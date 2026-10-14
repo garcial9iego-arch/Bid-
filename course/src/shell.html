@@ -206,6 +206,21 @@ details.deeper .inner ul,details.deeper .inner ol{margin:0 0 8px;padding-left:1.
 .ghost{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px}
 .ghost[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
 .kbd{font-family:var(--mono);font-size:12px;color:var(--muted)}
+/* Figures from real plan sheets */
+.fig{margin:0;display:grid;gap:6px;max-width:100%;min-width:0}
+.fig img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:4px;background:#fff;cursor:zoom-in}
+.fig figcaption{font-size:13.5px;color:var(--muted)}
+.fig figcaption b{color:var(--ink)}
+.figrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;align-items:start}
+.zoombox{position:fixed;inset:0;z-index:20;background:rgba(10,14,12,.86);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.zoombar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));color:#fff;font-size:14px}
+.zoombar button{background:#fff;color:#111;border:0;border-radius:6px;padding:7px 14px;font-weight:700}
+.zoomscroll{flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
+.zoomscroll img{display:block;max-width:none;background:#fff}
+.tier{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:2px 7px;border-radius:3px;white-space:nowrap}
+.tier.t1{background:var(--accent);color:var(--sheet)}
+.tier.t2{background:var(--caution-soft);color:var(--caution)}
+.tier.t3{background:var(--paper);color:var(--muted);border:1px solid var(--line)}
 /* Real Bid Lab */
 .labcard{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:8px;padding:14px 18px;margin-bottom:26px}
 .labcard h2{font-size:26px;text-transform:uppercase}
@@ -285,6 +300,8 @@ const store = {
   set(k, v){ try { localStorage.setItem("clb:" + k, JSON.stringify(v)); } catch(e){} }
 };
 const pad = n => String(n).padStart(2, "0");
+const isDeck = m => typeof m.n !== "number";
+const shortLabel = m => isDeck(m) ? m.code : "M-" + pad(m.n);
 let cur = { view: "home", m: null, i: 0 };
 let speaking = false;
 
@@ -299,6 +316,8 @@ function parseHash(){
   const h = (location.hash || "").slice(1);
   const mm = /^m(\d+)(?:-(\d+))?$/.exec(h);
   if(h === "lab") return { view: "lab", m: null, i: 0 };
+  const pm = /^plans(?:-(\d+))?$/.exec(h);
+  if(pm && MODS.P){ let i = pm[1] ? +pm[1] - 1 : store.get("pos:P", 0); i = Math.max(0, Math.min(MODS.P.slides.length - 1, i || 0)); return { view: "module", m: "P", i }; }
   const lm = /^lab-(\d\d-\w{6})$/.exec(h);
   if(lm && window.LAB && window.LAB.projects.some(p => p.id === lm[1])) return { view: "lab", m: lm[1], i: 0 };
   if(mm && MODS[+mm[1]]){
@@ -309,7 +328,7 @@ function parseHash(){
   return { view: "home", m: null, i: 0 };
 }
 function go(view, m, i){
-  const h = view === "module" ? "#m" + m + "-" + (i + 1) : view === "lab" ? (m ? "#lab-" + m : "#lab") : "#home";
+  const h = view === "module" ? (m === "P" ? "#plans-" : "#m" + m + "-") + (i + 1) : view === "lab" ? (m ? "#lab-" + m : "#lab") : "#home";
   if(location.hash !== h) history.replaceState(null, "", h);
   cur = { view, m, i }; render(true);
 }
@@ -325,6 +344,15 @@ function renderNav(){
     if(cur.view === "lab") b.setAttribute("aria-current", "true");
     b.innerHTML = '<span class="si-no">LAB</span><span><span class="si-t">Real Bid Lab</span><span class="si-s">' + window.LAB.projects.length + ' real San Diego bids to price</span></span>';
     b.onclick = () => { go("lab", null, 0); collapseNav(); };
+    li.append(b); ul.append(li);
+  }
+  if(MODS.P){
+    const li = document.createElement("li"); li.className = "si-item si-lab";
+    const b = document.createElement("button"); b.type = "button"; b.className = "si-btn";
+    if(cur.view === "module" && cur.m === "P") b.setAttribute("aria-current", "true");
+    const p = pct("P");
+    b.innerHTML = '<span class="si-no">PLANS</span><span><span class="si-t">Plan Set Deep Dive</span><span class="si-s"><span>' + MODS.P.hours + ' h</span><span class="bar" aria-hidden="true"><i style="width:' + p + '%"></i></span><span>' + p + '%</span></span></span>';
+    b.onclick = () => { go("module", "P", store.get("pos:P", 0)); collapseNav(); };
     li.append(b); ul.append(li);
   }
   OUT.forEach(o => {
@@ -369,6 +397,11 @@ function renderHome(){
     lab.innerHTML = '<div><span class="eyebrow">Practice with real bids</span><h2>Real Bid Lab</h2><p>Price ' + window.LAB.projects.length + ' real San Diego highway planting and irrigation jobs from the actual plans and specs, then compare every line item to what the winning contractor and every other bidder really bid.</p></div><button class="btn primary" type="button" id="labBtn">Open the lab →</button>';
     main.append(lab); $("labBtn").onclick = () => go("lab", null, 0);
   }
+  if(MODS.P){
+    const pc = document.createElement("section"); pc.className = "labcard";
+    pc.innerHTML = '<div><span class="eyebrow">Workshop · real plan sheets</span><h2>Plan Set Deep Dive</h2><p>Every sheet of a real 65-sheet Caltrans landscape plan set, ranked by how much it matters to your bid, then a close-up walkthrough of the sheets that set your price.</p></div><button class="btn primary" type="button" id="plansBtn">Open the deep dive →</button>';
+    main.append(pc); $("plansBtn").onclick = () => go("module", "P", store.get("pos:P", 0));
+  }
   const h2 = document.createElement("h2"); h2.textContent = "Sheet index"; h2.style.fontSize = "26px"; h2.style.textTransform = "uppercase"; h2.style.marginBottom = "10px"; main.append(h2);
   const wrap = document.createElement("div"); wrap.className = "tablewrap";
   let rows = OUT.map(o => {
@@ -400,7 +433,7 @@ function renderSlide(m, i){
   const s = m.slides[i]; const t = s.t || "std";
   const body = el("div", "sheet-body");
   if(t === "cover"){
-    body.append(el("span", "eyebrow", "Module " + pad(m.n) + " · " + m.hours + " hours"));
+    body.append(el("span", "eyebrow", (isDeck(m) ? m.kicker : "Module " + pad(m.n)) + " · " + m.hours + " hours"));
     body.append(el("h2", null, s.h));
     body.append(el("p", "lead", s.lead));
     const g = el("div", "cover-grid");
@@ -521,7 +554,7 @@ function renderModule(scroll){
   markSeen(m.n, i); store.set("pos:" + m.n, i); store.set("last", { m: m.n, i });
   const o = OUT.find(x => x.n === m.n);
   const head = el("div", "mhead");
-  head.append(el("span", "eyebrow", "Module " + pad(m.n) + " of " + OUT.length + " · " + m.hours + " hours"));
+  head.append(el("span", "eyebrow", isDeck(m) ? m.kicker + " · " + m.hours + " hours" : "Module " + pad(m.n) + " of " + OUT.length + " · " + m.hours + " hours"));
   const h1 = el("h1"); h1.textContent = o ? o.title : m.title; head.append(h1);
   main.append(head);
   const strip = el("div", "strip"); strip.setAttribute("aria-label", "Slides in this module");
@@ -535,7 +568,7 @@ function renderModule(scroll){
   main.append(strip);
   const sheet = el("article", "sheet"); sheet.setAttribute("aria-live", "polite");
   const top = el("div", "sheet-top");
-  const label = el("span", "mono", "M-" + pad(m.n) + " · Slide " + (i + 1) + " / " + m.slides.length);
+  const label = el("span", "mono", shortLabel(m) + " · Slide " + (i + 1) + " / " + m.slides.length);
   const tools = el("div"); tools.style.cssText = "display:flex;gap:8px;flex-wrap:wrap";
   const rd = el("button", "ghost", "Read aloud"); rd.type = "button"; rd.setAttribute("aria-pressed", "false");
   if(!("speechSynthesis" in window)) rd.hidden = true;
@@ -556,7 +589,7 @@ function renderModule(scroll){
   prev.onclick = () => go("module", m.n, i - 1);
   const next = el("button", "btn primary"); next.type = "button";
   const last = i === m.slides.length - 1;
-  const nextMod = MODS[m.n + 1];
+  const nextMod = isDeck(m) ? null : MODS[m.n + 1];
   next.textContent = last ? (nextMod ? "Start Module " + (m.n + 1) + " →" : "Back to course map") : "Next →";
   next.onclick = () => last ? (nextMod ? go("module", m.n + 1, 0) : go("home")) : go("module", m.n, i + 1);
   ctr.append(prev, el("span", "kbd", "← → keys work too"), next);
@@ -577,12 +610,33 @@ function render(scroll){
 }
 
 document.addEventListener("keydown", e => {
-  if(cur.view !== "module") return;
+  if(cur.view !== "module" || document.querySelector(".zoombox")) return;
   const tag = (e.target.tagName || "").toLowerCase();
   if(tag === "input" || tag === "select" || tag === "textarea" || e.metaKey || e.ctrlKey || e.altKey) return;
   const m = MODS[cur.m];
   if(e.key === "ArrowRight" && cur.i < m.slides.length - 1) go("module", m.n, cur.i + 1);
   if(e.key === "ArrowLeft" && cur.i > 0) go("module", m.n, cur.i - 1);
+});
+
+function openZoom(src, alt){
+  const box = el("div", "zoombox"); box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true"); box.setAttribute("aria-label", alt || "Plan sheet");
+  const bar = el("div", "zoombar"); const t = el("span"); t.textContent = (alt || "Plan sheet") + " · scroll to pan";
+  const z = el("div"); z.style.cssText = "display:flex;gap:8px";
+  const fit = el("button", null, "Fit"); fit.type = "button"; const full = el("button", null, "Full size"); full.type = "button";
+  const close = el("button", null, "Close"); close.type = "button";
+  z.append(fit, full, close); bar.append(t, z);
+  const sc = el("div", "zoomscroll"); const img = new Image(); img.src = src; img.alt = alt || "";
+  const fitIt = () => { img.style.width = "100%"; img.style.maxWidth = "100%"; };
+  const fullIt = () => { img.style.width = img.naturalWidth ? img.naturalWidth + "px" : "auto"; img.style.maxWidth = "none"; };
+  fit.onclick = fitIt; full.onclick = fullIt; img.onload = fullIt;
+  sc.append(img); box.append(bar, sc); document.body.append(box);
+  const shut = () => { box.remove(); document.removeEventListener("keydown", esc); };
+  const esc = e => { if(e.key === "Escape") shut(); };
+  close.onclick = shut; document.addEventListener("keydown", esc); close.focus();
+}
+$("main").addEventListener("click", e => {
+  const img = e.target.closest(".fig img"); if(!img) return;
+  openZoom(img.dataset.full || img.src, img.alt);
 });
 
 cur = parseHash(); render(false);
