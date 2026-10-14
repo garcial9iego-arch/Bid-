@@ -226,8 +226,8 @@ slides: [
 <li><div><b>Check against the engineer's estimate and history</b>A total far from the estimate or from past bid results means look again (Module 15).</div></li>
 <li><div><b>Every line priced</b>A blank unit price can make the bid non-responsive.</div></li>
 </ol>`,
-  ex: `<p><strong>Worked check:</strong> 4" main, 7,493 LF at $12.00 = $89,916.00. If the form shows $8,991.60, the decimal moved, and under Caltrans's rule the unit price you typed is what counts. Fix the unit price, not just the total.</p>`,
-  watch: `<p>Don't build a big markup into one item and almost none into others unless you understand the risk. Agencies can reject bids that are unbalanced (Module 15 shows how bidders moved money between items).</p>`
+  ex: `<p><strong>Worked check:</strong> 4" main, 7,493 LF at $12.00 = $89,916.00. If the form shows $8,991.60, the decimal moved, and under Caltrans's rule the unit price you typed is what counts. Fix the unit price as well as the total.</p>`,
+  watch: `<p>Don't build a big markup into one item and almost none into others unless you understand the risk. Read what the package says about unbalanced bids; some agencies reserve the right to reject them. Module 15 shows how real bidders moved money between items.</p>`
 },
 
 { h: "Submitting early and confirming receipt",
@@ -244,7 +244,7 @@ slides: [
 },
 
 { h: "The bid opening and reading results",
-  lead: "Right after the deadline, prices become public. The lowest number on the screen is the apparent low bidder, not yet the winner.",
+  lead: "Right after the deadline, prices become public. The lowest number on the screen is the apparent low bidder. The agency still has to check that bid before anyone wins.",
   body: `<ul>
 <li><strong>City of San Diego:</strong> once the deadline passes, bidders and the public can see results online in PlanetBids. That posting is the public announcement of the apparent low bidder.</li>
 <li><strong>Caltrans:</strong> bids are opened and read through a webcast right after the deadline. Caltrans later posts a Bid Summary with every bidder's prices and subs.</li>

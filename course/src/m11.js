@@ -69,7 +69,7 @@ slides: [
 },
 
 { h: "The crafts landscape work uses",
-  lead: "You pay by the work each person actually does, not by their job title at your company. These are the DIR crafts a San Diego landscape crew uses most.",
+  lead: "Each hour is paid by the work the person actually does that hour, whatever their job title at your company. These are the DIR crafts a San Diego landscape crew uses most.",
   body: `<div class="tablewrap"><table>
 <thead><tr><th>DIR craft (San Diego County, 2026-2)</th><th>Where on DIR's site</th><th>Typical work</th></tr></thead>
 <tbody>
@@ -103,13 +103,13 @@ slides: [
 <tr><td>Daily and Saturday overtime (1½×)</td><td class="num">$100.455</td><td>Footnote b</td></tr>
 <tr><td>Sunday and holiday (2×)</td><td class="num">$124.24</td><td></td></tr>
 </tbody></table></div>`,
-  ex: `<p><strong>Check the math yourself:</strong> $47.57 + $9.85 + $12.92 + $5.02 + $0.80 + $0.51 = $76.67. Overtime: $47.57 × 1.5 = $71.355, plus the $29.10 of employer payments = $100.455. Overtime multiplies the basic rate, not the benefits.</p>`,
+  ex: `<p><strong>Check the math yourself:</strong> $47.57 + $9.85 + $12.92 + $5.02 + $0.80 + $0.51 = $76.67. Overtime: $47.57 × 1.5 = $71.355, plus the $29.10 of employer payments = $100.455. Overtime multiplies only the basic rate.</p>`,
   watch: `<p>Read the footnotes. Here footnote b says the 1½× rate covers only the first 4 daily overtime hours and the first 12 hours on Saturday; after that, double time. Footnote c lets Saturday be worked at straight time only as a weather make-up day.</p>`,
   src: "DIR determination SD-102-X-14-2026-1, Landscape/Irrigation Laborer/Tender, San Diego County."
 },
 
 { h: "Tenders, tradesmen and the ratio rules",
-  lead: "The lower-paid helper classifications can only be used in a set mix with journeymen. Price the mix the rules allow, not the mix you wish you had.",
+  lead: "The lower-paid helper classifications can only be used in a set mix with journeymen. Price only the mix the rules allow.",
   body: `<div class="tablewrap"><table>
 <thead><tr><th>2026-2 San Diego rates</th><th class="num">Basic</th><th class="num">Total hourly</th></tr></thead>
 <tbody>
