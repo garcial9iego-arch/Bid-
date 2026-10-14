@@ -11,13 +11,30 @@ Each module is a set of written slides with:
 
 ## Status
 
-| Module | Title | Hours | Status |
-|---|---|---|---|
-| 1 | How Construction Bidding Works | 6 | Ready |
-| 2 | Your License, Your Company and Getting Bid-Ready | 6 | Ready |
-| 3 | Finding Work and Deciding What to Bid | 6 | Ready |
-| 15 | Real Bid Practice: full walkthrough of Caltrans 11-428704 (I-805 Chula Vista) | 8 | Ready |
-| 4–14, 16 | See `src/outline.js` | 74 | Planned |
+All 16 modules (100 hours) are written, plus two practice sections:
+
+| Module | Title | Hours |
+|---|---|---|
+| 1 | How Construction Bidding Works | 6 |
+| 2 | Your License, Your Company and Getting Bid-Ready | 6 |
+| 3 | Finding Work and Deciding What to Bid | 6 |
+| 4 | Reading Landscape and Irrigation Plans | 8 |
+| 5 | Reading Specifications | 6 |
+| 6 | Irrigation Takeoff | 8 |
+| 7 | Planting, Soil and Hardscape Takeoff | 7 |
+| 8 | Pricing Materials and Working with Suppliers | 5 |
+| 9 | Labor, Production Rates and Equipment | 7 |
+| 10 | Overhead, Markup and Your Final Number | 5 |
+| 11 | Prevailing Wage and Public Works Compliance | 6 |
+| 12 | Pre-Bid Meetings, RFIs, Addenda and Communication | 5 |
+| 13 | Writing the Proposal | 5 |
+| 14 | Submitting Public Bids and Bid Day | 6 |
+| 15 | Real Bid Practice: full walkthrough of Caltrans 11-428704 | 8 |
+| 16 | After the Bid: Contracts, Billing and Growing the Division | 6 |
+
+**Plan Set Deep Dive** (`src/plans.js`, 6 h workshop): the real 65-sheet 11-428704 plan set, every sheet ranked by importance to bidding, then close-ups of the price-driving sheets. Images in `src/img/pdd/` are crops of the public Caltrans plan PDFs.
+
+**Real Bid Lab** (below): price five real Caltrans jobs and compare to every bidder.
 
 ## Real Bid Lab
 
@@ -39,7 +56,9 @@ Source data is saved in `data/caltrans/<contract>/` (Bid Summary PDF and text, b
 course/
   src/shell.html   page layout, styles and slide viewer
   src/outline.js   the 16-module outline (titles, hours, descriptions)
-  src/m1.js ...    one file per finished module (slides as data)
+  src/m1.js ...    one file per module (slides as data)
+  src/plans.js     Plan Set Deep Dive workshop
+  src/img/         plan sheet images used by the deep dive
   src/realbids.js  generated Real Bid Lab data (do not edit by hand)
   src/lab.js       Real Bid Lab pages
   data/caltrans/   saved Caltrans source documents for the lab
@@ -56,7 +75,7 @@ python3 course/tools/build_realbids.py   # only when lab data changes
 node course/build.mjs
 ```
 
-To add a module, create `src/mN.js` following the existing modules and rebuild. The outline marks a module "Ready" automatically once its file exists.
+To edit a module, change `src/mN.js` and rebuild. `MODULES=1,2,3 node course/build.mjs` builds only the listed modules.
 
 Progress, quiz answers and checked-off practice are saved in the viewer's browser only.
 
