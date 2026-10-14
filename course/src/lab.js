@@ -95,6 +95,12 @@ function renderProject(main, id, go){
   const sheet = el("article", "sheet");
   const body = el("div", "sheet-body");
   body.append(txt("p", "lead", p.scope));
+  if(p.id === "11-428704"){
+    const w = el("div", "callout ex");
+    w.append(txt("span", "lbl", "Full walkthrough"));
+    w.append(el("div", null, '<p>Module 15 walks through this exact job from start to finish: every document, the hidden costs, the DBE rule that sank the lowest bid, and how all six bidders priced it. <a href="#m15-1">Open the walkthrough →</a></p>'));
+    body.append(w);
+  }
   const facts = el("dl", "facts");
   [["Caltrans description", p.title], ["Location", titleCase(p.location || "")], ["Route / postmile", p.route], ["License required", p.license],
    ["Time allowed", p.days], ["Advertised estimate", money(p.advertised) + " (printed in the specs)"], ["Bid packages issued", String(p.proposalsIssued)], ["Bidders", String(p.bidders.length)]]

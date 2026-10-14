@@ -16,7 +16,8 @@ Each module is a set of written slides with:
 | 1 | How Construction Bidding Works | 6 | Ready |
 | 2 | Your License, Your Company and Getting Bid-Ready | 6 | Ready |
 | 3 | Finding Work and Deciding What to Bid | 6 | Ready |
-| 4–16 | See `src/outline.js` | 82 | Planned |
+| 15 | Real Bid Practice: full walkthrough of Caltrans 11-428704 (I-805 Chula Vista) | 8 | Ready |
+| 4–14, 16 | See `src/outline.js` | 74 | Planned |
 
 ## Real Bid Lab
 
