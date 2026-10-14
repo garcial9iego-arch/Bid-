@@ -1,0 +1,519 @@
+<title>Commercial Landscape Bidding</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500&family=Saira+Condensed:wght@600;700&display=swap">
+<style>
+/* Layout: a plan-set title block across the top, a sheet index of modules on the left, one slide "sheet" at a time on the right. */
+:root{
+  --paper:#f2f5f1;      /* page ground, a faint green-grey like vellum */
+  --sheet:#ffffff;      /* the slide surface */
+  --ink:#1b2a21;        /* text */
+  --muted:#56675c;      /* secondary text */
+  --line:#cfd9d0;       /* rules and borders */
+  --accent:#663c9e;     /* recycled-water purple pipe */
+  --accent-soft:#efe8f8;
+  --leaf:#2b7246;       /* examples, correct answers */
+  --leaf-soft:#e3f1e7;
+  --caution:#9a5a06;    /* watch-outs */
+  --caution-soft:#fbf0dc;
+  --wrong:#a3342a;
+  --wrong-soft:#f8e3e0;
+  --display:"Saira Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Atkinson Hyperlegible",Verdana,"Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#111813; --sheet:#18211b; --ink:#e3ebe5; --muted:#9caca1; --line:#2d3a31;
+  --accent:#b996ea; --accent-soft:#2a2138; --leaf:#7ccb98; --leaf-soft:#18301f;
+  --caution:#e6aa58; --caution-soft:#33270f; --wrong:#f0a197; --wrong-soft:#3a1d1a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111813; --sheet:#18211b; --ink:#e3ebe5; --muted:#9caca1; --line:#2d3a31;
+  --accent:#b996ea; --accent-soft:#2a2138; --leaf:#7ccb98; --leaf-soft:#18301f;
+  --caution:#e6aa58; --caution-soft:#33270f; --wrong:#f0a197; --wrong-soft:#3a1d1a; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.1;text-wrap:balance;margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+.mono{font-family:var(--mono);font-size:.82em;letter-spacing:.02em}
+
+/* Title block */
+.titleblock{border-bottom:2px solid var(--ink);background:var(--sheet)}
+.tb-inner{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:12px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;justify-content:space-between}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+.brand-k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.brand-n{font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:.01em;text-transform:uppercase;line-height:1.05}
+.tb-meta{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 14px}
+.tb-meta span{white-space:nowrap}
+
+/* Layout */
+.layout{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}}
+
+/* Sheet index (module nav) */
+.navtoggle{display:none;width:100%;text-align:left;background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-weight:700}
+@media (max-width:900px){.navtoggle{display:block}.sheetindex.collapsed{display:none}}
+.sheetindex{background:var(--sheet);border:1px solid var(--line);border-radius:6px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);max-height:calc(100vh - 40px);overflow:auto}
+@media (max-width:900px){.sheetindex{position:static;max-height:none;margin-top:8px}}
+.si-head{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:12px 14px 8px;border-bottom:1px solid var(--line)}
+.si-list{list-style:none;margin:0;padding:0}
+.si-item{border-bottom:1px solid var(--line)}
+.si-item:last-child{border-bottom:0}
+.si-btn{display:grid;grid-template-columns:42px minmax(0,1fr);gap:8px;width:100%;text-align:left;background:none;border:0;padding:9px 14px;align-items:start}
+.si-btn:hover{background:var(--paper)}
+.si-btn[aria-current="true"]{background:var(--accent-soft)}
+.si-btn[disabled]{cursor:default;opacity:.62}
+.si-btn[disabled]:hover{background:none}
+.si-no{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:2px}
+.si-t{font-size:14.5px;line-height:1.35;font-weight:700;display:block}
+.si-s{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center;margin-top:2px}
+.bar{height:4px;background:var(--line);border-radius:2px;flex:1;max-width:80px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--leaf)}
+
+/* Main */
+main{min-width:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.home-hero{display:grid;gap:10px;padding-block:6px 18px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.home-hero h1{font-size:clamp(34px,5vw,52px);text-transform:uppercase}
+.home-hero p{max-width:66ch;margin:0;font-size:18px}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.btn{border:1.5px solid var(--ink);background:var(--sheet);border-radius:6px;padding:9px 16px;font-weight:700;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--sheet)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:26px}
+.how div{border-top:3px solid var(--ink);padding-top:10px;min-width:0}
+.how h3{font-size:20px;text-transform:uppercase;margin-bottom:4px}
+.how p{margin:0;font-size:15.5px;color:var(--muted)}
+.tablewrap{overflow-x:auto;background:var(--sheet);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--paper)}
+td.num,th.num{text-align:right;white-space:nowrap}
+.status{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.status.ready{background:var(--leaf-soft);color:var(--leaf)}
+.status.soon{background:var(--paper);color:var(--muted);border:1px solid var(--line)}
+.rowlink{background:none;border:0;padding:0;text-align:left;font-weight:700;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.note{font-size:14px;color:var(--muted);max-width:75ch}
+
+/* Module header + slide */
+.mhead{display:grid;gap:6px;margin-bottom:14px}
+.mhead h1{font-size:clamp(28px,4vw,40px);text-transform:uppercase}
+.strip{display:flex;gap:3px;flex-wrap:wrap;margin-bottom:14px}
+.strip button{flex:1 1 14px;min-width:14px;max-width:44px;height:10px;border:0;border-radius:2px;background:var(--line);padding:0}
+.strip button.seen{background:var(--leaf)}
+.strip button[aria-current="true"]{background:var(--accent);height:14px;margin-top:-2px}
+.sheet{background:var(--sheet);border:1px solid var(--line);border-radius:8px;min-width:0}
+.sheet-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;padding:10px 20px;border-bottom:1px solid var(--line)}
+.sheet-body{padding:22px 24px 26px;display:grid;gap:16px;min-width:0}
+@media (max-width:520px){.sheet-body{padding:18px 16px 22px}.sheet-top{padding:10px 16px}}
+.sheet h2{font-size:clamp(26px,3.6vw,36px)}
+.lead{font-size:20px;line-height:1.5;margin:0;max-width:62ch}
+.prose{max-width:70ch;min-width:0}
+.prose p{margin:0 0 10px}
+.prose p:last-child{margin-bottom:0}
+.prose ul,.prose ol{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.prose li::marker{color:var(--accent)}
+.prose strong{font-weight:700}
+.prose table{font-size:15px}
+.prose .tablewrap{margin-block:4px}
+.callout{border-radius:6px;padding:12px 16px;max-width:72ch;min-width:0}
+.callout .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;display:block;margin-bottom:4px}
+.callout p{margin:0 0 8px}.callout p:last-child{margin:0}
+.callout ul,.callout ol{margin:0;padding-left:1.2em;display:grid;gap:4px}
+.ex{background:var(--leaf-soft)}.ex .lbl{color:var(--leaf)}
+.watch{background:var(--caution-soft)}.watch .lbl{color:var(--caution)}
+details.deeper{border:1px dashed var(--line);border-radius:6px;max-width:72ch}
+details.deeper summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--accent);list-style-position:inside}
+details.deeper .inner{padding:0 16px 14px}
+details.deeper .inner p{margin:0 0 8px}
+details.deeper .inner ul,details.deeper .inner ol{margin:0 0 8px;padding-left:1.2em;display:grid;gap:4px}
+.src{font-size:13.5px;color:var(--muted)}
+
+/* Cover slide */
+.cover-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px}
+@media (max-width:700px){.cover-grid{grid-template-columns:minmax(0,1fr)}}
+.objectives{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.timebox{border:1.5px solid var(--ink);border-radius:6px;padding:12px 16px;align-self:start}
+.timebox .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-block:6px;font-variant-numeric:tabular-nums}
+.timebox .row:last-child{border-bottom:0;font-weight:700}
+.bignum{font-family:var(--display);font-size:64px;line-height:1;color:var(--accent)}
+
+/* Diagrams */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+.flow .node{border:1.5px solid var(--ink);border-radius:6px;padding:8px 12px;background:var(--sheet);min-width:0;flex:1 1 140px}
+.flow .node b{display:block;font-family:var(--display);font-size:19px;text-transform:uppercase;line-height:1.1}
+.flow .node span{font-size:13.5px;color:var(--muted)}
+.flow .node.you{border-color:var(--accent);background:var(--accent-soft)}
+.flow .arrow{align-self:center;color:var(--muted);font-family:var(--mono)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:st}
+.steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:8px 0;border-bottom:1px solid var(--line);counter-increment:st}
+.steps li:last-child{border-bottom:0}
+.steps li::before{content:counter(st,decimal-leading-zero);font-family:var(--mono);color:var(--accent);font-size:14px;padding-top:2px}
+.steps li b{display:block}
+.steps li.hl{background:var(--accent-soft);border-radius:4px}
+.twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.twocol>div{border:1px solid var(--line);border-radius:6px;padding:12px 14px;min-width:0}
+.twocol h3{font-size:21px;text-transform:uppercase;margin-bottom:6px}
+.twocol ul{margin:0;padding-left:1.2em;display:grid;gap:4px}
+
+/* Glossary */
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 22px}
+.terms div{border-bottom:1px solid var(--line);padding:9px 0;min-width:0}
+.terms dt{font-weight:700}
+.terms dd{margin:0;color:var(--muted);font-size:15.5px}
+
+/* Quiz */
+.q{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:8px}
+.q:first-child{border-top:0;padding-top:0}
+.q .qt{font-weight:700}
+.opts{display:grid;gap:6px}
+.opt{text-align:left;border:1.5px solid var(--line);background:var(--sheet);border-radius:6px;padding:8px 12px}
+.opt:hover:not([disabled]){border-color:var(--accent)}
+.opt[disabled]{cursor:default}
+.opt.right{border-color:var(--leaf);background:var(--leaf-soft)}
+.opt.wrong{border-color:var(--wrong);background:var(--wrong-soft)}
+.why{font-size:15px;margin:0;padding-left:12px;border-left:3px solid var(--line)}
+.score{font-family:var(--display);font-size:24px;text-transform:uppercase}
+
+/* Practice */
+.tasks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.task{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:start;border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.task.done{background:var(--leaf-soft);border-color:var(--leaf)}
+.task input{width:20px;height:20px;margin-top:3px;accent-color:var(--leaf)}
+.task label{font-weight:700;cursor:pointer}
+.task .d{font-size:15.5px;margin-top:3px}
+.task .d p{margin:0 0 6px}
+.task .d ul,.task .d ol{margin:0;padding-left:1.2em;display:grid;gap:3px}
+.task .hrs{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap;padding-top:3px}
+.tally{font-family:var(--mono);font-size:13px;color:var(--muted)}
+
+/* Scorer */
+.scorer{display:grid;gap:8px}
+.sc-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sc-row select{font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--sheet);color:var(--ink);max-width:150px}
+.sc-row .hint{display:block;font-size:13.5px;color:var(--muted)}
+.sc-total{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;border:1.5px solid var(--ink);border-radius:6px;padding:12px 16px}
+.sc-total .n{font-family:var(--display);font-size:40px;line-height:1}
+.sc-verdict{font-weight:700}
+
+/* Controls */
+.controls{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+.controls .mid{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.ghost{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px}
+.ghost[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
+.kbd{font-family:var(--mono);font-size:12px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.sheet{animation:in .16s ease-out}@keyframes in{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}}
+</style>
+
+<header class="titleblock">
+  <div class="tb-inner">
+    <a class="brand" href="#home" id="homeLink"><span class="brand-k">Course · Bid Division Training</span><span class="brand-n">Commercial Landscape Bidding</span></a>
+    <div class="tb-meta"><span>San Diego County</span><span>Private &amp; public work</span><span>C-27 landscape · irrigation · planting</span><span>16 modules · 100 hours</span></div>
+  </div>
+</header>
+<div class="layout">
+  <div>
+    <button class="navtoggle" id="navToggle" type="button" aria-expanded="false" aria-controls="sheetIndex">Course map ▾</button>
+    <nav class="sheetindex collapsed" id="sheetIndex" aria-label="Course modules"></nav>
+  </div>
+  <main id="main"></main>
+</div>
+
+<script>
+/*__CONTENT__*/
+</script>
+<script>
+(function(){
+const OUT = window.COURSE_OUTLINE || [];
+const MODS = {}; (window.COURSE_MODULES || []).forEach(m => MODS[m.n] = m);
+const $ = id => document.getElementById(id);
+const store = {
+  get(k, d){ try { const v = localStorage.getItem("clb:" + k); return v == null ? d : JSON.parse(v); } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem("clb:" + k, JSON.stringify(v)); } catch(e){} }
+};
+const pad = n => String(n).padStart(2, "0");
+let cur = { view: "home", m: null, i: 0 };
+let speaking = false;
+
+function seen(n){ return new Set(store.get("seen:" + n, [])); }
+function markSeen(n, i){ const s = seen(n); if(!s.has(i)){ s.add(i); store.set("seen:" + n, [...s]); } }
+function pct(n){ const m = MODS[n]; if(!m) return 0; return Math.round(seen(n).size / m.slides.length * 100); }
+
+function stopSpeech(){ try { if(window.speechSynthesis) speechSynthesis.cancel(); } catch(e){} speaking = false; }
+
+/* ---------- Navigation ---------- */
+function parseHash(){
+  const h = (location.hash || "").slice(1);
+  const mm = /^m(\d+)(?:-(\d+))?$/.exec(h);
+  if(mm && MODS[+mm[1]]){
+    const m = MODS[+mm[1]]; let i = mm[2] ? +mm[2] - 1 : store.get("pos:" + m.n, 0);
+    i = Math.max(0, Math.min(m.slides.length - 1, i || 0));
+    return { view: "module", m: m.n, i };
+  }
+  return { view: "home", m: null, i: 0 };
+}
+function go(view, m, i){
+  const h = view === "module" ? "#m" + m + "-" + (i + 1) : "#home";
+  if(location.hash !== h) history.replaceState(null, "", h);
+  cur = { view, m, i }; render(true);
+}
+window.addEventListener("hashchange", () => { cur = parseHash(); render(true); });
+
+function renderNav(){
+  const nav = $("sheetIndex"); nav.innerHTML = "";
+  const head = document.createElement("div"); head.className = "si-head"; head.textContent = "Sheet index · modules"; nav.append(head);
+  const ul = document.createElement("ul"); ul.className = "si-list";
+  OUT.forEach(o => {
+    const li = document.createElement("li"); li.className = "si-item";
+    const b = document.createElement("button"); b.type = "button"; b.className = "si-btn";
+    const ready = !!MODS[o.n];
+    if(!ready) b.disabled = true;
+    if(cur.view === "module" && cur.m === o.n) b.setAttribute("aria-current", "true");
+    const p = ready ? pct(o.n) : 0;
+    b.innerHTML = '<span class="si-no">M-' + pad(o.n) + '</span><span><span class="si-t"></span><span class="si-s"><span>' + o.hours + ' h</span>' +
+      (ready ? '<span class="bar" aria-hidden="true"><i style="width:' + p + '%"></i></span><span>' + p + '%</span>' : '<span>Coming next</span>') + '</span></span>';
+    b.querySelector(".si-t").textContent = o.title;
+    if(ready) b.onclick = () => { go("module", o.n, store.get("pos:" + o.n, 0)); collapseNav(); };
+    li.append(b); ul.append(li);
+  });
+  nav.append(ul);
+}
+function collapseNav(){ $("sheetIndex").classList.add("collapsed"); $("navToggle").setAttribute("aria-expanded", "false"); }
+$("navToggle").onclick = () => { const n = $("sheetIndex"); const c = n.classList.toggle("collapsed"); $("navToggle").setAttribute("aria-expanded", String(!c)); };
+$("homeLink").onclick = e => { e.preventDefault(); go("home"); };
+
+/* ---------- Home ---------- */
+function renderHome(){
+  const main = $("main"); main.innerHTML = "";
+  const totalH = OUT.reduce((a, o) => a + o.hours, 0);
+  const hero = document.createElement("section"); hero.className = "home-hero";
+  hero.innerHTML = '<span class="eyebrow">Start here · from zero to bidding</span>' +
+    '<h1>Learn to bid commercial landscape work</h1>' +
+    '<p>This course is for someone who has never bid a commercial job. It takes you from "what is a bid?" to pricing real San Diego landscape and irrigation projects and comparing your number to the contractor who actually won. It covers private jobs for general contractors and public jobs for cities, schools and agencies.</p>' +
+    '<div class="btnrow"><button class="btn primary" type="button" id="startBtn">Start Module 1 →</button><button class="btn" type="button" id="resumeBtn">Resume where I left off</button></div>';
+  main.append(hero);
+  const how = document.createElement("section"); how.className = "how";
+  how.innerHTML = [
+    ["Plain words first", "Every slide starts in simple language. Open “Go deeper” when you want the laws, numbers and fine print."],
+    ["Practice is the course", "Most of the " + totalH + " hours are hands-on: real bid documents, calls, takeoffs and bid results, not reading."],
+    ["Read aloud", "Press “Read aloud” on any slide to hear it. Use the arrow keys or the buttons to move between slides."],
+    ["Check the source", "Fees, limits and rules change. When a number matters for a real bid, confirm it at the source given on the slide."]
+  ].map(x => '<div><h3>' + x[0] + '</h3><p>' + x[1] + '</p></div>').join("");
+  main.append(how);
+  const h2 = document.createElement("h2"); h2.textContent = "Sheet index"; h2.style.fontSize = "26px"; h2.style.textTransform = "uppercase"; h2.style.marginBottom = "10px"; main.append(h2);
+  const wrap = document.createElement("div"); wrap.className = "tablewrap";
+  let rows = OUT.map(o => {
+    const ready = !!MODS[o.n];
+    return '<tr><td class="mono">M-' + pad(o.n) + '</td><td>' + (ready ? '<button class="rowlink" type="button" data-m="' + o.n + '"></button>' : '<strong class="t"></strong>') +
+      '<div class="note d"></div></td><td class="num">' + o.hours + ' h</td><td>' + (ready ? '<span class="status ready">Ready · ' + pct(o.n) + '%</span>' : '<span class="status soon">Coming</span>') + '</td></tr>';
+  }).join("");
+  wrap.innerHTML = '<table><thead><tr><th>Sheet</th><th>Module</th><th class="num">Hours</th><th>Status</th></tr></thead><tbody>' + rows +
+    '</tbody><tfoot><tr><td></td><td><strong>Total</strong></td><td class="num"><strong>' + totalH + ' h</strong></td><td></td></tr></tfoot></table>';
+  const trs = wrap.querySelectorAll("tbody tr");
+  OUT.forEach((o, k) => {
+    const t = trs[k].querySelector(".rowlink, .t"); t.textContent = o.title;
+    trs[k].querySelector(".d").textContent = o.desc;
+    if(MODS[o.n]) t.onclick = () => go("module", o.n, store.get("pos:" + o.n, 0));
+  });
+  main.append(wrap);
+  const n = document.createElement("p"); n.className = "note"; n.style.marginTop = "14px";
+  n.innerHTML = 'This course teaches how bidding works and where to check the rules. It is not legal, tax or insurance advice. For license structure, contracts and bonding, use a construction attorney, a CPA and a surety agent. Your progress is saved in this browser only.';
+  main.append(n);
+  $("startBtn").onclick = () => go("module", 1, 0);
+  $("resumeBtn").onclick = () => { const last = store.get("last", null); if(last && MODS[last.m]) go("module", last.m, last.i); else go("module", 1, 0); };
+}
+
+/* ---------- Slides ---------- */
+function el(tag, cls, html){ const e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+function callout(cls, label, html){ const c = el("div", "callout " + cls); c.append(el("span", "lbl", label)); c.append(el("div", null, html)); return c; }
+
+function renderSlide(m, i){
+  const s = m.slides[i]; const t = s.t || "std";
+  const body = el("div", "sheet-body");
+  if(t === "cover"){
+    body.append(el("span", "eyebrow", "Module " + pad(m.n) + " · " + m.hours + " hours"));
+    body.append(el("h2", null, s.h));
+    body.append(el("p", "lead", s.lead));
+    const g = el("div", "cover-grid");
+    const left = el("div", "prose"); left.append(el("h3", null, "By the end you will be able to")); left.lastChild.style.cssText = "font-size:20px;text-transform:uppercase;margin-bottom:8px";
+    const ol = el("ul", "objectives"); s.objectives.forEach(o => ol.append(el("li", null, o))); left.append(ol);
+    const tb = el("div", "timebox"); tb.append(el("div", "bignum", m.hours + "h"));
+    s.time.forEach(r => { const row = el("div", "row"); row.append(el("span", null, r[0]), el("span", null, r[1])); tb.append(row); });
+    g.append(left, tb); body.append(g);
+    if(s.body) body.append(el("div", "prose", s.body));
+  } else {
+    body.append(el("h2", null, s.h));
+    if(s.lead) body.append(el("p", "lead", s.lead));
+    if(t === "terms"){
+      const dl = el("dl", "terms");
+      s.terms.forEach(([k, v]) => { const d = el("div"); d.append(el("dt", null, k), el("dd", null, v)); dl.append(d); });
+      body.append(dl);
+    } else if(t === "quiz"){
+      body.append(renderQuiz(m, s));
+    } else if(t === "practice"){
+      body.append(renderPractice(m, s));
+    } else if(t === "scorer"){
+      body.append(renderScorer(m, s));
+    }
+    if(s.body) body.append(el("div", "prose", s.body));
+  }
+  if(s.ex) body.append(callout("ex", s.exLabel || "Example", s.ex));
+  if(s.watch) body.append(callout("watch", "Watch out", s.watch));
+  if(s.deeper){
+    const d = el("details", "deeper"); d.append(el("summary", null, "Go deeper"));
+    d.append(el("div", "inner", s.deeper)); body.append(d);
+  }
+  if(s.src) body.append(el("p", "src", "Sources: " + s.src));
+  return body;
+}
+
+function renderQuiz(m, s){
+  const key = "quiz:" + m.n + ":" + (s.id || "q");
+  const ans = store.get(key, {});
+  const box = el("div");
+  const score = el("p", "score");
+  function update(){
+    const done = Object.keys(ans).length;
+    const right = s.qs.reduce((a, q, k) => a + (ans[k] === q.c ? 1 : 0), 0);
+    score.textContent = done ? right + " of " + done + " right · " + (s.qs.length - done) + " to go" : s.qs.length + " questions · tap an answer";
+  }
+  s.qs.forEach((q, k) => {
+    const qd = el("div", "q");
+    qd.append(el("div", "qt", (k + 1) + ". " + q.q));
+    const opts = el("div", "opts");
+    const why = el("p", "why", q.why); why.hidden = ans[k] == null;
+    q.a.forEach((a, j) => {
+      const b = el("button", "opt", a); b.type = "button";
+      const paint = () => {
+        if(ans[k] == null) return;
+        b.disabled = true;
+        if(j === q.c) b.classList.add("right");
+        else if(j === ans[k]) b.classList.add("wrong");
+      };
+      b.onclick = () => { ans[k] = j; store.set(key, ans); opts.querySelectorAll(".opt").forEach(x => x._paint()); why.hidden = false; update(); };
+      b._paint = paint; paint(); opts.append(b);
+    });
+    qd.append(opts, why); box.append(qd);
+  });
+  const reset = el("button", "ghost", "Clear my answers"); reset.type = "button";
+  reset.onclick = () => { store.set(key, {}); render(false); };
+  update(); box.prepend(score); box.append(reset); box.style.cssText = "display:grid;gap:14px";
+  return box;
+}
+
+function renderPractice(m, s){
+  const key = "prac:" + m.n + ":" + (s.id || "p");
+  const st = store.get(key, {});
+  const wrap = el("div"); wrap.style.cssText = "display:grid;gap:10px";
+  const tally = el("p", "tally");
+  const total = s.items.reduce((a, x) => a + x.hrs, 0);
+  function upd(){ const d = s.items.reduce((a, x, k) => a + (st[k] ? x.hrs : 0), 0); tally.textContent = "Done: " + d + " of " + total + " practice hours"; }
+  const ul = el("ul", "tasks");
+  s.items.forEach((it, k) => {
+    const li = el("li", "task" + (st[k] ? " done" : ""));
+    const id = "t-" + m.n + "-" + (s.id || "p") + "-" + k;
+    const cb = document.createElement("input"); cb.type = "checkbox"; cb.id = id; cb.checked = !!st[k];
+    cb.onchange = () => { st[k] = cb.checked; store.set(key, st); li.classList.toggle("done", cb.checked); upd(); };
+    const mid = el("div"); const lab = el("label", null, it.h); lab.htmlFor = id; mid.append(lab, el("div", "d", it.d));
+    li.append(cb, mid, el("span", "hrs", it.hrs + " h")); ul.append(li);
+  });
+  upd(); wrap.append(tally, ul); return wrap;
+}
+
+function renderScorer(m, s){
+  const key = "score:" + m.n + ":" + (s.id || "s");
+  const st = store.get(key, {});
+  const box = el("div", "scorer");
+  const totalBox = el("div", "sc-total");
+  const n = el("span", "n"); const v = el("span", "sc-verdict"); const d = el("span", "note");
+  totalBox.append(n, v, d);
+  function upd(){
+    let sum = 0, answered = 0;
+    s.items.forEach((x, k) => { if(st[k] != null && st[k] !== ""){ sum += +st[k]; answered++; } });
+    n.textContent = sum + " / " + s.items.length * 2;
+    if(answered < s.items.length){ v.textContent = "Score all " + s.items.length + " items"; d.textContent = answered + " scored so far."; return; }
+    const band = s.bands.find(b => sum >= b[0]); v.textContent = band[1]; d.textContent = band[2];
+  }
+  s.items.forEach((x, k) => {
+    const row = el("div", "sc-row");
+    const id = "sc-" + m.n + "-" + k;
+    const lab = el("label", null, x[0]); lab.htmlFor = id; lab.append(el("span", "hint", x[1]));
+    const sel = document.createElement("select"); sel.id = id;
+    [["", "Score…"], ["2", "2 · Yes / strong"], ["1", "1 · Maybe / so-so"], ["0", "0 · No / weak"]].forEach(o => sel.add(new Option(o[1], o[0])));
+    sel.value = st[k] == null ? "" : String(st[k]);
+    sel.onchange = () => { st[k] = sel.value === "" ? null : +sel.value; store.set(key, st); upd(); };
+    row.append(lab, sel); box.append(row);
+  });
+  upd(); box.append(totalBox); return box;
+}
+
+function renderModule(scroll){
+  const m = MODS[cur.m]; const i = cur.i; const main = $("main"); main.innerHTML = "";
+  markSeen(m.n, i); store.set("pos:" + m.n, i); store.set("last", { m: m.n, i });
+  const o = OUT.find(x => x.n === m.n);
+  const head = el("div", "mhead");
+  head.append(el("span", "eyebrow", "Module " + pad(m.n) + " of " + OUT.length + " · " + m.hours + " hours"));
+  const h1 = el("h1"); h1.textContent = o ? o.title : m.title; head.append(h1);
+  main.append(head);
+  const strip = el("div", "strip"); strip.setAttribute("aria-label", "Slides in this module");
+  const sn = seen(m.n);
+  m.slides.forEach((s, k) => {
+    const b = el("button"); b.type = "button"; b.title = (k + 1) + ". " + s.h.replace(/<[^>]+>/g, "");
+    b.setAttribute("aria-label", "Slide " + (k + 1) + ": " + b.title);
+    if(sn.has(k)) b.classList.add("seen"); if(k === i) b.setAttribute("aria-current", "true");
+    b.onclick = () => go("module", m.n, k); strip.append(b);
+  });
+  main.append(strip);
+  const sheet = el("article", "sheet"); sheet.setAttribute("aria-live", "polite");
+  const top = el("div", "sheet-top");
+  const label = el("span", "mono", "M-" + pad(m.n) + " · Slide " + (i + 1) + " / " + m.slides.length);
+  const tools = el("div"); tools.style.cssText = "display:flex;gap:8px;flex-wrap:wrap";
+  const rd = el("button", "ghost", "Read aloud"); rd.type = "button"; rd.setAttribute("aria-pressed", "false");
+  if(!("speechSynthesis" in window)) rd.hidden = true;
+  rd.onclick = () => {
+    if(speaking){ stopSpeech(); rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; return; }
+    const clone = sheet.querySelector(".sheet-body").cloneNode(true);
+    clone.querySelectorAll("details:not([open]) .inner, select, .src").forEach(x => x.remove());
+    try {
+      const u = new SpeechSynthesisUtterance(clone.innerText.replace(/\s+/g, " "));
+      u.rate = 0.95; u.onend = () => { speaking = false; rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; };
+      speechSynthesis.cancel(); speechSynthesis.speak(u); speaking = true; rd.setAttribute("aria-pressed", "true"); rd.textContent = "Stop reading";
+    } catch(e){ rd.hidden = true; }
+  };
+  tools.append(rd); top.append(label, tools);
+  sheet.append(top, renderSlide(m, i)); main.append(sheet);
+  const ctr = el("div", "controls");
+  const prev = el("button", "btn", "← Back"); prev.type = "button"; prev.disabled = i === 0;
+  prev.onclick = () => go("module", m.n, i - 1);
+  const next = el("button", "btn primary"); next.type = "button";
+  const last = i === m.slides.length - 1;
+  const nextMod = MODS[m.n + 1];
+  next.textContent = last ? (nextMod ? "Start Module " + (m.n + 1) + " →" : "Back to course map") : "Next →";
+  next.onclick = () => last ? (nextMod ? go("module", m.n + 1, 0) : go("home")) : go("module", m.n, i + 1);
+  ctr.append(prev, el("span", "kbd", "← → keys work too"), next);
+  main.append(ctr);
+  if(scroll) main.scrollIntoView({ block: "start", behavior: "auto" });
+}
+
+function render(scroll){
+  stopSpeech();
+  renderNav();
+  if(cur.view === "module" && MODS[cur.m]) renderModule(scroll); else { renderHome(); if(scroll) window.scrollTo(0, 0); }
+}
+
+document.addEventListener("keydown", e => {
+  if(cur.view !== "module") return;
+  const tag = (e.target.tagName || "").toLowerCase();
+  if(tag === "input" || tag === "select" || tag === "textarea" || e.metaKey || e.ctrlKey || e.altKey) return;
+  const m = MODS[cur.m];
+  if(e.key === "ArrowRight" && cur.i < m.slides.length - 1) go("module", m.n, cur.i + 1);
+  if(e.key === "ArrowLeft" && cur.i > 0) go("module", m.n, cur.i - 1);
+});
+
+cur = parseHash(); render(false);
+})();
+</script>

@@ -1,0 +1,1633 @@
+<title>Commercial Landscape Bidding</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500&family=Saira+Condensed:wght@600;700&display=swap">
+<style>
+/* Layout: a plan-set title block across the top, a sheet index of modules on the left, one slide "sheet" at a time on the right. */
+:root{
+  --paper:#f2f5f1;      /* page ground, a faint green-grey like vellum */
+  --sheet:#ffffff;      /* the slide surface */
+  --ink:#1b2a21;        /* text */
+  --muted:#56675c;      /* secondary text */
+  --line:#cfd9d0;       /* rules and borders */
+  --accent:#663c9e;     /* recycled-water purple pipe */
+  --accent-soft:#efe8f8;
+  --leaf:#2b7246;       /* examples, correct answers */
+  --leaf-soft:#e3f1e7;
+  --caution:#9a5a06;    /* watch-outs */
+  --caution-soft:#fbf0dc;
+  --wrong:#a3342a;
+  --wrong-soft:#f8e3e0;
+  --display:"Saira Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Atkinson Hyperlegible",Verdana,"Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#111813; --sheet:#18211b; --ink:#e3ebe5; --muted:#9caca1; --line:#2d3a31;
+  --accent:#b996ea; --accent-soft:#2a2138; --leaf:#7ccb98; --leaf-soft:#18301f;
+  --caution:#e6aa58; --caution-soft:#33270f; --wrong:#f0a197; --wrong-soft:#3a1d1a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111813; --sheet:#18211b; --ink:#e3ebe5; --muted:#9caca1; --line:#2d3a31;
+  --accent:#b996ea; --accent-soft:#2a2138; --leaf:#7ccb98; --leaf-soft:#18301f;
+  --caution:#e6aa58; --caution-soft:#33270f; --wrong:#f0a197; --wrong-soft:#3a1d1a; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.1;text-wrap:balance;margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+.mono{font-family:var(--mono);font-size:.82em;letter-spacing:.02em}
+
+/* Title block */
+.titleblock{border-bottom:2px solid var(--ink);background:var(--sheet)}
+.tb-inner{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:12px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;justify-content:space-between}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+.brand-k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.brand-n{font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:.01em;text-transform:uppercase;line-height:1.05}
+.tb-meta{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 14px}
+.tb-meta span{white-space:nowrap}
+
+/* Layout */
+.layout{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}}
+
+/* Sheet index (module nav) */
+.navtoggle{display:none;width:100%;text-align:left;background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-weight:700}
+@media (max-width:900px){.navtoggle{display:block}.sheetindex.collapsed{display:none}}
+.sheetindex{background:var(--sheet);border:1px solid var(--line);border-radius:6px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);max-height:calc(100vh - 40px);overflow:auto}
+@media (max-width:900px){.sheetindex{position:static;max-height:none;margin-top:8px}}
+.si-head{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:12px 14px 8px;border-bottom:1px solid var(--line)}
+.si-list{list-style:none;margin:0;padding:0}
+.si-item{border-bottom:1px solid var(--line)}
+.si-item:last-child{border-bottom:0}
+.si-btn{display:grid;grid-template-columns:42px minmax(0,1fr);gap:8px;width:100%;text-align:left;background:none;border:0;padding:9px 14px;align-items:start}
+.si-btn:hover{background:var(--paper)}
+.si-btn[aria-current="true"]{background:var(--accent-soft)}
+.si-btn[disabled]{cursor:default;opacity:.62}
+.si-btn[disabled]:hover{background:none}
+.si-no{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:2px}
+.si-t{font-size:14.5px;line-height:1.35;font-weight:700;display:block}
+.si-s{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center;margin-top:2px}
+.bar{height:4px;background:var(--line);border-radius:2px;flex:1;max-width:80px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--leaf)}
+
+/* Main */
+main{min-width:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.home-hero{display:grid;gap:10px;padding-block:6px 18px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.home-hero h1{font-size:clamp(34px,5vw,52px);text-transform:uppercase}
+.home-hero p{max-width:66ch;margin:0;font-size:18px}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.btn{border:1.5px solid var(--ink);background:var(--sheet);border-radius:6px;padding:9px 16px;font-weight:700;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--sheet)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:26px}
+.how div{border-top:3px solid var(--ink);padding-top:10px;min-width:0}
+.how h3{font-size:20px;text-transform:uppercase;margin-bottom:4px}
+.how p{margin:0;font-size:15.5px;color:var(--muted)}
+.tablewrap{overflow-x:auto;background:var(--sheet);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--paper)}
+td.num,th.num{text-align:right;white-space:nowrap}
+.status{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.status.ready{background:var(--leaf-soft);color:var(--leaf)}
+.status.soon{background:var(--paper);color:var(--muted);border:1px solid var(--line)}
+.rowlink{background:none;border:0;padding:0;text-align:left;font-weight:700;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.note{font-size:14px;color:var(--muted);max-width:75ch}
+
+/* Module header + slide */
+.mhead{display:grid;gap:6px;margin-bottom:14px}
+.mhead h1{font-size:clamp(28px,4vw,40px);text-transform:uppercase}
+.strip{display:flex;gap:3px;flex-wrap:wrap;margin-bottom:14px}
+.strip button{flex:1 1 14px;min-width:14px;max-width:44px;height:10px;border:0;border-radius:2px;background:var(--line);padding:0}
+.strip button.seen{background:var(--leaf)}
+.strip button[aria-current="true"]{background:var(--accent);height:14px;margin-top:-2px}
+.sheet{background:var(--sheet);border:1px solid var(--line);border-radius:8px;min-width:0}
+.sheet-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;padding:10px 20px;border-bottom:1px solid var(--line)}
+.sheet-body{padding:22px 24px 26px;display:grid;gap:16px;min-width:0}
+@media (max-width:520px){.sheet-body{padding:18px 16px 22px}.sheet-top{padding:10px 16px}}
+.sheet h2{font-size:clamp(26px,3.6vw,36px)}
+.lead{font-size:20px;line-height:1.5;margin:0;max-width:62ch}
+.prose{max-width:70ch;min-width:0}
+.prose p{margin:0 0 10px}
+.prose p:last-child{margin-bottom:0}
+.prose ul,.prose ol{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.prose li::marker{color:var(--accent)}
+.prose strong{font-weight:700}
+.prose table{font-size:15px}
+.prose .tablewrap{margin-block:4px}
+.callout{border-radius:6px;padding:12px 16px;max-width:72ch;min-width:0}
+.callout .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;display:block;margin-bottom:4px}
+.callout p{margin:0 0 8px}.callout p:last-child{margin:0}
+.callout ul,.callout ol{margin:0;padding-left:1.2em;display:grid;gap:4px}
+.ex{background:var(--leaf-soft)}.ex .lbl{color:var(--leaf)}
+.watch{background:var(--caution-soft)}.watch .lbl{color:var(--caution)}
+details.deeper{border:1px dashed var(--line);border-radius:6px;max-width:72ch}
+details.deeper summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--accent);list-style-position:inside}
+details.deeper .inner{padding:0 16px 14px}
+details.deeper .inner p{margin:0 0 8px}
+details.deeper .inner ul,details.deeper .inner ol{margin:0 0 8px;padding-left:1.2em;display:grid;gap:4px}
+.src{font-size:13.5px;color:var(--muted)}
+
+/* Cover slide */
+.cover-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px}
+@media (max-width:700px){.cover-grid{grid-template-columns:minmax(0,1fr)}}
+.objectives{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.timebox{border:1.5px solid var(--ink);border-radius:6px;padding:12px 16px;align-self:start}
+.timebox .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-block:6px;font-variant-numeric:tabular-nums}
+.timebox .row:last-child{border-bottom:0;font-weight:700}
+.bignum{font-family:var(--display);font-size:64px;line-height:1;color:var(--accent)}
+
+/* Diagrams */
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+.flow .node{border:1.5px solid var(--ink);border-radius:6px;padding:8px 12px;background:var(--sheet);min-width:0;flex:1 1 140px}
+.flow .node b{display:block;font-family:var(--display);font-size:19px;text-transform:uppercase;line-height:1.1}
+.flow .node span{font-size:13.5px;color:var(--muted)}
+.flow .node.you{border-color:var(--accent);background:var(--accent-soft)}
+.flow .arrow{align-self:center;color:var(--muted);font-family:var(--mono)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:st}
+.steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:8px 0;border-bottom:1px solid var(--line);counter-increment:st}
+.steps li:last-child{border-bottom:0}
+.steps li::before{content:counter(st,decimal-leading-zero);font-family:var(--mono);color:var(--accent);font-size:14px;padding-top:2px}
+.steps li b{display:block}
+.steps li.hl{background:var(--accent-soft);border-radius:4px}
+.twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.twocol>div{border:1px solid var(--line);border-radius:6px;padding:12px 14px;min-width:0}
+.twocol h3{font-size:21px;text-transform:uppercase;margin-bottom:6px}
+.twocol ul{margin:0;padding-left:1.2em;display:grid;gap:4px}
+
+/* Glossary */
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 22px}
+.terms div{border-bottom:1px solid var(--line);padding:9px 0;min-width:0}
+.terms dt{font-weight:700}
+.terms dd{margin:0;color:var(--muted);font-size:15.5px}
+
+/* Quiz */
+.q{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:8px}
+.q:first-child{border-top:0;padding-top:0}
+.q .qt{font-weight:700}
+.opts{display:grid;gap:6px}
+.opt{text-align:left;border:1.5px solid var(--line);background:var(--sheet);border-radius:6px;padding:8px 12px}
+.opt:hover:not([disabled]){border-color:var(--accent)}
+.opt[disabled]{cursor:default}
+.opt.right{border-color:var(--leaf);background:var(--leaf-soft)}
+.opt.wrong{border-color:var(--wrong);background:var(--wrong-soft)}
+.why{font-size:15px;margin:0;padding-left:12px;border-left:3px solid var(--line)}
+.score{font-family:var(--display);font-size:24px;text-transform:uppercase}
+
+/* Practice */
+.tasks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.task{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:start;border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.task.done{background:var(--leaf-soft);border-color:var(--leaf)}
+.task input{width:20px;height:20px;margin-top:3px;accent-color:var(--leaf)}
+.task label{font-weight:700;cursor:pointer}
+.task .d{font-size:15.5px;margin-top:3px}
+.task .d p{margin:0 0 6px}
+.task .d ul,.task .d ol{margin:0;padding-left:1.2em;display:grid;gap:3px}
+.task .hrs{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap;padding-top:3px}
+.tally{font-family:var(--mono);font-size:13px;color:var(--muted)}
+
+/* Scorer */
+.scorer{display:grid;gap:8px}
+.sc-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sc-row select{font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--sheet);color:var(--ink);max-width:150px}
+.sc-row .hint{display:block;font-size:13.5px;color:var(--muted)}
+.sc-total{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;border:1.5px solid var(--ink);border-radius:6px;padding:12px 16px}
+.sc-total .n{font-family:var(--display);font-size:40px;line-height:1}
+.sc-verdict{font-weight:700}
+
+/* Controls */
+.controls{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+.controls .mid{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.ghost{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px}
+.ghost[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
+.kbd{font-family:var(--mono);font-size:12px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.sheet{animation:in .16s ease-out}@keyframes in{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}}
+</style>
+
+<header class="titleblock">
+  <div class="tb-inner">
+    <a class="brand" href="#home" id="homeLink"><span class="brand-k">Course · Bid Division Training</span><span class="brand-n">Commercial Landscape Bidding</span></a>
+    <div class="tb-meta"><span>San Diego County</span><span>Private &amp; public work</span><span>C-27 landscape · irrigation · planting</span><span>16 modules · 100 hours</span></div>
+  </div>
+</header>
+<div class="layout">
+  <div>
+    <button class="navtoggle" id="navToggle" type="button" aria-expanded="false" aria-controls="sheetIndex">Course map ▾</button>
+    <nav class="sheetindex collapsed" id="sheetIndex" aria-label="Course modules"></nav>
+  </div>
+  <main id="main"></main>
+</div>
+
+<script>
+window.COURSE_OUTLINE = [
+  { n: 1,  hours: 6, title: "How Construction Bidding Works", desc: "The players, how money and paperwork move, private vs. public work, and how a contractor actually wins a job." },
+  { n: 2,  hours: 6, title: "Your License, Your Company and Getting Bid-Ready", desc: "B and C-27 licenses, the new-company question, insurance, bonds, DIR registration, SLBE/ELBE and the bid-ready folder." },
+  { n: 3,  hours: 6, title: "Finding Work and Deciding What to Bid", desc: "Getting on GC bid lists, bid platforms, public agency portals, reading a bid notice, go/no-go decisions and cash flow." },
+  { n: 4,  hours: 8, title: "Reading Landscape and Irrigation Plans", desc: "Sheet order, scales, legends, symbols, details, notes, and finding the civil and electrical sheets that touch your scope." },
+  { n: 5,  hours: 6, title: "Reading Specifications", desc: "The project manual, CSI Division 32, the Greenbook and the City of San Diego Whitebook, and spec items that change your price." },
+  { n: 6,  hours: 8, title: "Irrigation Takeoff", desc: "Counting heads, valves, controllers and backflow; measuring mainline and laterals by size; drip zones; sleeves and wire." },
+  { n: 7,  hours: 7, title: "Planting, Soil and Hardscape Takeoff", desc: "Plant counts by container size, square footage for groundcover and mulch, soil amendments, trees, boulders and DG." },
+  { n: 8,  hours: 5, title: "Pricing Materials and Working with Suppliers", desc: "Getting written quotes from irrigation supply houses and nurseries, tax, freight, escalation and keeping a price list." },
+  { n: 9,  hours: 7, title: "Labor, Production Rates and Equipment", desc: "Crew day cost, burden, production rates per unit, equipment and rentals, and checking estimates against finished jobs." },
+  { n: 10, hours: 5, title: "Overhead, Markup and Your Final Number", desc: "Knowing your real overhead, setting markup by job type, minimum margins and the final price review." },
+  { n: 11, hours: 6, title: "Prevailing Wage and Public Works Compliance", desc: "Wage determinations, certified payroll, apprentices, DIR enforcement and building those costs into a public bid." },
+  { n: 12, hours: 5, title: "Pre-Bid Meetings, RFIs, Addenda and Communication", desc: "What to ask at job walks, writing RFIs, tracking addenda, and how to talk to agencies and GC estimators." },
+  { n: 13, hours: 5, title: "Writing the Proposal", desc: "Scope letters, inclusions, exclusions, clarifications, alternates, unit prices and a proposal GCs can level easily." },
+  { n: 14, hours: 6, title: "Submitting Public Bids and Bid Day", desc: "Agency bid forms, bid bonds, subcontractor listing, SLBE/ELBE forms, electronic bidding and the bid opening." },
+  { n: 15, hours: 8, title: "Real Bid Practice: Price It, Then Compare to the Winner", desc: "Price real past San Diego landscape and irrigation bids, then compare your line items to the winning and losing bids." },
+  { n: 16, hours: 6, title: "After the Bid: Contracts, Billing and Growing the Division", desc: "Subcontracts, submittals, pay applications, retention, change orders, plant establishment and building a repeatable division." }
+];
+
+(window.COURSE_MODULES = window.COURSE_MODULES || []).push({
+n: 1, hours: 6, title: "How Construction Bidding Works",
+slides: [
+
+{ t: "cover",
+  h: "How Construction Bidding Works",
+  lead: "Before you price a single sprinkler head, you need to know how the commercial world works: who is involved, how money and paperwork move, and how a contractor wins a job.",
+  objectives: [
+    "Explain in your own words what a bid is and why it is a promise",
+    "Name every player on a commercial project and what each one does",
+    "Describe how contracts, bills and payments move between them",
+    "Tell the difference between private work and public work",
+    "Explain why the cheapest bid does not always win",
+    "Follow a bid from invitation to award, day by day"
+  ],
+  time: [["Reading and slides", "1.5 h"], ["Practice assignments", "4.5 h"], ["Module total", "6 h"]],
+  body: "<p>You already know how to install landscape and irrigation. This module adds the part nobody at the company knows yet: how commercial work is bought and sold.</p>"
+},
+
+{ h: "How to use this course",
+  lead: "Every slide starts in plain words. Extra detail is there when you want it, but you never need it to keep going.",
+  body: `<ul>
+<li><strong>Main text</strong> is what you must know. Read this on every slide.</li>
+<li><strong>Example</strong> boxes show how it looks on a real job.</li>
+<li><strong>Watch out</strong> boxes are mistakes that cost contractors money.</li>
+<li><strong>Go deeper</strong> opens extra detail: laws, numbers and fine print. Skip it the first time if you like.</li>
+<li><strong>Read aloud</strong> (top right of each slide) reads the slide to you.</li>
+<li><strong>Words to know</strong> near the end of each module lists new terms. Keep your own list too.</li>
+<li><strong>Practice</strong> is where most of the hours are. The course only works if you do the practice.</li>
+</ul>`,
+  deeper: `<p>About accuracy: fees, limits and rules change. Numbers in this course were checked in 2026. Before you rely on one for a real bid, confirm it at the source listed on the slide.</p>
+<p>This course is training, not legal advice. For how your company is set up, contracts and bonding, the right people are a construction attorney, a CPA and a surety (bonding) agent.</p>`
+},
+
+{ h: "What is a bid?",
+  lead: "A bid is a written promise: “We will do this exact work, under these conditions, for this price.”",
+  body: `<p>Every bid has three parts:</p>
+<ol>
+<li><strong>Scope.</strong> The work you will do. On commercial jobs this comes from the plans and specifications, not from a conversation.</li>
+<li><strong>Price.</strong> One total, often broken into line items.</li>
+<li><strong>Terms.</strong> What is <em>not</em> included (exclusions), assumptions you made, and how long the price is good for.</li>
+</ol>
+<p>If the client accepts it, your bid becomes the basis of a contract. You are expected to build it for that number.</p>`,
+  ex: `<p>“Landscape and irrigation per sheets L-1.0 to L-4.2 and spec sections 32 84 00 and 32 93 00, including 90-day plant establishment. Excludes permits, bonds and water meter fees. Total: $186,400. Price good for 60 days.”</p>`,
+  watch: `<p>Never send a number you are not willing to build for. “We'll fix it later” does not work in commercial bidding. A low number you can't live with is worse than losing the bid.</p>`,
+  deeper: `<p><strong>Public bids:</strong> in California, once public bids are opened you generally can't withdraw yours. The Public Contract Code (sections 5100–5110) gives relief only for certain clerical mistakes (not bad judgment), and you must notify the agency in writing within five working days after the bid opening.</p>
+<p><strong>Private bids to a GC:</strong> a subcontractor's bid can still bind you. In the California case <em>Drennan v. Star Paving</em> (1958), a GC used a sub's low bid in its own bid; the sub tried to back out, and the court held the sub to its price because the GC had relied on it. That idea, called promissory estoppel, is still applied today.</p>`,
+  src: "California Public Contract Code §§5100–5110; Drennan v. Star Paving Co., 51 Cal.2d 409 (1958)."
+},
+
+{ h: "Residential vs. commercial: what changes",
+  lead: "Installing landscape is the same skill. What changes is who hires you, the paperwork, the competition and how you get paid.",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th></th><th>Residential (what you know)</th><th>Commercial (what you're learning)</th></tr></thead>
+<tbody>
+<tr><td><strong>Who hires you</strong></td><td>A homeowner</td><td>A general contractor (GC), or a public agency directly</td></tr>
+<tr><td><strong>Who designs</strong></td><td>Often you</td><td>A landscape architect. You build exactly what is drawn.</td></tr>
+<tr><td><strong>Documents</strong></td><td>A sketch or an idea</td><td>A plan set, a specification book and a contract</td></tr>
+<tr><td><strong>How price is set</strong></td><td>You quote, they decide</td><td>Several contractors price the same plans; the comparison decides</td></tr>
+<tr><td><strong>Payment</strong></td><td>Deposit and progress payments</td><td>Monthly bill (“pay application”), paid 30–60+ days later, with 5–10% held back until the end (“retention”)</td></tr>
+<tr><td><strong>Paperwork</strong></td><td>Light</td><td>Insurance certificates, submittals, schedules, lien releases, certified payroll on public jobs</td></tr>
+<tr><td><strong>Changes</strong></td><td>Talk it over and adjust</td><td>Only by a written, signed change order</td></tr>
+<tr><td><strong>Schedule</strong></td><td>Flexible</td><td>Tied to the GC's schedule. Delays can cost you money.</td></tr>
+</tbody></table></div>`,
+  deeper: `<p>California's home improvement rules limit a homeowner down payment to 10% of the contract or $1,000, whichever is less (Business and Professions Code §7159). Commercial contracts don't have that cap, but they have their own terms: retention, pay-when-paid clauses, insurance requirements and more. You will read those in Module 16.</p>`,
+  src: "Cal. Business & Professions Code §7159."
+},
+
+{ h: "The players on a commercial project",
+  lead: "Every commercial job has the same cast. Learn who each one is, because each one affects your bid.",
+  body: `<div class="flow" role="list">
+<div class="node" role="listitem"><b>Owner</b><span>Pays for the project: a developer, business, HOA, city, school district</span></div>
+<div class="node" role="listitem"><b>Designers</b><span>Landscape architect, civil engineer, architect</span></div>
+<div class="node" role="listitem"><b>General contractor</b><span>Signs with the owner, runs the job, hires the trades</span></div>
+<div class="node you" role="listitem"><b>You: landscape sub</b><span>Irrigation, planting, soil, mulch, establishment</span></div>
+<div class="node" role="listitem"><b>Suppliers</b><span>Irrigation supply house, nurseries, soil yards, rental yards</span></div>
+<div class="node" role="listitem"><b>Inspectors</b><span>City inspector, owner's rep, agency resident engineer</span></div>
+</div>
+<ul>
+<li>The <strong>landscape architect (LA)</strong> draws the planting and irrigation plans and writes the landscape specs. They answer design questions and approve your products.</li>
+<li>The <strong>civil engineer</strong> draws grading, drainage and utilities. Your water source (the point of connection) is often on their sheets.</li>
+<li>The <strong>GC</strong> is your customer on most private jobs. Their estimator invites you to bid; their project manager and superintendent run the job.</li>
+</ul>`,
+  ex: `<p>A new drive-thru coffee shop. <strong>Owner:</strong> a developer. <strong>LA:</strong> draws three landscape sheets. <strong>GC:</strong> builds everything and hires you for landscape and irrigation. <strong>Suppliers:</strong> you buy irrigation parts from a supply house such as Ewing or SiteOne, and plants from a wholesale nursery. <strong>Inspector:</strong> the city checks the backflow device and the final landscape.</p>`
+},
+
+{ h: "How contracts, bills and money move",
+  lead: "Contracts flow down. Bills flow up. Money flows back down, slowly, with some held back.",
+  body: `<ol class="steps">
+<li><div><b>Owner signs a contract with the GC.</b>The GC promises to build the whole project.</div></li>
+<li class="hl"><div><b>GC signs a subcontract with you.</b>You promise to build the landscape scope.</div></li>
+<li><div><b>You buy from suppliers.</b>Purchase orders for pipe, heads, plants, soil.</div></li>
+<li class="hl"><div><b>Each month you bill the GC.</b>A “pay application” for the percent of work you finished.</div></li>
+<li><div><b>The GC bills the owner.</b>Your bill goes inside theirs.</div></li>
+<li><div><b>The owner pays the GC, then the GC pays you.</b>Often 30–60+ days after you billed, minus retention.</div></li>
+<li class="hl"><div><b>Retention comes at the end.</b>The 5–10% held back is released after the job is accepted.</div></li>
+</ol>`,
+  watch: `<p>You pay your crew every week and your suppliers within 30 days, but you may not see the GC's money for two months. A job can be profitable on paper and still run you out of cash. Module 3 shows this with real numbers.</p>`,
+  deeper: `<ul>
+<li>On private jobs in California, a GC generally must pay a sub within 7 days of receiving payment for that sub's work, unless the contract says otherwise (Business and Professions Code §7108.5).</li>
+<li>On California public works, retention is generally capped at 5% (Public Contract Code §7201).</li>
+<li>Many subcontracts include “pay-when-paid” language. It affects how long you wait, so read it before you sign.</li>
+<li>With each payment you sign a lien release. California uses statutory forms (Civil Code §§8132–8138). Never sign an unconditional release before the money clears.</li>
+</ul>`,
+  src: "Cal. B&P Code §7108.5; Public Contract Code §7201; Civil Code §§8132–8138."
+},
+
+{ h: "The life of a project",
+  lead: "Landscape is one of the last trades on most jobs. You bid early, but you may install many months later.",
+  body: `<ol class="steps">
+<li><div><b>Design</b>The owner hires designers. Plans and specs are drawn.</div></li>
+<li class="hl"><div><b>Bidding</b>GCs and subs price the plans. This is what this course teaches.</div></li>
+<li><div><b>Award and contract</b>The owner picks a GC. The GC picks subs and signs subcontracts.</div></li>
+<li class="hl"><div><b>Submittals</b>You send product data, plant sources, soil tests and samples for approval before you order.</div></li>
+<li><div><b>Construction</b>Grading, utilities, building, paving. You install sleeves early, then come back near the end.</div></li>
+<li class="hl"><div><b>Landscape installation</b>Irrigation, soil prep, planting, mulch, controller programming.</div></li>
+<li><div><b>Inspection and punch list</b>The LA and inspector walk the job and list fixes.</div></li>
+<li class="hl"><div><b>Plant establishment / maintenance period</b>You water, weed and replace dead plants for a set time, often 90 days or more.</div></li>
+<li><div><b>Final acceptance and warranty</b>Retention is released. Your warranty period starts, often one year.</div></li>
+</ol>`,
+  ex: `<p>You bid an apartment project in March. The building takes 14 months. You install landscape the next May. If plant or PVC prices rise 8% in that time, that comes out of your profit unless your bid planned for it.</p>`,
+  deeper: `<p>The plant establishment (or maintenance) period is set in the specs. Public projects often require 90 days to a year, sometimes longer, with weekly visits, reports and plant replacement. It is real labor that must be in your price. Module 5 shows where to find it in the specs.</p>`
+},
+
+{ h: "Two markets: private and public",
+  lead: "Private and public jobs use the same estimating skills but different rules. You will learn both.",
+  body: `<div class="twocol">
+<div><h3>Private work</h3><ul>
+<li>Owner is a business, developer or HOA</li>
+<li>You usually bid to a GC, not the owner</li>
+<li>The GC can pick any sub it wants, not only the lowest</li>
+<li>Relationships matter a lot</li>
+<li>Invites come by email and bid platforms</li>
+<li>Prices can be discussed and adjusted</li>
+<li>Prevailing wage usually doesn't apply</li>
+</ul></div>
+<div><h3>Public work</h3><ul>
+<li>Owner is a city, county, school district, water district or state agency</li>
+<li>Must be advertised; any qualified contractor can bid</li>
+<li>Award goes to the “lowest responsive, responsible bidder”</li>
+<li>All bid prices become public after opening</li>
+<li>Strict forms and deadlines; small mistakes get bids thrown out</li>
+<li>Prevailing wage, DIR registration and certified payroll apply</li>
+<li>Bonds are usually required</li>
+</ul></div>
+</div>`,
+  watch: `<p>Some “private” projects are paid partly with public money, such as affordable housing with city or state funds. That can make them public works for prevailing wage. Always check the bid documents for prevailing wage language.</p>`,
+  deeper: `<p>California Labor Code §1720(a)(1) defines public works as construction “paid for in whole or in part out of public funds.” That is why some privately owned projects still require prevailing wages.</p>`,
+  src: "Cal. Labor Code §1720."
+},
+
+{ h: "How projects get contracted",
+  lead: "How the owner hires the GC changes how and when you get to bid.",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th>Method</th><th>In plain words</th><th>What it means for you</th></tr></thead>
+<tbody>
+<tr><td><strong>Design-bid-build</strong></td><td>Design is finished, then contractors bid, then it gets built. Most common on public work.</td><td>You bid on finished plans. Price competition is strongest.</td></tr>
+<tr><td><strong>Hard bid</strong></td><td>Lowest qualified price wins.</td><td>Your number has to be sharp, and your scope complete.</td></tr>
+<tr><td><strong>Negotiated</strong></td><td>A private owner picks a GC they trust.</td><td>The GC still asks subs for prices, but may also weigh relationships and quality.</td></tr>
+<tr><td><strong>Design-build</strong></td><td>One team designs and builds.</td><td>You may help design the irrigation system and give budgets early.</td></tr>
+<tr><td><strong>CM at risk / CMAR</strong></td><td>A builder joins the team during design and guarantees a maximum price.</td><td>You may give early budget numbers, then bid formally later.</td></tr>
+</tbody></table></div>`,
+  ex: `<p>A school district hires a GC by CMAR to modernize a campus. In design, the GC asks you for a budget price for the new playfield irrigation. Months later, the GC sends out formal bid packages and you bid the final plans with other landscape subs.</p>`
+},
+
+{ h: "Where a landscape contractor fits",
+  lead: "Depending on the job, you are either a subcontractor to a GC or the main (“prime”) contractor yourself.",
+  body: `<div class="twocol">
+<div><h3>As a subcontractor</h3><ul>
+<li>Landscape on buildings: retail centers, offices, apartments, hotels, medical, schools</li>
+<li>Landscape on bigger civil jobs, under a general engineering (Class A) contractor: street projects, large parks, stormwater basins</li>
+<li>Your customer is the GC</li>
+</ul></div>
+<div><h3>As the prime contractor</h3><ul>
+<li>Landscape-only public jobs: median planting, park irrigation retrofits, water-saving turf conversions, landscape renovations</li>
+<li>Only when the bid notice allows your license class (Module 2)</li>
+<li>Your customer is the agency, and you handle all the paperwork</li>
+</ul></div>
+</div>`,
+  ex: `<p>Typical San Diego County landscape bids: a median irrigation retrofit for a city, a school field renovation, planting and irrigation for a new apartment complex, an HOA common-area renovation, planting in a stormwater basin on a street project, and landscape for a new medical office building.</p>`
+},
+
+{ h: "“Lowest responsive, responsible bidder”",
+  lead: "Public jobs don't go to the lowest number alone. They go to the lowest bid that followed the rules, from a company that can do the work.",
+  body: `<ul>
+<li><strong>Lowest:</strong> the lowest total price.</li>
+<li><strong>Responsive:</strong> the bid follows the instructions exactly. Every form filled and signed, every addendum acknowledged, the bid bond included, subcontractors listed, submitted on time.</li>
+<li><strong>Responsible:</strong> the company can actually do the job: right license, registered with DIR, experience, a clean record, financial strength.</li>
+</ul>
+<p>Miss any one and the agency can throw out your bid, even if it was the cheapest.</p>`,
+  ex: `<p>Bidder A: $412,000, everything complete. Bidder B: $398,000, but forgot to acknowledge Addendum 2, which added 40 trees. The agency finds Bidder B non-responsive and awards to Bidder A. Bidder B did all the work of estimating for nothing.</p>`,
+  deeper: `<p>Agencies can choose to waive a truly minor irregularity that gives no bidder an advantage. You can't count on it. Anything that touches price, such as an addendum or a missing bond, usually can't be waived.</p>`
+},
+
+{ h: "What's inside a bid package",
+  lead: "When you get invited to bid, you receive a package of documents. All of it matters, not only the drawings.",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th>Document</th><th>What it tells you</th></tr></thead>
+<tbody>
+<tr><td><strong>Invitation to bid / Notice inviting bids</strong></td><td>Project name, due date and time, where to submit, job walk date, license needed, bond needed</td></tr>
+<tr><td><strong>Instructions to bidders</strong></td><td>The rules for how to bid. Follow them exactly.</td></tr>
+<tr><td><strong>Bid form</strong></td><td>The form your price goes on. Public jobs often have line items with quantities.</td></tr>
+<tr><td><strong>Plans (drawings)</strong></td><td>What to build and where. Landscape sheets usually start with “L”.</td></tr>
+<tr><td><strong>Specifications (project manual)</strong></td><td>Products, quality, methods, testing, warranty, establishment period</td></tr>
+<tr><td><strong>Addenda</strong></td><td>Changes issued during bidding. Each one changes the job.</td></tr>
+<tr><td><strong>Contract and bond forms</strong></td><td>What you'll sign if you win</td></tr>
+<tr><td><strong>Wage information</strong></td><td>On public work: prevailing wage requirements</td></tr>
+<tr><td><strong>Reports</strong></td><td>Soil or geotechnical reports, sometimes an agronomic soil test</td></tr>
+</tbody></table></div>`,
+  watch: `<p>The landscape sheets aren't the only ones that matter. The water meter and point of connection may be on civil sheets, and controller power on electrical sheets. Module 4 teaches you to search the whole set.</p>`
+},
+
+{ h: "What a landscape scope usually includes",
+  lead: "Commercial landscape bids are bigger than “plants and sprinklers.” Here is what usually falls in your package.",
+  body: `<div class="twocol">
+<div><h3>Irrigation</h3><ul>
+<li>Point of connection to the water source</li>
+<li>Backflow preventer and enclosure</li>
+<li>Master valve and flow sensor</li>
+<li>Controller, weather or soil sensor</li>
+<li>Mainline (pressure pipe), by size</li>
+<li>Remote control valves and valve boxes</li>
+<li>Lateral lines, spray heads, rotors, drip</li>
+<li>Control wire, sleeves under paving</li>
+<li>Testing, as-built drawings, controller chart</li>
+</ul></div>
+<div><h3>Planting</h3><ul>
+<li>Weed removal before planting</li>
+<li>Fine grading</li>
+<li>Soil testing and amendments</li>
+<li>Trees with staking or guying, and root barrier</li>
+<li>Shrubs and groundcover by container size</li>
+<li>Turf: sod or seed (less common now)</li>
+<li>Mulch, decomposed granite, boulders</li>
+<li>Plant establishment / maintenance period</li>
+<li>Warranty and plant replacement</li>
+</ul></div>
+</div>`,
+  watch: `<p>Sleeves under paving are often drawn on the landscape sheets but must be installed before paving, months before you start. Ask early who installs them.</p>`
+},
+
+{ h: "Bid leveling: how a GC compares subs",
+  lead: "GCs don't just pick the lowest number. They line up every bid and fill in anything missing with their own estimate, called a “plug.”",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th>Item</th><th class="num">Sub A</th><th class="num">Sub B</th><th class="num">Sub C</th></tr></thead>
+<tbody>
+<tr><td>Base bid as submitted</td><td class="num">$182,000</td><td class="num">$164,000</td><td class="num">$176,000</td></tr>
+<tr><td>90-day establishment</td><td class="num">Included</td><td class="num">Excluded → plug $14,000</td><td class="num">Included</td></tr>
+<tr><td>Backflow and enclosure</td><td class="num">Included</td><td class="num">Excluded → plug $6,000</td><td class="num">Included</td></tr>
+<tr><td>Sleeves under paving</td><td class="num">Included</td><td class="num">Included</td><td class="num">Included</td></tr>
+<tr><td><strong>Leveled total</strong></td><td class="num"><strong>$182,000</strong></td><td class="num"><strong>$184,000</strong></td><td class="num"><strong>$176,000</strong></td></tr>
+</tbody></table></div>
+<p>Sub B looked cheapest, but after leveling, Sub C is the real low bid. The GC calls Sub C.</p>`,
+  ex: `<p>The lesson for you: a complete, clear bid is easier for a GC to say yes to. If you exclude something, say it plainly so the GC isn't surprised later. That builds trust, and trust gets you invited again.</p>`,
+  deeper: `<p>GCs usually plug missing items on the high side to protect themselves. So a missing item can make a sub look more expensive than they really are. Clear inclusions and exclusions keep the comparison fair. Module 13 covers how to write them.</p>`
+},
+
+{ h: "Why bids are won and lost",
+  lead: "Price matters most, but plenty of bids are lost before price is even compared.",
+  body: `<div class="twocol">
+<div><h3>Common reasons for losing</h3><ul>
+<li>Price too high (often from missing production efficiency or a high markup)</li>
+<li>Scope gaps or unclear exclusions</li>
+<li>Late. Even one minute late on a public bid.</li>
+<li>Missing forms, signatures, bond or addenda</li>
+<li>Not registered (DIR) or wrong license class</li>
+<li>No relationship; the GC already trusts another sub</li>
+<li>Can't meet the schedule or insurance requirements</li>
+</ul></div>
+<div><h3>What winners do</h3><ul>
+<li>Read every document, including addenda</li>
+<li>Know their real costs from past jobs</li>
+<li>Send clean, complete, easy-to-compare proposals</li>
+<li>Submit early and confirm it was received</li>
+<li>Follow up after bid day and ask for feedback</li>
+<li>Track results and learn the market's prices</li>
+<li>Keep relationships with GC estimators</li>
+</ul></div>
+</div>`
+},
+
+{ h: "A bid from start to finish",
+  lead: "A typical bid takes two to four weeks from invitation to due date. Here's what happens along the way.",
+  body: `<ol class="steps">
+<li><div><b>Day 1: Invitation arrives</b>Download everything. Put the due date and job walk on the calendar. Decide go or no-go.</div></li>
+<li><div><b>Day 3: Job walk / pre-bid meeting</b>See the site. Note access, existing conditions, water source.</div></li>
+<li class="hl"><div><b>Days 3–12: Study and take off</b>Read plans and specs. Count and measure everything.</div></li>
+<li><div><b>Day 10: Question deadline</b>Last day to send RFIs (questions).</div></li>
+<li><div><b>Day 13: Last addendum</b>Answers and changes are issued. Update your takeoff.</div></li>
+<li class="hl"><div><b>Days 12–16: Price it</b>Supplier quotes, labor, equipment, overhead and markup.</div></li>
+<li><div><b>Day 17: Sub bids due to GCs</b>Often the day before, or the morning of, the GC's deadline.</div></li>
+<li><div><b>Day 18, 2:00 PM: GC bids due to the owner</b>Public bids are opened and read, often the same day.</div></li>
+<li><div><b>Weeks later: Award and contract</b>Then the notice to proceed, the official start.</div></li>
+</ol>`,
+  deeper: `<p>On public jobs the bid results (“bid tabulation” or “bid tab”) are usually posted online within days. Even when you don't bid, these are a free education in what the market pays. Module 3 shows how to read them.</p>`
+},
+
+{ h: "Bid day, for real",
+  lead: "On bid day a GC estimator is collecting dozens of prices from every trade in a few hours. Make it easy for them.",
+  body: `<ul>
+<li><strong>Send your scope early</strong> (a day or two before) so the estimator can read it before the rush.</li>
+<li><strong>Send your price on time</strong>, using the GC's bid form if they have one.</li>
+<li><strong>Confirm they received it.</strong> A short call or email: “Did you get our landscape number?”</li>
+<li><strong>Be reachable.</strong> Estimators call with last-minute questions. A missed call can mean a missed job.</li>
+<li><strong>Send to every GC</strong> bidding the project, not only one. Each GC is a separate chance to win.</li>
+</ul>`,
+  watch: `<p>Many subs send their price in the final hour so competitors can't “shop” it. That's normal, but if your email arrives after the GC has finished their spreadsheet, you're out. Know each GC's cutoff time.</p>`
+},
+
+{ h: "What carries over, and what's new",
+  lead: "You're not starting from zero. Your field knowledge is a big advantage once you add the office skills.",
+  body: `<div class="twocol">
+<div><h3>You already have</h3><ul>
+<li>How irrigation systems are built</li>
+<li>Plant knowledge and sizes</li>
+<li>How long installation really takes</li>
+<li>Supplier relationships</li>
+<li>A crew that knows the work</li>
+<li>A C-27 license and history</li>
+</ul></div>
+<div><h3>You're adding</h3><ul>
+<li>Reading formal plans and specifications</li>
+<li>Precise takeoffs and estimating</li>
+<li>Written communication: RFIs, proposals</li>
+<li>Insurance, bonds and registrations</li>
+<li>Public works rules and prevailing wage</li>
+<li>Tracking bids and learning from results</li>
+</ul></div>
+</div>`,
+  ex: `<p>Many new commercial estimators come from the office and have never installed a valve. You have the opposite advantage: when you count labor hours, you know what a day of trenching really looks like. Keep that advantage as you learn the paperwork.</p>`
+},
+
+{ t: "terms", h: "Words to know",
+  lead: "Add these to your own notebook. You'll see every one of them again.",
+  terms: [
+    ["Bid", "A written promise to do specific work for a specific price."],
+    ["General contractor (GC)", "The company hired by the owner to build the whole project. Hires subs."],
+    ["Subcontractor (sub)", "A specialty company hired by the GC for one part of the work."],
+    ["Prime contractor", "The contractor hired directly by the owner. On landscape-only jobs, that can be you."],
+    ["Owner", "Whoever pays for the project: developer, business, HOA or agency."],
+    ["Landscape architect (LA)", "Designs the landscape and irrigation and writes the landscape specs."],
+    ["Scope of work", "Exactly what work is included in your bid."],
+    ["Plans / drawings", "The sheets showing what to build and where."],
+    ["Specifications (specs)", "The written book of products, methods and requirements."],
+    ["Addendum (plural: addenda)", "An official change to the bid documents issued before bids are due."],
+    ["Takeoff", "Counting and measuring everything on the plans."],
+    ["RFI", "Request for information. A written question about the documents."],
+    ["Bid leveling", "When the GC compares sub bids side by side and fills gaps."],
+    ["Plug", "The GC's own estimate for something a sub left out."],
+    ["Pay application", "Your monthly bill for the work completed."],
+    ["Retention", "Part of each payment (often 5–10%) held back until the job is finished."],
+    ["Change order", "A signed, written change to the contract scope or price."],
+    ["Punch list", "The list of fixes found at the final walk-through."],
+    ["Plant establishment period", "Time after planting when you maintain and replace plants, set by the specs."],
+    ["Prevailing wage", "Minimum wages set by the state for public works."],
+    ["Responsive", "A bid that followed all the instructions."],
+    ["Responsible", "A bidder able to do the work: licensed, registered, qualified."],
+    ["Bid tab", "The posted list of every bidder's price after a public bid opening."],
+    ["Notice to proceed (NTP)", "The official go-ahead to start the work."]
+  ]
+},
+
+{ t: "quiz", id: "m1", h: "Check yourself",
+  lead: "Tap an answer to see if you got it. You can try again any time.",
+  qs: [
+    { q: "What is a bid?", a: ["A rough guess at the cost", "A written promise to do specific work for a specific price", "A question about the plans"], c: 1, why: "A bid is a promise. If it's accepted, it becomes the basis of a contract you're expected to honor." },
+    { q: "On a new office building, who usually hires the landscape contractor?", a: ["The owner directly", "The landscape architect", "The general contractor"], c: 2, why: "On building projects, the GC holds the contract with the owner and hires the trades as subs." },
+    { q: "What is retention?", a: ["Part of each payment held back until the job is finished", "A penalty for being late", "The deposit the owner pays up front"], c: 0, why: "Retention (often 5–10%, capped at 5% on most California public works) is released after the job is accepted." },
+    { q: "Sub B had the lowest number but excluded the maintenance period. What will the GC most likely do?", a: ["Award to Sub B because it's cheapest", "Add a plug for the missing maintenance and compare again", "Ask the owner to remove the maintenance period"], c: 1, why: "That's bid leveling. After plugs are added, a 'cheap' bid often isn't the lowest anymore." },
+    { q: "A public bid is the lowest but the bidder forgot to acknowledge an addendum. What can happen?", a: ["Nothing, the price is all that matters", "The bid can be rejected as non-responsive", "The agency must call the bidder to fix it"], c: 1, why: "Public jobs go to the lowest responsive, responsible bidder. Missing an addendum usually makes a bid non-responsive." },
+    { q: "Which is usually TRUE of public work but not most private work?", a: ["Prevailing wage and DIR registration apply", "Relationships decide who wins", "Prices are kept secret after bidding"], c: 0, why: "Public works require prevailing wages and DIR registration, and bid results are public." },
+    { q: "How are changes made on a commercial job?", a: ["A phone call with the superintendent", "A written, signed change order", "Adding it to the next invoice"], c: 1, why: "Without a signed change order, extra work is often never paid." },
+    { q: "Why does landscape bidding carry extra price risk?", a: ["Plants are always on sale", "Landscape is installed near the end, often months after the bid", "Landscape contracts can't be changed"], c: 1, why: "Prices for plants, pipe and labor can rise between bid day and installation. Your bid should account for it." }
+  ]
+},
+
+{ t: "practice", id: "m1", h: "Practice assignments",
+  lead: "This is where the learning happens. Check each one off when it's done.",
+  items: [
+    { h: "Set up your bid notebook", hrs: 0.25, d: "<p>Start a binder or digital notebook with three sections: Words to know, Questions to ask, and Bid log. Copy this module's terms into it in your own words.</p>" },
+    { h: "Map a real project you know", hrs: 0.5, d: "<p>Pick a shopping center, apartment complex or office near you with commercial landscape. Write down who the owner, GC and landscape architect probably were. Look for construction signs, ask the property manager, or search the City's permit records. Draw the contract chain from this module.</p>" },
+    { h: "Take the City's free bidding tutorials", hrs: 1.5, d: "<p>Go to <a href=\"https://www.sandiego.gov/cip/bidopps/doingbusiness\" target=\"_blank\" rel=\"noopener\">City of San Diego · Doing CIP Business</a> and work through the online tutorials. Write down 10 things you learned and 3 questions you still have.</p>" },
+    { h: "Open one real bid package", hrs: 1, d: "<p>From the City's bid opportunities page (PlanetBids), find a closed project that includes landscape or irrigation. You may need a free vendor account. List every document in the package, then find the bid results and write down the low bid and the number of bidders.</p>" },
+    { h: "Interview your boss", hrs: 0.5, d: "<p>Ask and write down:</p><ul><li>The three largest jobs the company has done, and their dollar size</li><li>Crew sizes and equipment we own</li><li>Our main suppliers and nurseries</li><li>Any HOA, commercial or public work done before</li><li>What size of commercial job the owner is comfortable starting with</li></ul>" },
+    { h: "Explain it back", hrs: 0.75, d: "<p>Write one page, or explain out loud to a coworker, how a commercial landscape bid works from invitation to payment. Use at least 10 words from the Words to know list. If you get stuck, that's the part to reread.</p>" }
+  ]
+},
+
+{ h: "Module 1 summary",
+  lead: "You now know how the commercial world is set up. Next, you'll make sure the company is legally and practically ready to bid.",
+  body: `<ul>
+<li>A bid is a promise. Scope, price and terms must all be clear.</li>
+<li>On most commercial jobs you're a sub to a GC. On landscape-only public jobs you can be the prime.</li>
+<li>Contracts flow down, bills flow up, money flows back down slowly, with retention held.</li>
+<li>Private work runs on relationships and bid leveling. Public work runs on strict rules and the lowest responsive, responsible bid.</li>
+<li>Complete, clear and on-time bids win more often than cheap, confusing ones.</li>
+</ul>
+<p><strong>Next: Module 2 · Your License, Your Company and Getting Bid-Ready.</strong></p>`
+}
+]
+});
+
+(window.COURSE_MODULES = window.COURSE_MODULES || []).push({
+n: 2, hours: 6, title: "Your License, Your Company and Getting Bid-Ready",
+slides: [
+
+{ t: "cover",
+  h: "Your License, Your Company and Getting Bid-Ready",
+  lead: "A bid from a company that isn't licensed, registered, insured and bondable for that job gets thrown out, no matter how good the price is. This module gets the company ready before you bid.",
+  objectives: [
+    "Explain what the B and C-27 licenses allow on commercial and public work",
+    "Understand why a license can't move to a new company, and what that means",
+    "Describe the insurance GCs and agencies require, and what a COI is",
+    "Explain bid bonds, performance bonds and payment bonds",
+    "Register with DIR and know when registration is required",
+    "Understand SLBE/ELBE certification and why it helps",
+    "Build the company's bid-ready folder"
+  ],
+  time: [["Reading and slides", "1.5 h"], ["Practice assignments", "4.5 h"], ["Module total", "6 h"]],
+  body: "<p>Most of this module is set up once, then kept current. Doing it well now saves you from scrambling on every bid.</p>"
+},
+
+{ h: "Why paperwork comes before pricing",
+  lead: "On commercial and public jobs, your company has to qualify before your price is even looked at.",
+  body: `<p>Before a GC or agency compares prices, they check:</p>
+<ul>
+<li>Is the license active, and is it the right class for this work?</li>
+<li>Is the company registered with the state for public work (DIR)?</li>
+<li>Does the insurance meet their limits?</li>
+<li>Can the company get the bonds the job requires?</li>
+<li>Does the company have experience and a safety record?</li>
+</ul>
+<p>Any “no” can end your chances. The good news: once this is set up, it carries over to every bid.</p>`,
+  ex: `<p>A GC's estimator likes your number but their prequalification form shows no bonding letter and an expired insurance certificate. They give the job to the next sub on the list, who sent everything the first time.</p>`
+},
+
+{ h: "California contractor licenses, the basics",
+  lead: "In California the Contractors State License Board (CSLB) licenses contractors. A license belongs to a business, not a person.",
+  body: `<ul>
+<li><strong>The license belongs to the business entity</strong>: a sole owner, partnership, corporation or LLC.</li>
+<li><strong>A qualifying individual (the “qualifier”)</strong> passed the exams or was waived and is responsible for the company's construction work. A qualifier is either an <strong>RMO</strong> (responsible managing officer, an owner or officer) or an <strong>RME</strong> (responsible managing employee).</li>
+<li><strong>Classifications</strong> say what work the company can do:
+  <ul>
+  <li><strong>A:</strong> general engineering (streets, utilities, large civil work)</li>
+  <li><strong>B:</strong> general building (structures)</li>
+  <li><strong>C-xx:</strong> specialty trades. <strong>C-27 is Landscaping.</strong></li>
+  </ul></li>
+</ul>`,
+  deeper: `<p>California requires a license for any job of $1,000 or more in labor and materials combined, or any job that needs a building permit (B&P Code §7048; the limit was $500 before 2025). On commercial and public work you'll always be over that.</p>
+<p>Look up any company's license, including competitors and GCs, with CSLB's free Instant License Check. It shows classifications, bond, workers' comp, and any complaints or discipline.</p>`,
+  src: "CSLB, cslb.ca.gov; Cal. B&P Code §§7048, 7055–7059, 7068."
+},
+
+{ h: "What your B and C-27 licenses allow",
+  lead: "For commercial landscape and irrigation bids, the C-27 is the license that matters. The B alone isn't enough.",
+  body: `<div class="twocol">
+<div><h3>C-27 Landscaping</h3><ul>
+<li>Landscape systems for public and private property</li>
+<li>Grading and preparing land for landscape</li>
+<li>Irrigation systems</li>
+<li>Planting, soil prep, mulch</li>
+<li>Landscape hardscape such as walks, low garden walls, patios and drainage tied to the landscape</li>
+<li>Lets you bid landscape as a sub, or as prime on landscape-only jobs</li>
+</ul></div>
+<div><h3>B General Building</h3><ul>
+<li>Lets you be the GC on buildings</li>
+<li><strong>Can't</strong> take a contract for one specialty trade (like landscape only) unless it also includes framing or carpentry, or you hold that specialty license</li>
+<li>So a B alone can't bid a landscape-only subcontract</li>
+<li>With the C-27 too, the company can do both</li>
+</ul></div>
+</div>`,
+  watch: `<p>Read the official CSLB wording for C-27 before bidding anything unusual, like large retaining walls, pools, fountains, electrical for site lighting, or major grading. Those may need another classification.</p>`,
+  deeper: `<p>B&P Code §7057 limits a B contractor from taking a contract for a single specialty trade other than framing or carpentry, unless the B contractor also holds that specialty license or subcontracts the work to someone who does. The C-27 description comes from CSLB's classification regulations (California Code of Regulations, Title 16, §832.27).</p>`,
+  src: "Cal. B&P Code §7057; 16 CCR §832.27; CSLB classification pages."
+},
+
+{ h: "Who can bid what on public work",
+  lead: "Each public bid notice says which license class can bid as the prime. Check it before you spend any time.",
+  body: `<ul>
+<li><strong>Landscape-only jobs</strong> (median planting, park irrigation retrofits, turf conversions) often allow a C-27 prime. You bid directly to the agency.</li>
+<li><strong>Mixed civil jobs</strong> (streets, parks with grading, concrete and utilities) often require an <strong>A</strong> license to be prime. You bid your landscape scope to the A contractors as a sub.</li>
+<li><strong>Building jobs</strong> (schools, libraries, fire stations) usually require a <strong>B</strong> prime. Your company's B could let it bid as GC, but that's a different business. For this division you'd normally bid landscape to the B contractors.</li>
+</ul>`,
+  ex: `<p>Notice says: “Bidders must possess a valid Class A or C-27 license at the time of bid.” → Your company can bid as prime.</p>
+<p>Notice says: “Class A license required.” → You can't be prime. Find out which A contractors are bidding (often listed on the planholders list) and send them your landscape price.</p>`,
+  deeper: `<p>B&P Code §7059 lets the awarding agency decide which classifications can bid, and allows a specialty contractor to bid when the work is in its specialty. Public Contract Code §3300 requires agencies to state the license class in the bid documents.</p>`,
+  src: "Cal. B&P Code §7059; Public Contract Code §3300."
+},
+
+{ h: "The new company question",
+  lead: "If the company forms a new business to bid commercial work, that new business needs its own license. Licenses can't be transferred.",
+  body: `<ul>
+<li>CSLB ties the license to the business entity. A new LLC or corporation must apply for its own license, even with the same qualifier.</li>
+<li>An existing qualifier can often skip the exams by applying with an exam waiver.</li>
+<li>The new entity will usually get a <strong>new license number</strong>, with no work history attached.</li>
+<li>Until that license is issued, the new company can't bid.</li>
+</ul>
+<p><strong>The qualifier rules decide what's possible:</strong></p>
+<ul>
+<li>An <strong>RMO</strong> can qualify more than one company only if there's at least 20% common ownership, and no more than three firms in one year.</li>
+<li>An <strong>RME</strong> can qualify only one active license and must work at least 32 hours a week (or 80% of operating hours) for it.</li>
+<li>If a qualifier leaves a license, that company has 90 days to replace them or the license is suspended.</li>
+</ul>`,
+  watch: `<p>A new company starts with no track record. Sureties set bonding from financial history, and prequalification forms ask for years in business and completed projects. The new company will qualify for smaller jobs at first, even with the same people.</p>`,
+  ex: `<p><strong>Decision for the owner:</strong> bid under the existing company (license, history and financials already in place), or start the new company (cleaner separation, but slower start)? There can be good liability or tax reasons for a new company. This is a question for a construction attorney, a CPA and a surety agent together, and it should be settled before any registrations are done, because they all attach to one entity.</p>`,
+  deeper: `<p>An LLC license requires a $100,000 employee/worker bond in addition to the standard $25,000 contractor bond, and liability insurance of at least $1 million (more with more than five listed members). A corporation needs only the $25,000 contractor bond.</p>
+<p>CSLB reissues an existing license number only in limited cases. Ask CSLB directly if you think yours qualifies.</p>`,
+  src: "CSLB: Change in Business Entity; CSLB: Licenses for LLCs; Cal. B&P Code §§7068.1, 7071.6, 7071.6.5, 7071.19."
+},
+
+{ h: "Insurance: what GCs and agencies ask for",
+  lead: "Every commercial job requires proof of insurance, called a certificate of insurance (COI). The contract sets the limits and wording.",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th>Coverage</th><th>What it covers</th><th>Commonly required</th></tr></thead>
+<tbody>
+<tr><td><strong>General liability (GL)</strong></td><td>Injury or damage you cause to others</td><td>$1M per occurrence / $2M aggregate</td></tr>
+<tr><td><strong>Auto liability</strong></td><td>Your trucks and vehicles</td><td>$1M combined single limit</td></tr>
+<tr><td><strong>Workers' compensation</strong></td><td>Your employees' injuries. Required by law if you have employees.</td><td>Statutory, plus $1M employer's liability</td></tr>
+<tr><td><strong>Umbrella / excess</strong></td><td>Extra coverage above the others</td><td>$1M–$5M on larger jobs</td></tr>
+</tbody></table></div>
+<p>Those are typical amounts, not rules. Each contract lists its own.</p>`,
+  watch: `<p>Commercial contracts also ask for special <strong>endorsements</strong>, wording added to your policy. If your agent can't add them, you can't sign the contract. Ask your agent about them now:</p>
+<ul>
+<li><strong>Additional insured</strong>: the GC and owner are covered by your policy (forms often called CG 20 10 for ongoing work and CG 20 37 for completed work).</li>
+<li><strong>Primary and non-contributory</strong>: your policy pays first.</li>
+<li><strong>Waiver of subrogation</strong>: your insurer won't sue the GC to recover a claim.</li>
+</ul>`,
+  deeper: `<p>Raising your limits and adding endorsements costs money. Find out the cost before you bid, so it's in your overhead or job cost. If a project has a wrap-up insurance program (OCIP or CCIP), the owner or GC provides some coverage and you may have to deduct your own insurance cost from your bid. The bid documents will say.</p>`
+},
+
+{ h: "Bonds, in plain words",
+  lead: "A bond is a guarantee from a surety company that you'll do what you promised. If you don't, the surety pays, and then you pay the surety back.",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th>Bond</th><th>What it guarantees</th><th>Usual amount</th></tr></thead>
+<tbody>
+<tr><td><strong>Bid bond</strong></td><td>If you win, you'll sign the contract at your bid price</td><td>Usually 10% of your bid</td></tr>
+<tr><td><strong>Performance bond</strong></td><td>You'll finish the work as the contract requires</td><td>Usually 100% of the contract</td></tr>
+<tr><td><strong>Payment bond</strong></td><td>You'll pay your workers, subs and suppliers</td><td>Usually 100% of the contract</td></tr>
+<tr><td><strong>Maintenance / warranty bond</strong></td><td>You'll fix problems during the warranty period</td><td>Varies</td></tr>
+</tbody></table></div>
+<p>A bond is <strong>not insurance for you</strong>. It protects the owner. If the surety pays a claim, your company and usually its owners personally must pay it back.</p>`,
+  ex: `<p>You win a $300,000 park irrigation job. The City requires a 10% bid bond at bid time, then 100% performance and payment bonds before the contract is signed. If the bond premium is around 2%, that's about $6,000, and it belongs in your bid price.</p>`,
+  deeper: `<ul>
+<li>California public works contracts over $25,000 require a payment bond (Civil Code §9550). Most agencies also require a performance bond.</li>
+<li>Premiums for smaller contractors often run about 1%–3% of the contract. Strong financials earn lower rates. Bid bonds are often free or cheap once you have a surety.</li>
+<li>Some GCs require subs to provide bonds on larger subcontracts. Many will ask in their prequalification form whether you <em>can</em>.</li>
+</ul>`,
+  src: "Cal. Civil Code §9550."
+},
+
+{ h: "Bonding capacity",
+  lead: "A surety decides how much work your company can bond. That number sets the biggest job you can take as a bonded contractor.",
+  body: `<p>Sureties set two limits:</p>
+<ul>
+<li><strong>Single-job limit:</strong> the largest one contract they'll bond.</li>
+<li><strong>Aggregate limit:</strong> the total of all bonded work you can have going at once.</li>
+</ul>
+<p>To set those, they look at:</p>
+<ul>
+<li>Financial statements, ideally prepared by a CPA who knows construction</li>
+<li>Working capital (cash and receivables minus short-term bills)</li>
+<li>Net worth (equity) of the company</li>
+<li>The owners' personal credit and finances</li>
+<li>Experience: largest jobs completed, years in business</li>
+<li>Backlog and how past jobs turned out</li>
+</ul>`,
+  ex: `<p><strong>Questions to ask a surety agent on your first call:</strong> What bonding capacity can we qualify for today? What financial statements do you need? What would raise our limit in a year? What's your rate? Can you issue bid bonds quickly when we need them?</p>`,
+  watch: `<p>Use a <strong>surety agent who specializes in construction</strong>, not just your regular insurance agent. Specialists know the sureties that work with small and growing contractors.</p>`
+},
+
+{ h: "DIR registration for public works",
+  lead: "Before your company can bid public work, or even be listed as a sub on someone else's public bid, it must be registered with the California Department of Industrial Relations (DIR).",
+  body: `<ul>
+<li><strong>Cost:</strong> $400 per year (check DIR for the current fee). You can pay for up to three years at once.</li>
+<li><strong>Year:</strong> registration runs July 1 to June 30. Renew before it expires.</li>
+<li><strong>Requirements include:</strong> an active CSLB license, workers' compensation coverage, and no unpaid wage judgments or debarment.</li>
+<li><strong>Where:</strong> online at the DIR public works contractor registration page.</li>
+</ul>`,
+  watch: `<p>Bidding without registration can disqualify the bid. DIR allows late registration in limited cases only with a $2,000 penalty. Register first, then bid.</p>`,
+  deeper: `<ul>
+<li><strong>Small project exemption:</strong> registration isn't required on public works of $25,000 or less for new construction, or $15,000 or less for alteration, demolition, repair or maintenance. But prevailing wage still applies to public works over $1,000.</li>
+<li>Registered contractors must submit certified payroll records electronically to DIR (eCPR) on most projects and follow apprenticeship rules. Module 11 covers this in detail.</li>
+<li>You can look up any contractor's DIR registration on DIR's public search.</li>
+</ul>`,
+  src: "DIR Public Works Contractor Registration; Cal. Labor Code §§1725.5, 1771, 1771.1."
+},
+
+{ h: "SLBE/ELBE: the City of San Diego's small business program",
+  lead: "The City certifies small, local construction firms. Certified firms get access to jobs and to primes who need them.",
+  body: `<ul>
+<li><strong>SLBE:</strong> Small Local Business Enterprise. <strong>ELBE:</strong> Emerging Local Business Enterprise (smaller).</li>
+<li>To qualify, the firm must be based in San Diego County and stay under revenue limits. City bid documents in 2026 listed limits of $6.5M for SLBE and $3.5M for ELBE for specialty construction. Check the current figures.</li>
+<li>Some City jobs are <strong>reserved</strong> for SLBE/ELBE firms only.</li>
+<li>Larger City jobs set <strong>required SLBE/ELBE participation percentages</strong>. Prime contractors must find certified subs, and they come looking for them.</li>
+<li>Certification is done through the City's Equal Opportunity Contracting program.</li>
+</ul>`,
+  ex: `<p>A $2.4M City street project requires 20% SLBE/ELBE participation. The A-licensed prime needs certified subs to hit that number. A certified landscape sub with a fair price becomes very valuable to that prime, often more valuable than a cheaper sub without certification.</p>`,
+  deeper: `<p>Other certifications to know about:</p>
+<ul>
+<li><strong>California Small Business (SB)</strong> through the Department of General Services, used on state contracts.</li>
+<li><strong>DBE</strong> (Disadvantaged Business Enterprise) through the California Unified Certification Program, used on federally funded transportation work. Requires 51% ownership by socially and economically disadvantaged individuals.</li>
+<li><strong>DVBE</strong> (Disabled Veteran Business Enterprise), if an owner qualifies.</li>
+</ul>
+<p>Certifications attach to the business entity. Settle the new-company question first.</p>`,
+  src: "City of San Diego, Equal Opportunity Contracting: SLBE program; City of San Diego bidding documents (2026)."
+},
+
+{ h: "Other registrations",
+  lead: "A few more accounts and documents make the company ready to bid anywhere in the county.",
+  body: `<ul>
+<li><strong>City of San Diego business tax certificate</strong>, if the company does business in the City.</li>
+<li><strong>PlanetBids vendor accounts</strong>: the City of San Diego and many other local agencies use PlanetBids. Each agency has its own portal and its own free registration.</li>
+<li><strong>Cal eProcure</strong>: the State of California's bidding site.</li>
+<li><strong>Bid platforms</strong> where GCs invite subs: BuildingConnected, PlanHub and others (Module 3).</li>
+<li><strong>SAM.gov</strong>: only needed for federal jobs (military bases, federal buildings). Federal jobs have their own wage rules (Davis-Bacon).</li>
+</ul>`,
+  watch: `<p>Every registration should be in the exact legal name of the bidding entity, matching the CSLB license. Mismatched names cause rejected bids and payment delays.</p>`
+},
+
+{ h: "Safety: required and checked",
+  lead: "GCs check your safety record before they let you on their site. Some won't invite you to bid without it.",
+  body: `<ul>
+<li><strong>IIPP:</strong> every California employer must have a written Injury and Illness Prevention Program. GCs ask for a copy.</li>
+<li><strong>EMR</strong> (experience modification rate): a number from your workers' comp history. 1.0 is average; under 1.0 is better; over 1.0 is worse. Many GCs prefer 1.0 or lower. Ask your workers' comp carrier or agent for your EMR letter.</li>
+<li><strong>Injury logs:</strong> Cal/OSHA Form 300 logs, if your company is required to keep them.</li>
+<li><strong>Training:</strong> OSHA 10-hour for workers and 30-hour for supervisors is common on commercial sites.</li>
+<li><strong>Site-specific needs:</strong> heat illness prevention (important in landscape work), trenching and excavation safety, equipment training.</li>
+</ul>`,
+  deeper: `<p>The IIPP requirement is in Title 8 of the California Code of Regulations, §3203. Cal/OSHA's heat illness standard (§3395) applies to all outdoor work and is checked on landscape crews. A new company without enough claims history may not have its own EMR yet; ask your agent how that will be shown.</p>`,
+  src: "8 CCR §3203; 8 CCR §3395."
+},
+
+{ h: "The bid-ready folder",
+  lead: "Keep one folder with everything GCs and agencies ask for, current and ready to send the same day.",
+  body: `<div class="twocol">
+<div><h3>Company documents</h3><ul>
+<li>CSLB license printout</li>
+<li>Sample certificate of insurance (COI)</li>
+<li>W-9</li>
+<li>DIR registration printout</li>
+<li>Business tax certificate</li>
+<li>SLBE/ELBE or other certification letters</li>
+<li>Bonding capacity letter from your surety</li>
+</ul></div>
+<div><h3>Qualifications</h3><ul>
+<li>One-page capabilities statement</li>
+<li>Project list with dollar sizes and references</li>
+<li>Equipment list</li>
+<li>Key staff resumes</li>
+<li>IIPP and safety program, EMR letter</li>
+<li>Financial statements (send only when needed)</li>
+<li>Standard exclusions and proposal template</li>
+</ul></div>
+</div>`,
+  watch: `<p>Put an expiration date next to every document that expires: insurance, DIR, certifications. Check the folder on the first of each month. Sending an expired COI looks careless.</p>`
+},
+
+{ h: "Your capabilities statement",
+  lead: "A one-page summary of what the company does. You'll attach it to every introduction email and prequalification form.",
+  body: `<p><strong>What goes on it:</strong></p>
+<ul>
+<li>Company name, license number and classes, DIR number</li>
+<li>Services: irrigation, planting, soil prep, establishment and maintenance, landscape renovation</li>
+<li>Project types and size range you want</li>
+<li>Service area: for example, San Diego County</li>
+<li>3–5 representative projects, with photos if possible</li>
+<li>Certifications (SLBE/ELBE when you have it)</li>
+<li>Contact: estimator name, phone and email</li>
+</ul>`,
+  exLabel: "Example opening (edit to fit)",
+  ex: `<p>“[Company] is a San Diego landscape and irrigation contractor (CSLB #XXXXXX, B and C-27) with [X] years of installation experience. We build commercial planting and irrigation systems, landscape renovations and water-efficient retrofits from $25,000 to $500,000 across San Diego County, and provide plant establishment and maintenance. DIR #XXXXXXX.”</p>`
+},
+
+{ h: "Prequalification forms",
+  lead: "Many GCs and some agencies make you fill out a prequalification form before you can bid. Fill it out once, completely, and save the answers.",
+  body: `<p><strong>Common questions:</strong></p>
+<ul>
+<li>Years in business and legal structure</li>
+<li>Annual revenue for the last 3 years</li>
+<li>Largest completed job and current backlog</li>
+<li>Bonding capacity and surety contact</li>
+<li>EMR and safety program</li>
+<li>Insurance limits and carrier</li>
+<li>References: GCs, owners, suppliers</li>
+<li>Any lawsuits, claims, or contracts you didn't finish</li>
+<li>Financial statements (often kept confidential)</li>
+</ul>`,
+  ex: `<p>Keep a “master prequal answers” document. When a new form arrives, copy and paste from it. A form that took four hours the first time then takes thirty minutes.</p>`,
+  watch: `<p>Answer every question truthfully. A false statement on a public prequalification can disqualify you from future work with that agency.</p>`,
+  deeper: `<p>Some California school districts and other agencies require formal prequalification for larger projects, often using a standard questionnaire scored on points. Check each agency's bid documents. Prequalification deadlines are often well before the bid date.</p>`
+},
+
+{ h: "Getting ready: the order of operations",
+  lead: "Do these in order. Each step depends on the one before it.",
+  body: `<ol class="steps">
+<li class="hl"><div><b>Decide which company will bid</b>Existing company or new entity. Settle this with the owner, attorney and CPA.</div></li>
+<li><div><b>Confirm the license</b>Look it up on CSLB. C-27 active? Right entity? Bonds and workers' comp current?</div></li>
+<li><div><b>Call your insurance agent</b>Get current limits, ask about endorsements, get a sample COI.</div></li>
+<li><div><b>Call a construction surety agent</b>Find out bonding capacity and what financials they need.</div></li>
+<li class="hl"><div><b>Register with DIR</b>Required before any public bid.</div></li>
+<li><div><b>Apply for SLBE/ELBE</b>If the company qualifies.</div></li>
+<li><div><b>Register on PlanetBids and bid platforms</b>Module 3 covers this.</div></li>
+<li class="hl"><div><b>Build the bid-ready folder</b>Capabilities statement, project list, safety documents.</div></li>
+</ol>`
+},
+
+{ t: "terms", h: "Words to know",
+  lead: "Add these to your notebook.",
+  terms: [
+    ["CSLB", "Contractors State License Board, which licenses California contractors."],
+    ["Qualifier", "The person whose experience qualifies the company's license."],
+    ["RMO", "Responsible managing officer: a qualifier who is an owner or officer."],
+    ["RME", "Responsible managing employee: a qualifier who is an employee."],
+    ["C-27", "California landscaping contractor license."],
+    ["Class A / Class B", "General engineering / general building licenses."],
+    ["Prime contractor", "The contractor with the contract directly from the owner or agency."],
+    ["COI", "Certificate of insurance: proof of your coverage and limits."],
+    ["Additional insured", "Adding the GC and owner to your liability policy."],
+    ["Waiver of subrogation", "Your insurer agrees not to sue the GC or owner to recover a claim."],
+    ["Surety", "The company that issues bonds."],
+    ["Bid bond", "Guarantees you'll sign the contract if you win. Usually 10%."],
+    ["Performance bond", "Guarantees you'll finish the work."],
+    ["Payment bond", "Guarantees you'll pay workers, subs and suppliers."],
+    ["Bonding capacity", "How much bonded work a surety will back."],
+    ["DIR", "California Department of Industrial Relations. Registers public works contractors and enforces prevailing wage."],
+    ["SLBE / ELBE", "City of San Diego small and emerging local business certifications."],
+    ["IIPP", "Injury and Illness Prevention Program, required for every California employer."],
+    ["EMR", "Experience modification rate. 1.0 is average safety; lower is better."],
+    ["Prequalification", "A form or process that approves you to bid before bidding."],
+    ["Capabilities statement", "A one-page summary of your company for GCs and agencies."]
+  ]
+},
+
+{ t: "quiz", id: "m2", h: "Check yourself",
+  lead: "Tap an answer to check it.",
+  qs: [
+    { q: "Your company holds a B license only. Can it take a landscape-only subcontract?", a: ["Yes, B covers everything", "No, a B can't take a single specialty trade contract unless it holds that specialty", "Only on private jobs"], c: 1, why: "B&P Code §7057 limits B contractors on single-trade contracts. That's why the C-27 matters." },
+    { q: "The company forms a new LLC. Can it use the existing company's C-27 license?", a: ["Yes, the license transfers", "No, the new entity must apply for its own license", "Yes, if the qualifier is the same person"], c: 1, why: "A California license belongs to the business entity and can't be transferred, even with the same qualifier." },
+    { q: "A City bid notice says “Class A license required.” What do you do?", a: ["Bid as prime anyway", "Skip it completely", "Bid your landscape scope to the A contractors who are bidding as prime"], c: 2, why: "You can't be prime, but the A contractors still need a landscape sub." },
+    { q: "What does a bid bond guarantee?", a: ["That you'll pay your suppliers", "That you'll sign the contract at your price if you win", "That the plants will live"], c: 1, why: "A bid bond (usually 10%) protects the agency if the low bidder refuses to sign." },
+    { q: "If a surety pays a claim on your bond, who pays the surety back?", a: ["Nobody, that's what the premium is for", "The GC", "Your company, and usually its owners personally"], c: 2, why: "A bond is a guarantee, not insurance for you. You sign an indemnity agreement promising to repay." },
+    { q: "When must you be registered with DIR?", a: ["Before you bid or are listed on a public works bid", "Only after you win", "Only for jobs over $1 million"], c: 0, why: "Registration is required to bid, to be listed as a sub, and to work on public works (with a small-project exemption)." },
+    { q: "Why do primes look for SLBE/ELBE-certified subs on big City jobs?", a: ["Certified subs are always cheaper", "The City requires a set percentage of certified participation", "Certified subs don't need insurance"], c: 1, why: "Required participation percentages make certified subs valuable to primes." },
+    { q: "Your EMR is 0.85. Is that good or bad?", a: ["Good, better than average", "Bad, worse than average", "It doesn't matter"], c: 0, why: "1.0 is average. Below 1.0 means a better-than-average safety record." }
+  ]
+},
+
+{ t: "practice", id: "m2", h: "Practice assignments",
+  lead: "These produce real things the company needs. Save everything in the bid-ready folder.",
+  items: [
+    { h: "Look up the license", hrs: 0.5, d: "<p>On CSLB's Instant License Check, look up the company's license. Write down: entity name, license number, classes, qualifier, bond, workers' comp and expiration date. Then look up 3 landscape competitors and 3 GCs you'd like to work for, and compare.</p>" },
+    { h: "Write up the new-company decision", hrs: 0.75, d: "<p>Write one page for the owner: the two options (existing company vs. new entity), what each needs, how long each takes, and the questions for the attorney, CPA and surety agent. Get a decision date on the calendar.</p>" },
+    { h: "Call the insurance agent", hrs: 0.5, d: "<p>Ask for current GL, auto, workers' comp and umbrella limits; whether they can add additional insured (ongoing and completed operations), primary and non-contributory, and waiver of subrogation; and what it costs to raise GL to $2M aggregate and add a $2M umbrella. Get a sample COI.</p>" },
+    { h: "Call a construction surety agent", hrs: 0.75, d: "<p>Use the surety questions from the Bonding capacity slide. Write down the answers and what documents they need. Ask what one thing would raise the company's bonding limit most in the next year.</p>" },
+    { h: "Read the DIR and SLBE requirements", hrs: 0.5, d: "<p>Read the DIR registration page and the City's SLBE program requirements. Make a checklist of what each one needs, and note anything that depends on the new-company decision.</p>" },
+    { h: "Draft the capabilities statement", hrs: 1, d: "<p>Write the one-page capabilities statement using the slide as a guide. Choose 3–5 of the company's best projects. Take or find photos. Have the owner review it.</p>" },
+    { h: "Start the master prequal answers", hrs: 0.5, d: "<p>Make a document with every common prequalification question from this module. Fill in what you know now and mark what you still need from the owner or CPA.</p>" }
+  ]
+},
+
+{ h: "Module 2 summary",
+  lead: "The company now knows what it needs to qualify for commercial and public bids. Next, you'll find the work.",
+  body: `<ul>
+<li>The C-27 is what lets the company bid landscape and irrigation packages. The B alone can't.</li>
+<li>Each public bid names the license class allowed to be prime. Check it first.</li>
+<li>Licenses can't move to a new company. Decide which company bids before registering anything.</li>
+<li>Insurance needs the right limits and endorsements. Bonds are guarantees you must repay.</li>
+<li>Register with DIR before any public bid. Apply for SLBE/ELBE if you qualify.</li>
+<li>Keep a bid-ready folder current, with expiration dates.</li>
+</ul>
+<p><strong>Next: Module 3 · Finding Work and Deciding What to Bid.</strong></p>`
+}
+]
+});
+
+(window.COURSE_MODULES = window.COURSE_MODULES || []).push({
+n: 3, hours: 6, title: "Finding Work and Deciding What to Bid",
+slides: [
+
+{ t: "cover",
+  h: "Finding Work and Deciding What to Bid",
+  lead: "Bids don't come to a company nobody knows. This module shows where commercial landscape bids come from, how to get invited, and how to choose which ones are worth your time.",
+  objectives: [
+    "Name the places private and public landscape bids come from",
+    "Get on general contractors' bid lists with emails and calls",
+    "Set up bid platform and agency portal profiles",
+    "Read a public bid notice and pull out what matters",
+    "Decide go or no-go with a simple scorecard",
+    "Understand cash flow and choose the right size of job",
+    "Read a bid tab and learn from it"
+  ],
+  time: [["Reading and slides", "1.5 h"], ["Practice assignments", "4.5 h"], ["Module total", "6 h"]],
+  body: "<p>This module ends with real outreach: calls, emails and profiles. By the end, invitations should start arriving.</p>"
+},
+
+{ h: "Where commercial landscape bids come from",
+  lead: "Work comes from two directions: GCs who invite you, and public agencies who advertise.",
+  body: `<div class="twocol">
+<div><h3>Private (through GCs)</h3><ul>
+<li>Direct invitations from GC estimators you know</li>
+<li>Bid platforms GCs use to invite subs (BuildingConnected, PlanHub)</li>
+<li>Lead services that list upcoming projects (ConstructConnect, Dodge)</li>
+<li>Referrals from suppliers, LAs and other subs</li>
+<li>Repeat customers: developers, property managers, HOAs</li>
+</ul></div>
+<div><h3>Public (advertised)</h3><ul>
+<li>City of San Diego, through PlanetBids</li>
+<li>Other cities, the County, water districts and the Port</li>
+<li>School and community college districts</li>
+<li>State agencies (Cal eProcure) and Caltrans</li>
+<li>A-license primes bidding public civil jobs, who need a landscape sub</li>
+</ul></div>
+</div>`,
+  ex: `<p>One public City project can create several chances: you can bid it as prime if the license class allows, <em>and</em> send your landscape price to every A contractor on the planholders list if it doesn't.</p>`
+},
+
+{ h: "Getting on GC bid lists",
+  lead: "Most private work goes to subs the GC already knows. Your job is to become one of them.",
+  body: `<ol class="steps">
+<li><div><b>Build a target list</b>20–40 commercial GCs that build in San Diego County: retail, multifamily, medical, schools, offices.</div></li>
+<li><div><b>Find the right person</b>The chief estimator or preconstruction manager, not the front desk or the project manager.</div></li>
+<li class="hl"><div><b>Send a short intro email</b>Who you are, what you do, the size you want, your capabilities statement attached.</div></li>
+<li class="hl"><div><b>Call 3–5 days later</b>Ask to be added to their bid list for landscape and irrigation.</div></li>
+<li><div><b>Complete their prequalification</b>Right away, while they remember you.</div></li>
+<li><div><b>Log everything</b>Company, contact, date, response, next follow-up.</div></li>
+<li><div><b>Bid what they send you</b>The first few invitations are a test. Respond to every one, even to decline.</div></li>
+</ol>`,
+  ex: `<p>Where to find GCs: the planholders and bidders lists on public jobs, ABC and AGC San Diego member directories, construction signs on job sites, project news in the San Diego Business Journal, and asking your irrigation supply house and nursery reps who's building.</p>`
+},
+
+{ h: "The intro email",
+  lead: "Short, specific and easy to forward. The estimator should know in ten seconds what you do and how to invite you.",
+  exLabel: "Email template (fill in the brackets)",
+  ex: `<p><strong>Subject:</strong> Landscape &amp; irrigation sub, San Diego: request to join your bid list</p>
+<p>Hi [Name],</p>
+<p>I'm the estimator at [Company], a San Diego landscape and irrigation contractor (CSLB #[number], C-27, DIR #[number]). We install commercial planting and irrigation, water-efficient retrofits and plant establishment, typically $25,000–$500,000, anywhere in San Diego County.</p>
+<p>We'd like to bid landscape and irrigation packages on your upcoming projects. Our capabilities statement is attached. Who should I send our prequalification to, and how do you send bid invites (BuildingConnected, email, other)?</p>
+<p>Thanks,<br>[Your name] · [phone] · [email]</p>`,
+  watch: `<p>Don't send a long history of the company or a price list. Don't send the same email to ten people at one company. Find the one estimator who sends landscape invitations.</p>`
+},
+
+{ h: "The follow-up call",
+  lead: "Calls get results that emails don't. Keep it under two minutes.",
+  exLabel: "Call script",
+  ex: `<p><strong>You:</strong> “Hi, this is [Name] with [Company]. We're a landscape and irrigation contractor in San Diego. I emailed you on [day] about getting on your bid list. Do you have a minute?”</p>
+<p><strong>If yes:</strong> “What kinds of projects do you have coming up with landscape? How do you send out bid invites? Do you have a prequalification form I can fill out today?”</p>
+<p><strong>If they already have landscape subs:</strong> “Understood. We'd still like the chance to give you a competitive number on your next one. Can I be added as an extra bidder?”</p>
+<p><strong>Close:</strong> “Thanks. I'll send the prequal back this week. Is it OK if I check in once a month on new projects?”</p>`,
+  body: `<p>After the call, log it and set the next follow-up date. Most relationships take several contacts before the first invitation.</p>`
+},
+
+{ h: "Bid platforms",
+  lead: "GCs send most private bid invitations through online platforms. A complete profile makes you show up in their searches.",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th>Platform</th><th>What it is</th><th>Cost to subs</th></tr></thead>
+<tbody>
+<tr><td><strong>BuildingConnected</strong> (Autodesk)</td><td>The most common way large and mid-size GCs invite subs</td><td>Free to receive invites and bid</td></tr>
+<tr><td><strong>PlanHub</strong></td><td>GC invites plus a project search</td><td>Free level; paid for more features</td></tr>
+<tr><td><strong>ConstructConnect</strong></td><td>Project leads and plans from many sources</td><td>Paid subscription</td></tr>
+<tr><td><strong>Dodge Construction Network</strong></td><td>Project leads and plans, early in design</td><td>Paid subscription</td></tr>
+</tbody></table></div>
+<p>Start with the free ones. Pay for a lead service only after you're ready to bid more than you're being invited to.</p>`,
+  watch: `<p>Fill in your profile completely: every trade code for landscape and irrigation (for example CSI 32 80 00 Irrigation and 32 90 00 Planting), your service area, license, union or non-union, certifications. GCs filter by these. An empty profile never shows up.</p>`
+},
+
+{ h: "Public agency portals",
+  lead: "Public bids are advertised openly. You have to register on each agency's portal to see documents and get notices.",
+  body: `<ul>
+<li><strong>City of San Diego:</strong> PlanetBids, reached from the City's “Doing CIP Business” page. Register as a vendor and pick the landscape and irrigation categories.</li>
+<li><strong>Other agencies in the county:</strong> many cities, water districts and school districts also use PlanetBids, but <strong>each agency has its own PlanetBids portal and its own registration</strong>. Make a list and register on each one you'd work for.</li>
+<li><strong>County of San Diego:</strong> its purchasing and contracting site lists construction bids.</li>
+<li><strong>State:</strong> Cal eProcure. <strong>Caltrans:</strong> its contracts-out-for-bid listings.</li>
+<li><strong>Federal (optional):</strong> SAM.gov, for military bases and federal property.</li>
+</ul>`,
+  ex: `<p>A good first list: City of San Diego, the County, and 5–8 nearby cities, water districts and school districts where your crews already work. Set notifications for landscape, irrigation, park, median, and water-efficiency projects.</p>`,
+  deeper: `<p>On PlanetBids, downloading the documents usually puts you on the project's planholders list. That list is public to other bidders, so primes can find you, and you can find the primes to send your sub price to.</p>`
+},
+
+{ h: "Reading a public bid notice",
+  lead: "The notice inviting bids tells you in one page whether to keep going. Learn to scan it in two minutes.",
+  exLabel: "Practice example (made up for training, not a real project)",
+  ex: `<div class="tablewrap"><table><tbody>
+<tr><td><strong>Project</strong></td><td>Mira Mesa Blvd Median Irrigation &amp; Planting Retrofit</td></tr>
+<tr><td><strong>Engineer's estimate</strong></td><td>$780,000</td></tr>
+<tr><td><strong>License required</strong></td><td>Class A or C-27 at time of bid</td></tr>
+<tr><td><strong>Bids due</strong></td><td>Thursday, 2:00 PM, electronic, through PlanetBids</td></tr>
+<tr><td><strong>Pre-bid meeting</strong></td><td>Optional, 10:00 AM, two weeks before bid date</td></tr>
+<tr><td><strong>Bid security</strong></td><td>10% bid bond</td></tr>
+<tr><td><strong>SLBE/ELBE</strong></td><td>Mandatory participation goal (set in the bid documents)</td></tr>
+<tr><td><strong>Wages</strong></td><td>Prevailing wage; DIR registration required</td></tr>
+<tr><td><strong>Working days</strong></td><td>90 working days</td></tr>
+<tr><td><strong>Liquidated damages</strong></td><td>$1,500 per day late</td></tr>
+<tr><td><strong>Plant establishment</strong></td><td>120 days after acceptance of planting</td></tr>
+<tr><td><strong>Questions due</strong></td><td>7 days before bid date, through PlanetBids Q&amp;A only</td></tr>
+</tbody></table></div>`,
+  body: `<p>In the example: the C-27 can be prime, the size is mid-range, it needs a bid bond, certified subs or self-performance count toward the goal, and the 120-day establishment period is real labor to price.</p>`
+},
+
+{ h: "Key terms in every notice",
+  lead: "A few lines in a bid notice change your price and your risk.",
+  body: `<ul>
+<li><strong>Engineer's estimate:</strong> the agency's own guess at the cost. Good for sizing the job. Bids often land above or below it.</li>
+<li><strong>Working days:</strong> how long you have to finish. Usually counts weekdays except holidays. Too short a schedule means more crews and overtime.</li>
+<li><strong>Liquidated damages:</strong> a set dollar amount per day you're late, taken from your payment. At $1,500 a day, two weeks late costs $21,000.</li>
+<li><strong>Mandatory pre-bid meeting:</strong> if it says mandatory and you miss it, you can't bid. No exceptions.</li>
+<li><strong>Bid security:</strong> the bid bond, usually 10%.</li>
+<li><strong>Bid opening:</strong> the time bids are opened and results read. Bids received one second late are rejected.</li>
+</ul>`,
+  watch: `<p>“Mandatory” means mandatory. Put mandatory meetings on the calendar the day you see the notice, and arrive early. Late arrivals often aren't signed in.</p>`
+},
+
+{ h: "Go or no-go: decide before you estimate",
+  lead: "A full landscape estimate can take 10 to 40 hours. Spend that time on jobs you can win and want to win.",
+  body: `<p><strong>Hard stops.</strong> Any of these means no-go, no matter what:</p>
+<ul>
+<li>License class not allowed as prime, and no primes you can sub to</li>
+<li>Missed a mandatory pre-bid meeting</li>
+<li>Can't get the required bond</li>
+<li>Not registered with DIR on a public job (and can't register in time)</li>
+<li>Not enough time left to do the estimate properly</li>
+</ul>
+<p>If none of those apply, score the job on the next slide.</p>`,
+  ex: `<p>When you pass on a GC's invitation, tell them: “We're going to pass on this one because of [schedule/size], but please keep us on your list.” Silence can get you dropped from their list. A polite no keeps you on it.</p>`
+},
+
+{ t: "scorer", id: "gonogo", h: "Go / no-go scorecard",
+  lead: "Score a real bid you're looking at. 2 = strong yes, 1 = so-so, 0 = no. Your choices are saved in this browser.",
+  items: [
+    ["Fits our scope", "Mostly irrigation and planting, work we do every day"],
+    ["Right size", "Within our bonding, cash and crew capacity"],
+    ["Schedule works", "Our crews are free when the job needs them"],
+    ["Location", "Within our normal service area"],
+    ["Good customer", "GC or agency pays on time and treats subs fairly"],
+    ["Competition", "Few bidders, or we have an edge (relationship, SLBE/ELBE)"],
+    ["Clear documents", "Plans and specs are complete; few unknowns"],
+    ["Manageable risk", "Establishment period, liquidated damages and wage rules are clear"],
+    ["Profit potential", "We can price it competitively and still make our margin"],
+    ["Strategic value", "Builds a relationship, a project type or a reference we want"]
+  ],
+  bands: [
+    [15, "Go", "Strong fit. Start the estimate."],
+    [11, "Think it over", "Talk through the weak scores with the owner before estimating."],
+    [0, "Pass", "Politely decline and ask to stay on the bid list."]
+  ]
+},
+
+{ h: "Choose the right size of job",
+  lead: "Start with jobs big enough to learn on and small enough to survive a mistake.",
+  body: `<ul>
+<li>A good first range for many landscape contractors is about <strong>$25,000 to $250,000</strong> of landscape scope. Adjust it to your company's largest past jobs, crew size and bonding.</li>
+<li>Jobs too small for big landscape firms are where newcomers win first: small medians, irrigation retrofits, small retail pads, HOA renovations.</li>
+<li>Grow the size step by step as you complete jobs and your bonding grows.</li>
+</ul>`,
+  watch: `<p>A job twice as big as anything you've built isn't just twice the work. It's bigger crews, more supervision, more cash tied up, and a bigger loss if the estimate is wrong.</p>`
+},
+
+{ h: "Cash flow: the math nobody shows you",
+  lead: "You pay for labor and materials now, but get paid much later, minus retention. Here's a simple example.",
+  body: `<p><strong>Example:</strong> a $150,000 landscape subcontract over three months. Your costs are $120,000 ($40,000 a month). You bill $50,000 at the end of each month. The GC pays about 45 days later and holds 5% retention.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Month</th><th class="num">You spend</th><th class="num">You receive</th><th class="num">Cash position</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="num">−$40,000</td><td class="num">$0</td><td class="num">−$40,000</td></tr>
+<tr><td>2</td><td class="num">−$40,000</td><td class="num">$0</td><td class="num">−$80,000</td></tr>
+<tr><td>3</td><td class="num">−$40,000</td><td class="num">+$47,500</td><td class="num">−$72,500</td></tr>
+<tr><td>4</td><td class="num">$0</td><td class="num">+$47,500</td><td class="num">−$25,000</td></tr>
+<tr><td>5</td><td class="num">$0</td><td class="num">+$47,500</td><td class="num">+$22,500</td></tr>
+<tr><td>Later</td><td class="num">$0</td><td class="num">+$7,500 retention</td><td class="num">+$30,000</td></tr>
+</tbody></table></div>
+<p>The job makes $30,000. But the company needs about <strong>$80,000 of cash</strong> before the first payment arrives, and it doesn't see its profit until month 5 or later.</p>`,
+  watch: `<p>Several jobs at once multiply this. Know how much cash or credit line the company has before you bid, and size jobs to fit. Supplier credit terms (net 30) help; ask your suppliers for them.</p>`
+},
+
+{ h: "Choosing your GCs",
+  lead: "Not every GC is a good customer. Pick the ones worth building a relationship with.",
+  body: `<div class="twocol">
+<div><h3>Good signs</h3><ul>
+<li>Builds the project types you want, regularly</li>
+<li>Pays subs on time (ask other subs and suppliers)</li>
+<li>Gives feedback after bid day</li>
+<li>Has repeat owners and steady work</li>
+<li>Fair subcontract terms</li>
+</ul></div>
+<div><h3>Warning signs</h3><ul>
+<li>Reputation for slow pay or back-charges</li>
+<li>Mechanics liens or lawsuits from subs</li>
+<li>Uses sub bids only to “check” a favorite sub's price</li>
+<li>Never shares results</li>
+<li>One-sided subcontract (unlimited liability, pay-if-paid)</li>
+</ul></div>
+</div>`,
+  ex: `<p>Your irrigation supply house rep sees who pays and who doesn't. Ask: “Which GCs do your contractor customers like working for?”</p>`
+},
+
+{ h: "Track every bid",
+  lead: "If you don't write it down, you can't learn from it. Log every invitation and every bid.",
+  body: `<p>For each bid, record:</p>
+<ul>
+<li>Bid number, project, GC or agency, contact</li>
+<li>Due date and time, job walk, question deadline</li>
+<li>Go/no-go decision and score</li>
+<li>Your price, and the low or winning price when you learn it</li>
+<li>How far over or under the low bid you were, as a percent</li>
+<li>Result (won, lost, pending, no bid) and the reason</li>
+<li>Follow-up date and notes</li>
+</ul>
+<p>Your company already has a tracker for this: <a href="https://claude.ai/artifact/BfM3VhU69VAesNWb6kbEnP" target="_blank" rel="noopener">Commercial Bid Tracker</a>.</p>`,
+  deeper: `<p>After 15–20 bids, patterns appear: which GCs you win with, which project types you're always too high on, and how far off you usually are. Those patterns guide your pricing (Module 10) and your bid review meetings.</p>`
+},
+
+{ h: "Bid tabs: free education",
+  lead: "After a public bid opens, the agency posts every bidder's price. Studying them teaches you the market before you ever bid.",
+  exLabel: "Practice bid tab (made up for training)",
+  ex: `<div class="tablewrap"><table>
+<thead><tr><th>Rank</th><th>Bidder</th><th class="num">Total bid</th><th class="num">vs. low</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Landscape Co. A</td><td class="num">$356,880</td><td class="num">—</td></tr>
+<tr><td>2</td><td>Landscape Co. B</td><td class="num">$371,250</td><td class="num">+4.0%</td></tr>
+<tr><td>3</td><td>Engineering Contractor C</td><td class="num">$389,400</td><td class="num">+9.1%</td></tr>
+<tr><td>4</td><td>Landscape Co. D</td><td class="num">$402,115</td><td class="num">+12.7%</td></tr>
+<tr><td>5</td><td>Landscape Co. E</td><td class="num">$445,700</td><td class="num">+24.9%</td></tr>
+<tr><td>6</td><td>Engineering Contractor F</td><td class="num">$497,300</td><td class="num">+39.3%</td></tr>
+<tr><td></td><td>Engineer's estimate</td><td class="num">$412,000</td><td class="num">+15.4%</td></tr>
+</tbody></table></div>`,
+  body: `<p><strong>What this tells you:</strong></p>
+<ul>
+<li>The low bid came in about 13% under the engineer's estimate. That's the market's price, not the estimate.</li>
+<li>The top four were within about 13% of each other: that's the competitive range.</li>
+<li>Landscape specialists took 1st and 2nd. On landscape-heavy jobs they often beat general engineering firms.</li>
+<li>Many public bids have line items. Comparing unit prices (per tree, per valve, per foot of pipe) teaches you the most.</li>
+</ul>`
+},
+
+{ t: "terms", h: "Words to know",
+  lead: "Add these to your notebook.",
+  terms: [
+    ["Bid list", "A GC's list of subs it invites to bid."],
+    ["Chief estimator / precon manager", "The person at a GC who runs bidding and sends sub invitations."],
+    ["Bid platform", "Website GCs use to invite subs and collect bids."],
+    ["Lead service", "Paid service listing upcoming projects and plans."],
+    ["PlanetBids", "Bidding portal used by the City of San Diego and many local agencies."],
+    ["Planholders list", "Public list of companies that downloaded a project's documents."],
+    ["Notice inviting bids", "The public announcement of a bid, with key dates and requirements."],
+    ["Engineer's estimate", "The agency's own estimate of the project cost."],
+    ["Working days", "The time allowed to finish, usually counting weekdays."],
+    ["Liquidated damages", "A set dollar amount per day you finish late."],
+    ["Mandatory pre-bid", "A meeting you must attend to be allowed to bid."],
+    ["Go / no-go", "The decision whether to spend time estimating a bid."],
+    ["Cash flow", "When money actually goes out and comes in."],
+    ["Net 30", "Supplier terms: pay within 30 days of the invoice."],
+    ["Bid tab", "The posted list of every bidder's price."],
+    ["Unit price", "The price for one unit: per tree, per valve, per foot."]
+  ]
+},
+
+{ t: "quiz", id: "m3", h: "Check yourself",
+  lead: "Tap an answer to check it.",
+  qs: [
+    { q: "Who at a GC should get your intro email?", a: ["The receptionist", "The chief estimator or preconstruction manager", "The superintendent on a job site"], c: 1, why: "Estimators run bidding and decide who gets invited." },
+    { q: "You registered on the City of San Diego's PlanetBids. Are you registered with every agency on PlanetBids?", a: ["Yes, it's one account for all", "No, each agency has its own portal and registration", "Only for county agencies"], c: 1, why: "Each agency runs its own PlanetBids portal. Register on each one you want to bid." },
+    { q: "A notice says the pre-bid meeting is mandatory. You can't make it. What happens?", a: ["You can still bid if you call them", "You can't bid that project", "You get a small penalty"], c: 1, why: "Missing a mandatory pre-bid meeting makes you ineligible to bid." },
+    { q: "Liquidated damages are $1,500 per day. You finish 10 working days late. What could it cost?", a: ["$1,500", "$15,000", "Nothing if the plants look good"], c: 1, why: "10 days × $1,500 = $15,000, usually taken from your payments." },
+    { q: "You decide not to bid a GC's invitation. What should you do?", a: ["Ignore it", "Reply that you're passing this time and want to stay on their list", "Send a very high number"], c: 1, why: "A polite decline keeps you on the list. Silence can get you dropped." },
+    { q: "In the cash flow example, about how much cash did the company need before its first payment?", a: ["$30,000", "$80,000", "$150,000"], c: 1, why: "Two full months of costs went out before the first payment came in." },
+    { q: "The low bid on a public job came in 13% under the engineer's estimate. What does that tell you?", a: ["The estimate is the real market price", "The market price was below the agency's estimate", "The low bidder will lose money for sure"], c: 1, why: "Bid tabs show what contractors actually bid. That's the price you compete against." },
+    { q: "When is paying for a lead service (like ConstructConnect) worth it?", a: ["Before you've bid anything", "When you're ready to bid more than you're being invited to", "Never"], c: 1, why: "Start with free platforms and relationships. Pay for leads when you have the capacity to use them." }
+  ]
+},
+
+{ t: "practice", id: "m3", h: "Practice assignments",
+  lead: "By the end of these, the company should be visible to GCs and agencies, and invitations should start coming in.",
+  items: [
+    { h: "Register on public portals", hrs: 0.75, d: "<p>Register (or make the list to register, once the bidding entity is settled) on the City of San Diego's PlanetBids and at least 5 other local agencies. Choose landscape, irrigation and park categories. Save logins in a safe place.</p>" },
+    { h: "Build your bid platform profiles", hrs: 0.5, d: "<p>Create complete profiles on BuildingConnected and PlanHub: trade codes, service area, license, DIR, certifications, capabilities statement.</p>" },
+    { h: "Build a target list of 20 GCs", hrs: 1, d: "<p>Use planholders lists from recent public jobs, AGC and ABC San Diego member lists, and your supplier reps. For each: company, estimator name, email, phone, project types. Put them in a spreadsheet with columns for each contact date.</p>" },
+    { h: "Send 5 intro emails and make 5 calls", hrs: 1, d: "<p>Use the email template and call script. Log every contact. Set follow-up dates. Note what each GC told you about their projects and bid process.</p>" },
+    { h: "Score 3 open bids", hrs: 0.5, d: "<p>Find 3 open landscape or irrigation bids (public or private). For each, pull the notice details and run the go/no-go scorecard. Bring the scores to the owner and discuss.</p>" },
+    { h: "Study 3 bid tabs", hrs: 0.75, d: "<p>Download results for 3 closed City or agency landscape projects. Record: engineer's estimate, number of bidders, low bid, spread between bids, and who won. If line items are posted, note the unit prices for trees, shrubs, valves and irrigation pipe. Save this; you'll use it in Module 15.</p>" }
+  ]
+},
+
+{ h: "Module 3 summary",
+  lead: "You know where bids come from, how to get invited, and how to choose. Next, you'll learn to read the plans.",
+  body: `<ul>
+<li>Private bids come through GCs; get on their lists with short emails, calls and fast prequalification.</li>
+<li>Public bids are advertised; register on each agency's portal.</li>
+<li>Read every notice for license class, mandatory meetings, bonds, schedule and liquidated damages.</li>
+<li>Decide go or no-go before you spend hours estimating.</li>
+<li>Size jobs to your cash, crews and bonding. Profit on paper isn't cash in the bank.</li>
+<li>Track every bid and study bid tabs to learn the market.</li>
+</ul>
+<p><strong>Next: Module 4 · Reading Landscape and Irrigation Plans</strong> (coming next).</p>`
+}
+]
+});
+
+</script>
+<script>
+(function(){
+const OUT = window.COURSE_OUTLINE || [];
+const MODS = {}; (window.COURSE_MODULES || []).forEach(m => MODS[m.n] = m);
+const $ = id => document.getElementById(id);
+const store = {
+  get(k, d){ try { const v = localStorage.getItem("clb:" + k); return v == null ? d : JSON.parse(v); } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem("clb:" + k, JSON.stringify(v)); } catch(e){} }
+};
+const pad = n => String(n).padStart(2, "0");
+let cur = { view: "home", m: null, i: 0 };
+let speaking = false;
+
+function seen(n){ return new Set(store.get("seen:" + n, [])); }
+function markSeen(n, i){ const s = seen(n); if(!s.has(i)){ s.add(i); store.set("seen:" + n, [...s]); } }
+function pct(n){ const m = MODS[n]; if(!m) return 0; return Math.round(seen(n).size / m.slides.length * 100); }
+
+function stopSpeech(){ try { if(window.speechSynthesis) speechSynthesis.cancel(); } catch(e){} speaking = false; }
+
+/* ---------- Navigation ---------- */
+function parseHash(){
+  const h = (location.hash || "").slice(1);
+  const mm = /^m(\d+)(?:-(\d+))?$/.exec(h);
+  if(mm && MODS[+mm[1]]){
+    const m = MODS[+mm[1]]; let i = mm[2] ? +mm[2] - 1 : store.get("pos:" + m.n, 0);
+    i = Math.max(0, Math.min(m.slides.length - 1, i || 0));
+    return { view: "module", m: m.n, i };
+  }
+  return { view: "home", m: null, i: 0 };
+}
+function go(view, m, i){
+  const h = view === "module" ? "#m" + m + "-" + (i + 1) : "#home";
+  if(location.hash !== h) history.replaceState(null, "", h);
+  cur = { view, m, i }; render(true);
+}
+window.addEventListener("hashchange", () => { cur = parseHash(); render(true); });
+
+function renderNav(){
+  const nav = $("sheetIndex"); nav.innerHTML = "";
+  const head = document.createElement("div"); head.className = "si-head"; head.textContent = "Sheet index · modules"; nav.append(head);
+  const ul = document.createElement("ul"); ul.className = "si-list";
+  OUT.forEach(o => {
+    const li = document.createElement("li"); li.className = "si-item";
+    const b = document.createElement("button"); b.type = "button"; b.className = "si-btn";
+    const ready = !!MODS[o.n];
+    if(!ready) b.disabled = true;
+    if(cur.view === "module" && cur.m === o.n) b.setAttribute("aria-current", "true");
+    const p = ready ? pct(o.n) : 0;
+    b.innerHTML = '<span class="si-no">M-' + pad(o.n) + '</span><span><span class="si-t"></span><span class="si-s"><span>' + o.hours + ' h</span>' +
+      (ready ? '<span class="bar" aria-hidden="true"><i style="width:' + p + '%"></i></span><span>' + p + '%</span>' : '<span>Coming next</span>') + '</span></span>';
+    b.querySelector(".si-t").textContent = o.title;
+    if(ready) b.onclick = () => { go("module", o.n, store.get("pos:" + o.n, 0)); collapseNav(); };
+    li.append(b); ul.append(li);
+  });
+  nav.append(ul);
+}
+function collapseNav(){ $("sheetIndex").classList.add("collapsed"); $("navToggle").setAttribute("aria-expanded", "false"); }
+$("navToggle").onclick = () => { const n = $("sheetIndex"); const c = n.classList.toggle("collapsed"); $("navToggle").setAttribute("aria-expanded", String(!c)); };
+$("homeLink").onclick = e => { e.preventDefault(); go("home"); };
+
+/* ---------- Home ---------- */
+function renderHome(){
+  const main = $("main"); main.innerHTML = "";
+  const totalH = OUT.reduce((a, o) => a + o.hours, 0);
+  const hero = document.createElement("section"); hero.className = "home-hero";
+  hero.innerHTML = '<span class="eyebrow">Start here · from zero to bidding</span>' +
+    '<h1>Learn to bid commercial landscape work</h1>' +
+    '<p>This course is for someone who has never bid a commercial job. It takes you from "what is a bid?" to pricing real San Diego landscape and irrigation projects and comparing your number to the contractor who actually won. It covers private jobs for general contractors and public jobs for cities, schools and agencies.</p>' +
+    '<div class="btnrow"><button class="btn primary" type="button" id="startBtn">Start Module 1 →</button><button class="btn" type="button" id="resumeBtn">Resume where I left off</button></div>';
+  main.append(hero);
+  const how = document.createElement("section"); how.className = "how";
+  how.innerHTML = [
+    ["Plain words first", "Every slide starts in simple language. Open “Go deeper” when you want the laws, numbers and fine print."],
+    ["Practice is the course", "Most of the " + totalH + " hours are hands-on: real bid documents, calls, takeoffs and bid results, not reading."],
+    ["Read aloud", "Press “Read aloud” on any slide to hear it. Use the arrow keys or the buttons to move between slides."],
+    ["Check the source", "Fees, limits and rules change. When a number matters for a real bid, confirm it at the source given on the slide."]
+  ].map(x => '<div><h3>' + x[0] + '</h3><p>' + x[1] + '</p></div>').join("");
+  main.append(how);
+  const h2 = document.createElement("h2"); h2.textContent = "Sheet index"; h2.style.fontSize = "26px"; h2.style.textTransform = "uppercase"; h2.style.marginBottom = "10px"; main.append(h2);
+  const wrap = document.createElement("div"); wrap.className = "tablewrap";
+  let rows = OUT.map(o => {
+    const ready = !!MODS[o.n];
+    return '<tr><td class="mono">M-' + pad(o.n) + '</td><td>' + (ready ? '<button class="rowlink" type="button" data-m="' + o.n + '"></button>' : '<strong class="t"></strong>') +
+      '<div class="note d"></div></td><td class="num">' + o.hours + ' h</td><td>' + (ready ? '<span class="status ready">Ready · ' + pct(o.n) + '%</span>' : '<span class="status soon">Coming</span>') + '</td></tr>';
+  }).join("");
+  wrap.innerHTML = '<table><thead><tr><th>Sheet</th><th>Module</th><th class="num">Hours</th><th>Status</th></tr></thead><tbody>' + rows +
+    '</tbody><tfoot><tr><td></td><td><strong>Total</strong></td><td class="num"><strong>' + totalH + ' h</strong></td><td></td></tr></tfoot></table>';
+  const trs = wrap.querySelectorAll("tbody tr");
+  OUT.forEach((o, k) => {
+    const t = trs[k].querySelector(".rowlink, .t"); t.textContent = o.title;
+    trs[k].querySelector(".d").textContent = o.desc;
+    if(MODS[o.n]) t.onclick = () => go("module", o.n, store.get("pos:" + o.n, 0));
+  });
+  main.append(wrap);
+  const n = document.createElement("p"); n.className = "note"; n.style.marginTop = "14px";
+  n.innerHTML = 'This course teaches how bidding works and where to check the rules. It is not legal, tax or insurance advice. For license structure, contracts and bonding, use a construction attorney, a CPA and a surety agent. Your progress is saved in this browser only.';
+  main.append(n);
+  $("startBtn").onclick = () => go("module", 1, 0);
+  $("resumeBtn").onclick = () => { const last = store.get("last", null); if(last && MODS[last.m]) go("module", last.m, last.i); else go("module", 1, 0); };
+}
+
+/* ---------- Slides ---------- */
+function el(tag, cls, html){ const e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+function callout(cls, label, html){ const c = el("div", "callout " + cls); c.append(el("span", "lbl", label)); c.append(el("div", null, html)); return c; }
+
+function renderSlide(m, i){
+  const s = m.slides[i]; const t = s.t || "std";
+  const body = el("div", "sheet-body");
+  if(t === "cover"){
+    body.append(el("span", "eyebrow", "Module " + pad(m.n) + " · " + m.hours + " hours"));
+    body.append(el("h2", null, s.h));
+    body.append(el("p", "lead", s.lead));
+    const g = el("div", "cover-grid");
+    const left = el("div", "prose"); left.append(el("h3", null, "By the end you will be able to")); left.lastChild.style.cssText = "font-size:20px;text-transform:uppercase;margin-bottom:8px";
+    const ol = el("ul", "objectives"); s.objectives.forEach(o => ol.append(el("li", null, o))); left.append(ol);
+    const tb = el("div", "timebox"); tb.append(el("div", "bignum", m.hours + "h"));
+    s.time.forEach(r => { const row = el("div", "row"); row.append(el("span", null, r[0]), el("span", null, r[1])); tb.append(row); });
+    g.append(left, tb); body.append(g);
+    if(s.body) body.append(el("div", "prose", s.body));
+  } else {
+    body.append(el("h2", null, s.h));
+    if(s.lead) body.append(el("p", "lead", s.lead));
+    if(t === "terms"){
+      const dl = el("dl", "terms");
+      s.terms.forEach(([k, v]) => { const d = el("div"); d.append(el("dt", null, k), el("dd", null, v)); dl.append(d); });
+      body.append(dl);
+    } else if(t === "quiz"){
+      body.append(renderQuiz(m, s));
+    } else if(t === "practice"){
+      body.append(renderPractice(m, s));
+    } else if(t === "scorer"){
+      body.append(renderScorer(m, s));
+    }
+    if(s.body) body.append(el("div", "prose", s.body));
+  }
+  if(s.ex) body.append(callout("ex", s.exLabel || "Example", s.ex));
+  if(s.watch) body.append(callout("watch", "Watch out", s.watch));
+  if(s.deeper){
+    const d = el("details", "deeper"); d.append(el("summary", null, "Go deeper"));
+    d.append(el("div", "inner", s.deeper)); body.append(d);
+  }
+  if(s.src) body.append(el("p", "src", "Sources: " + s.src));
+  return body;
+}
+
+function renderQuiz(m, s){
+  const key = "quiz:" + m.n + ":" + (s.id || "q");
+  const ans = store.get(key, {});
+  const box = el("div");
+  const score = el("p", "score");
+  function update(){
+    const done = Object.keys(ans).length;
+    const right = s.qs.reduce((a, q, k) => a + (ans[k] === q.c ? 1 : 0), 0);
+    score.textContent = done ? right + " of " + done + " right · " + (s.qs.length - done) + " to go" : s.qs.length + " questions · tap an answer";
+  }
+  s.qs.forEach((q, k) => {
+    const qd = el("div", "q");
+    qd.append(el("div", "qt", (k + 1) + ". " + q.q));
+    const opts = el("div", "opts");
+    const why = el("p", "why", q.why); why.hidden = ans[k] == null;
+    q.a.forEach((a, j) => {
+      const b = el("button", "opt", a); b.type = "button";
+      const paint = () => {
+        if(ans[k] == null) return;
+        b.disabled = true;
+        if(j === q.c) b.classList.add("right");
+        else if(j === ans[k]) b.classList.add("wrong");
+      };
+      b.onclick = () => { ans[k] = j; store.set(key, ans); opts.querySelectorAll(".opt").forEach(x => x._paint()); why.hidden = false; update(); };
+      b._paint = paint; paint(); opts.append(b);
+    });
+    qd.append(opts, why); box.append(qd);
+  });
+  const reset = el("button", "ghost", "Clear my answers"); reset.type = "button";
+  reset.onclick = () => { store.set(key, {}); render(false); };
+  update(); box.prepend(score); box.append(reset); box.style.cssText = "display:grid;gap:14px";
+  return box;
+}
+
+function renderPractice(m, s){
+  const key = "prac:" + m.n + ":" + (s.id || "p");
+  const st = store.get(key, {});
+  const wrap = el("div"); wrap.style.cssText = "display:grid;gap:10px";
+  const tally = el("p", "tally");
+  const total = s.items.reduce((a, x) => a + x.hrs, 0);
+  function upd(){ const d = s.items.reduce((a, x, k) => a + (st[k] ? x.hrs : 0), 0); tally.textContent = "Done: " + d + " of " + total + " practice hours"; }
+  const ul = el("ul", "tasks");
+  s.items.forEach((it, k) => {
+    const li = el("li", "task" + (st[k] ? " done" : ""));
+    const id = "t-" + m.n + "-" + (s.id || "p") + "-" + k;
+    const cb = document.createElement("input"); cb.type = "checkbox"; cb.id = id; cb.checked = !!st[k];
+    cb.onchange = () => { st[k] = cb.checked; store.set(key, st); li.classList.toggle("done", cb.checked); upd(); };
+    const mid = el("div"); const lab = el("label", null, it.h); lab.htmlFor = id; mid.append(lab, el("div", "d", it.d));
+    li.append(cb, mid, el("span", "hrs", it.hrs + " h")); ul.append(li);
+  });
+  upd(); wrap.append(tally, ul); return wrap;
+}
+
+function renderScorer(m, s){
+  const key = "score:" + m.n + ":" + (s.id || "s");
+  const st = store.get(key, {});
+  const box = el("div", "scorer");
+  const totalBox = el("div", "sc-total");
+  const n = el("span", "n"); const v = el("span", "sc-verdict"); const d = el("span", "note");
+  totalBox.append(n, v, d);
+  function upd(){
+    let sum = 0, answered = 0;
+    s.items.forEach((x, k) => { if(st[k] != null && st[k] !== ""){ sum += +st[k]; answered++; } });
+    n.textContent = sum + " / " + s.items.length * 2;
+    if(answered < s.items.length){ v.textContent = "Score all " + s.items.length + " items"; d.textContent = answered + " scored so far."; return; }
+    const band = s.bands.find(b => sum >= b[0]); v.textContent = band[1]; d.textContent = band[2];
+  }
+  s.items.forEach((x, k) => {
+    const row = el("div", "sc-row");
+    const id = "sc-" + m.n + "-" + k;
+    const lab = el("label", null, x[0]); lab.htmlFor = id; lab.append(el("span", "hint", x[1]));
+    const sel = document.createElement("select"); sel.id = id;
+    [["", "Score…"], ["2", "2 · Yes / strong"], ["1", "1 · Maybe / so-so"], ["0", "0 · No / weak"]].forEach(o => sel.add(new Option(o[1], o[0])));
+    sel.value = st[k] == null ? "" : String(st[k]);
+    sel.onchange = () => { st[k] = sel.value === "" ? null : +sel.value; store.set(key, st); upd(); };
+    row.append(lab, sel); box.append(row);
+  });
+  upd(); box.append(totalBox); return box;
+}
+
+function renderModule(scroll){
+  const m = MODS[cur.m]; const i = cur.i; const main = $("main"); main.innerHTML = "";
+  markSeen(m.n, i); store.set("pos:" + m.n, i); store.set("last", { m: m.n, i });
+  const o = OUT.find(x => x.n === m.n);
+  const head = el("div", "mhead");
+  head.append(el("span", "eyebrow", "Module " + pad(m.n) + " of " + OUT.length + " · " + m.hours + " hours"));
+  const h1 = el("h1"); h1.textContent = o ? o.title : m.title; head.append(h1);
+  main.append(head);
+  const strip = el("div", "strip"); strip.setAttribute("aria-label", "Slides in this module");
+  const sn = seen(m.n);
+  m.slides.forEach((s, k) => {
+    const b = el("button"); b.type = "button"; b.title = (k + 1) + ". " + s.h.replace(/<[^>]+>/g, "");
+    b.setAttribute("aria-label", "Slide " + (k + 1) + ": " + b.title);
+    if(sn.has(k)) b.classList.add("seen"); if(k === i) b.setAttribute("aria-current", "true");
+    b.onclick = () => go("module", m.n, k); strip.append(b);
+  });
+  main.append(strip);
+  const sheet = el("article", "sheet"); sheet.setAttribute("aria-live", "polite");
+  const top = el("div", "sheet-top");
+  const label = el("span", "mono", "M-" + pad(m.n) + " · Slide " + (i + 1) + " / " + m.slides.length);
+  const tools = el("div"); tools.style.cssText = "display:flex;gap:8px;flex-wrap:wrap";
+  const rd = el("button", "ghost", "Read aloud"); rd.type = "button"; rd.setAttribute("aria-pressed", "false");
+  if(!("speechSynthesis" in window)) rd.hidden = true;
+  rd.onclick = () => {
+    if(speaking){ stopSpeech(); rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; return; }
+    const clone = sheet.querySelector(".sheet-body").cloneNode(true);
+    clone.querySelectorAll("details:not([open]) .inner, select, .src").forEach(x => x.remove());
+    try {
+      const u = new SpeechSynthesisUtterance(clone.innerText.replace(/\s+/g, " "));
+      u.rate = 0.95; u.onend = () => { speaking = false; rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; };
+      speechSynthesis.cancel(); speechSynthesis.speak(u); speaking = true; rd.setAttribute("aria-pressed", "true"); rd.textContent = "Stop reading";
+    } catch(e){ rd.hidden = true; }
+  };
+  tools.append(rd); top.append(label, tools);
+  sheet.append(top, renderSlide(m, i)); main.append(sheet);
+  const ctr = el("div", "controls");
+  const prev = el("button", "btn", "← Back"); prev.type = "button"; prev.disabled = i === 0;
+  prev.onclick = () => go("module", m.n, i - 1);
+  const next = el("button", "btn primary"); next.type = "button";
+  const last = i === m.slides.length - 1;
+  const nextMod = MODS[m.n + 1];
+  next.textContent = last ? (nextMod ? "Start Module " + (m.n + 1) + " →" : "Back to course map") : "Next →";
+  next.onclick = () => last ? (nextMod ? go("module", m.n + 1, 0) : go("home")) : go("module", m.n, i + 1);
+  ctr.append(prev, el("span", "kbd", "← → keys work too"), next);
+  main.append(ctr);
+  if(scroll) main.scrollIntoView({ block: "start", behavior: "auto" });
+}
+
+function render(scroll){
+  stopSpeech();
+  renderNav();
+  if(cur.view === "module" && MODS[cur.m]) renderModule(scroll); else { renderHome(); if(scroll) window.scrollTo(0, 0); }
+}
+
+document.addEventListener("keydown", e => {
+  if(cur.view !== "module") return;
+  const tag = (e.target.tagName || "").toLowerCase();
+  if(tag === "input" || tag === "select" || tag === "textarea" || e.metaKey || e.ctrlKey || e.altKey) return;
+  const m = MODS[cur.m];
+  if(e.key === "ArrowRight" && cur.i < m.slides.length - 1) go("module", m.n, cur.i + 1);
+  if(e.key === "ArrowLeft" && cur.i > 0) go("module", m.n, cur.i - 1);
+});
+
+cur = parseHash(); render(false);
+})();
+</script>
