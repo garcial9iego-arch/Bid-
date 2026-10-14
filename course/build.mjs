@@ -11,7 +11,8 @@ const src = join(root, "src");
 const dist = join(root, "dist");
 
 const moduleFiles = readdirSync(src).filter(f => /^m\d+\.js$/.test(f)).sort((a, b) => parseInt(a.slice(1)) - parseInt(b.slice(1)));
-const content = [readFileSync(join(src, "outline.js"), "utf8"), ...moduleFiles.map(f => readFileSync(join(src, f), "utf8"))].join("\n");
+const extras = ["realbids.js", "lab.js"].map(f => readFileSync(join(src, f), "utf8"));
+const content = [readFileSync(join(src, "outline.js"), "utf8"), ...moduleFiles.map(f => readFileSync(join(src, f), "utf8")), ...extras].join("\n");
 const shell = readFileSync(join(src, "shell.html"), "utf8");
 if (!shell.includes("/*__CONTENT__*/")) throw new Error("shell.html is missing the /*__CONTENT__*/ placeholder");
 const page = shell.replace("/*__CONTENT__*/", () => content);

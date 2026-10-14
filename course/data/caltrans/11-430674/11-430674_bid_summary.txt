@@ -1,0 +1,967 @@
+                    STATE OF CALIFORNIA              B I D    S U M M A R Y            DEPARTMENT OF TRANSPORTATION            BID211
+                                                                                                                               PAGE 1
+   BID OPENING DATE       01/04/22                       IN SAN DIEGO COUNTY AT VARIOUS                                        01/05/22
+   CONTRACT NUMBER        11-430674                      LOCATIONS                                                   CONTRACT CODE 'A '
+   LOCATION               11-SD-5-R0.3/5.0                                                                           120 CONTRACT ITEMS
+
+                                                         CONVERT POTABLE IRRIGATION SYSTEM           FEDERAL AID   ACST-X073-(150)E
+
+
+             DB GOALS:     DISADVANTAGED BUSINESS ENTERPRISE - 23.0%
+PROPOSALS ISSUED   14      FUND TOTAL                     0                              TOTAL NUMBER OF WORKING DAYS     950
+NUMBER OF BIDDERS    5    ENGINEERS EST       11,206,405.25    AMOUNT OVER         339,625.25          PERCENT OVER EST   3.03
+              BID RANK         BID TOTAL     BIDDER ID          BIDDER INFORMATION (NAME/ADDRESS/LOCATION)
+              --------        -----------    ---------          -------------------------------------------------
+                    1        11,546,030.50      2               DIVERSIFIED LANDSCAPE CO.               951 245-1686
+                                                                                                        00576183
+                                                                21730 BUNDY CANYON ROAD;            FAX 800 783-4197
+                                                                WILDOMAR CA 92595
+                    2        12,177,446.25      1               MARINA LANDSCAPE, INC.                  714 939-6600
+                                                                                                        00492862
+                                                                3707 WEST GARDEN GROVE BLVD;        FAX 714 935-1199
+                                                                ORANGE CA 92868
+                    3        12,701,059.40      3               ACCU CONSTRUCTION, INC.                 714 641-4730
+                                                                                                        00822927
+                                                                2098 S. GRAND AVE. SUITE A;         FAX 714 641-4704
+                                                                SANTA ANA CA 92705
+                    4        13,133,124.47      4               GRIFFITH COMPANY                        714 984-5500
+                                                                                                        00000088
+                                                                3050 EAST BIRCH STREET;             FAX 714 854-0228
+                                                                BREA CA 92821
+                    5        13,592,574.95      5               SEMA CONSTRUCTION, INC.                 303 627-2600
+                                                                                                        00657770
+                                                                42690 RIO NEDO;                     FAX 951 296-6448
+                                                                TEMECULA CA 92590
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 2
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   02     FORTTE CONSTRUCTION INC.                                      ITEM 113 (100%)
+          BUENA PARK CA                           1032550
+          FORTTE CONSTRUCTION INC.                                      ITEM 114 (100%)
+          BUENA PARK CA                           1032550
+          GOLDEN STATE BORING & PIPE JACKING, INC                       DIRECTIONAL BORING
+          CHINO CA                                678500
+          GOLDEN STATE BORING & PIPE JACKING, INC                       ITEM 95 (72%)
+          CHINO CA                                678500
+          MANERI TRAFFIC CONTROL                                        ITEM 13 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL                                        ITEM 5 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL                                        ITEM 6 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL                                        ITEM 7 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL                                        ITEM 9 (100%)
+          FALLBROOK CA                            1017741
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 3
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   01     DC TRAFFIC CONTROL                                            ALTERNATIVE TEMORARY CRASH CUSHION
+          SANTA FE SPRINGS CA                     1015478
+          DC TRAFFIC CONTROL                                            ITEM 11 (0%)
+          SANTA FE SPRINGS CA                     1015478
+          DC TRAFFIC CONTROL                                            ITEM 12 (100%)
+          SANTA FE SPRINGS CA                     1015478
+          DC TRAFFIC CONTROL                                            ITEM 13 (0%)
+          SANTA FE SPRINGS CA                     1015478
+          DC TRAFFIC CONTROL                                            PORTABLE CHANGEABLE MESSAGE SIGN
+          SANTA FE SPRINGS CA                     1015478
+          DC TRAFFIC CONTROL                                            TEMPORARY RAILING TYPE K
+          SANTA FE SPRINGS CA                     1015478
+          EWASTEDISPOSAL, INC                                           ITEM 27 (30%)
+          NEWPORT BEACH CA                        N/A
+          EWASTEDISPOSAL, INC                                           TRUCKING AND DISPOSAL (PARTIAL)
+          NEWPORT BEACH CA                        N/A
+          FORTTE CONSTRUCTION INC                                       ELECTRIC SERVICE FOR IRRIGATION
+          BUENA PARK CA                           1032550
+          FORTTE CONSTRUCTION INC                                       ITEM 113 (100%)
+          BUENA PARK CA                           1032550
+          FORTTE CONSTRUCTION INC                                       ITEM 114 (100%)
+          BUENA PARK CA                           1032550
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 4
+         01/04/22                                                                                                 01/05/22
+                                           L I S T    O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   01     FORTTE CONSTRUCTION INC                                        SUBSURFACE LOCATOR
+          BUENA PARK CA                            1032550
+          GOLDEN STATE BORING & PIPE JACKING INC                         BORING (PARTIAL)
+          CHINO CA                                 678500
+          GOLDEN STATE BORING & PIPE JACKING INC                         ITEM 95 (15%)
+          CHINO CA                                 678500
+          LOPEZ CONSTRUCTION                                             ITEM 105 (100%)
+          CORONA CA                                890389
+          LOPEZ CONSTRUCTION                                             SLOPE PAVING
+          CORONA CA                                890389
+          MANERI TRAFFIC CONTROL INC                                     ALTERNATIVE TEMORARY CRASH CUSHION
+          FALLBROOK CA                             1017741
+          MANERI TRAFFIC CONTROL INC                                     CONSTRUCTION AREA SIGNS
+          FALLBROOK CA                             1017741
+          MANERI TRAFFIC CONTROL INC                                     ITEM 11 (100%)
+          FALLBROOK CA                             1017741
+          MANERI TRAFFIC CONTROL INC                                     ITEM 13 (100%)
+          FALLBROOK CA                             1017741
+          MANERI TRAFFIC CONTROL INC                                     ITEM 5 (100%)
+          FALLBROOK CA                             1017741
+          MANERI TRAFFIC CONTROL INC                                     ITEM 7 (100%)
+          FALLBROOK CA                             1017741
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 5
+         01/04/22                                                                                                 01/05/22
+                                             L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   01     MANERI TRAFFIC CONTROL INC                                      ITEM 9 (100%)
+          FALLBROOK CA                              1017741
+          MANERI TRAFFIC CONTROL INC                                      PLASTIC TRAFFIC DRUMS
+          FALLBROOK CA                              1017741
+          MANERI TRAFFIC CONTROL INC                                      PORTABLE CHANGEABLE MESSAGE SIGN
+          FALLBROOK CA                              1017741
+          MANERI TRAFFIC CONTROL INC                                      STATIONARY IMPACT ATTENUATOR VEHICLE
+          FALLBROOK CA                              1017741
+          PAYNECO SPECIALTIES INCORPORATED                                ITEM 1 (100%)
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                                ITEM 10 (100%)
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                                ITEM 108 (100%)
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                                ITEM 109 (100%)
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                                ITEM 110 (100%)
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                                ITEM 111 (100%)
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                                ITEM 112 (100%)
+          CHULA VISTA CA                            298637
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                  BID211
+         11-SD-5-R0                                                                                                 PAGE 6
+         01/04/22                                                                                                   01/05/22
+                                             L I S T   O F   S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   01     PAYNECO SPECIALTIES INCORPORATED                               ITEM 8 (100%)
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                               LEAD COMPLIANCE PLAN
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                               PAVEMENT MARKER RETROREFLECTIVE
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                               REMOVE PAINTED TRAFFIC STRIPE
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                               TEMPORARY PAVEMENT MARKER
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                               TEMPORARY TRAFFIC STRIPE
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                               6" THERMOPLASTIC TRAFFIC STRIPE
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                               8" THERMOPLASTIC TRAFFIC STRIPE
+          CHULA VISTA CA                            298637
+          PAYNECO SPECIALTIES INCORPORATED                               8" THERMOPLASTIC TRAFFIC STRIPE (BROKEN)
+          CHULA VISTA CA                            298637
+          RIVERSIDE DIRECTIONAL DRILLING                                 BORING (PARTIAL)
+          RIVERSIDE CA                              838671
+          RIVERSIDE DIRECTIONAL DRILLING                                 ITEM 91 (20%)
+          RIVERSIDE CA                              838671
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 7
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   03     FORTTE CONSTRUCTION INC                                       ITEM 113 (100%)
+          BUENA PARK CA                           1032550
+          FORTTE CONSTRUCTION INC                                       ITEM 114 (100%)
+          BUENA PARK CA                           1032550
+          HYM ENGINEERING, INC.                                         CONCRETE WORK ONLY
+          FULLERTON CA                            918130
+          HYM ENGINEERING, INC.                                         ITEM 105 (93%)
+          FULLERTON CA                            918130
+          HYM ENGINEERING, INC.                                         ITEM 41 (100%)
+          FULLERTON CA                            918130
+          HYM ENGINEERING, INC.                                         ITEM 42 (100%)
+          FULLERTON CA                            918130
+          HYM ENGINEERING, INC.                                         ITEM 43 (100%)
+          FULLERTON CA                            918130
+          HYM ENGINEERING, INC.                                         ITEM 44 (100%)
+          FULLERTON CA                            918130
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 11 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 13 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 5 (100%)
+          FALLBROOK CA                            1017741
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 8
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   03     MANERI TRAFFIC CONTROL, INC.                                  ITEM 6 (39%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 7 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 9 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL, INC.                                  LANE AND RAMP CLOSURE ONLY
+          FALLBROOK CA                            1017741
+          SRK ENGINEERING INC.                                          EXCAVATION AND GRADING ONLY
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 103 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 104 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 105 (7%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 106 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 107 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 12 (100%)
+          ESCONDIDO CA                            1017836
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 9
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   03     SRK ENGINEERING INC.                                          ITEM 120 (20%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 25 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 26 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 27 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 28 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 91 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 93 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 94 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 95 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 96 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING INC.                                          ITEM 97 (100%)
+          ESCONDIDO CA                            1017836
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 10
+         01/04/22                                                                                                 01/05/22
+                                             L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   03     SRK ENGINEERING INC.                                            ITEM 98 (100%)
+          ESCONDIDO CA                              1017836
+          SRK ENGINEERING INC.                                            MOBILIZATION FOR SRK ENGINEERING ONLY
+          ESCONDIDO CA                              1017836
+          TURBOSCAPE, INC.                                                ITEM 100 (100%)
+          LAKE ELSINORE CA                          851931
+          TURBOSCAPE, INC.                                                ITEM 46 (100%)
+          LAKE ELSINORE CA                          851931
+          UNITED GENERAL CONSTRUCTION INC.                                ITEM 20 (100%)
+          POWAY CA                                  1045977
+          UNITED GENERAL CONSTRUCTION INC.                                ITEM 24 (100%)
+          POWAY CA                                  1045977
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   04     FORTTE CONSRTUCTION INC.                                        ITEM 113 (100%)
+          BUENA PARK CA                             1032550
+          FORTTE CONSRTUCTION INC.                                        ITEM 114 (100%)
+          BUENA PARK CA                             1032550
+          FORTTE CONSRTUCTION INC.                                        ITEM 120 (3%)
+          BUENA PARK CA                             1032550
+          FORTTE CONSRTUCTION INC.                                        MOBILIZATION FOR ELECTRICAL WORK
+          BUENA PARK CA                             1032550
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                  BID211
+         11-SD-5-R0                                                                                                 PAGE 11
+         01/04/22                                                                                                   01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   04     MANERI TRAFFIC CONTROL                                        ITEM 11 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL                                        ITEM 5 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL                                        ITEM 6 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL                                        ITEM 7 (100%)
+          FALLBROOK CA                            1017741
+          SRK ENGINEERING                                               (PARTIAL - EXCAVATION & ROUGH GRADE ONLY)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 1 (70%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 103 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 104 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 105 (5%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 106 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 107 (100%)
+          ESCONDIDO CA                            1017836
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 12
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   04     SRK ENGINEERING                                               ITEM 12 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 120 (37%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 13 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 25 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 26 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 27 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 28 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 9 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 91 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 93 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 94 (100%)
+          ESCONDIDO CA                            1017836
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                 BID211
+         11-SD-5-R0                                                                                                PAGE 13
+         01/04/22                                                                                                  01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   04     SRK ENGINEERING                                               ITEM 95 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 96 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 97 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               ITEM 98 (100%)
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               MOBILIZATION FOR UNDERGROUND UTILITIES AND ROADWAY EXCAVATI
+          ESCONDIDO CA                            1017836
+          SRK ENGINEERING                                               PARTIAL - FOR UNDERGROUND UTILITIES AND ROADWAY EXCAVATION
+          ESCONDIDO CA                            1017836
+          STATEWIDE STRIPES INC.                                        (PARTIAL - FOR STRIPING REMOVAL ONLY)
+          SAN DIEGO CA                            788286
+          STATEWIDE STRIPES INC.                                        ITEM 1 (14%)
+          SAN DIEGO CA                            788286
+          STATEWIDE STRIPES INC.                                        ITEM 108 (100%)
+          SAN DIEGO CA                            788286
+          STATEWIDE STRIPES INC.                                        ITEM 109 (100%)
+          SAN DIEGO CA                            788286
+          STATEWIDE STRIPES INC.                                        ITEM 110 (100%)
+          SAN DIEGO CA                            788286
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 14
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   04     STATEWIDE STRIPES INC.                                        ITEM 111 (100%)
+          SAN DIEGO CA                            788286
+          STATEWIDE STRIPES INC.                                        ITEM 112 (100%)
+          SAN DIEGO CA                            788286
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   05     CGO CONSTRUCTION COMPANY                                      ITEM 25 (100%)
+          ONTARIO CA                              532200
+          DRS REBAR, INC.                                               ITEM 105 (11%)
+          CORONA CA                               981885
+          DRS REBAR, INC.                                               REINFORCING STEEL
+          CORONA CA                               981885
+          GOLDEN STATE BORING & PIPE JACKING, INC.                      DIRECTIONAL DRILLING
+          CHINO CA                                 678500
+          GOLDEN STATE BORING & PIPE JACKING, INC.                      ITEM 120 (1%)
+          CHINO CA                                 678500
+          GOLDEN STATE BORING & PIPE JACKING, INC.                      ITEM 95 (58%)
+          CHINO CA                                 678500
+          GOLDEN STATE BORING & PIPE JACKING, INC.                      MOBILIZATION
+          CHINO CA                                 678500
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 11 (100%)
+          FALLBROOK CA                            1017741
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 15
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F    S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   05     MANERI TRAFFIC CONTROL, INC.                                  ITEM 13 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 5 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 6 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 7 (100%)
+          FALLBROOK CA                            1017741
+          MANERI TRAFFIC CONTROL, INC.                                  ITEM 9 (100%)
+          FALLBROOK CA                            1017741
+          MARINA LANDSCAPE, INC.                                        ITEM 100 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                        ITEM 119 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                        ITEM 30 (92%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                        ITEM 31 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                        ITEM 32 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                        ITEM 33 (100%)
+          ORANGE CA                               492862
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 16
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F   S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   05     MARINA LANDSCAPE, INC.                                       ITEM 34 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 35 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 36 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 37 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 38 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 39 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 40 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 46 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 47 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 48 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 49 (100%)
+          ORANGE CA                               492862
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 17
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F   S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   05     MARINA LANDSCAPE, INC.                                       ITEM 50 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 51 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 52 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 53 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 54 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 55 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 56 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 57 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 58 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 59 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 60 (100%)
+          ORANGE CA                               492862
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 18
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F   S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   05     MARINA LANDSCAPE, INC.                                       ITEM 61 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 62 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 63 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 64 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 65 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 66 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 67 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 68 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 69 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 70 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 71 (100%)
+          ORANGE CA                               492862
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 19
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F   S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   05     MARINA LANDSCAPE, INC.                                       ITEM 72 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 73 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 74 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 75 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 76 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 77 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 78 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 79 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 80 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 81 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 82 (100%)
+          ORANGE CA                               492862
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 20
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F   S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   05     MARINA LANDSCAPE, INC.                                       ITEM 83 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 84 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 85 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 86 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 87 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 88 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 89 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 90 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 91 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 92 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ITEM 93 (100%)
+          ORANGE CA                               492862
+CONTINUED ON NEXT PAGE
+         11-430674                                                                                                BID211
+         11-SD-5-R0                                                                                               PAGE 21
+         01/04/22                                                                                                 01/05/22
+                                           L I S T   O F   S U B C O N T R A C T O R S
+
+BIDDER ID NAME AND ADDRESS                        LICENSE NUMBER      DESCRIPTION OF PORTION OF WORK SUBCONTRACTED
+_________ ____________________________________________________________ ____________________________________________________________
+   05     MARINA LANDSCAPE, INC.                                       ITEM 99 (100%)
+          ORANGE CA                               492862
+          MARINA LANDSCAPE, INC.                                       ROCK BLANKET
+          ORANGE CA                               492862
+          PERRY ELECTRIC                                               ITEM 113 (100%)
+          SANTEE CA                               747931
+          PERRY ELECTRIC                                               ITEM 114 (100%)
+          SANTEE CA                               747931
+          11-430674                                                                                                BID211
+          11-SD-5-R0                C O N T R A C T   P R O P O S A L    O F   L O W     B I D D E R               PAGE 22
+          01/04/22                                                                                                 01/05/22
+------------------------------------------------------------------------------------------------------------------------------------
+    ITEM      ITEM                                                   UNIT OF     ESTIMATED
+     NO.      CODE                  ITEM DESCRIPTION                 MEASURE     QUANTITY          BID              AMOUNT
+------------------------------------------------------------------------------------------------------------------------------------
+
+      1       070030    LEAD COMPLIANCE PLAN                            LS     LUMP SUM                5,740.00     5,740.00
+      2       090100    TIME-RELATED OVERHEAD (WDAY)                    WDAY        200                1,640.00   328,000.00
+      3       090205    DISPUTE RESOLUTION BOARD ON-SITE                EA            5                6,000.00    30,000.00
+                        MEETING
+      4       090210    HOURLY OFF-SITE                                 HR             20                200.00     4,000.00
+                        DISPUTE-RESOLUTION-BOARD-RELATED TASKS
+      5       120090    CONSTRUCTION AREA SIGNS                         LS     LUMP SUM             69,900.00      69,900.00
+      6       120100    TRAFFIC CONTROL SYSTEM                          LS     LUMP SUM            229,200.00     229,200.00
+      7       120103    STATIONARY IMPACT ATTENUATOR VEHICLE            DAY          26              1,120.00      29,120.00
+      8       120159    TEMPORARY TRAFFIC STRIPE (PAINT)                LF          860                  2.45       2,107.00
+      9       120198    PLASTIC TRAFFIC DRUMS                           EA          160                 38.50       6,160.00
+     10       120300    TEMPORARY PAVEMENT MARKER                       EA           34                 32.00       1,088.00
+     11       128651    PORTABLE CHANGEABLE MESSAGE SIGN (EA)           EA            2              7,480.00      14,960.00
+     12       129000    TEMPORARY RAILING (TYPE K)                      LF        6,440                 51.20     329,728.00
+     13       012571    ALTERNATIVE TEMPORARY CRASH CUSHION             EA           26              2,750.00      71,500.00
+     14       130100    JOB SITE MANAGEMENT                             LS     LUMP SUM             30,400.00      30,400.00
+     15       130300    PREPARE STORM WATER POLLUTION PREVENTION        LS     LUMP SUM              1,870.00       1,870.00
+                         PLAN
+     16       130310    RAIN EVENT ACTION PLAN                          EA           20                  500.00    10,000.00
+     17       130320    STORM WATER SAMPLING AND ANALYSIS DAY           EA            5                  210.00     1,050.00
+     18       130330    STORM WATER ANNUAL REPORT                       EA            5                2,000.00    10,000.00
+     19       130610    TEMPORARY CHECK DAM                             LF          760                    3.80     2,888.00
+     20       130640    TEMPORARY FIBER ROLL                            LF       60,300                    3.90   235,170.00
+     21       130710    TEMPORARY CONSTRUCTION ENTRANCE                 EA            9                3,100.00    27,900.00
+     22       130730    STREET SWEEPING                                 LS     LUMP SUM                9,570.00     9,570.00
+     23       130900    TEMPORARY CONCRETE WASHOUT                      LS     LUMP SUM                1,010.00     1,010.00
+     24       012572    MANAGE SOLID WASTE GENERATED                    HR        1,520                  100.00   152,000.00
+                        BY THE PUBLIC
+     25       170103    CLEARING AND GRUBBING (LS)                      LS     LUMP SUM             84,900.00      84,900.00
+     26       190101    ROADWAY EXCAVATION                              CY        6,480                 28.50     184,680.00
+     27       190105    ROADWAY EXCAVATION (TYPE Z-2)                   CY          190                390.00      74,100.00
+                        (AERIALLY DEPOSITED LEAD)
+     28       192502    SAND BEDDING                                    CY        3,220                 46.50     149,730.00
+     29       200002    ROADSIDE CLEARING                               LS     LUMP SUM             52,700.00      52,700.00
+     30       200114    ROCK BLANKET                                    SQFT     13,300                 11.40     151,620.00
+     31       200122    WEED GERMINATION                                SQYD    168,000                   .18      30,240.00
+     32       202038    PACKET FERTILIZER                               EA       48,000                   .26      12,480.00
+     33       202039    SLOW-RELEASE FERTILIZER                         LB        5,160                  1.95      10,062.00
+          11-430674                                                                                                 BID211
+          11-SD-5-R0                C O N T R A C T   P R O P O S A L    O F   L O W    B I D D E R                 PAGE 23
+          01/04/22                                                                                                  01/05/22
+------------------------------------------------------------------------------------------------------------------------------------
+    ITEM      ITEM                                                   UNIT OF     ESTIMATED
+     NO.      CODE                  ITEM DESCRIPTION                 MEASURE     QUANTITY          BID              AMOUNT
+------------------------------------------------------------------------------------------------------------------------------------
+
+     34 (F)   204008    PLANT (GROUP H)                                 EA      741,405                  .50       370,702.50
+     35       204011    PLANT (GROUP K)                                 EA        1,120               350.00       392,000.00
+     36       204025    PLANT (GROUP Z) (EA)                            EA          320             4,970.00     1,590,400.00
+     37       204035    PLANT (GROUP A)                                 EA       31,900                 8.30       264,770.00
+     38       204036    PLANT (GROUP B)                                 EA        3,050                26.20        79,910.00
+     39       204038    PLANT (GROUP U)                                 EA          960               310.00       297,600.00
+     40       204099    PLANT ESTABLISHMENT WORK                        LS     LUMP SUM           292,200.00       292,200.00
+     41       012573    ROCK MULCH (TYPE 1)                             SQFT     33,300                 2.90        96,570.00
+     42       012574    ROCK MULCH (TYPE 2)                             SQFT     23,900                 3.05        72,895.00
+     43       012575    ROCK MULCH (TYPE 3)                             SQFT      4,460                 5.55        24,753.00
+     44       205033    GRAVEL MULCH                                    SQFT    204,000                 2.85       581,400.00
+     45       205034    DECOMPOSED GRANITE                              SQFT     55,900                 1.70        95,030.00
+     46       205035    WOOD MULCH                                      CY        8,040                39.80       319,992.00
+     47       206005    EDGING                                          LF        3,660                 7.95        29,097.00
+     48       206400    CHECK AND TEST EXISTING IRRIGATION              LS     LUMP SUM            16,800.00        16,800.00
+                        FACILITIES
+     49       206402    OPERATE EXISTING IRRIGATION FACILITIES          LS     LUMP SUM             5,430.00         5,430.00
+     50       206405    REMOVE IRRIGATION FACILITY                      LS     LUMP SUM            55,000.00        55,000.00
+     51       206560    CONTROL AND NEUTRAL CONDUCTORS                  LS     LUMP SUM           161,000.00       161,000.00
+     52       206562    1" REMOTE CONTROL VALVE                         EA           60               400.00        24,000.00
+     53       206564    1 1/2" REMOTE CONTROL VALVE                     EA          180               570.00       102,600.00
+     54       206567    3" REMOTE CONTROL VALVE                         EA            1             1,500.00         1,500.00
+     55       012576    16 STATION IRRIGATION CONTROLLER                EA            1            10,500.00        10,500.00
+                        AND ENCLOSURE '157A'
+     56       012577    48 STATION IRRIGATION CONTROLLER                EA             1           18,900.00        18,900.00
+                        AND ENCLOSURE '158A'
+     57       012578    48 STATION IRRIGATION CONTROLLER                EA             1           15,200.00        15,200.00
+                        AND ENCLOSURE '158B'
+     58       012579    24 STATION IRRIGATION CONTROLLER                EA             1           13,400.00        13,400.00
+                        AND ENCLOSURE '159A'
+     59       012580    16 STATION IRRIGATION CONTROLLER                EA             1              9,960.00       9,960.00
+                        AND ENCLOSURE '159B'
+     60       012581    24 STATION IRRIGATION CONTROLLER                EA             1           14,900.00        14,900.00
+                        AND ENCLOSURE '160A'
+     61       012582    16 STATION IRRIGATION CONTROLLER                EA             1              9,960.00       9,960.00
+                        AND ENCLOSURE '160B'
+     62       012583    48 STATION IRRIGATION CONTROLLER                EA             1           18,900.00        18,900.00
+                        AND ENCLOSURE '161A'
+          11-430674                                                                                               BID211
+          11-SD-5-R0                C O N T R A C T   P R O P O S A L    O F   L O W    B I D D E R               PAGE 24
+          01/04/22                                                                                                01/05/22
+------------------------------------------------------------------------------------------------------------------------------------
+    ITEM      ITEM                                                   UNIT OF     ESTIMATED
+     NO.      CODE                  ITEM DESCRIPTION                 MEASURE     QUANTITY          BID              AMOUNT
+------------------------------------------------------------------------------------------------------------------------------------
+
+     63       012584    48 STATION IRRIGATION CONTROLLER                EA             1           15,200.00      15,200.00
+                        AND ENCLOSURE '161B'
+     64       012585    48 STATION IRRIGATION CONTROLLER                EA             1           15,000.00      15,000.00
+                        AND ENCLOSURE '161C'
+     65       012586    24 STATION IRRIGATION CONTROLLER                EA             1           15,000.00      15,000.00
+                        AND ENCLOSURE '162A'
+     66       012587    24 STATION IRRIGATION CONTROLLER                EA             1           11,300.00      11,300.00
+                        AND ENCLOSURE '162B'
+     67       012588    48 STATION IRRIGATION CONTROLLER                EA             1           18,800.00      18,800.00
+                        AND ENCLOSURE '163A'
+     68       012589    40 STATION IRRIGATION CONTROLLER                EA             1           14,400.00      14,400.00
+                        AND ENCLOSURE '163B'
+     69       012590    ANTENNA MAST                                    EA            4               1,450.00     5,800.00
+     70       206950    RECYCLED WATER IDENTIFICATION AND               LS     LUMP SUM               2,700.00     2,700.00
+                        WARNING SIGNS
+     71       012591    3" RECYCLED WATER CONNECTION ASSEMBLY           EA            6               7,800.00    46,800.00
+     72       208426    2" BACKFLOW PREVENTER ASSEMBLY                  EA            2               7,250.00    14,500.00
+     73       208442    FLOW SENSOR                                     EA            7               1,180.00     8,260.00
+     74       208445    TREE WELL SPRINKLER ASSEMBLY                    EA        2,560                  28.30    72,448.00
+     75       208446    RISER SPRINKLER ASSEMBLY (GEAR DRIVEN)          EA          810                  42.50    34,425.00
+     76       208447    POP-UP SPRINKLER ASSEMBLY (GEAR DRIVEN)         EA          820                  72.10    59,122.00
+     77       208448    RISER SPRINKLER ASSEMBLY                        EA          140                  49.50     6,930.00
+     78       208449    POP-UP SPRINKLER ASSEMBLY                       EA          110                  63.00     6,930.00
+     79       208565    REPLACE VALVE BOX COVER                         EA           87                  20.30     1,766.10
+     80       208575    2" GATE VALVE                                   EA           77                 540.00    41,580.00
+     81       208588    3" GATE VALVE                                   EA           46               1,190.00    54,740.00
+     82 (F)   208595    1" PLASTIC PIPE (SCHEDULE 40) (SUPPLY           LF       57,127                   4.50   257,071.50
+                        LINE)
+     83 (F)   208596    1 1/4" PLASTIC PIPE (SCHEDULE 40)               LF       29,852                   4.85   144,782.20
+                        (SUPPLY LINE)
+     84 (F)   208597    1 1/2" PLASTIC PIPE (SCHEDULE 40)               LF        6,626                   5.15    34,123.90
+                        (SUPPLY LINE)
+     85 (F)   208598    2" PLASTIC PIPE (SCHEDULE 40)                   LF       13,190                   5.85    77,161.50
+                        (SUPPLY LINE)
+     86 (F)   208599    2 1/2" PLASTIC PIPE (SCHEDULE 40)               LF        7,736                   7.55    58,406.80
+                        (SUPPLY LINE)
+     87 (F)   208607    3" PLASTIC PIPE (CLASS 315)                     LF        1,223                  12.90    15,776.70
+                        (SUPPLY LINE)
+          11-430674                                                                                                BID211
+          11-SD-5-R0                C O N T R A C T   P R O P O S A L    O F   L O W     B I D D E R               PAGE 25
+          01/04/22                                                                                                 01/05/22
+------------------------------------------------------------------------------------------------------------------------------------
+    ITEM      ITEM                                                   UNIT OF     ESTIMATED
+     NO.      CODE                  ITEM DESCRIPTION                 MEASURE     QUANTITY          BID              AMOUNT
+------------------------------------------------------------------------------------------------------------------------------------
+
+     88 (F)   208608    4" PLASTIC PIPE (CLASS 315)                     LF       33,604                   18.00   604,872.00
+                        (SUPPLY LINE)
+     89       208640    PRESSURE REGULATING VALVE                       EA            6                3,620.00    21,720.00
+     90       208683    BALL VALVE                                      EA            6                  390.00     2,340.00
+     91       208688    PVC PIPE CONDUIT                                LF          260                  130.00    33,800.00
+     92 (F)   208690    PVC PIPE CONDUIT (SLEEVE)                       LF           24                   33.20       796.80
+     93       208739    10" CORRUGATED HIGH DENSITY                     LF          650                   80.90    52,585.00
+                        POLYETHYLENE PIPE CONDUIT
+     94 (F)   012592    8" C900 (DR-14) PVC PIPE RECYCLED WATER         LF       21,358                   42.00   897,036.00
+                        DISTRIBUTION LINE
+     95       012593    16" RECYCLED WATER DISTRIBUTION LINE            LF        1,340                  230.00   308,200.00
+                        CONDUIT (SCHEDULE 40 PVC PIPE)
+     96 (F)   012594    4" TEMPORARY PVC PIPE (SURVEY SLEEVE)           EA          400                  310.00   124,000.00
+                        (RECYCLED WATER DISTRIBUTION LINE)
+     97       012595    8" GATE VALVE WITH GATE WELL                    EA             20              3,750.00    75,000.00
+                        (RECYCLED WATER DISTRIBUTION LINE)
+     98       012596    2" COMBINATION AIR RELEASE VALVE                EA             13              6,570.00    85,410.00
+                        (RECYCLED WATER DISTRIBUTION LINE)
+     99       210430    HYDROSEED                                       SQFT    315,000                     .11    34,650.00
+    100       210610    COMPOST (CY)                                    CY          470                   46.50    21,855.00
+    101       390132    HOT MIX ASPHALT (TYPE A)                        TON           9                1,640.00    14,760.00
+    102       012597    PLACE HOT MIX ASPHALT DIKE                      LF          350                   53.40    18,690.00
+                        (TYPE E MODIFIED)
+    103       398100    REMOVE ASPHALT CONCRETE DIKE                    LF          350                    3.80     1,330.00
+    104       012598    REMOVE CONCRETE MASONARY                        EA            2                3,400.00     6,800.00
+                        BLOCK STRUCTURE
+    105       721813    SLOPE PAVING (EXPOSED AGGREGATE)                CY          380                590.00     224,200.00
+    106       012599    ABANDON 2" WATER LATERAL                        EA            6              2,140.00      12,840.00
+    107       012600    4" WATER SERVICE                                EA            1             35,200.00      35,200.00
+    108       810230    PAVEMENT MARKER (RETROREFLECTIVE)               EA           34                 32.00       1,088.00
+    109       846007    6" THERMOPLASTIC TRAFFIC STRIPE                 LF          430                  3.75       1,612.50
+                        (ENHANCED WET NIGHT VISIBILITY)
+    110       846009    8" THERMOPLASTIC TRAFFIC STRIPE                 LF          330                    4.60     1,518.00
+                        (ENHANCED WET NIGHT VISIBILITY)
+    111       846010    8" THERMOPLASTIC TRAFFIC STRIPE                 LF          100                    2.40       240.00
+                        (ENHANCED WET NIGHT VISIBILITY)
+                        (BROKEN 12-3)
+    112       846020    REMOVE PAINTED TRAFFIC STRIPE                   LF          860                    1.35     1,161.00
+          11-430674                                                                                               BID211
+          11-SD-5-R0                C O N T R A C T   P R O P O S A L    O F   L O W   B I D D E R                PAGE 26
+          01/04/22                                                                                                01/05/22
+------------------------------------------------------------------------------------------------------------------------------------
+    ITEM      ITEM                                                   UNIT OF     ESTIMATED
+     NO.      CODE                  ITEM DESCRIPTION                 MEASURE     QUANTITY          BID              AMOUNT
+------------------------------------------------------------------------------------------------------------------------------------
+
+    113       012601    SUBSURFACE LOCATOR                              LS     LUMP SUM           20,200.00       20,200.00
+    114       870136    ELECTRIC SERVICE FOR IRRIGATION                 LS     LUMP SUM          106,800.00      106,800.00
+    115       995100    WATER METER CHARGES                             LS     LUMP SUM            1,860.00        1,860.00
+    116       012602    WATER METER REMOVAL CHARGES                     LS     LUMP SUM            1,250.00        1,250.00
+    117       995200    IRRIGATION WATER SERVICE CHARGES                LS     LUMP SUM          206,700.00      206,700.00
+    118       000001    ITEM DELETED PER ADDENDUM                       LS     LUMP SUM                 .00            0.00
+    119       204096    MAINTAIN EXISTING PLANTED AREAS                 LS     LUMP SUM            7,250.00        7,250.00
+    120       999990    MOBILIZATION                                    LS     LUMP SUM          248,000.00      248,000.00
+                                                                                                  TOTAL       11,546,030.50
+         11-430674                                                                                                  BID211
+         11-SD-5-R0                 S U M M A R Y     O F   R E M A I N I N G     B I D D E R S                     PAGE 27
+         01/04/22                                                                                                   01/05/22
+    |-------------------------------|-------------------------------|-------------------------------|-------------------------------
+ITEM|            SECOND             |            THIRD              |            FOURTH             |            FIFTH
+    |       BID         AMOUNT      |       BID         AMOUNT      |       BID         AMOUNT      |       BID         AMOUNT
+    |-------------------------------|-------------------------------|-------------------------------|-------------------------------
+  1 |         1,900.00       1900.00|         5,000.00         5000.00|          12,500.00        12500.00|     2,762.78         2762.78
+  2 |           500.00     100000.00|         3,400.00       680000.00|           2,000.00     400000.00|       1,652.62       330524.00
+  3 |         6,000.00      30000.00|         6,000.00        30000.00|           6,000.00        30000.00|     6,000.00        30000.00
+  4 |           200.00       4000.00|           200.00         4000.00|             200.00         4000.00|       200.00         4000.00
+  5 |        94,000.00      94000.00|        70,000.00        70000.00|          71,800.00        71800.00|    66,548.98        66548.98
+  6 |       250,000.00     250000.00|        81,000.00        81000.00|         171,160.00     171160.00|     177,670.56       177670.56
+  7 |         1,350.00      35100.00|         1,100.00        28600.00|           2,895.00        75270.00|     1,066.82        27737.32
+  8 |             3.00       2580.00|               3.00       2580.00|               5.50         4730.00|         2.37         2038.20
+  9 |            55.00       8800.00|            45.00         7200.00|              76.75        12280.00|        36.58         5852.80
+ 10 |            40.00       1360.00|            35.00         1190.00|              21.90          744.60|        30.97         1052.98
+ 11 |        10,750.00      21500.00|         2,000.00         4000.00|           9,865.00        19730.00|     9,042.54        18085.08
+ 12 |            58.00     373520.00|            17.00       109480.00|              22.50     144900.00|          39.64       255281.60
+ 13 |         3,260.00      84760.00|         2,600.00        67600.00|           6,195.00     161070.00|       2,616.24        68022.24
+ 14 |        10,500.00      10500.00|        10,000.00        10000.00|          16,200.00        16200.00|    53,740.83        53740.83
+ 15 |         2,250.00       2250.00|         2,000.00         2000.00|           2,800.00         2800.00|     1,770.61         1770.61
+ 16 |           500.00      10000.00|           500.00        10000.00|             500.00        10000.00|       500.00        10000.00
+ 17 |           260.00       1300.00|           200.00         1000.00|             500.00         2500.00|       202.36         1011.80
+ 18 |         2,000.00      10000.00|         2,000.00        10000.00|           2,000.00        10000.00|     2,000.00        10000.00
+ 19 |             5.00       3800.00|            13.00         9880.00|              11.50         8740.00|        13.34        10138.40
+ 20 |             3.70     223110.00|               4.00     241200.00|               3.10     186930.00|           6.65       400995.00
+ 21 |         3,500.00      31500.00|         2,000.00        18000.00|           3,000.00        27000.00|     7,546.29        67916.61
+ 22 |        60,000.00      60000.00|         3,000.00         3000.00|          11,000.00        11000.00|    32,376.89        32376.89
+ 23 |         2,700.00       2700.00|         1,000.00         1000.00|          12,000.00        12000.00|    20,359.40        20359.40
+ 24 |           170.00     258400.00|           150.00       228000.00|             200.00     304000.00|         110.47       167914.40
+ 25 |       400,000.00     400000.00|       100,000.00       100000.00|         165,000.00     165000.00|     478,323.18       478323.18
+26 |       22.00   142560.00|        60.00   388800.00|       60.30   390744.00|       39.41   255376.80
+27 |      310.00    58900.00|       400.00    76000.00|      422.00    80180.00|      229.80    43662.00
+28 |       55.00   177100.00|        52.00   167440.00|       54.85   176617.00|       31.36   100979.20
+29 |   54,000.00    54000.00|   100,000.00   100000.00|   95,600.00    95600.00|   25,294.45    25294.45
+30 |       14.00   186200.00|        16.00   212800.00|       12.75   169575.00|       16.11   214263.00
+31 |        .10     16800.00|          .80   134400.00|         .47    78960.00|         .10    16800.00
+32 |        .25     12000.00|          .50    24000.00|         .24    11520.00|         .26    12480.00
+33 |       1.70      8772.00|         3.00    15480.00|         .36     1857.60|        1.53     7894.80
+34 |        .35    259491.75|          .70   518983.50|        1.21   897100.05|         .41   303976.05
+35 |      400.00   448000.00|       700.00   784000.00|      630.00   705600.00|      459.90   515088.00
+36 |    1,680.00   537600.00|     2,400.00   768000.00|    2,400.00   768000.00|    1,839.60   588672.00
+37 |       6.00    191400.00|        14.00   446600.00|        7.45   237655.00|        7.15   228085.00
+38 |       18.50    56425.00|        34.00   103700.00|       17.90    54595.00|       20.44    62342.00
+39 |      105.00   100800.00|       170.00   163200.00|      169.00   162240.00|      122.64   117734.40
+         11-430674                                                                                                  BID211
+         11-SD-5-R0                 S U M M A R Y     O F   R E M A I N I N G     B I D D E R S                     PAGE 28
+         01/04/22                                                                                                   01/05/22
+    |-------------------------------|-------------------------------|-------------------------------|-------------------------------
+ITEM|            SECOND             |            THIRD              |            FOURTH             |            FIFTH
+    |       BID         AMOUNT      |       BID         AMOUNT      |       BID         AMOUNT      |       BID         AMOUNT
+    |-------------------------------|-------------------------------|-------------------------------|-------------------------------
+ 40 |       300,000.00     300000.00|       510,000.00       510000.00|         153,000.00     153000.00|     255,703.87       255703.87
+ 41 |             3.30     109890.00|               4.80     159840.00|               5.25     174825.00|           5.07       168831.00
+ 42 |             5.65     135035.00|               8.20     195980.00|               5.00     119500.00|           6.01       143639.00
+ 43 |             8.20      36572.00|            11.50        51290.00|               9.00        40140.00|         8.73        38935.80
+ 44 |             2.10     428400.00|               2.00     408000.00|               2.00     408000.00|           2.79       569160.00
+ 45 |             2.75     153725.00|               2.00     111800.00|               3.00     167700.00|           2.97       166023.00
+ 46 |            37.00     297480.00|            40.00       321600.00|              41.75     335670.00|          40.88       328675.20
+ 47 |             3.60      13176.00|               7.00      25620.00|              10.30        37698.00|         4.09        14969.40
+ 48 |         5,800.00       5800.00|         6,000.00         6000.00|          17,300.00        17300.00|     6,642.99         6642.99
+ 49 |        18,000.00      18000.00|         6,000.00         6000.00|          17,300.00        17300.00|    20,439.96        20439.96
+ 50 |        50,000.00      50000.00|        10,000.00        10000.00|          50,000.00        50000.00|    63,363.86        63363.86
+ 51 |       160,000.00     160000.00|       100,000.00       100000.00|         168,000.00     168000.00|     143,079.70       143079.70
+ 52 |           438.00      26280.00|           550.00        33000.00|             580.00        34800.00|       480.34        28820.40
+ 53 |           510.00      91800.00|           600.00       108000.00|             675.00     121500.00|         551.88        99338.40
+ 54 |         1,625.00       1625.00|         1,500.00         1500.00|           1,140.00         1140.00|     1,737.39         1737.39
+ 55 |         9,675.00       9675.00|        12,500.00        12500.00|          12,300.00        12300.00|    10,219.98        10219.98
+ 56 |        14,800.00      14800.00|        17,800.00        17800.00|          18,100.00        18100.00|    15,329.98        15329.98
+ 57 |        11,000.00      11000.00|        14,000.00        14000.00|          14,210.00        14210.00|    11,241.97        11241.97
+ 58 |        11,600.00      11600.00|        14,000.00        14000.00|          17,000.00        17000.00|    12,263.97        12263.97
+ 59 |         9,200.00       9200.00|        12,000.00        12000.00|          11,700.00        11700.00|     9,708.98         9708.98
+ 60 |        13,000.00      13000.00|        15,000.00        15000.00|          16,200.00        16200.00|    10,219.98        10219.98
+ 61 |         9,100.00       9100.00|        12,000.00        12000.00|          17,000.00        17000.00|     9,708.98         9708.98
+ 62 |        14,800.00      14800.00|        17,000.00        17000.00|          18,000.00        18000.00|    15,329.98        15329.98
+ 63 |        11,400.00      11400.00|        14,000.00        14000.00|          14,300.00        14300.00|    11,241.97        11241.97
+ 64 |        11,200.00      11200.00|        14,000.00        14000.00|          14,000.00        14000.00|    11,241.97        11241.97
+65 |   13,100.00    13100.00|   15,000.00    15000.00|   16,200.00    16200.00|   12,263.97    12263.97
+66 |    9,700.00     9700.00|   12,000.00    12000.00|   12,300.00    12300.00|   10,219.98    10219.98
+67 |   14,700.00    14700.00|   17,000.00    17000.00|   18,000.00    18000.00|   15,329.98    15329.98
+68 |   11,400.00    11400.00|   14,000.00    14000.00|   14,000.00    14000.00|   11,957.37    11957.37
+69 |    1,750.00     7000.00|    2,000.00     8000.00|    3,000.00    12000.00|    2,044.00     8176.00
+70 |   10,600.00    10600.00|   10,000.00    10000.00|    2,700.00     2700.00|   13,285.97    13285.97
+71 |   12,800.00    76800.00|   14,000.00    84000.00|    9,000.00    54000.00|   13,796.97    82781.82
+72 |    4,825.00     9650.00|    8,000.00    16000.00|   12,900.00    25800.00|    5,109.99    10219.98
+73 |    1,450.00    10150.00|    1,500.00    10500.00|    1,800.00    12600.00|    1,533.00    10731.00
+74 |       55.00   140800.00|       70.00   179200.00|       53.00   135680.00|       61.32   156979.20
+75 |       40.00    32400.00|       80.00    64800.00|       46.00    37260.00|       42.92    34765.20
+76 |       92.00    75440.00|      100.00    82000.00|       97.00    79540.00|      102.20    83804.00
+77 |       22.00     3080.00|       60.00     8400.00|       40.00     5600.00|       25.55     3577.00
+78 |       40.00     4400.00|       80.00     8800.00|       45.00     4950.00|       42.92     4721.20
+         11-430674                                                                                                BID211
+         11-SD-5-R0                 S U M M A R Y     O F   R E M A I N I N G   B I D D E R S                     PAGE 29
+         01/04/22                                                                                                 01/05/22
+    |-------------------------------|-------------------------------|-------------------------------|-------------------------------
+ITEM|            SECOND             |            THIRD              |            FOURTH             |            FIFTH
+    |       BID         AMOUNT      |       BID         AMOUNT      |       BID         AMOUNT      |       BID         AMOUNT
+    |-------------------------------|-------------------------------|-------------------------------|-------------------------------
+ 79 |           100.00       8700.00|           150.00        13050.00|           389.00        33843.00|       102.20         8891.40
+ 80 |           460.00      35420.00|           800.00        61600.00|           566.00        43582.00|       511.00        39347.00
+ 81 |           800.00      36800.00|         1,500.00        69000.00|         1,325.00        60950.00|     1,022.00        47012.00
+ 82 |             4.95     282778.65|               5.50     314198.50|             4.84     276494.68|           5.62       321053.74
+ 83 |             5.00     149260.00|               5.70     170156.40|             5.32     158812.64|           5.62       167768.24
+ 84 |             5.60      37105.60|               6.00      39756.00|             5.66        37503.16|         6.13        40617.38
+ 85 |             7.50      98925.00|               6.50      85735.00|             6.43        84811.70|         8.18       107894.20
+ 86 |            15.00     116040.00|               7.50      58020.00|             9.38        72563.68|        16.35       126483.60
+ 87 |            23.75      29046.25|            10.00        12230.00|            11.82        14455.86|        26.57        32495.11
+ 88 |            24.00     806496.00|            12.00       403248.00|            14.20     477176.80|          25.54       858246.16
+ 89 |         3,700.00      22200.00|         1,300.00         7800.00|         3,200.00        19200.00|     3,883.59        23301.54
+ 90 |           320.00       1920.00|           400.00         2400.00|           445.00         2670.00|       357.70         2146.20
+ 91 |           220.00      57200.00|           400.00       104000.00|           450.00     117000.00|         235.06        61115.60
+ 92 |           140.00       3360.00|            80.00         1920.00|            11.00          264.00|       143.08         3433.92
+ 93 |           102.00      66300.00|           100.00        65000.00|           170.00     110500.00|         112.42        73073.00
+ 94 |            80.00    1708640.00|            50.00      1067900.00|            52.65    1124498.70|          54.00    1153332.00
+ 95 |           290.00     388600.00|           350.00       469000.00|           379.00     507860.00|         316.88       424619.20
+ 96 |            65.00      26000.00|           240.00        96000.00|           225.00        90000.00|       171.58        68632.00
+ 97 |         6,900.00     138000.00|         4,000.00        80000.00|         3,600.00        72000.00|     4,487.25        89745.00
+ 98 |         2,200.00      28600.00|         7,000.00        91000.00|         6,900.00        89700.00|     5,393.49        70115.37
+ 99 |              .10      31500.00|                .10      31500.00|              .10        31500.00|          .10        31500.00
+100 |            31.00      14570.00|            60.00        28200.00|            65.00        30550.00|        31.68        14889.60
+101 |           610.00       5490.00|           700.00         6300.00|           375.00         3375.00|       293.42         2640.78
+102 |            62.00      21700.00|            50.00        17500.00|            39.00        13650.00|        49.17        17209.50
+103 |            48.00      16800.00|            30.00        10500.00|            22.00         7700.00|         9.45         3307.50
+104 |     2,375.00     4750.00|     4,500.00     9000.00|     4,600.00     9200.00|    18,835.85    37671.70
+105 |     1,445.00   549100.00|     1,100.00   418000.00|     2,090.00   794200.00|     1,907.38   724804.40
+106 |       340.00     2040.00|     2,000.00    12000.00|     2,200.00    13200.00|     1,396.42     8378.52
+107 |    31,000.00    31000.00|    40,000.00    40000.00|    37,000.00    37000.00|    22,488.30    22488.30
+108 |        38.00     1292.00|        33.00     1122.00|        27.50      935.00|        30.97     1052.98
+109 |        4.50      1935.00|         4.00     1720.00|         4.00     1720.00|         3.61     1552.30
+110 |        5.50      1815.00|         5.00     1650.00|         5.00     1650.00|         4.44     1465.20
+111 |        3.00       300.00|         3.00      300.00|         3.00      300.00|         2.32      232.00
+112 |        1.60      1376.00|         1.50     1290.00|         1.45     1247.00|         1.29     1109.40
+113 |    10,000.00    10000.00|     8,000.00     8000.00|     8,800.00     8800.00|    18,945.24    18945.24
+114 |   140,000.00   140000.00|   120,000.00   120000.00|   110,000.00   110000.00|   195,596.75   195596.75
+115 |     1,740.00     1740.00|     2,000.00     2000.00|    26,600.00    26600.00|     1,914.53     1914.53
+116 |     1,740.00     1740.00|     1,200.00     1200.00|    10,200.00    10200.00|     1,914.53     1914.53
+117 |   140,000.00   140000.00|   100,000.00   100000.00|     4,800.00     4800.00|    35,209.87    35209.87
+           11-430674                                                                                                     BID211
+           11-SD-5-R0                   S U M M A R Y    O F   R E M A I N I N G     B I D D E R S                       PAGE 30
+           01/04/22                                                                                                      01/05/22
+      |-------------------------------|-------------------------------|-------------------------------|-------------------------------
+ITEM|            SECOND             |            THIRD              |            FOURTH             |            FIFTH
+    |       BID         AMOUNT      |       BID         AMOUNT      |       BID         AMOUNT      |       BID         AMOUNT
+    |-------------------------------|-------------------------------|-------------------------------|-------------------------------
+118 |                .00          0.00|                 .00          0.00|                .00            0.00|            .00           0.00
+119 |          25,000.00      25000.00|          10,000.00       10000.00|          58,000.00        58000.00|      30,659.94       30659.94
+120 |         500,000.00     500000.00|         320,000.00      320000.00|         450,000.00     450000.00|     1,359,257.49    1359257.49
+
+TOT                     12,177,446.25                     12,701,059.40                    13,133,124.47                  13,592,574.95
+

@@ -206,6 +206,55 @@ details.deeper .inner ul,details.deeper .inner ol{margin:0 0 8px;padding-left:1.
 .ghost{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px}
 .ghost[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
 .kbd{font-family:var(--mono);font-size:12px;color:var(--muted)}
+/* Real Bid Lab */
+.labcard{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:8px;padding:14px 18px;margin-bottom:26px}
+.labcard h2{font-size:26px;text-transform:uppercase}
+.labcard p{margin:4px 0 0;max-width:70ch}
+@media (max-width:640px){.labcard{grid-template-columns:minmax(0,1fr)}}
+.si-lab{border-bottom:2px solid var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 20px;margin:0}
+.facts div{border-bottom:1px solid var(--line);padding:7px 0;min-width:0}
+.facts dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0}
+.docs h3,.results h3{font-size:21px;text-transform:uppercase;margin:4px 0 6px}
+.docs ul{margin:0 0 8px;padding-left:1.2em;display:grid;gap:4px}
+.scope,.bidsheet,.results{margin-top:26px;display:grid;gap:12px;min-width:0}
+.scope h2,.bidsheet h2,.results h2{font-size:28px;text-transform:uppercase}
+.catboxes{display:flex;flex-wrap:wrap;gap:8px}
+.catbox{display:flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--sheet);border-radius:6px;padding:7px 12px;cursor:pointer;font-weight:700;font-size:15px}
+.catbox input{width:18px;height:18px;accent-color:var(--accent)}
+.totalbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:flex-end;justify-content:space-between;background:var(--sheet);border:1.5px solid var(--ink);border-radius:6px;padding:10px 16px}
+.bigtotal{font-family:var(--display);font-size:34px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+table.items{font-size:14.5px}
+table.items td{vertical-align:middle}
+table.items td.desc{min-width:220px}
+table.items .code{display:block;font-family:var(--mono);font-size:11px;color:var(--muted)}
+table.items input{width:110px;font:inherit;text-align:right;padding:5px 8px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);font-variant-numeric:tabular-nums}
+table.items input:disabled{opacity:.75;background:transparent;border-style:dashed}
+table.items td.num{white-space:nowrap}
+table.items td.range{font-size:13px;color:var(--muted)}
+.grouprow td{background:var(--paper);font-family:var(--display);font-size:18px;text-transform:uppercase;font-weight:700;letter-spacing:.02em}
+.subrow td{font-weight:700;border-bottom:2px solid var(--line)}
+td.hi{color:var(--wrong);font-weight:700}
+td.lo{color:var(--leaf);font-weight:700}
+.confirm{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.copyfallback{width:100%;min-height:120px;font-family:var(--mono);font-size:12px;background:var(--sheet);color:var(--ink);border:1px solid var(--line);border-radius:6px}
+.verdict{display:grid;gap:6px}
+.rankchart{display:grid;gap:6px;background:var(--sheet);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.rk{display:grid;grid-template-columns:minmax(120px,240px) minmax(0,1fr) auto;gap:12px;align-items:center}
+@media (max-width:640px){.rk{grid-template-columns:minmax(0,1fr) auto}.rk-bar{grid-column:1/-1;order:3}}
+.rk-name{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14.5px;min-width:0}
+.rk-bar{height:14px;background:var(--paper);border-radius:3px;overflow:hidden}
+.rk-bar i{display:block;height:100%;background:var(--muted);opacity:.55}
+.rk.won .rk-bar i{background:var(--leaf);opacity:1}
+.rk.you .rk-bar i{background:var(--accent);opacity:1}
+.rk.you .rk-name{font-weight:700;color:var(--accent)}
+.rk.ee .rk-bar i{background:none;border-right:3px solid var(--ink);opacity:1}
+.rk.ee .rk-name{color:var(--muted);font-style:italic}
+.rk-val{font-family:var(--mono);font-size:12.5px;white-space:nowrap;text-align:right}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:1px 6px;border-radius:3px}
+.tag.won{background:var(--leaf-soft);color:var(--leaf)}
+.tag.nr{background:var(--wrong-soft);color:var(--wrong)}
 @media (prefers-reduced-motion:no-preference){.sheet{animation:in .16s ease-out}@keyframes in{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}}
 </style>
 
@@ -249,6 +298,9 @@ function stopSpeech(){ try { if(window.speechSynthesis) speechSynthesis.cancel()
 function parseHash(){
   const h = (location.hash || "").slice(1);
   const mm = /^m(\d+)(?:-(\d+))?$/.exec(h);
+  if(h === "lab") return { view: "lab", m: null, i: 0 };
+  const lm = /^lab-(\d\d-\w{6})$/.exec(h);
+  if(lm && window.LAB && window.LAB.projects.some(p => p.id === lm[1])) return { view: "lab", m: lm[1], i: 0 };
   if(mm && MODS[+mm[1]]){
     const m = MODS[+mm[1]]; let i = mm[2] ? +mm[2] - 1 : store.get("pos:" + m.n, 0);
     i = Math.max(0, Math.min(m.slides.length - 1, i || 0));
@@ -257,7 +309,7 @@ function parseHash(){
   return { view: "home", m: null, i: 0 };
 }
 function go(view, m, i){
-  const h = view === "module" ? "#m" + m + "-" + (i + 1) : "#home";
+  const h = view === "module" ? "#m" + m + "-" + (i + 1) : view === "lab" ? (m ? "#lab-" + m : "#lab") : "#home";
   if(location.hash !== h) history.replaceState(null, "", h);
   cur = { view, m, i }; render(true);
 }
@@ -267,6 +319,14 @@ function renderNav(){
   const nav = $("sheetIndex"); nav.innerHTML = "";
   const head = document.createElement("div"); head.className = "si-head"; head.textContent = "Sheet index · modules"; nav.append(head);
   const ul = document.createElement("ul"); ul.className = "si-list";
+  if(window.LAB){
+    const li = document.createElement("li"); li.className = "si-item si-lab";
+    const b = document.createElement("button"); b.type = "button"; b.className = "si-btn";
+    if(cur.view === "lab") b.setAttribute("aria-current", "true");
+    b.innerHTML = '<span class="si-no">LAB</span><span><span class="si-t">Real Bid Lab</span><span class="si-s">' + window.LAB.projects.length + ' real San Diego bids to price</span></span>';
+    b.onclick = () => { go("lab", null, 0); collapseNav(); };
+    li.append(b); ul.append(li);
+  }
   OUT.forEach(o => {
     const li = document.createElement("li"); li.className = "si-item";
     const b = document.createElement("button"); b.type = "button"; b.className = "si-btn";
@@ -304,6 +364,11 @@ function renderHome(){
     ["Check the source", "Fees, limits and rules change. When a number matters for a real bid, confirm it at the source given on the slide."]
   ].map(x => '<div><h3>' + x[0] + '</h3><p>' + x[1] + '</p></div>').join("");
   main.append(how);
+  if(window.LAB){
+    const lab = document.createElement("section"); lab.className = "labcard";
+    lab.innerHTML = '<div><span class="eyebrow">Practice with real bids</span><h2>Real Bid Lab</h2><p>Price ' + window.LAB.projects.length + ' real San Diego highway planting and irrigation jobs from the actual plans and specs, then compare every line item to what the winning contractor and every other bidder really bid.</p></div><button class="btn primary" type="button" id="labBtn">Open the lab →</button>';
+    main.append(lab); $("labBtn").onclick = () => go("lab", null, 0);
+  }
   const h2 = document.createElement("h2"); h2.textContent = "Sheet index"; h2.style.fontSize = "26px"; h2.style.textTransform = "uppercase"; h2.style.marginBottom = "10px"; main.append(h2);
   const wrap = document.createElement("div"); wrap.className = "tablewrap";
   let rows = OUT.map(o => {
@@ -502,7 +567,13 @@ function renderModule(scroll){
 function render(scroll){
   stopSpeech();
   renderNav();
-  if(cur.view === "module" && MODS[cur.m]) renderModule(scroll); else { renderHome(); if(scroll) window.scrollTo(0, 0); }
+  if(cur.view === "module" && MODS[cur.m]) renderModule(scroll);
+  else if(cur.view === "lab" && window.LAB){
+    const labGo = (v, id) => go("lab", id || null, 0);
+    if(cur.m) window.LAB.renderProject($("main"), cur.m, labGo); else window.LAB.renderList($("main"), labGo);
+    if(scroll) $("main").scrollIntoView({ block: "start" });
+  }
+  else { renderHome(); if(scroll) window.scrollTo(0, 0); }
 }
 
 document.addEventListener("keydown", e => {
