@@ -261,7 +261,7 @@ Profit = $2,400,000 − $1,800,000 − $350,000 = $250,000 (10.4% of revenue)</p
 <tr><td>+ Profit 10%</td><td>$184,406.40 × 0.10 = $18,440.64</td><td class="num">$202,847.04</td></tr>
 <tr><td>+ General liability</td><td>$202,847.04 × 0.009 = $1,825.62</td><td class="num">$204,672.66</td></tr>
 <tr><td>+ Bond 2.5% (only if required)</td><td>$204,672.66 × 0.025 = $5,116.82</td><td class="num">$209,789.48</td></tr>
-<tr class="hl"><td><strong>Final bid (rounded up to $100)</strong></td><td></td><td class="num"><strong>$209,800</strong></td></tr>
+<tr><td><strong>Final bid (rounded up to $100)</strong></td><td></td><td class="num"><strong>$209,800</strong></td></tr>
 </tbody></table></div>`,
   body: `<p><strong>What the final number means:</strong></p>
 <ul>
