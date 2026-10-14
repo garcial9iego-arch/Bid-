@@ -181,22 +181,8 @@ slides: [
 <div class="tablewrap"><table><thead><tr><th>IP-1</th><th>IP-2</th><th>IP-3</th><th>IP-4</th><th>IP-5</th><th>IP-6</th><th>IP-7</th><th>In conduits</th><th>Total</th></tr></thead>
 <tbody><tr><td class="num">440</td><td class="num">1,365</td><td class="num">1,210</td><td class="num">165</td><td class="num">1,150</td><td class="num">1,385</td><td class="num">1,130</td><td class="num">648</td><td class="num"><strong>7,493</strong></td></tr></tbody></table></div>
 <p><strong>Example 2: iceplant cuttings (item 25).</strong> Add up the callouts on the 7 planting sheets: 4,600 + 15,750 + 12,900 + 185 + 1,790 + 2,430 + 2,730 + 6,180 + 1,960 + 13,450 = <strong>61,975</strong>. The original bid list said 60,015. The addendum fixed it.</p>
-<p><strong>Example 3: something to ask about.</strong> The quantity table on IQ-1 adds up to 172 tree well sprinkler assemblies, but bid item 51 says 180. That's a good bidder inquiry. Ask before bid day.</p>`,
-  watch: `<p>Item 25 is marked <strong>(F)</strong>, meaning “final pay”: you're paid the bid quantity even if you install a different number, unless the Engineer changes it. Other items are paid by the actual units installed. That's why checking quantities matters: on (F) items, a wrong quantity is your gain or loss.</p>`
-},
-
-{ h: "Step 5 · Addendum 1",
-  lead: "Twelve days before bids were due, Caltrans changed the job. Every bidder had to bid the new version.",
-  body: `<div class="tablewrap"><table>
-<thead><tr><th>What changed</th><th>Before</th><th>After</th></tr></thead>
-<tbody>
-<tr><td>Item 7 · Temporary railing (Type K)</td><td class="num">1,340 LF</td><td class="num">1,700 LF</td></tr>
-<tr><td>Item 25 · Plant (Group H) cuttings</td><td class="num">60,015</td><td class="num">61,975</td></tr>
-<tr><td>Item 38 · 2" remote control valve</td><td class="num">4</td><td class="num">3</td></tr>
-<tr><td>Plan sheets 22, 23, 45, 56</td><td colspan="2">Replaced (traffic handling, irrigation and planting quantities)</td></tr>
-<tr><td>Federal wage rates</td><td colspan="2">Updated to Modification 12 (Aug 27, 2021), including higher carpenter and laborer rates</td></tr>
-</tbody></table></div>
-<p>The addendum says: “Submit bids for this work with the understanding and full consideration of this addendum.” The bid form asks you to list every addendum you received; the winner's bid form lists “1”.</p>`,
+<p><strong>Example 3: small differences.</strong> IQ-1 adds up to 172 tree well sprinkler assemblies (43 trees × 4), but bid item 51 says 180. On this job Caltrans rounded many measured items up a little: valve box labels 197 → 200, compost 282 → 290, packet fertilizer 1,893 → 1,900. So 180 is probably rounding. If a gap is bigger than that pattern, or it's on a lump-sum or final-pay item, ask before bid day.</p>`,
+  watch: `<p>Items marked <strong>(F)</strong> are “final pay”: you're paid the bid quantity even if you install a different amount, unless the Engineer changes the work. On this job that's the iceplant cuttings (item 25) and every supply pipe size (items 57–63), and those match the plan tables exactly. Other items are paid by the units actually installed. On final-pay items, a quantity error is your gain or loss, so check them hardest.</p>`,
   watch: `<p>Check for addenda the morning of bid day. Bidding the old quantities makes your extensions wrong, and failing to acknowledge an addendum can make your bid non-responsive.</p>`
 },
 

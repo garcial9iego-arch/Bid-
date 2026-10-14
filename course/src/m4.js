@@ -258,7 +258,7 @@ slides: [
 <li>Footnotes matter: on IQ-2, “(N) not a separate pay item, for information only” and “* included on IQ-1.”</li>
 </ul>`,
   watch: `<p>Private plan sets rarely include quantities, and when they do they often say “for reference only.” The contractor is responsible for the takeoff. Use any table as a check, never as your count.</p>`,
-  ex: `<p>Module 15 shows how checking IQ-1 against the bid list on this job found a question worth asking: the table adds to 172 tree well assemblies, but the bid item says 180.</p>`
+  ex: `<p>Module 15 shows what checking IQ-1 against the bid list turns up on this job: the table adds to 172 tree well assemblies, but the bid item says 180. It's probably Caltrans rounding up, as on several other items, and a short written question confirms it.</p>`
 },
 
 { h: "Finding your water and power on other sheets",

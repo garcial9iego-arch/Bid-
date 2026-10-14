@@ -264,7 +264,7 @@ slides: [
   body: fig("iq1-laterals", "<b>IQ-1 lateral supply side, by controller (97A, 97B, 97C, 97E, 97F, 97G) and valve.</b> Totals: 1\" 1,390 LF · 1¼\" 325 · 1½\" 60 · 2\" 172 · 2½\" 130 · tree well 172 · riser 15 · pop-up 1.", "iq1-full") +
 `<ul>
 <li>These totals match bid items 57, 58, 59 and 61 exactly. 2" pipe 172 + 20 on the main side = 192 = item 60.</li>
-<li><strong>Tree wells: 36 + 44 + 48 + 44 = 172 here, but bid item 51 is 180.</strong> That's a bidder inquiry: “IQ-1 totals 172 tree well sprinkler assemblies; the Bid Item List shows 180. Please confirm the quantity.”</li>
+<li><strong>Tree wells: 36 + 44 + 48 + 44 = 172 here (43 trees × 4), but bid item 51 is 180.</strong> Caltrans rounded several measured items up a little on this job (labels 197 → 200, compost 282 → 290), so this is probably rounding. If you're not sure, a short bidder inquiry settles it: “IQ-1 totals 172 tree well sprinkler assemblies; the Bid Item List shows 180. Please confirm.”</li>
 <li>Valve 97C-38 alone has 350 LF of 1" and 110 LF of 1¼": long laterals on that station. Look it up on the IP sheet to see why.</li>
 </ul>`,
   watch: `<p>On a unit-price public bid, you're paid for what you install, so a small quantity error is usually Caltrans's risk. On a lump-sum private bid, it's yours. Check quantity tables either way.</p>`
@@ -428,7 +428,7 @@ slides: [
     { q: "On ISS-1, what does symbol ⑥ require?", a: ["Use next to shoulders, curbs, sidewalks and dikes", "Use only on slopes", "Use at tree wells"], c: 0, why: "Remark ⑤ on the ⑥ pop-up row says it's required adjacent to shoulders, curbs, sidewalks and dikes." },
     { q: "On a removal plan, a label is struck through. What does that mean?", a: ["Keep it", "Remove it", "Ignore it"], c: 1, why: "Struck-through existing items are removed; “to remain” items stay." },
     { q: "An item on IQ-1 is marked (N). What does that mean for your bid?", a: ["You don't build it", "It's not a separate bid item, so its cost goes into other items", "Caltrans supplies it"], c: 1, why: "(N) means for information only. You still build and pay for it." },
-    { q: "IQ-1 totals 172 tree well assemblies; the bid item says 180. What should you do?", a: ["Ignore it", "Bid 172", "Send a bidder inquiry before bid day"], c: 2, why: "Mismatches are questions for the agency. Ask in writing before bids close." },
+    { q: "IQ-1 totals 172 tree well assemblies; the bid item says 180. What is the best approach?", a: ["Bid 172 at the bid item", "Check whether it fits the agency's rounding pattern; if unsure, ask in writing before bid day", "Ignore all quantity tables"], c: 1, why: "Caltrans rounded several items up slightly on this job. Small gaps are usually rounding; anything you can't explain is a written question before bids close." },
     { q: "Why did Addendum 1 raise the iceplant count by exactly 1,960?", a: ["A new area was added to the design", "A callout on PP-6 had been left out of the quantity table", "Caltrans rounded up"], c: 1, why: "The 1,960 CAR EDU callout on PP-6 wasn't in the original PQ-1 total." },
     { q: "Which sheets are Tier 1 for a landscape bidder?", a: ["Utility plans", "Irrigation and planting plans, schedules, details and quantity tables", "Project control"], c: 1, why: "Tier 1 sheets define what you build and how much: they set your price." }
   ]

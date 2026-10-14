@@ -227,7 +227,7 @@ slides: [
 },
 
 { h: "Drip zones",
-  lead: "Drip areas are usually drawn as shaded zones, not lines. You measure the area, then turn it into feet of tubing and number of emitters.",
+  lead: "Drip areas are usually drawn as shaded zones. You measure the area, then turn it into feet of tubing and number of emitters.",
   body: `<ol class="steps">
 <li><div><b>Measure the drip area in SF</b>For each drip zone, from the plan.</div></li>
 <li class="hl"><div><b>Tubing LF = area (SF) ÷ row spacing (ft)</b>Rows 18" apart means 1.5 ft. Rows 12" apart means 1.0 ft.</div></li>
@@ -256,7 +256,7 @@ slides: [
 <li><strong>Recycled water labels and signs:</strong> per the plans and local rules.</li>
 </ul>`,
   ex: `<p>Real example: on 11-428704, thrust blocks, warning tape, the two-wire decoder, ground rods and pavement markers were all marked “(N)”: no separate payment. The recycled water mains were pressure tested at 150 psi. You put the cost of these into the paid items they belong to, usually the 4" main.</p>`,
-  watch: `<p>“Not separately paid” is a pricing note, not a takeoff note. Take off the quantity anyway. If you skip the count, you'll skip the cost.</p>`,
+  watch: `<p>“Not separately paid” is about how you get paid. Take off the quantity anyway. If you skip the count, you'll skip the cost.</p>`,
   src: "11-428704 plans ISS-1, IQ-1, IQ-2; Special Provisions 20-2 (pressure testing modified to 150 psi)."
 },
 
