@@ -34,7 +34,7 @@ slides: [
   watch: `<p>Agencies can't split a job into small pieces to stay under the limits. If the bid documents say prevailing wage applies, it applies, even to your small scope.</p>`,
   deeper: `<ul>
 <li>Labor Code (LC) §1720(a)(1) defines public works; §1771 requires prevailing wage on public works over $1,000, including maintenance.</li>
-<li><strong>Small project exemption:</strong> DIR registration and electronic certified payroll aren't required on projects of $25,000 or less (new construction, alteration, installation, demolition or repair) or $15,000 or less (maintenance). The limit is the whole prime contract, not your subcontract. Prevailing wage still applies over $1,000.</li>
+<li><strong>Small project exemption:</strong> DIR (Department of Industrial Relations) registration and electronic certified payroll aren't required on projects of $25,000 or less (new construction, alteration, installation, demolition or repair) or $15,000 or less (maintenance). The limit is the whole prime contract, not your subcontract. Prevailing wage still applies over $1,000.</li>
 <li>If you aren't sure, anyone can ask DIR for a coverage determination (pwcoverage@dir.ca.gov).</li>
 </ul>`,
   src: "Cal. Labor Code §§1720, 1771; DIR Public Works FAQ (dir.ca.gov/Public-Works/PublicWorksSB854FAQ.html)."
@@ -44,8 +44,8 @@ slides: [
   lead: "Run every new bid through these questions before you price a single hour of labor.",
   body: `<ol class="steps">
 <li><div><b>Who is the owner?</b>A city, county, school or college district, water district, the State (including Caltrans), a port or a transit agency? If yes, it is almost certainly public works.</div></li>
-<li><div><b>Is any public money in it?</b>Grants, housing money, bond money, fee waivers or below-market land from an agency can make a private-looking job public works. Ask the GC.</div></li>
-<li class="hl"><div><b>What do the bid documents say?</b>Search the specs and the subcontract for “prevailing wage,” “Labor Code,” “DIR” and “certified payroll.” If they're there, price it as public works.</div></li>
+<li><div><b>Is any public money in it?</b>Grants, housing money, bond money, fee waivers or below-market land from an agency can make a private-looking job public works. Ask the GC (general contractor).</div></li>
+<li class="hl"><div><b>What do the bid documents say?</b>Search the specs and the subcontract for “prevailing wage,” “Labor Code,” “DIR” (Department of Industrial Relations) and “certified payroll.” If they're there, price it as public works.</div></li>
 <li><div><b>Is it over $1,000?</b>Then prevailing wage applies. Over $25,000 for construction ($15,000 for maintenance) also means DIR registration and electronic payroll.</div></li>
 <li><div><b>Is federal money in it?</b>Then a federal wage decision applies too (later in this module).</div></li>
 <li><div><b>Still not sure?</b>Ask the GC or agency in writing (Module 12), and keep the answer in the bid folder.</div></li>
@@ -64,7 +64,7 @@ slides: [
 },
 
 { h: "The wage determination, in plain words",
-  lead: "DIR publishes the rates as “general prevailing wage determinations,” one for each craft and area. The one that applies to your job is the one in effect on the date the job was advertised for bids.",
+  lead: "DIR (Department of Industrial Relations) publishes the rates as “general prevailing wage determinations,” one for each craft and area. The one that applies to your job is the one in effect on the date the job was advertised for bids.",
   body: `<ul>
 <li><strong>Issued twice a year:</strong> February 22 and August 22. Each goes into effect 10 days later.</li>
 <li><strong>By craft and county:</strong> one document for Landscape/Irrigation Laborer in San Diego County, another for Operating Engineer, and so on.</li>
@@ -86,7 +86,7 @@ slides: [
 <tr><td>Aug 28, 2026</td><td>2026-1</td><td>2026-2 was issued Aug 22, 2026 but didn't take effect until Sept 1, 2026 (10 days later)</td></tr>
 <tr><td>Sept 1, 2026</td><td>2026-2</td><td>First day 2026-2 is in effect</td></tr>
 <tr><td>Feb 25, 2027</td><td>2026-2</td><td>2027-1 is issued Feb 22, 2027 but takes effect March 4, 2027 (non-leap year)</td></tr>
-<tr><td>Oct 12, 2026, Laborer (Engineering Construction) only</td><td>Interim SD-23-102-3-2026-1</td><td>DIR issued an interim determination Sept 29, 2026 for projects advertised on or after Oct 9, 2026</td></tr>
+<tr><td>Oct 12, 2026, Laborer (Engineering Construction) only</td><td>Interim SD-23-102-3-2026-1</td><td>DIR (Department of Industrial Relations) issued an interim determination Sept 29, 2026 for projects advertised on or after Oct 9, 2026</td></tr>
 </tbody></table></div>
 <p>Then add any predetermined increases that take effect while your crew is working.</p>`,
   ex: `<p><strong>Interim determinations happen.</strong> DIR's notice for Laborer (Engineering Construction) in San Diego County says: “This determination applies to projects advertised for bids on or after October 9, 2026. These rates supersede the rates in determination SD-23-102-3-2025-1.” Its Group 1 total jumped to $78.65. A bid advertised Oct 8 and one advertised Oct 9 use different rates.</p>`,
@@ -96,7 +96,7 @@ slides: [
 },
 
 { h: "How to find the right rate",
-  lead: "DIR's site walks you through six steps. For San Diego County landscape work you will use steps 2B, 3 and 4 most.",
+  lead: "DIR's (Department of Industrial Relations) site walks you through six steps. For San Diego County landscape work you will use steps 2B, 3 and 4 most.",
   body: `<ol class="steps">
 <li><div><b>Open the determinations page</b>Go to <a href="https://www.dir.ca.gov/oprl/DPreWageDetermination.htm" target="_blank" rel="noopener">DIR General Prevailing Wage Determinations</a> and pick the period that was current on the bid advertisement date (for example “2026-2”).</div></li>
 <li><div><b>Step 1 · Statewide</b>Trades that apply in most counties.</div></li>
@@ -106,7 +106,7 @@ slides: [
 <li><div><b>Step 6 · Important notices</b>Check for corrections that change a rate.</div></li>
 </ol>
 <p>For each craft, also open the <strong>Increase</strong>, <strong>Holidays</strong>, <strong>Scope</strong> (what work the craft covers) and <strong>Travel</strong> links. Apprentice rates are on a separate DIR page.</p>`,
-  ex: `<p>Save a PDF of every determination you used, with the date you downloaded it, in the bid folder. If a question comes up during the job, you can prove which rate you bid.</p>`,
+  ex: `<p>Save a PDF (portable document file) of every determination you used, with the date you downloaded it, in the bid folder. If a question comes up during the job, you can prove which rate you bid.</p>`,
   src: "DIR Index 2026-2 general prevailing wage journeyman determinations (dir.ca.gov/oprl/2026-2/PWD/index.htm)."
 },
 
@@ -122,13 +122,13 @@ slides: [
 <li><div><b>Apprentice rates</b>From the landing page, open the apprentice menu, pick the period and county, then “View” the craft.</div></li>
 <li><div><b>Important notices</b>Open the notice index for the period. Look for your crafts.</div></li>
 </ol>`,
-  watch: `<p>Some links on DIR's pages differ only by a letter: SD-23-63-3 is Operating Engineer, SD-23-63-3(B) is cranes and hoisting, (C) is tunnel and (D) is inspectors and soils testers. Read the craft name inside the PDF before you copy numbers.</p>`,
+  watch: `<p>Some links on DIR's (Department of Industrial Relations) pages differ only by a letter: SD-23-63-3 is Operating Engineer, SD-23-63-3(B) is cranes and hoisting, (C) is tunnel and (D) is inspectors and soils testers. Read the craft name inside the PDF before you copy numbers.</p>`,
   deeper: `<p>If a page won't load or a rate looks wrong, call DIR's Office of the Director – Research Unit at (415) 703-4774 or email statistics@dir.ca.gov. Write down who you talked to and when.</p>`,
   src: "DIR Director's General Prevailing Wage Determinations page; DIR 2026-2 San Diego page and San Diego County subtrades page (SDI); DIR apprentice wage sheets (dir.ca.gov/OPRL/PWAppWage/PWAppWageStart.asp)."
 },
 
 { h: "The crafts landscape work uses",
-  lead: "Each hour is paid by the work the person actually does that hour, whatever their job title at your company. These are the DIR crafts a San Diego landscape crew uses most.",
+  lead: "Each hour is paid by the work the person actually does that hour, whatever their job title at your company. These are the DIR (Department of Industrial Relations) crafts a San Diego landscape crew uses most.",
   body: `<div class="tablewrap"><table>
 <thead><tr><th>DIR craft (San Diego County, 2026-2)</th><th>Where on DIR's site</th><th>Typical work</th></tr></thead>
 <tbody>
@@ -142,7 +142,7 @@ slides: [
 <tr><td><strong>Landscape Maintenance Laborer</strong></td><td>Southern California</td><td>Maintenance contracts (not new construction)</td></tr>
 </tbody></table></div>`,
   watch: `<p>A worker who spends the morning running the skid steer and the afternoon planting gets the Operating Engineer rate for the morning hours and the laborer rate for the afternoon. Track hours by craft on the time card, or pay the higher rate for the whole day.</p>`,
-  deeper: `<p>Read the <strong>Scope</strong> PDF for each craft. It is labeled advisory, but it's the best guide to which craft covers which task. If two crafts could fit, many contractors pay the higher one to stay safe. When in doubt, ask DIR's Research Unit at (415) 703-4774 before bid day.</p>`,
+  deeper: `<p>Read the <strong>Scope</strong> PDF (portable document file) for each craft. It is labeled advisory, but it's the best guide to which craft covers which task. If two crafts could fit, many contractors pay the higher one to stay safe. When in doubt, ask DIR's Research Unit at (415) 703-4774 before bid day.</p>`,
   src: "DIR 2026-2 San Diego basic trades index, Southern California index, and San Diego County subtrades (SDI-2026-2)."
 },
 
@@ -156,7 +156,7 @@ slides: [
 <li>installing low-voltage irrigation: “controllers, valves, sensors… junction boxes and conductors”</li>
 <li>“Start-up testing, flushing, purging, water balancing”</li>
 <li>“All temporary irrigation”</li>
-<li>Plant establishment work during the warranty or the period DIR sets</li>
+<li>Plant establishment work during the warranty or the period DIR (Department of Industrial Relations) sets</li>
 </ul></div>
 <div><h3>Tenders may only (item 62)</h3><ul>
 <li>Assist the Landscape Laborer with wire installation</li>
@@ -168,7 +168,7 @@ slides: [
 </ul></div>
 </div>`,
   watch: `<p>The scope says traffic control incidental to landscape work is covered “except on freeways, highways, and high traffic areas where safety is of paramount concern.” On a freeway or busy street, flagging and traffic control belong to Laborer (Engineering Construction) Group 1 (“Flagman,” “Traffic Control by any method”) or to your traffic control sub.</p>`,
-  deeper: `<p>The scope PDF has redacted parts and is labeled advisory. Use it to choose the craft, and ask DIR when a task could fit two crafts. Hydroseeding by hand is the Landscape Hydro Seeder classification ($77.77 total in 2026-2); running a hydroseeder machine is listed under Operating Engineer Group 4 (“Hydro Seeder Machine Operator”).</p>`,
+  deeper: `<p>The scope PDF (portable document file) has redacted parts and is labeled advisory. Use it to choose the craft, and ask DIR when a task could fit two crafts. Hydroseeding by hand is the Landscape Hydro Seeder classification ($77.77 total in 2026-2); running a hydroseeder machine is listed under Operating Engineer Group 4 (“Hydro Seeder Machine Operator”).</p>`,
   src: "DIR Scope of Work Provisions, Landscape/Irrigation Laborer/Tender, ID 102-X-14, San Diego County (2026-2); DIR SD-23-102-3-2026-1 classifications; DIR SD-23-63-3-2026-2 classifications."
 },
 
@@ -199,8 +199,8 @@ slides: [
 <thead><tr><th>Mark</th><th>Where you see it</th><th>What it means for your bid</th></tr></thead>
 <tbody>
 <tr><td><strong>#</strong></td><td>After the craft name</td><td>Apprenticeable craft: apprentice and training fund rules apply. Teamster has no # in 2026-2 and its training amount is $0.00.</td></tr>
-<tr><td><strong>*</strong> / <strong>**</strong></td><td>After the expiration date</td><td>* rate good for the whole job; ** a raise is scheduled, open the Increase PDF</td></tr>
-<tr><td><strong>+</strong></td><td>After Operating Engineer on DIR's list</td><td>Shift rates exist (night and multi-shift work)</td></tr>
+<tr><td><strong>*</strong> / <strong>**</strong></td><td>After the expiration date</td><td>* rate good for the whole job; ** a raise is scheduled, open the Increase PDF (portable document file)</td></tr>
+<tr><td><strong>+</strong></td><td>After Operating Engineer on DIR's (Department of Industrial Relations) list</td><td>Shift rates exist (night and multi-shift work)</td></tr>
 <tr><td><strong>a</strong> (landscape)</td><td>Vacation and holiday</td><td>Includes supplemental dues (an amount withheld for the union)</td></tr>
 <tr><td><strong>b</strong> (landscape)</td><td>Overtime columns</td><td>1½× only for the first 4 daily overtime hours and first 12 Saturday hours; then 2×</td></tr>
 <tr><td><strong>c</strong> (landscape)</td><td>Saturday column</td><td>Saturday at straight time only if weather or ground conditions shut the job down that week</td></tr>
@@ -235,7 +235,7 @@ slides: [
 { h: "Operating Engineer groups for landscape equipment",
   lead: "Operators are paid by the group their machine falls in. Find your machine in the classification list, then use that group's rate.",
   body: `<div class="tablewrap"><table>
-<thead><tr><th>Machine (as DIR lists it)</th><th>Group</th><th class="num">Basic</th><th class="num">Total</th><th class="num">1½×</th><th class="num">2×</th></tr></thead>
+<thead><tr><th>Machine (as DIR (Department of Industrial Relations) lists it)</th><th>Group</th><th class="num">Basic</th><th class="num">Total</th><th class="num">1½×</th><th class="num">2×</th></tr></thead>
 <tbody>
 <tr><td>“Ditch Witch, With Seat Or Similar Type Equipment”; generator, pump, compressor</td><td>1</td><td class="num">$62.40</td><td class="num">$103.71</td><td class="num">$134.91</td><td class="num">$166.11</td></tr>
 <tr><td>Skiploader (wheel type up to ¾ yard)</td><td>2</td><td class="num">$63.18</td><td class="num">$104.49</td><td class="num">$136.08</td><td class="num">$167.67</td></tr>
@@ -316,7 +316,7 @@ slides: [
 <thead><tr><th>Step</th><th class="num">Math</th><th class="num">Per hour</th></tr></thead>
 <tbody>
 <tr><td>1 · Annualized health credit</td><td class="num">$7,800 ÷ 2,080 h</td><td class="num">$3.75</td></tr>
-<tr><td>2 · Training paid to CAC or a program</td><td class="num">from the determination</td><td class="num">$0.80</td></tr>
+<tr><td>2 · Training paid to CAC (California Apprenticeship Council) or a program</td><td class="num">from the determination</td><td class="num">$0.80</td></tr>
 <tr><td>3 · Fringe still owed as cash</td><td class="num">$29.10 − $3.75 − $0.80</td><td class="num">$24.55</td></tr>
 <tr><td>4 · Paycheck rate, straight time</td><td class="num">$47.57 + $24.55</td><td class="num">$72.12</td></tr>
 <tr><td>5 · Paycheck rate, overtime</td><td class="num">$47.57 × 1.5 + $24.55</td><td class="num">$95.905</td></tr>
@@ -327,7 +327,7 @@ slides: [
   deeper: `<ul>
 <li>Labor Code §1773.1(e) and (f): annualization applies to payments not made directly to the worker. A defined contribution pension plan with immediate participation and vesting within the first 500 hours worked can get full credit on public hours without annualizing.</li>
 <li>Credit may be taken even if the payment isn't made in the same pay period, if the employer pays the plan regularly, at least quarterly.</li>
-<li>Exemptions to annualization issued by DIR before January 1, 2026 have been revoked.</li>
+<li>Exemptions to annualization issued by DIR (Department of Industrial Relations) before January 1, 2026 have been revoked.</li>
 </ul>`,
   src: "Cal. Labor Code §1773.1 (as of Jan. 1, 2026); DIR SD-102-X-14-2026-1."
 },
@@ -336,7 +336,7 @@ slides: [
   lead: "Public works has its own overtime rule, and each craft adds its own holiday, travel and shift rules on top.",
   body: `<ul>
 <li><strong>Overtime:</strong> hours over 8 in a day or 40 in a week must be paid at least 1½ times the basic rate. Check each craft's footnotes for double time.</li>
-<li><strong>Holidays:</strong> the craft's holidays come from its union agreement on file with DIR, or Government Code §6700 if it isn't union-based. Download the “Holidays” PDF for each craft.</li>
+<li><strong>Holidays:</strong> the craft's holidays come from its union agreement on file with DIR (Department of Industrial Relations), or Government Code §6700 if it isn't union-based. Download the “Holidays” PDF (portable document file) for each craft.</li>
 <li><strong>Travel and subsistence:</strong> some crafts require travel pay or per-diem depending on distance. Download the “Travel” PDF.</li>
 <li><strong>Shift work:</strong> night work for crafts marked “+” (like Operating Engineer) has its own shift rates. Night freeway closures (Module 15) trigger them.</li>
 <li><strong>Agency work hours:</strong> the City of San Diego's normal working hours are 7:00 AM to 5:00 PM, Monday through Friday, unless the permit says otherwise.</li>
@@ -376,7 +376,7 @@ slides: [
 </tbody></table></div>
 <p>Using $76.67 for all 1,200 hours would be $92,004.00, which is $1,825.00 short.</p>`,
   ex: `<p><strong>Other 2026-2 increases to plan for:</strong> Operating Engineer +$4.50 on July 1, 2027 (Group 4 goes from $106.27 to at least $110.77). Landscape/Irrigation Fitter +$4.03 on Sept 1, 2027 ($76.40 to at least $80.43). Laborer increases continue Aug 1, 2028 (+$3.75) and Aug 1, 2029 (+$4.03) for multi-year jobs like long plant establishment.</p>`,
-  watch: `<p>The 2026-2 landscape notice says the raise is “allocated to wages and/or fringes” without saying how. Overtime multiplies only the wage part, so you don't know the new overtime rate yet. To be safe, price overtime as if the whole raise goes to the basic rate: $3.65 × 1.5 = $5.475 more per overtime hour. Call DIR at (415) 703-4774 when the raise takes effect to confirm the split.</p>`,
+  watch: `<p>The 2026-2 landscape notice says the raise is “allocated to wages and/or fringes” without saying how. Overtime multiplies only the wage part, so you don't know the new overtime rate yet. To be safe, price overtime as if the whole raise goes to the basic rate: $3.65 × 1.5 = $5.475 more per overtime hour. Call DIR (Department of Industrial Relations) at (415) 703-4774 when the raise takes effect to confirm the split.</p>`,
   src: "DIR Predetermined Increase notices for SD-102-X-14-2026-1, SD-23-63-3-2026-2 and SDI-2026-2 (footnote B: “Please contact the Office of the Director – Research Unit… when the predetermined increase becomes due to confirm the distribution”)."
 },
 
@@ -388,7 +388,7 @@ slides: [
 <li class="hl"><div><b>Ratio</b>At least 1 hour of apprentice work for every 5 hours of journeyman work, per craft.</div></li>
 <li><div><b>Training fund</b>Pay the training amount from the determination for every hour, overtime included, of every journeyman and apprentice. Pay it to your apprenticeship program, or to the California Apprenticeship Council (CAC) with an online CAC-2 form, by the 15th of the following month.</div></li>
 </ol>
-<p>Crafts marked “#” on DIR's determinations are apprenticeable. Landscape/Irrigation Laborer, Landscape/Irrigation Fitter and Operating Engineer are all marked #.</p>`,
+<p>Crafts marked “#” on DIR's (Department of Industrial Relations) determinations are apprenticeable. Landscape/Irrigation Laborer, Landscape/Irrigation Fitter and Operating Engineer are all marked #.</p>`,
   ex: `<p><strong>Ratio math:</strong> your two Landscape/Irrigation Laborers will work 8 hours a day for 40 days: 2 × 8 × 40 = 640 journeyman hours. Minimum apprentice hours: 640 ÷ 5 = <strong>128</strong>. Training fund on the journeyman hours at the 2026-2 rate: 640 × $0.80 = <strong>$512</strong>, plus the apprentice training amount on the apprentices' hours.</p>`,
   watch: `<p>The duty applies to subs too, even if your subcontract is under $30,000, when the prime contract is $30,000 or more. Send the DAS 140 even on a short job.</p>`,
   deeper: `<p>Labor Code §1777.5 sets the 1:5 ratio and the $30,000 threshold. Knowing violations cost up to $100 per day of noncompliance, and up to $300 per day for a repeat within 3 years (§1777.7). If a committee won't dispatch apprentices after you asked all programs in the area, you have met the duty. Keep copies of every DAS 140, DAS 142 and CAC-2 receipt.</p>`,
@@ -398,13 +398,13 @@ slides: [
 { h: "Apprenticeship step by step, with real dates",
   lead: "Here is the calendar for a made-up landscape subcontract on a City park job. Put every date in your calendar the day you sign.",
   body: `<ol class="steps">
-<li><div><b>Tue Mar 2, 2027 · Subcontract signed</b>Start the clock: the DAS 140 is due within 10 days (by Fri Mar 12), but no later than the first day of work.</div></li>
+<li><div><b>Tue Mar 2, 2027 · Subcontract signed</b>Start the clock: the DAS (Division of Apprenticeship Standards) 140 is due within 10 days (by Fri Mar 12), but no later than the first day of work.</div></li>
 <li><div><b>Same day · Find the committees</b>Use DAS's <a href="http://www.dir.ca.gov/databases/das/pwaddrstart.asp" target="_blank" rel="noopener">public works apprenticeship committee search</a> for San Diego County and each craft you'll use (Landscape/Irrigation Laborer, Operating Engineer, Fitter).</div></li>
 <li class="hl"><div><b>By Mon Mar 8 · DAS 140 sent</b>Work starts Mar 8, so that's the real deadline. Include your estimate of journeyman hours, how many apprentices you plan to use, and when. Email, fax or mail, and keep proof.</div></li>
 <li class="hl"><div><b>By Wed Mar 10 · DAS 142 sent</b>You need an apprentice on Mon Mar 15. Three business days before is Wed Mar 10 (Wed, Thu, Fri).</div></li>
 <li><div><b>No apprentice sent?</b>Request from all other committees in the area once. If none will dispatch, you have met the duty. Keep the emails.</div></li>
 <li><div><b>Every week · Track the ratio</b>Journeyman straight-time hours ÷ 5 = apprentice hours needed by the end of your subcontract.</div></li>
-<li><div><b>By Thu Apr 15, 2027 · Training funds for March</b>Pay your program, or pay CAC with the online CAC-2 form (it gives a Transaction ID; save it).</div></li>
+<li><div><b>By Thu Apr 15, 2027 · Training funds for March</b>Pay your program, or pay CAC (California Apprenticeship Council) with the online CAC-2 form (it gives a Transaction ID; save it).</div></li>
 </ol>`,
   watch: `<p>“Even if a job will take less than 40 hours, the contractor must submit a DAS 140 and DAS 142,” says DAS. A two-week irrigation repair still needs the forms.</p>`,
   deeper: `<p>You don't have to sign a DAS 7 or agree to other conditions a program asks for. Apprenticeship requirements are the contractor's responsibility even if you use a temp agency. Training funds can only be paid directly to workers in a non-apprenticeable craft.</p>`,
@@ -428,7 +428,7 @@ slides: [
 <li>Journeymen: 640 × $76.67 = $49,068.80</li>
 <li>Apprentice: 128 × $36.57 = $4,680.96</li>
 <li>Total: <strong>$53,749.76</strong>, compared with 768 × $76.67 = $58,882.56 all journeymen. Difference: $5,132.80.</li>
-<li>Training funds inside those totals: 640 × $0.80 + 128 × $2.19 = $512.00 + $280.32 = $792.32 (sent to CAC or your program, not the worker).</li>
+<li>Training funds inside those totals: 640 × $0.80 + 128 × $2.19 = $512.00 + $280.32 = $792.32 (sent to CAC (California Apprenticeship Council) or your program, not the worker).</li>
 </ul>`,
   watch: `<p>A first-year apprentice may be slower. If you price the apprentice hours at lower production, use your own numbers. And only registered apprentices may be paid apprentice rates; a new hire you call an apprentice is a journeyman for pay.</p>`,
   deeper: `<p>Overtime doesn't count toward the ratio. Labor Code §1777.5: “Any work performed by a journeyman in excess of eight hours per day or 40 hours per week shall not be used to calculate the ratio.” If the journeymen above worked 680 hours, 40 of them overtime, you still need 640 ÷ 5 = 128 apprentice hours.</p>`,
@@ -439,7 +439,7 @@ slides: [
   lead: "Every week you pay workers on a public job, you produce a certified payroll record (CPR): who worked, which craft, how many hours, what you paid, signed under penalty of perjury.",
   body: `<ul>
 <li><strong>What it shows:</strong> each worker's name, address, last 4 of the social security number, craft, hours each day, rate paid, gross pay, deductions and benefits paid.</li>
-<li><strong>Most jobs: eCPR to DIR.</strong> eCPR means electronic certified payroll. Each contractor and sub uploads its own certified payroll to DIR's online system, at least monthly while working (within a month after the end of the payroll period). Weekly is best practice.</li>
+<li><strong>Most jobs: eCPR to DIR (Department of Industrial Relations).</strong> eCPR means electronic certified payroll. Each contractor and sub uploads its own certified payroll to DIR's online system, at least monthly while working (within a month after the end of the payroll period). Weekly is best practice.</li>
 <li><strong>Caltrans:</strong> exempt from DIR's eCPR. Caltrans jobs use <strong>LCPtracker Pro</strong> (the 11-428704 specs said so in section 7-1.02K(3)).</li>
 <li><strong>City of San Diego:</strong> weekly certified payroll through the City's own Labor Compliance Program system <strong>and</strong> to DIR. The City withholds payments when payroll is late or incomplete.</li>
 <li><strong>No work this week?</strong> File a Statement of Non-Performance so the record has no gaps.</li>
@@ -454,8 +454,8 @@ slides: [
 },
 
 { h: "One worker's week on a certified payroll",
-  lead: "This is what one line of a CPR looks like, filled in. The numbers must tie back to the determination to the cent.",
-  body: `<p><strong>Header (top of the form):</strong> contractor name, contractor license number, workers' comp policy number, project name and DIR Project ID, payroll number (1, 2, 3…), week ending date.</p>
+  lead: "This is what one line of a CPR (certified payroll record) looks like, filled in. The numbers must tie back to the determination to the cent.",
+  body: `<p><strong>Header (top of the form):</strong> contractor name, contractor license number, workers' comp policy number, project name and DIR (Department of Industrial Relations) Project ID, payroll number (1, 2, 3…), week ending date.</p>
 <p><strong>Worker line (example worker, 2026-2 rates, all fringe paid into plans):</strong></p>
 <div class="tablewrap"><table>
 <thead><tr><th>Field</th><th>Entry</th></tr></thead>
@@ -465,34 +465,34 @@ slides: [
 <tr><td>Hours Mon–Fri</td><td>8 · 8 · 10 · 8 · 6 = 40 (38 straight time, 2 overtime)</td></tr>
 <tr><td>Rates paid</td><td>ST $47.57 · OT $71.355</td></tr>
 <tr><td>Gross wages</td><td>38 × $47.57 + 2 × $71.355 = $1,807.66 + $142.71 = <strong>$1,950.37</strong></td></tr>
-<tr><td>Fringe paid to plans</td><td>40 h × $29.10 = <strong>$1,164.00</strong> (H&amp;W $9.85, pension $12.92, vac $5.02, training $0.80, other $0.51)</td></tr>
+<tr><td>Fringe paid to plans</td><td>40 h × $29.10 = <strong>$1,164.00</strong> (health and welfare $9.85, pension $12.92, vacation $5.02, training $0.80, other $0.51)</td></tr>
 <tr><td>Deductions</td><td>Taxes, any union dues, garnishments</td></tr>
 <tr><td>Net pay and check number</td><td>From your payroll system</td></tr>
 </tbody></table></div>
 <p><strong>Check it:</strong> 38 × $76.67 + 2 × $100.455 = $2,913.46 + $200.91 = $3,114.37. Wages + fringe = $1,950.37 + $1,164.00 = $3,114.37. They match.</p>`,
   watch: `<p>Wednesday has 10 hours, so 2 are overtime even though the week totals 40. A CPR that shows 40 straight-time hours is underpaying.</p>`,
-  deeper: `<p>Labor Code §1776(a) requires “the name, address, social security number, work classification, straight time and overtime hours worked each day and week, and the actual per diem wages paid.” Public copies are redacted: name, address and social security number are removed. DIR's paper form is A-1-131; the eCPR system asks for the same information.</p>`,
+  deeper: `<p>Labor Code §1776(a) requires “the name, address, social security number, work classification, straight time and overtime hours worked each day and week, and the actual per diem wages paid.” Public copies are redacted: name, address and social security number are removed. DIR's paper form is A-1-131; the eCPR (electronic certified payroll) system asks for the same information.</p>`,
   src: "Cal. Labor Code §1776; DIR SD-102-X-14-2026-1; DIR certified payroll form A-1-131."
 },
 
 { h: "Submitting payroll: DIR, LCPtracker and the City",
   lead: "Each system has a setup step you must finish before your first payroll is due. Do it the week you sign the subcontract.",
   body: `<ol class="steps">
-<li><div><b>Get the DIR Project ID</b>The awarding body registers the project with DIR and gets an ID. Ask the GC for it. If the project isn't registered, ask the agency to do it; DIR can help at publicworks@dir.ca.gov.</div></li>
-<li><div><b>DIR Public Works website services</b>Create a user account, link it to your company's account, then request to join the project. Older logins (PWCR, eCPR) no longer work in the modernized system.</div></li>
+<li><div><b>Get the DIR (Department of Industrial Relations) Project ID</b>The awarding body registers the project with DIR and gets an ID. Ask the GC (general contractor) for it. If the project isn't registered, ask the agency to do it; DIR can help at publicworks@dir.ca.gov.</div></li>
+<li><div><b>DIR Public Works website services</b>Create a user account, link it to your company's account, then request to join the project. Older logins from the old PWCR (contractor registration) and eCPR (electronic certified payroll) systems no longer work in the modernized system.</div></li>
 <li class="hl"><div><b>Enter or upload</b>Type the payroll into the online form, or upload an XML (extensible markup language) file from your payroll software. Review it, then sign. After you sign you can't change it.</div></li>
 <li><div><b>Fix mistakes with an amended record</b>Submit a new record for the same pay period. The amendment takes precedence; the original stays on file.</div></li>
 <li><div><b>Caltrans jobs</b>Use LCPtracker as the special provisions say. The resident engineer's office sets up access.</div></li>
 <li><div><b>City of San Diego jobs</b>Weekly through the City's web-based Labor Compliance Program, plus DIR. City Prevailing Wage Unit: 858-627-3200.</div></li>
 <li><div><b>Send a copy to the GC</b>Most subcontracts require it weekly. GCs must review subs' payroll to protect themselves.</div></li>
 </ol>`,
-  ex: `<p><strong>Owner-operator?</strong> DIR says even if you're paid by draw, you report your name, address and SSN (or FEIN, federal employer identification number), your classification, the hourly rate for it, the hours you worked, and an estimate of what you were paid for your labor. That labor pay must be at least the prevailing rate.</p>`,
+  ex: `<p><strong>Owner-operator?</strong> DIR says even if you're paid by draw, you report your name, address and SSN (social security number), or FEIN (federal employer identification number) if you have no SSN, your classification, the hourly rate for it, the hours you worked, and an estimate of what you were paid for your labor. That labor pay must be at least the prevailing rate.</p>`,
   watch: `<p>Sending payroll to the GC, a union or the City does not replace sending it to DIR. Each one is a separate duty.</p>`,
   src: "DIR Public Works FAQ (Electronic Certified Payroll Reporting, owner/operator, amended records); City of San Diego K-24-1952 Attachment D §§1.3, 1.8; Caltrans 11-428704 Special Provisions 7-1.02K(3)."
 },
 
 { h: "DIR registration, job site posting and records",
-  lead: "You must be registered before you bid. Once you're working, the wage rates and DIR's notice go up on site, and your records must be ready to show.",
+  lead: "You must be registered before you bid. Once you're working, the wage rates and DIR's (Department of Industrial Relations) notice go up on site, and your records must be ready to show.",
   body: `<div class="twocol">
 <div><h3>Registration (recap)</h3><ul>
 <li>Every contractor and sub on a public works job must be DIR-registered to bid, be listed or work. See <a href="#m2-10">Module 2</a>.</li>
@@ -503,7 +503,7 @@ slides: [
 <div><h3>On site and in the office</h3><ul>
 <li>Post the wage determinations at each job site.</li>
 <li>Post DIR's job site notice telling workers how to report wage problems.</li>
-<li>Keep time cards by craft, payroll, benefit payment proof, DAS 140/142, CAC-2 receipts and the determinations you used.</li>
+<li>Keep time cards by craft, payroll, benefit payment proof, DAS (Division of Apprenticeship Standards) 140/142, CAC-2 (California Apprenticeship Council training fund form) receipts and the determinations you used.</li>
 <li>Keep records at least 3 years after the work.</li>
 </ul></div>
 </div>`,
@@ -519,10 +519,10 @@ slides: [
 <tbody>
 <tr><td>Wage determinations, Increase, Holiday, Scope and Travel PDFs, with download date</td><td>Proves which rates applied</td><td>Life of job + retention period</td></tr>
 <tr><td>Daily time cards signed by the worker, hours split by craft and group</td><td>Proves which rate each hour earned</td><td>3 years after completion (5 on City jobs, see below)</td></tr>
-<tr><td>Certified payroll, eCPR or LCPtracker receipts, Statements of Non-Performance</td><td>Shows you filed on time</td><td>Same</td></tr>
+<tr><td>Certified payroll, eCPR (electronic certified payroll) or LCPtracker receipts, Statements of Non-Performance</td><td>Shows you filed on time</td><td>Same</td></tr>
 <tr><td>Proof of fringe payments: plan invoices, remittance reports, annualization worksheet</td><td>Proves benefit credit</td><td>Same</td></tr>
-<tr><td>DAS 140, DAS 142 with proof of sending; apprentice agreements; CAC-2 Transaction IDs</td><td>Proves the apprenticeship duty</td><td>Same</td></tr>
-<tr><td>Job site posting photo (determinations and DIR notice on the board, date-stamped)</td><td>Proves posting</td><td>Same</td></tr>
+<tr><td>DAS (Division of Apprenticeship Standards) 140, DAS 142 with proof of sending; apprentice agreements; CAC-2 (California Apprenticeship Council training fund form) Transaction IDs</td><td>Proves the apprenticeship duty</td><td>Same</td></tr>
+<tr><td>Job site posting photo (determinations and DIR (Department of Industrial Relations) notice on the board, date-stamped)</td><td>Proves posting</td><td>Same</td></tr>
 <tr><td>Subs' DIR registration printouts, their CPRs and final affidavits</td><td>Protects you as the upper tier</td><td>Same</td></tr>
 </tbody></table></div>`,
   ex: `<p><strong>Real retention rules:</strong> on City of San Diego job K-24-1952, the contractor had to “retain all records, books, papers, and documents pertinent to the Contract for a period of not less than 5 years after Notice of Completion.” On small projects under the exemption, the same contract says certified payroll must be kept “for at least three years following the completion of the Contract.”</p>`,
@@ -531,13 +531,13 @@ slides: [
 },
 
 { h: "What an audit or investigation looks like",
-  lead: "Most problems start with a worker complaint, a missing payroll or a GC's review. Here is the path, step by step.",
+  lead: "Most problems start with a worker complaint, a missing payroll or a GC's (general contractor's) review. Here is the path, step by step.",
   body: `<ol class="steps">
-<li><div><b>A trigger</b>A worker calls the Labor Commissioner, a union compares payroll, the awarding body's labor compliance staff spot a gap, or eCPR uploads stop.</div></li>
+<li><div><b>A trigger</b>A worker calls the Labor Commissioner, a union compares payroll, the awarding body's labor compliance staff spot a gap, or eCPR (electronic certified payroll) uploads stop.</div></li>
 <li><div><b>A written request for records</b>The agency or the Labor Commissioner's Office (DLSE, Division of Labor Standards Enforcement) asks for certified payroll. You have <strong>10 days</strong> (§1776).</div></li>
 <li><div><b>The audit</b>An investigator compares your payroll to the determinations: craft, group, hours, overtime, fringe, apprentice hours, training funds. They may interview workers.</div></li>
 <li class="hl"><div><b>Assessment or withholding</b>DLSE issues a Civil Wage and Penalty Assessment (CWPA) within 18 months after the notice of completion or acceptance, whichever is later. An agency with a labor compliance program can issue a Notice of Withholding and hold your payments.</div></li>
-<li><div><b>Your options</b>Ask for a settlement meeting within 30 days. Request formal review within 60 days. Or pay. Deposit the full amount with DIR within 60 days to avoid liquidated damages while you contest it.</div></li>
+<li><div><b>Your options</b>Ask for a settlement meeting within 30 days. Request formal review within 60 days. Or pay. Deposit the full amount with DIR (Department of Industrial Relations) within 60 days to avoid liquidated damages while you contest it.</div></li>
 <li><div><b>After 60 days</b>Wages still unpaid bring liquidated damages equal to those unpaid wages (§1742.1), plus interest.</div></li>
 <li><div><b>Worst cases</b>Willful violators go on a public list. Debarment (banned from public work) for 1 to 3 years for intent to defraud or repeated willful violations.</div></li>
 </ol>`,
@@ -554,7 +554,7 @@ slides: [
 <tr><td>Paying less than prevailing wage</td><td>Back wages, plus up to $200 per worker per day. Minimum $40 (unless a good faith mistake promptly fixed), $80 with a prior violation in 3 years, $120 if willful.</td><td>LC §1775</td></tr>
 <tr><td>No overtime on public works</td><td>$25 per worker per day</td><td>LC §1813</td></tr>
 <tr><td>Payroll records not given within 10 days of a written request</td><td>$100 per worker per day</td><td>LC §1776</td></tr>
-<tr><td>eCPR not uploaded to DIR</td><td>$100 per day, up to $5,000 per project</td><td>LC §1771.4</td></tr>
+<tr><td>eCPR (electronic certified payroll) not uploaded to DIR (Department of Industrial Relations)</td><td>$100 per day, up to $5,000 per project</td><td>LC §1771.4</td></tr>
 <tr><td>Knowing apprenticeship violation</td><td>Up to $100 per day; $300 per day for a repeat</td><td>LC §1777.7</td></tr>
 <tr><td>Working without DIR registration</td><td>Removal by stop order; $2,000 to register late</td><td>LC §§1725.5, 1771.1</td></tr>
 </tbody></table></div>
@@ -582,7 +582,7 @@ slides: [
   lead: "When federal money is in the job, a federal wage decision applies too. On a state or local agency job with federal money, you pay whichever rate is higher for each classification.",
   body: `<ul>
 <li><strong>Davis-Bacon</strong> is the federal prevailing wage law for federal construction contracts over $2,000. Its wage decisions are on SAM.gov (System for Award Management) and are bound into the bid documents.</li>
-<li><strong>Federal-aid jobs run by California agencies</strong> (most Caltrans highway work, some City jobs) must follow <strong>both</strong> state and federal rules, including DIR registration.</li>
+<li><strong>Federal-aid jobs run by California agencies</strong> (most Caltrans highway work, some City jobs) must follow <strong>both</strong> state and federal rules, including DIR (Department of Industrial Relations) registration.</li>
 <li>Caltrans's rule on 11-428704: “the Contractor and subcontractors must not pay less than the higher wage rate.”</li>
 <li>Jobs fully controlled by a federal agency (for example, on a military base) follow only the federal rules.</li>
 </ul>
@@ -609,7 +609,7 @@ slides: [
 <li><div><b>Build the crew mix the ratio rules allow</b>Laborer/Tender and Fitter/Tradesman rules, plus apprentices at 1 hour per 5.</div></li>
 <li><div><b>Add burden on the wages you pay on the check</b>Payroll taxes, workers' comp and liability insurance. Ask your agent which pay your comp rate is charged on.</div></li>
 <li><div><b>Add overtime, shift and travel</b>Night closures, weekend make-up days, travel and subsistence.</div></li>
-<li><div><b>Add the compliance cost</b>Office time for certified payroll every week, LCPtracker or eCPR (electronic certified payroll) setup, DAS forms, training fund remittances.</div></li>
+<li><div><b>Add the compliance cost</b>Office time for certified payroll every week, LCPtracker or eCPR (electronic certified payroll) setup, DAS (Division of Apprenticeship Standards) forms, training fund remittances.</div></li>
 </ol>`,
   watch: `<p>Don't take your residential crew cost and add a percentage. Rebuild the crew day from the determination. The difference is too big to guess.</p>`
 },
@@ -630,7 +630,7 @@ slides: [
 <p>Public ÷ private = $1,932.29 ÷ $883.20 = <strong>2.19 times</strong>.</p>
 <p><strong>Effect on a unit price:</strong> if the crew plants 60 one-gallon shrubs a day (example rate), labor per plant is $1,932.29 ÷ 60 = <strong>$32.20</strong> on the public job, compared with $883.20 ÷ 60 = $14.72 privately.</p>`,
   ex: `<p>If the job won't let you use Tenders (federal-aid Caltrans work, or crew size too small), four Laborers cost 4 × $76.67 × 8 = $2,453.44, plus 20% burden on $1,522.24 of check wages ($304.45) = <strong>$2,757.89</strong> a day.</p>`,
-  watch: `<p>The private wages and the 20% burden are example numbers for practice. Use your own payroll costs and your insurance agent's rates. The public rates are real 2026-2 DIR rates; pull current ones for every bid.</p>`,
+  watch: `<p>The private wages and the 20% burden are example numbers for practice. Use your own payroll costs and your insurance agent's rates. The public rates are real 2026-2 DIR (Department of Industrial Relations) rates; pull current ones for every bid.</p>`,
   src: "DIR SD-102-X-14-2026-1."
 },
 
@@ -696,7 +696,7 @@ slides: [
 <li><div><b>Benefits must be annualized</b>Higher fringe credit on public hours than private hours is figured on all hours worked in the year (fringe slides).</div></li>
 <li><div><b>Certified payroll shows only the public job</b>But keep the private time cards. An auditor may ask for them to check annualization and the week's total hours.</div></li>
 </ol>`,
-  ex: `<p><strong>Scenario:</strong> Maria works Monday to Wednesday on a City park (24 hours as a Landscape/Irrigation Laborer) and Thursday to Friday on a private retail job (16 hours at $25 an hour, example). Her week: 24 × $76.67 = $1,840.08 of prevailing wage cost (wages plus benefits), plus 16 × $25.00 = $400.00 private. No day over 8 hours, no week over 40, so no overtime. The CPR for the park shows Monday to Wednesday only.</p>`,
+  ex: `<p><strong>Scenario:</strong> Maria works Monday to Wednesday on a City park (24 hours as a Landscape/Irrigation Laborer) and Thursday to Friday on a private retail job (16 hours at $25 an hour, example). Her week: 24 × $76.67 = $1,840.08 of prevailing wage cost (wages plus benefits), plus 16 × $25.00 = $400.00 private. No day over 8 hours, no week over 40, so no overtime. The CPR (certified payroll record) for the park shows Monday to Wednesday only.</p>`,
   watch: `<p>Don't move a worker's hours from a public day to a private day on paper. Time cards, GPS (global positioning system) logs from trucks and phone photos tell the real story in an audit.</p>`,
   src: "Cal. Labor Code §§1773.1, 1774, 1776, 1815; DIR Public Works FAQ."
 },
@@ -717,13 +717,13 @@ slides: [
 { h: "Flow-down: what you pass to your subs",
   lead: "When you hire a sub or trucker on a public job, you take on part of their risk. Protect yourself with five steps.",
   body: `<ol class="steps">
-<li><div><b>Check DIR registration before you list or hire</b>Look up the sub's registration on DIR's Public Works site and print it to the bid folder. An unregistered sub can stop work under a stop order.</div></li>
+<li><div><b>Check DIR (Department of Industrial Relations) registration before you list or hire</b>Look up the sub's registration on DIR's Public Works site and print it to the bid folder. An unregistered sub can stop work under a stop order.</div></li>
 <li><div><b>Put the Labor Code sections in the subcontract</b>Attach copies, not just numbers. On City job K-24-1952 the list was §§1771, 1771.1, 1775, 1776, 1777.5, 1810, 1813, 1815, 1860 and 1861.</div></li>
 <li class="hl"><div><b>Collect their certified payroll every week</b>Review it against the rate card: craft, group, rates, overtime, apprentices.</div></li>
 <li><div><b>Act on problems right away</b>If a sub underpays, hold enough of their payment to cover it and tell them in writing.</div></li>
 <li><div><b>Get a signed affidavit before final payment</b>The sub swears it paid its workers prevailing wages and employer payments.</div></li>
 </ol>`,
-  ex: `<p><strong>When you're the sub:</strong> expect the GC to ask for your DIR registration number with your quote, your weekly CPRs, your DAS 140, and a final affidavit. Have them ready. On K-24-1952 the prime also had to give the City a list of every sub, “regardless of tier,” with DIR numbers, before work and with each invoice. That includes your hydroseed or trucking sub.</p>`,
+  ex: `<p><strong>When you're the sub:</strong> expect the GC (general contractor) to ask for your DIR registration number with your quote, your weekly CPRs, your DAS (Division of Apprenticeship Standards) 140, and a final affidavit. Have them ready. On K-24-1952 the prime also had to give the City a list of every sub, “regardless of tier,” with DIR numbers, before work and with each invoice. That includes your hydroseed or trucking sub.</p>`,
   watch: `<p>Labor Code §1775(b): the prime avoids penalties for a sub's underpayment only if it did all of these steps and didn't know about the failure. Skip one and the sub's penalties can become yours.</p>`,
   src: "Cal. Labor Code §§1771.1, 1775(b); City of San Diego K-24-1952 Attachment D §§1.6, 1.9, 1.11."
 },
@@ -735,11 +735,11 @@ slides: [
 <li><strong>Using the printed rate when it has **.</strong> The scheduled raise is part of the minimum.</li>
 <li><strong>Wrong craft.</strong> Paying a fitter's work at a tender rate, or forgetting the operator rate for equipment hours.</li>
 <li><strong>Too many tenders.</strong> Breaking the ratio means paying journeyman rates for those hours, plus penalties.</li>
-<li><strong>No DAS 140.</strong> Even short jobs over the $30,000 contract threshold need it.</li>
+<li><strong>No DAS (Division of Apprenticeship Standards) 140.</strong> Even short jobs over the $30,000 contract threshold need it.</li>
 <li><strong>Late certified payroll.</strong> Payments stop and penalties start.</li>
 <li><strong>Benefits not annualized.</strong> Claiming a full year's benefit cost against public hours only.</li>
 <li><strong>Owner working without reporting.</strong> Owner hours still go on certified payroll.</li>
-<li><strong>Using an unregistered sub or trucker.</strong> Check DIR registration for every sub before you list them.</li>
+<li><strong>Using an unregistered sub or trucker.</strong> Check DIR (Department of Industrial Relations) registration for every sub before you list them.</li>
 <li><strong>No time cards by craft.</strong> Without them you can't prove which rate applied.</li>
 </ul>`,
   watch: `<p>Set up prevailing wage payroll with your payroll provider before you bid your first public job. Ask them if they can produce certified payroll and the DIR eCPR (electronic certified payroll) upload file in XML (extensible markup language).</p>`
@@ -751,11 +751,11 @@ slides: [
 <thead><tr><th>Situation</th><th>Right move</th><th>Why</th></tr></thead>
 <tbody>
 <tr><td>Rain shuts the City job Tuesday and Wednesday. The foreman wants to work Saturday.</td><td>Work Saturday at straight time for Landscape/Irrigation Laborers, and note the weather days on the daily report.</td><td>Footnote c allows straight-time Saturday when weather shut the job that week. Keep proof.</td></tr>
-<tr><td>A GC asks you to bid a school job “at your normal rates, it's a small job.”</td><td>Price at prevailing wage and say so in your proposal.</td><td>A public owner means public works for every tier.</td></tr>
+<tr><td>A GC (general contractor) asks you to bid a school job “at your normal rates, it's a small job.”</td><td>Price at prevailing wage and say so in your proposal.</td><td>A public owner means public works for every tier.</td></tr>
 <tr><td>Your best laborer runs the skid steer half of every day.</td><td>Split his time card by craft, or pay Operating Engineer Group 3 all day.</td><td>Each hour is paid by the work done that hour.</td></tr>
-<tr><td>No apprentice shows up after your DAS 142.</td><td>Request from every other committee in the area once, keep the emails, keep working.</td><td>Asking all programs meets your duty.</td></tr>
-<tr><td>You find a $0.40 underpayment on last month's CPR.</td><td>Pay the workers the difference now, file an amended CPR, keep the proof.</td><td>A good faith mistake promptly fixed can avoid the $40 minimum penalty.</td></tr>
-<tr><td>The job runs past July 31, 2027.</td><td>Pay the Aug 1, 2027 increase and confirm the split with DIR.</td><td>Two asterisks mean the raise is owed.</td></tr>
+<tr><td>No apprentice shows up after your DAS (Division of Apprenticeship Standards) 142.</td><td>Request from every other committee in the area once, keep the emails, keep working.</td><td>Asking all programs meets your duty.</td></tr>
+<tr><td>You find a $0.40 underpayment on last month's CPR (certified payroll record).</td><td>Pay the workers the difference now, file an amended CPR, keep the proof.</td><td>A good faith mistake promptly fixed can avoid the $40 minimum penalty.</td></tr>
+<tr><td>The job runs past July 31, 2027.</td><td>Pay the Aug 1, 2027 increase and confirm the split with DIR (Department of Industrial Relations).</td><td>Two asterisks mean the raise is owed.</td></tr>
 </tbody></table></div>`,
   src: "DIR SD-102-X-14-2026-1 footnotes c and d and Predetermined Increase; Cal. Labor Code §§1775, 1777.5; DIR DAS public works pages."
 },
@@ -763,13 +763,13 @@ slides: [
 { t: "scorer", id: "pwready", h: "Are we prevailing-wage ready?",
   lead: "Score your company before your first public bid. 2 = done, 1 = started, 0 = not yet. Your choices are saved in this browser.",
   items: [
-    ["DIR registration", "Current for this fiscal year, number on file for bids"],
+    ["DIR (Department of Industrial Relations) registration", "Current for this fiscal year, number on file for bids"],
     ["Rate card habit", "We pull determinations, increases, holidays, scope and travel for every bid date"],
     ["Crew mix", "We know the tender, tradesman and apprentice ratios and price them"],
-    ["Payroll provider", "Can run payroll by craft, produce CPRs and DIR XML files, and handle cash fringe"],
-    ["Annualization", "Our CPA has figured our per-hour benefit credit on all hours worked"],
+    ["Payroll provider", "Can run payroll by craft, produce CPRs and DIR XML (extensible markup language) files, and handle cash fringe"],
+    ["Annualization", "Our CPA (certified public accountant) has figured our per-hour benefit credit on all hours worked"],
     ["Time cards", "Daily, signed, split by job, craft and group"],
-    ["Apprenticeship", "We know the committees for our crafts and have DAS 140, DAS 142 and CAC-2 ready"],
+    ["Apprenticeship", "We know the committees for our crafts and have DAS (Division of Apprenticeship Standards) 140, DAS 142 and CAC-2 (California Apprenticeship Council) forms ready"],
     ["Posting kit", "Determinations and DIR's job site notice ready for the job board"],
     ["Sub checks", "We verify subs' DIR registration and collect their CPRs and affidavits"],
     ["Compliance folder", "One folder per job, kept at least 3 years (5 on City jobs)"]
@@ -867,8 +867,8 @@ slides: [
 <li>Use the DIR (Department of Industrial Relations) determinations in effect on the bid advertisement date, including interim ones, plus every predetermined increase (**) during the job.</li>
 <li>Pick the craft and group by the work done. Landscape/Irrigation Laborer, Tender, Fitter, Operating Engineer, Teamster and Laborer (Engineering Construction) cover most landscape jobs. Follow the tender and tradesman ratios.</li>
 <li>Pay at least the total hourly rate. Overtime multiplies the basic rate. Watch the double-time and Saturday footnotes. Benefits not paid into plans go on the check, and benefit credit is annualized.</li>
-<li>On contracts of $30,000 or more: DAS 140, DAS 142, 1:5 apprentice hours and training fund payments by the 15th.</li>
-<li>Certified payroll weekly: DIR eCPR on most jobs, LCPtracker on Caltrans, plus the City's system on City jobs. Keep records at least 3 years, 5 on City jobs.</li>
+<li>On contracts of $30,000 or more: DAS (Division of Apprenticeship Standards) 140, DAS 142, 1:5 apprentice hours and training fund payments by the 15th.</li>
+<li>Certified payroll weekly: DIR eCPR (electronic certified payroll) on most jobs, LCPtracker on Caltrans, plus the City's system on City jobs. Keep records at least 3 years, 5 on City jobs.</li>
 <li>Audits end in assessments, liquidated damages and possible debarment. Flow the Labor Code down to your subs and check their payroll.</li>
 <li>On federal-aid jobs, pay the higher of state and federal for each worker.</li>
 <li>Rebuild the crew day from the rates. It can cost twice the residential number.</li>

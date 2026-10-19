@@ -166,7 +166,7 @@ slides: [
 </div>`,
   ex: `<p>Caltrans job 11-428704 had 43 Plant (Group K) trees, the Canary Island and Eldarica pines in 24" boxes, as bid item 26. The specs say payment for tree hole and basin work is included in the payment for plant (Group K). So the bid price per tree had to carry the tree, its freight, the hole, the basin and the planting labor.</p>`,
   watch: `<p>Specimen trees (extra-large or special trees) can be one of a kind. If the designer picked a specific tree, it may be gone by the time you're awarded. Get a written hold or price an allowance and say so in your proposal (Module 13).</p>`,
-  src: "11-428704 Bid Summary item 26; 11-428704 Special Provisions (tree hole and basin payment, section 20-4)."
+  src: "11-428704 Bid Summary item 26; 11-428704 Special Provisions section 20-3.02D (tree hole and basin payment)."
 },
 
 { h: "Soil, mulch, compost and rock yards",

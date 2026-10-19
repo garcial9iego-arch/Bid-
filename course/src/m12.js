@@ -41,7 +41,7 @@ slides: [
 <li><div><b>Your takeoff and questions</b>Read, take off, walk the site, and send questions early.</div></li>
 <li class="hl"><div><b>Question deadline</b>On City job K-24-1952, questions received less than 14 days before bid opening “may not be considered.”</div></li>
 <li><div><b>Addenda</b>Changes come out by addendum. If a material change comes out less than 72 hours before bids close, the bid time must be extended at least 72 hours (Public Contract Code §4104.5).</div></li>
-<li><div><b>GC deadline for sub prices</b>Usually hours before the agency's deadline.</div></li>
+<li><div><b>GC (general contractor) deadline for sub prices</b>Usually hours before the agency's deadline.</div></li>
 <li><div><b>Bid opening and results</b>Public bids are opened and read; results are posted.</div></li>
 </ol>`,
   ex: `<p><strong>Real timeline, Caltrans 11-428704:</strong> Notice to Bidders dated Aug 2, 2021 · Addendum 1 issued Aug 27, 2021 (12 days before bids) · bids due 2:00 p.m. Wed Sept 8, 2021 through the Bid Express website · bid summary dated Sept 22, 2021. On <strong>11-431064</strong>, Addendum 1 came out May 12, 2022, five days before the May 17 bid opening, to change the federal wage rates.</p>`,
@@ -107,7 +107,7 @@ slides: [
   body: `<ol class="steps">
 <li><div><b>Arrive 15 minutes early</b>Sign in with the exact legal company name. Photograph the sign-in sheet if allowed.</div></li>
 <li><div><b>Listen to the presentation</b>Write down anything about schedule, access, hours, phasing and who to contact. Note who asks what.</div></li>
-<li class="hl"><div><b>Walk the water path</b>Meter, backflow, POC, mainline route, valve locations, controller and power.</div></li>
+<li class="hl"><div><b>Walk the water path</b>Meter, backflow, POC (point of connection), mainline route, valve locations, controller and power.</div></li>
 <li><div><b>Walk the planting areas</b>Soils, slopes, existing plants to protect, weeds, drainage, edges and mow curbs.</div></li>
 <li><div><b>Walk access and staging</b>Gates, truck route, where a bin and pallets can go, parking for the crew.</div></li>
 <li><div><b>Look for scope that may land on you</b>Demolition, fine grading, drainage, site concrete and walls are sometimes handed to the landscape sub. Note what you see; <a href="#m18-1">Module 18</a> covers those scopes.</div></li>
@@ -125,7 +125,7 @@ slides: [
 <li><strong>Backflow preventer:</strong> existing to remain, new, or relocated? Is there room for an enclosure and the clearance the detail shows?</li>
 <li><strong>Water source:</strong> potable or recycled? Recycled (purple) water brings its own pipe, signs, tags and county rules. Ask which water agency serves the site (City of San Diego, Otay, Sweetwater, Helix or others).</li>
 <li><strong>Static pressure:</strong> if you can read it safely, write it down in PSI (pounds per square inch). Compare it to the design pressure on the irrigation legend.</li>
-<li><strong>Controller power:</strong> is there a 120V circuit at the controller location, or is a new circuit, conduit and electrician needed? Who provides it (you, the GC's electrician, or the utility)?</li>
+<li><strong>Controller power:</strong> is there a 120V circuit at the controller location, or is a new circuit, conduit and electrician needed? Who provides it (you, the GC's (general contractor's) electrician, or the utility)?</li>
 <li><strong>Communication:</strong> does the controller need cell, radio or Wi-Fi? Can a signal be found there?</li>
 </ul>`,
   ex: `<p>On Caltrans 11-428704 (see Module 15), three drinking-water connections were shut off and the whole corridor was fed from one recycled-water connection at Palomar Street, with new Calsense controllers powered from an existing SDG&amp;E (San Diego Gas &amp; Electric) service on sheets E-1 and E-2. A site visit lets you see exactly where those pieces sit before you price them.</p>`
@@ -136,12 +136,12 @@ slides: [
   body: `<div class="tablewrap"><table>
 <thead><tr><th>Item</th><th>Real example</th><th>What to check on the walk</th></tr></thead>
 <tbody>
-<tr><td>Meter charges</td><td>11-431064 SP (special provisions) 5-1.20E: two new 2" Otay meters, $210 connection fee each; one meter charge “Zero” (Caltrans had credits), the other $118,247.00. The SP says the price is adjusted if the charge changes.</td><td>Where each meter goes; is there room; is it near the POC on the plans?</td></tr>
+<tr><td>Meter charges</td><td>11-431064 SP (special provisions) 5-1.20E: two new 2" Otay meters, $210 connection fee each; one meter charge “Zero” (Caltrans had credits), the other $118,247.00. The SP says the price is adjusted if the charge changes.</td><td>Where each meter goes; is there room; is it near the POC (point of connection) on the plans?</td></tr>
 <tr><td>Water service during the job</td><td>11-431064 SP 5-1.20F: City of San Diego $78.72 a month plus $7.053 per HCF (hundred cubic feet); Otay $240.85 per meter per month plus $5.84 per HCF. You pay until contract acceptance.</td><td>How many meters will run, for how many months, including 750 working days of plant establishment</td></tr>
 <tr><td>Pressure test</td><td>11-428704 SP: test recycled water mains by Method A “with the testing pressure modified to 150 psi”</td><td>Is static pressure available to fill and test, or will you need a pump?</td></tr>
 <tr><td>Recycled water rules</td><td>11-428704 plan note: all piping, equipment and sprinkler caps purple or labeled per San Diego County DEH (Department of Environmental Health); no ponding, runoff or overspray</td><td>Walks, streets and private lots near spray heads</td></tr>
 </tbody></table></div>`,
-  watch: `<p>On a GC bid, ask in writing who pays meter fees and the water bill during construction and establishment. If nobody says, it often lands on the landscape sub.</p>`,
+  watch: `<p>On a GC (general contractor) bid, ask in writing who pays meter fees and the water bill during construction and establishment. If nobody says, it often lands on the landscape sub.</p>`,
   src: "Caltrans 11-431064 Special Provisions §§5-1.20E, 5-1.20F; Caltrans 11-428704 Special Provisions (section 20-2.01A(4)(b)(i) revision) and irrigation legend note 3 and 4."
 },
 
@@ -171,8 +171,8 @@ slides: [
 <li class="hl"><div><b>Ask if a zone can be run</b>Only the owner's staff should run it. Watch coverage and pressure.</div></li>
 <li><div><b>Write down what the specs make you responsible for</b>Testing, operating, repairing or replacing the existing system.</div></li>
 </ol>`,
-  ex: `<p><strong>Real spec language, Caltrans 11-428704:</strong> the bid had lump-sum items 32 “Check and Test Existing Irrigation Facilities” and 33 “Operate Existing Irrigation Facilities.” The SP added: “If an irrigation facility to be modified is determined unsuitable, replace the irrigation facility under section 20-2. The replacement of the unsuitable facility is change order work.” So checking is in your price; replacing unsuitable parts is paid extra. A walk tells you how much checking work there will be.</p>`,
-  watch: `<p>On private GC jobs, the specs often say the opposite: “repair existing system to working order” with no extra pay. Read your job's wording and price the condition you saw.</p>`,
+  ex: `<p><strong>Real spec language, Caltrans 11-428704:</strong> the bid had lump-sum items 32 “Check and Test Existing Irrigation Facilities” and 33 “Operate Existing Irrigation Facilities.” The SP (special provisions) added: “If an irrigation facility to be modified is determined unsuitable, replace the irrigation facility under section 20-2. The replacement of the unsuitable facility is change order work.” So checking is in your price; replacing unsuitable parts is paid extra. A walk tells you how much checking work there will be.</p>`,
+  watch: `<p>On private GC (general contractor) jobs, the specs often say the opposite: “repair existing system to working order” with no extra pay. Read your job's wording and price the condition you saw.</p>`,
   src: "Caltrans 11-428704 Bid Item List items 32–33; Special Provisions additions to section 20-10.02C(1)."
 },
 
@@ -180,7 +180,7 @@ slides: [
   lead: "How your crew gets in, where materials sit, and when you can work are all costs.",
   body: `<ul>
 <li><strong>Access:</strong> can a truck and trailer reach the work? Gates, curbs, narrow drives, overhead wires?</li>
-<li><strong>Staging:</strong> where can you store pipe, plants and a bin? Is it secure overnight? On a GC job, ask where the GC will let you stage.</li>
+<li><strong>Staging:</strong> where can you store pipe, plants and a bin? Is it secure overnight? On a GC (general contractor) job, ask where the GC will let you stage.</li>
 <li><strong>Traffic:</strong> medians and street work need traffic control plans, signs and maybe flaggers. Freeway work may be nights only.</li>
 <li><strong>Work hours:</strong> schools, hospitals, HOAs (homeowners associations) and retail centers often limit hours or noisy work.</li>
 <li><strong>Neighbors:</strong> occupied buildings mean clean-up every day and care with sprinklers near windows and walks.</li>
@@ -199,7 +199,7 @@ slides: [
 <tr><td>☐</td><td>Meter: existing or new? size? dedicated irrigation? which water agency?</td><td></td></tr>
 <tr><td>☐</td><td>Backflow: existing to remain, new or relocated? room for enclosure?</td><td></td></tr>
 <tr><td>☐</td><td>Water type: potable or recycled (purple)?</td><td></td></tr>
-<tr><td>☐</td><td>Static pressure reading (only if allowed): ____ PSI at ____</td><td></td></tr>
+<tr><td>☐</td><td>Static pressure reading (only if allowed): ____ PSI (pounds per square inch) at ____</td><td></td></tr>
 <tr><td>☐</td><td>Pressure test water: available at the site? pump needed?</td><td></td></tr>
 <tr><td>☐</td><td>Controller location; 120V power present? who provides it?</td><td></td></tr>
 <tr><td>☐</td><td>Controller communication: cell signal bars / radio line of sight</td><td></td></tr>
@@ -247,7 +247,7 @@ slides: [
   ex: `<div class="tablewrap"><table>
 <thead><tr><th>#</th><th>Time</th><th>Where (sheet / area)</th><th>What it shows</th><th>Question raised?</th></tr></thead>
 <tbody>
-<tr><td>037</td><td>9:42</td><td>L-3.1, north median</td><td>Existing backflow, no enclosure, bent cage</td><td>RFI #3: replace or reuse?</td></tr>
+<tr><td>037</td><td>9:42</td><td>L-3.1, north median</td><td>Existing backflow, no enclosure, bent cage</td><td>RFI (request for information) #3: replace or reuse?</td></tr>
 <tr><td>038</td><td>9:45</td><td>L-3.1, north median</td><td>Pedestal controller, no power conduit visible</td><td>RFI #4: who provides 120V?</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
 </tbody></table></div>`,
@@ -312,7 +312,7 @@ slides: [
 <tr><td><strong>City of San Diego</strong> (public works)</td><td>The contact named in the bid documents. On K-24-1952 it was the Senior Contract Specialist, by email. Some solicitations use the PlanetBids Q&amp;A tab instead; check the bid's PlanetBids page.</td><td>K-24-1952: questions received less than 14 days before bid opening “may not be considered.”</td></tr>
 <tr><td><strong>Caltrans</strong></td><td>The online Bidders' Inquiries system linked from the job's advertisement. Responses are posted publicly, numbered and dated.</td><td>Before bid opening; earlier is better</td></tr>
 <tr><td><strong>Other agencies</strong></td><td>Whatever the Notice Inviting Bids says: PlanetBids Q&amp;A, email to one named buyer, or a form</td><td>Stated in the notice, often 7–14 days before bids are due</td></tr>
-<tr><td><strong>Private (GC (general contractor) bids)</strong></td><td>The GC's estimator. Never the architect, owner or LA (landscape architect) directly unless the GC says so.</td><td>The GC's RFI deadline, usually a few days before the sub bid date</td></tr>
+<tr><td><strong>Private (GC (general contractor) bids)</strong></td><td>The GC's estimator. Never the architect, owner or LA (landscape architect) directly unless the GC says so.</td><td>The GC's RFI (request for information) deadline, usually a few days before the sub bid date</td></tr>
 </tbody></table></div>`,
   watch: `<p>Deadlines differ on every bid. A question sent after the cutoff may never be answered, and you'll have to price the risk yourself. Put the question deadline on your calendar the day you decide to bid.</p>`,
   ex: `<p>Find them: <a href="https://www.sandiego.gov/cip/bid-contracting" target="_blank" rel="noopener">City of San Diego bid and contracting opportunities</a> · <a href="https://ppmoe.dot.ca.gov/des/oe/bid-inquiries.php" target="_blank" rel="noopener">Caltrans Bidders' Inquiries</a> · <a href="https://ppmoe.dot.ca.gov/des/oe/weekly-ads/all-adv-projects.php" target="_blank" rel="noopener">Caltrans projects currently advertised</a>.</p>`,
@@ -323,10 +323,10 @@ slides: [
 { h: "Sending a question, step by step",
   lead: "The channel changes from bid to bid, but the steps are the same. Leave a trail you can prove later.",
   body: `<ol class="steps">
-<li><div><b>Find the channel in the documents</b>Instructions to Bidders, Notice Inviting Bids, or the GC's invitation. Copy the exact address or link into your bid tracker.</div></li>
-<li><div><b>Write the question in your RFI log first</b>Number it, date it, attach the sheet references (next slides).</div></li>
+<li><div><b>Find the channel in the documents</b>Instructions to Bidders, Notice Inviting Bids, or the GC's (general contractor's) invitation. Copy the exact address or link into your bid tracker.</div></li>
+<li><div><b>Write the question in your RFI (request for information) log first</b>Number it, date it, attach the sheet references (next slides).</div></li>
 <li class="hl"><div><b>Submit through that channel only</b>PlanetBids: open the bid, use its Q&amp;A area if the bid uses one. Email: one question per email, bid number and RFI number in the subject. Caltrans: the Bidders' Inquiries system for that contract. GC: email the estimator.</div></li>
-<li><div><b>Save proof</b>Screenshot the confirmation or save the sent email as a PDF in folder 04 RFIs.</div></li>
+<li><div><b>Save proof</b>Screenshot the confirmation or save the sent email as a PDF (portable document file) in folder 04 RFIs.</div></li>
 <li><div><b>Watch for the answer</b>Check the Q&amp;A page and addenda every day. Answers usually go to everyone, not just to you.</div></li>
 <li><div><b>No answer by the deadline?</b>Price the risk, and write your assumption into your proposal (Module 13).</div></li>
 </ol>`,
@@ -356,7 +356,7 @@ slides: [
 <li><div><b>Did I read the general notes and legends?</b>Most quantity “conflicts” are explained in a note.</div></li>
 <li><div><b>Did I read the specs and the Standard Specifications they point to?</b>Special provisions often say “Replace section X with…”. Read the replaced section too.</div></li>
 <li><div><b>Did I check the latest addendum?</b>The question may already be fixed.</div></li>
-<li class="hl"><div><b>Does it change my price or my method?</b>If not, it isn't worth an RFI.</div></li>
+<li class="hl"><div><b>Does it change my price or my method?</b>If not, it isn't worth an RFI (request for information).</div></li>
 <li><div><b>Does it give away my strategy?</b>If so, word it neutrally or ask privately when allowed.</div></li>
 <li><div><b>Is it one clear question with a proposed answer?</b></div></li>
 </ol>`,
@@ -369,14 +369,14 @@ slides: [
 },
 
 { h: "Real RFI example 1 · tree well sprinklers on 11-428704",
-  lead: "On the I-805 job, the quantity table and the bid item disagreed on tree well sprinkler assemblies. Here's the RFI a careful bidder would send.",
+  lead: "On the I-805 job, the quantity table and the bid item disagreed on tree well sprinkler assemblies. Here's the RFI (request for information) a careful bidder would send.",
   body: `<ul>
 <li>Sheet IQ-1 (irrigation quantities) adds up to <strong>172</strong> tree well sprinkler assemblies.</li>
 <li>Bid item 51, Tree Well Sprinkler Assembly, lists <strong>180 EA</strong> (each).</li>
 <li>The plans show <strong>43</strong> box trees, and the tree well sprinkler detail shows 4 bubblers per tree. 43 × 4 = <strong>172</strong>.</li>
 <li>Addendum 1 replaced the quantity sheets, but the revised IQ-1 still totals 172 and item 51 stayed at 180.</li>
 </ul>`,
-  exLabel: "Sample bidder inquiry",
+  exLabel: "Sample bidder inquiry (RFI, request for information)",
   ex: `<p><strong>Reference:</strong> Plan sheet IQ-1 (Irrigation Quantities); Bid Item 51, Tree Well Sprinkler Assembly; planting plans PP-1 to PP-7 (43 Group K trees).</p>
 <p><strong>Question:</strong> Sheet IQ-1 totals 172 tree well sprinkler assemblies, which equals 43 trees at 4 assemblies each. Bid Item 51 lists 180 EA.</p>
 <p><strong>Proposed answer:</strong> Please confirm whether bidders should price 180 EA as listed, or whether Bid Item 51 will be revised to 172 EA by addendum.</p>`,
@@ -391,7 +391,7 @@ slides: [
 <li>The original Planting Quantities sheet (PQ-1) and bid item 25 both said <strong>60,015</strong>.</li>
 <li>Difference: 1,960 cuttings. That happens to equal one callout on the plans, a clue that one area was left out of the table.</li>
 </ul>`,
-  exLabel: "Sample bidder inquiry",
+  exLabel: "Sample bidder inquiry (RFI, request for information)",
   ex: `<p><strong>Reference:</strong> Planting plans PP-1 to PP-7; Planting Quantities sheet PQ-1; Bid Item 25, Plant (Group H).</p>
 <p><strong>Question:</strong> The Group H (Carpobrotus edulis) callouts on PP-1 to PP-7 total 61,975. PQ-1 and Bid Item 25 list 60,015. The difference (1,960) matches one callout.</p>
 <p><strong>Proposed answer:</strong> Please confirm the correct quantity is 61,975 and revise Bid Item 25 and PQ-1 by addendum.</p>`,
@@ -405,9 +405,9 @@ slides: [
 <li>SP (special provisions) addition to section 20-2.06B(2)(a): controllers “must be Calsense and must have 2-way communication by General packet Radio Service (GPRS) radio.” GPRS is a cellular data service.</li>
 <li>The Department's quoted equipment for controllers '97B' to '97G' lists a “Calsense CS3000 Spread Spectrum Radio Communication Device” and a spread spectrum stick antenna. Spread spectrum is a short-range radio link between controllers, not cellular.</li>
 <li>Only the '97A' modification list includes a “Calsense 5 Year Data Access Service Plan, Item # COMM-5YR-35.”</li>
-<li>Bid items 41–46 (controllers), 47 (antenna mast, 3 EA) and 40 (modify controller '97A') depend on the answer.</li>
+<li>Bid items 41–46 (controllers), 47 (antenna mast, 3 EA, meaning each) and 40 (modify controller '97A') depend on the answer.</li>
 </ul>`,
-  exLabel: "Sample bidder inquiry",
+  exLabel: "Sample bidder inquiry (RFI, request for information)",
   ex: `<p><strong>Reference:</strong> Special Provisions, additions to sections 20-2.06B(2)(a) and 20-10.02B(1); Bid Items 40–47.</p>
 <p><strong>Question:</strong> Section 20-2.06B(2)(a) requires 2-way communication by GPRS radio. The quoted equipment for controllers '97B'–'97G' lists spread spectrum radio devices and antennas, and only the '97A' modification includes a 5-year data access service plan.</p>
 <p><strong>Proposed answer:</strong> Please confirm that controllers '97B'–'97G' communicate by spread spectrum radio to '97A', that '97A' is the only controller requiring a data service plan, and that bidders should price the equipment as listed in the quoted tables.</p>`,
@@ -422,7 +422,7 @@ slides: [
 <li>Each table says “These prices are good until April 14, 2022” (or 04/14/2022).</li>
 <li>Bids opened Sept 8, 2021. With 120 working days of construction, equipment could be bought near or after that date.</li>
 </ul>`,
-  exLabel: "Sample bidder inquiry",
+  exLabel: "Sample bidder inquiry (RFI, request for information)",
   ex: `<p><strong>Reference:</strong> Special Provisions, additions to sections 20-2.05B (flow sensors), 20-2.06B(2)(a) (controllers) and 20-10.02B(1) (modify controller); Bid Items 40–46 and 50.</p>
 <p><strong>Question:</strong> The Department's quoted prices are good until April 14, 2022. If the equipment is purchased after that date and the supplier's price has increased, how will the difference be handled?</p>
 <p><strong>Proposed answer:</strong> Please confirm whether bidders should price the quoted amounts plus tax and delivery, with any increase after April 14, 2022 paid as extra work, or whether bidders should include their own escalation.</p>`,
@@ -438,7 +438,7 @@ slides: [
 <li>SP 5-1.20E lists an existing 2" City of San Diego meter at Caliente Avenue, serial # 11955385, plus two new 2" Otay meters.</li>
 <li>Plant establishment: 750 working days (Notice to Bidders).</li>
 </ul>`,
-  exLabel: "Sample bidder inquiry",
+  exLabel: "Sample bidder inquiry (RFI, request for information)",
   ex: `<p><strong>Reference:</strong> Special Provisions §§5-1.20E and 5-1.20F; Bid Item 68, Irrigation Water Service Charges; Notice to Bidders (750 working days of plant establishment).</p>
 <p><strong>Question:</strong> To price item 68, can the Department provide past monthly water use (in HCF) for the existing 2" City of San Diego meter, serial # 11955385, at Caliente Avenue, and the expected start dates for the two new Otay meters?</p>
 <p><strong>Proposed answer:</strong> Please provide the last 12 months of billed use for meter 11955385, or confirm bidders should estimate water use from the irrigation design.</p>`,
@@ -453,7 +453,7 @@ slides: [
 <li>Item 8c says the contractor “shall not be due additional compensation” for the soil analysis and testing.</li>
 <li>So the test is in your price; a change in amendments after the test is handled as a contract change.</li>
 </ul>`,
-  exLabel: "Sample question to the City",
+  exLabel: "Sample question to the City (RFI, request for information)",
   ex: `<p><strong>Reference:</strong> K-24-1952 Supplementary Special Provisions, Section 801-2.2.1, item 8 (Soil Tests).</p>
 <p><strong>Question:</strong> Item 8b says a cost change for soil preparation work will follow the General Conditions after the soil test results are reviewed.</p>
 <p><strong>Proposed answer:</strong> Please confirm that bidders should price the amendments and rates listed in Section 801-2.2, and that any added or deleted amendments recommended after the soil test will be handled as a change under the General Conditions.</p>`,
@@ -464,7 +464,7 @@ slides: [
 { h: "RFI log template",
   lead: "Keep one log per bid. It shows what you asked, what came back and what you did about it.",
   body: `<div class="tablewrap"><table>
-<thead><tr><th>RFI #</th><th>Date sent</th><th>Sent to / how</th><th>Reference</th><th>Question (short)</th><th>Answer and source</th><th>Estimate change</th></tr></thead>
+<thead><tr><th>RFI (request for information) #</th><th>Date sent</th><th>Sent to / how</th><th>Reference</th><th>Question (short)</th><th>Answer and source</th><th>Estimate change</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>8/16/21</td><td>Caltrans Bidders' Inquiries</td><td>IQ-1; item 51</td><td>172 vs 180 tree well assemblies</td><td>No change by Addendum 1</td><td>Priced 180; unit price covers setup</td></tr>
 <tr><td>2</td><td>8/16/21</td><td>Caltrans Bidders' Inquiries</td><td>PP-1–PP-7; PQ-1; item 25</td><td>Group H count 61,975 vs 60,015</td><td>Addendum 1: item 25 = 61,975</td><td>Updated count, labor and nursery quote</td></tr>
@@ -477,7 +477,7 @@ slides: [
 { h: "Addenda: read every one, log every one",
   lead: "An addendum is a formal change to the bid documents issued before bid day. You must price it and acknowledge it.",
   body: `<ol class="steps">
-<li><div><b>Know where they're posted</b>PlanetBids for the City, the Caltrans addendum page and Bid Express for Caltrans, the GC's platform or email for private bids.</div></li>
+<li><div><b>Know where they're posted</b>PlanetBids for the City, the Caltrans addendum page and Bid Express for Caltrans, the GC's (general contractor's) platform or email for private bids.</div></li>
 <li><div><b>Turn on notifications</b>But don't rely on them. Check the portal yourself, including the morning of bid day.</div></li>
 <li class="hl"><div><b>Log each addendum</b>Number, date, what changed, which estimate lines it affects, done or not done.</div></li>
 <li class="hl"><div><b>Update the estimate</b>Replace sheets in your plan set, re-check quantities, change your prices.</div></li>
@@ -555,7 +555,7 @@ slides: [
 },
 
 { h: "Call scripts for GC estimators",
-  lead: "Short scripts keep calls under two minutes. Fill in the brackets and read them out loud a few times before you call.",
+  lead: "Short scripts keep calls with GC (general contractor) estimators under two minutes. Fill in the brackets and read them out loud a few times before you call.",
   body: `<div class="tablewrap"><table>
 <thead><tr><th>Call</th><th>Script</th></tr></thead>
 <tbody>
@@ -570,7 +570,7 @@ slides: [
 },
 
 { h: "Bid day with GCs",
-  lead: "On bid day, the GC is combining dozens of sub prices in a few hours. Send early, send clearly, and be reachable.",
+  lead: "On bid day, the GC (general contractor) is combining dozens of sub prices in a few hours. Send early, send clearly, and be reachable.",
   body: `<ol class="steps">
 <li><div><b>Send a scope letter the day before</b>Inclusions, exclusions, clarifications, addenda acknowledged, with the price to follow if needed. Module 13 shows how to write it.</div></li>
 <li class="hl"><div><b>Send the final number before the GC's cutoff</b>The GC sets its own deadline for sub prices, usually hours before the agency's.</div></li>
@@ -582,7 +582,7 @@ slides: [
 },
 
 { h: "A bid-day plan, hour by hour",
-  lead: "Example times for a public bid due at 2:00 p.m. with a GC cutoff of 11:00 a.m. Adjust to your bid.",
+  lead: "Example times for a public bid due at 2:00 p.m. with a GC (general contractor) cutoff of 11:00 a.m. Adjust to your bid.",
   body: `<div class="tablewrap"><table>
 <thead><tr><th>Time</th><th>Task</th></tr></thead>
 <tbody>
@@ -604,7 +604,7 @@ slides: [
   lead: "Every bid is a chance to learn. Ask how you did, politely, a few days after bid day.",
   body: `<ul>
 <li><strong>Public jobs:</strong> the results are public. Download the bid tab and find out which primes were low. Then ask those primes if they used your number.</li>
-<li><strong>Private jobs:</strong> email the estimator 3–7 days after the bid. Ask whether the GC won, and how your number compared.</li>
+<li><strong>Private jobs:</strong> email the estimator 3–7 days after the bid. Ask whether the GC (general contractor) won, and how your number compared.</li>
 <li><strong>Record the answer</strong> in your bid tracker: won, lost, how far off, why.</li>
 <li><strong>If you won the sub price:</strong> thank them, confirm your scope and ask about the next step (Module 16).</li>
 </ul>`,
@@ -641,8 +641,8 @@ slides: [
   body: `<div class="tablewrap"><table>
 <thead><tr><th>Question</th><th>Answer</th></tr></thead>
 <tbody>
-<tr><td>Project, bid no., bid date, owner, GCs we priced to</td><td></td></tr>
-<tr><td>Our number (and per SF or per item, where useful)</td><td></td></tr>
+<tr><td>Project, bid no., bid date, owner, GCs (general contractors) we priced to</td><td></td></tr>
+<tr><td>Our number (and per SF (square feet) or per item, where useful)</td><td></td></tr>
 <tr><td>Result: won / lost / no award yet / GC didn't win</td><td></td></tr>
 <tr><td>Where we placed, and the spread to the low number (%)</td><td></td></tr>
 <tr><td>Feedback from the GC (exact words, date, who)</td><td></td></tr>
@@ -677,10 +677,10 @@ slides: [
 <tbody>
 <tr><td>At a City job walk, the engineer says “the irrigation sleeves are already in.” The plans show new sleeves.</td><td>Price the sleeves. Send a written question the same day asking to confirm by addendum.</td><td>Oral answers have no legal effect on City bids.</td></tr>
 <tr><td>A friend who works for the City offers to tell you the engineer's estimate.</td><td>Say no. Talk only to the named contact.</td><td>Communication rules and ethics rules protect fair bidding; your bid can be thrown out.</td></tr>
-<tr><td>Two GCs ask you to “sharpen your pencil” before their bid goes in.</td><td>Re-check your numbers. Change only for a real reason, and send the same number to both.</td><td>Different numbers to different GCs for the same scope hurt your reputation.</td></tr>
+<tr><td>Two GCs (general contractors) ask you to “sharpen your pencil” before their bid goes in.</td><td>Re-check your numbers. Change only for a real reason, and send the same number to both.</td><td>Different numbers to different GCs for the same scope hurt your reputation.</td></tr>
 <tr><td>An addendum posts at 4:00 p.m. the day before the bid and changes plant quantities.</td><td>Process it tonight, call the nursery in the morning, and watch for a bid date extension.</td><td>You must price and acknowledge every addendum; a material late change may extend the bid time.</td></tr>
 <tr><td>A GC calls after bid opening: “Your number missed the irrigation sleeves.”</td><td>Check your proposal. If your scope letter included or excluded them clearly, say so politely. If you missed them, own it and talk about a fair fix.</td><td>A clear scope letter (Module 13) settles these calls.</td></tr>
-<tr><td>Your RFI isn't answered and the deadline has passed.</td><td>Price the risk and state your assumption in your proposal.</td><td>Unanswered questions become clarifications, not guesses.</td></tr>
+<tr><td>Your RFI (request for information) isn't answered and the deadline has passed.</td><td>Price the risk and state your assumption in your proposal.</td><td>Unanswered questions become clarifications, not guesses.</td></tr>
 </tbody></table></div>`,
   src: "City of San Diego K-24-1952-DBB-3-A, Instructions to Bidders item 9; Cal. Public Contract Code §4104.5."
 },
@@ -688,7 +688,7 @@ slides: [
 { h: "Professional email templates",
   lead: "Short, specific and easy to forward. Use the bid name and number in every subject line.",
   exLabel: "Templates (fill in the brackets)",
-  ex: `<p><strong>1 · RFI to a GC estimator</strong><br><strong>Subject:</strong> [Project], landscape RFI #2, plant count conflict<br>Hi [Name], one question on landscape for [Project]. Sheet L-2.0 shows 38 Lomandra in the north bed; the plant schedule on L-1.0 lists 26 total. Please confirm we should price the 38 shown on the plan. Thanks, [Name].</p>
+  ex: `<p><strong>1 · RFI (request for information) to a GC (general contractor) estimator</strong><br><strong>Subject:</strong> [Project], landscape RFI #2, plant count conflict<br>Hi [Name], one question on landscape for [Project]. Sheet L-2.0 shows 38 Lomandra in the north bed; the plant schedule on L-1.0 lists 26 total. Please confirm we should price the 38 shown on the plan. Thanks, [Name].</p>
 <p><strong>2 · Scope letter cover note</strong><br><strong>Subject:</strong> [Project], landscape &amp; irrigation proposal, addenda 1–2<br>Hi [Name], attached is our landscape and irrigation proposal for [Project], based on sheets [L-1.0 to L-6.0], spec sections [32 84 00, 32 91 13, 32 93 00] and addenda 1–2. Price and clarifications are on page 1. I'll be at this number all day: [phone].</p>
 <p><strong>3 · Declining a bid</strong><br><strong>Subject:</strong> [Project], landscape: passing this time<br>Hi [Name], thanks for the invite. We're passing on this one because [our crews are committed in March]. Please keep us on your list for landscape and irrigation.</p>`,
   watch: `<p>Reread every email before you send it: right project, right person, right attachment, no old price in the file name.</p>`
@@ -730,7 +730,7 @@ slides: [
   body: `<div class="tablewrap"><table>
 <thead><tr><th>Date / time</th><th>Who (company)</th><th>How</th><th>Summary</th><th>Follow-up</th><th>Saved as</th></tr></thead>
 <tbody>
-<tr><td>3/10 9:15</td><td>[Estimator], [GC]</td><td>Phone</td><td>Bioswale planting is in civil, not landscape</td><td>Confirm by email today</td><td>04 RFIs / GC-email-2026-03-10.pdf</td></tr>
+<tr><td>3/10 9:15</td><td>[Estimator], [GC (general contractor)]</td><td>Phone</td><td>Bioswale planting is in civil, not landscape</td><td>Confirm by email today</td><td>04 RFIs / GC-email-2026-03-10.pdf</td></tr>
 <tr><td>3/10 9:40</td><td>[Estimator], [GC]</td><td>Email</td><td>Confirmed bioswale in civil</td><td>Add exclusion to proposal</td><td>04 RFIs / GC-email-2026-03-10b.pdf</td></tr>
 <tr><td>3/12 2:05</td><td>[Rep], [nursery]</td><td>Email</td><td>Quote rev. 2 after Addendum 2 plant changes</td><td>Update estimate v3</td><td>05 Quotes / nursery-rev2-2026-03-12.pdf</td></tr>
 </tbody></table></div>
