@@ -1,339 +1,228 @@
 (window.COURSE_MODULES = window.COURSE_MODULES || []).push({
-n: 3, hours: 10.5, title: "Finding Work and Deciding What to Bid",
+n: 3, hours: 6.25, title: "Finding Work and Deciding What to Bid",
 slides: [
 
 { t: "cover",
   h: "Finding Work and Deciding What to Bid",
-  lead: "Bids don't come to a company nobody knows. This module shows where commercial landscape bids come from, how to get invited, and how to choose which ones are worth your time.",
+  lead: "Get invited by GCs, find and read public notices, spend estimating hours only on winnable jobs, and size work to your cash.",
   objectives: [
-    "Name the places private and public landscape bids come from",
-    "Get on general contractors' bid lists with emails, calls and a weekly routine",
-    "Register on PlanetBids, BuyNet and bid platforms, and search and download bids step by step",
-    "Read a real public bid notice and pull out what matters",
-    "Decide go or no-go with a scorecard and practice scenarios",
-    "Work out cash flow for a job and choose the right size of job",
-    "Read real bid tabs: spreads, medians and unit prices"
+    "Get on GC bid lists with a targeted outreach routine and log",
+    "Register on bid platforms and public portals and work a PlanetBids or Caltrans project",
+    "Read a public notice for the lines that change price and eligibility",
+    "Decide go or no-go with hard stops and a scorecard",
+    "Estimate peak cash need for single, public-prime and overlapping jobs",
+    "Read bid tabs for spread, median and unit-price market data"
   ],
-  time: [["Reading and slides", "4 h"], ["Practice assignments", "6.5 h"], ["Module total", "10.5 h"]],
-  body: "<p>This module ends with real outreach: calls, emails and profiles. By the end, invitations should start arriving. The real examples come from a City of San Diego park bid (K-24-1952) and five Caltrans District 11 landscape jobs you can open in the Real Bid Lab.</p>"
+  time: [["Reading and slides", "1.5 h"], ["Practice assignments", "4.75 h"], ["Module total", "6.25 h"]],
+  body: "<p>Real examples: City of San Diego park bid K-24-1952 and five Caltrans (California Department of Transportation) District 11 landscape jobs in the <a href=\"#lab\">Real Bid Lab</a>. Practice is real outreach; invitations should start arriving by the end.</p>"
 },
 
-{ h: "Where commercial landscape bids come from",
-  lead: "Work comes from two directions: general contractors who invite you, and public agencies who advertise.",
+{ h: "Where bids come from and how to get on GC lists",
+  lead: "Most private work goes to subs the GC already knows; public work is advertised, and one public job can be both a prime bid and a sub bid.",
   body: `<div class="twocol">
-<div><h3>Private (through general contractors)</h3><ul>
-<li>Direct invitations from general contractor estimators you know</li>
-<li>Bid platforms general contractors use to invite subs (BuildingConnected, PlanHub)</li>
-<li>Lead services that list upcoming projects (ConstructConnect, Dodge)</li>
-<li>Referrals from suppliers, landscape architects and other subs</li>
-<li>Repeat customers: developers, property managers, HOAs (homeowners associations)</li>
+<div><h3>Private, through GCs</h3><ul>
+<li>Direct invitations from estimators you know</li>
+<li>Bid platforms (BuildingConnected, PlanHub)</li>
+<li>Paid lead services (ConstructConnect, Dodge)</li>
+<li>Referrals from suppliers, LAs (landscape architects), other subs</li>
+<li>Repeat developers, property managers, HOAs (homeowners associations)</li>
 </ul></div>
-<div><h3>Public (advertised)</h3><ul>
-<li>City of San Diego, through PlanetBids</li>
-<li>Other cities, the County, water districts and the Port</li>
+<div><h3>Public, advertised</h3><ul>
+<li>City of San Diego (PlanetBids)</li>
+<li>Other cities, County, water districts, the Port</li>
 <li>School and community college districts</li>
-<li>State agencies (Cal eProcure) and Caltrans (the California Department of Transportation)</li>
-<li>A-license primes bidding public civil jobs, who need a landscape sub</li>
+<li>State (Cal eProcure), Caltrans</li>
+<li>Class A primes on civil jobs who need a landscape sub</li>
 </ul></div>
-</div>`,
-  ex: `<p>One public City project can create several chances: you can bid it as prime if the license class allows, <em>and</em> send your landscape price to every A contractor on the planholders list if it doesn't.</p>`
-},
-
-{ h: "Getting on general contractor bid lists",
-  lead: "Most private work goes to subs the general contractor (GC) already knows. Your job is to become one of them.",
-  body: `<ol class="steps">
-<li><div><b>Build a target list</b>20–40 commercial GCs that build in San Diego County: retail, multifamily, medical, schools, offices.</div></li>
-<li><div><b>Find the right person</b>The chief estimator or preconstruction manager, not the front desk or the project manager.</div></li>
-<li class="hl"><div><b>Send a short intro email</b>Who you are, what you do, the size you want, your capabilities statement attached.</div></li>
-<li class="hl"><div><b>Call 3–5 days later</b>Ask to be added to their bid list for landscape and irrigation.</div></li>
-<li><div><b>Complete their prequalification</b>Right away, while they remember you.</div></li>
-<li><div><b>Log everything</b>Company, contact, date, response, next follow-up.</div></li>
-<li><div><b>Bid what they send you</b>The first few invitations are a test. Respond to every one, even to decline.</div></li>
+</div>
+<ol class="steps">
+<li><div><b>Target 20–40 GCs</b>Retail, multifamily, medical, schools, offices in San Diego County.</div></li>
+<li><div><b>Reach the chief estimator or precon manager</b>Not the front desk or a PM.</div></li>
+<li class="hl"><div><b>Email, then call 3–5 days later</b>Ask to join the landscape and irrigation bid list.</div></li>
+<li><div><b>Return their prequal at once</b>While they remember you.</div></li>
+<li><div><b>Answer every invite</b>Bid or decline; early invites are a test.</div></li>
 </ol>`,
-  ex: `<p>Where to find GCs: the planholders and bidders lists on public jobs, ABC (Associated Builders and Contractors) and AGC (Associated General Contractors) San Diego member directories, construction signs on job sites, project news in the San Diego Business Journal, and asking your irrigation supply house and nursery reps who's building. Caltrans bid summaries also list which primes hired landscape subs (Module 1).</p>`
+  ex: `<p>Where to find GCs: planholders and bidders lists on public jobs, sub lists on Caltrans bid summaries (<a href="#m1-1">Module 1</a>), ABC (Associated Builders and Contractors) and AGC (Associated General Contractors) San Diego directories, job-site signs, San Diego Business Journal project news, your supply house and nursery reps.</p>`
 },
 
-{ h: "The intro email",
-  lead: "Short, specific and easy to forward. The estimator should know in ten seconds what you do and how to invite you.",
-  exLabel: "Email template (fill in the brackets)",
+{ h: "Intro email and follow-up call",
+  lead: "An estimator should know in ten seconds what you do, your size range and how to invite you; the call gets what the email doesn't.",
+  exLabel: "Templates",
   ex: `<p><strong>Subject:</strong> Landscape &amp; irrigation sub, San Diego: request to join your bid list</p>
-<p>Hi [Name],</p>
-<p>I'm the estimator at [Company], a San Diego landscape and irrigation contractor (CSLB #[number], C-27, DIR #[number]). We install commercial planting and irrigation, water-efficient retrofits and plant establishment, typically $25,000–$500,000, anywhere in San Diego County.</p>
-<p>We'd like to bid landscape and irrigation packages on your upcoming projects. Our capabilities statement is attached. Who should I send our prequalification to, and how do you send bid invites (BuildingConnected, email, other)?</p>
-<p>Thanks,<br>[Your name] · [phone] · [email]</p>`,
-  body: `<p>CSLB is the Contractors State License Board (your license number). DIR is the Department of Industrial Relations (your public works registration number). Both numbers tell an estimator you're a real, qualified company.</p>`,
-  watch: `<p>Don't send a long history of the company or a price list. Don't send the same email to ten people at one company. Find the one estimator who sends landscape invitations.</p>`
+<p>Hi [Name], I'm the estimator at [Company], a San Diego landscape and irrigation contractor (CSLB #[number], C-27, DIR #[number]). We install commercial planting and irrigation, water-efficient retrofits and plant establishment, typically $25,000–$500,000, anywhere in San Diego County. Our capabilities statement is attached. Who should get our prequalification, and how do you send invites (BuildingConnected, email, other)? [Name · phone · email]</p>
+<p><strong>Call (under 2 minutes):</strong> “[Name] with [Company], landscape and irrigation. I emailed [day] about your bid list.” Then: “What's coming up with landscape? How do you send invites? Can I fill out your prequal today?” If they have subs: “Can we be added as an extra bidder on the next one?” Close: “I'll return the prequal this week. OK to check in monthly?”</p>`,
+  body: `<p>CSLB (Contractors State License Board) and DIR (Department of Industrial Relations) numbers in the first line signal a qualified company.</p>`,
+  watch: `<p>No company history or price list. One personal email to the estimator who sends landscape invites, not ten people at the same firm.</p>`
 },
 
-{ h: "The follow-up call",
-  lead: "Calls get results that emails don't. Keep it under two minutes.",
-  exLabel: "Call script",
-  ex: `<p><strong>You:</strong> “Hi, this is [Name] with [Company]. We're a landscape and irrigation contractor in San Diego. I emailed you on [day] about getting on your bid list. Do you have a minute?”</p>
-<p><strong>If yes:</strong> “What kinds of projects do you have coming up with landscape? How do you send out bid invites? Do you have a prequalification form I can fill out today?”</p>
-<p><strong>If they already have landscape subs:</strong> “Understood. We'd still like the chance to give you a competitive number on your next one. Can I be added as an extra bidder?”</p>
-<p><strong>Close:</strong> “Thanks. I'll send the prequal back this week. Is it OK if I check in once a month on new projects?”</p>`,
-  body: `<p>After the call, log it and set the next follow-up date. Most relationships take several contacts before the first invitation.</p>`
-},
-
-{ h: "Outreach tracking template",
-  lead: "One row per contact. If it isn't in the log, it didn't happen. Use a spreadsheet or the company's bid tracker.",
-  exLabel: "Template with two made-up sample rows",
-  ex: `<div class="tablewrap"><table>
-<thead><tr><th>Date</th><th>Company</th><th>Contact, title</th><th>How</th><th>What happened</th><th>Next step</th><th>Follow-up</th><th>Status</th></tr></thead>
-<tbody>
-<tr><td>3/2</td><td>[Example GC A]</td><td>[Name], chief estimator</td><td>Email</td><td>Sent intro and capabilities</td><td>Call</td><td>3/6</td><td>Contacted</td></tr>
-<tr><td>3/6</td><td>[Example GC A]</td><td>[Name], chief estimator</td><td>Call</td><td>Uses BuildingConnected; 2 medical jobs bidding in April; sent prequal form</td><td>Return prequal; confirm BuildingConnected profile</td><td>3/10</td><td>Prequal in progress</td></tr>
-<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table></div>
-<p><strong>Status choices</strong> (pick one per company): Not contacted · Contacted · Prequal in progress · On bid list · Invited · Bid sent · Won · Not a fit.</p>`,
-  body: `<ul>
-<li>Sort by follow-up date every Monday; that's your call list for the week.</li>
-<li>Keep the outreach log separate from the bid log (one row per bid). The company's <a href="https://claude.ai/artifact/BfM3VhU69VAesNWb6kbEnP" target="_blank" rel="noopener">Commercial Bid Tracker</a> holds the bid log.</li>
-<li>After three contacts with no reply, wait a month and try a different person at the company.</li>
-</ul>`
-},
-
-{ h: "A weekly prospecting routine",
-  lead: "Finding work is a habit, not a one-time project. About four to five hours a week keeps invitations coming.",
+{ h: "Outreach log, bid log and weekly routine",
+  lead: "About 4–5 hours a week, logged, keeps invitations coming; if it isn't in the log, it didn't happen.",
   body: `<div class="tablewrap"><table>
-<thead><tr><th>Day</th><th>Task</th><th>About</th></tr></thead>
+<thead><tr><th>Log</th><th>One row per</th><th>Columns</th></tr></thead>
 <tbody>
-<tr><td><strong>Every morning</strong></td><td>Check email, BuildingConnected and PlanetBids notices. Answer every invite: “will bid” or a polite decline.</td><td>15 min</td></tr>
-<tr><td><strong>Monday</strong></td><td>Search public portals (City, County, cities, water and school districts, Caltrans). Run go/no-go on anything new. Sort the outreach log by follow-up date.</td><td>1 h</td></tr>
-<tr><td><strong>Tuesday</strong></td><td>Send 5 intro emails to new general contractors or primes from planholder lists.</td><td>45 min</td></tr>
-<tr><td><strong>Wednesday</strong></td><td>Make 5 follow-up calls. Log each one.</td><td>45 min</td></tr>
-<tr><td><strong>Thursday</strong></td><td>Finish one prequalification form. Update platform profiles and the bid-ready folder.</td><td>45 min</td></tr>
-<tr><td><strong>Friday</strong></td><td>Pull bid results for jobs you bid or watched. Log the low bid, your gap, and one lesson.</td><td>45 min</td></tr>
+<tr><td>Outreach</td><td>Contact</td><td>Date · company · contact and title · email/call · what happened · next step · follow-up date · status (not contacted, contacted, prequal in progress, on bid list, invited, bid sent, won, not a fit)</td></tr>
+<tr><td>Bid</td><td>Invitation</td><td>Project · GC or agency · due date/time, job walk, RFI deadline · go/no-go score · your price · low or winning price · % over/under low · result and reason · follow-up</td></tr>
+</tbody></table></div>
+<p>The company's bid log lives in the <a href="https://claude.ai/artifact/BfM3VhU69VAesNWb6kbEnP" target="_blank" rel="noopener">Commercial Bid Tracker</a>.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>When</th><th>Task</th><th>Time</th></tr></thead>
+<tbody>
+<tr><td>Daily</td><td>Email, BuildingConnected, PlanetBids notices; answer every invite</td><td>15 min</td></tr>
+<tr><td>Mon</td><td>Search public portals; go/no-go on new jobs; sort outreach log by follow-up date</td><td>1 h</td></tr>
+<tr><td>Tue</td><td>5 intro emails to new GCs or planholder primes</td><td>45 min</td></tr>
+<tr><td>Wed</td><td>5 follow-up calls</td><td>45 min</td></tr>
+<tr><td>Thu</td><td>One prequal; update profiles and bid-ready folder</td><td>45 min</td></tr>
+<tr><td>Fri</td><td>Pull results on bid or watched jobs; log low, your gap, one lesson</td><td>45 min</td></tr>
 </tbody></table></div>`,
-  ex: `<p>At 5 emails and 5 calls a week, you reach about 20 new companies a month. If 1 in 4 puts you on their list, that's about 5 new general contractors a month sending invitations.</p>`,
-  watch: `<p>The routine slips first when you're busy estimating. Block the time on your calendar like a job walk.</p>`
+  ex: `<p>5 emails and 5 calls a week ≈ 20 new companies a month; at 1 in 4, about 5 new GCs a month sending invites. Three contacts with no reply: wait a month and try another person there. After 15–20 bids, the bid log shows which GCs and project types you win and how far off you run (<a href="#m10-1">Module 10</a>).</p>`,
+  watch: `<p>The routine is the first thing to slip when estimating gets busy. Calendar it like a job walk.</p>`
 },
 
-{ h: "Bid platforms",
-  lead: "General contractors send most private bid invitations through online platforms. A complete profile makes you show up in their searches.",
+{ h: "Bid platforms and your profile",
+  lead: "GCs filter subs by trade code and area, so an incomplete profile never appears in their search.",
   body: `<div class="tablewrap"><table>
-<thead><tr><th>Platform</th><th>What it is</th><th>Cost to subs</th></tr></thead>
+<thead><tr><th>Platform</th><th>Use</th><th>Cost to subs</th></tr></thead>
 <tbody>
-<tr><td><strong>BuildingConnected</strong> (Autodesk)</td><td>The most common way large and mid-size general contractors invite subs</td><td>Free to receive invites and bid</td></tr>
-<tr><td><strong>PlanHub</strong></td><td>General contractor invites plus a project search</td><td>Free level; paid for more features</td></tr>
-<tr><td><strong>ConstructConnect</strong></td><td>Project leads and plans from many sources</td><td>Paid subscription</td></tr>
-<tr><td><strong>Dodge Construction Network</strong></td><td>Project leads and plans, early in design</td><td>Paid subscription</td></tr>
+<tr><td>BuildingConnected (Autodesk)</td><td>Most mid and large GC invitations</td><td>Free</td></tr>
+<tr><td>PlanHub</td><td>GC invites plus project search</td><td>Free tier</td></tr>
+<tr><td>ConstructConnect / Dodge</td><td>Project leads and plans, early in design</td><td>Paid; only once capacity exceeds invites</td></tr>
 </tbody></table></div>
-<p>Start with the free ones. Pay for a lead service only after you're ready to bid more than you're being invited to.</p>`,
-  watch: `<p>Fill in your profile completely: every trade code for landscape and irrigation (for example CSI 32 80 00 Irrigation and 32 90 00 Planting; CSI is the MasterFormat numbering system), your service area, license, union or non-union, certifications. General contractors filter by these. An empty profile never shows up.</p>`
-},
-
-{ h: "Set up a bid platform profile, step by step",
-  lead: "BuildingConnected, PlanHub and similar sites work the same basic way. Menus change, so follow each site's help pages, but these are the steps.",
-  body: `<ol class="steps">
-<li><div><b>Create a free account</b>Use a shared company email (like bids@yourcompany.com) so invites don't depend on one person.</div></li>
-<li><div><b>Claim or create the company profile</b>Search first; general contractors may have already added your company. Use the exact legal name from your license.</div></li>
-<li class="hl"><div><b>Pick your trades</b>Choose every code that fits: CSI 32 80 00 (Irrigation), 32 84 00 (Planting Irrigation), 32 90 00 (Planting), 32 91 13 (Soil Preparation), 32 92 00 (Turf and Grasses), 32 93 00 (Plants). Leave off trades you don't do.</div></li>
-<li class="hl"><div><b>Set your service area</b>San Diego County, plus any nearby areas you'll really travel to.</div></li>
-<li><div><b>Fill in qualifications</b>License classes and number, DIR (Department of Industrial Relations) number, union or non-union, certifications (SLBE, ELBE, DBE), project size range, insurance limits.</div></li>
-<li><div><b>Upload documents</b>Capabilities statement, project list, logo.</div></li>
-<li><div><b>Set notifications</b>Have invites go to the shared email and to your phone.</div></li>
-<li><div><b>Test it</b>Ask a friendly general contractor estimator to search for “landscape” in San Diego and tell you if you show up.</div></li>
+<ol class="steps">
+<li><div><b>Shared account</b>bids@company.com, so invites don't depend on one person.</div></li>
+<li><div><b>Claim, don't duplicate</b>GCs may have added you already. Exact legal name from the license.</div></li>
+<li class="hl"><div><b>Trade codes</b>CSI (Construction Specifications Institute) MasterFormat 32 80 00 Irrigation, 32 84 00 Planting Irrigation, 32 90 00 Planting, 32 91 13 Soil Preparation, 32 92 00 Turf and Grasses, 32 93 00 Plants. Only trades you do.</div></li>
+<li class="hl"><div><b>Service area and qualifications</b>County plus real travel range; license, DIR, union status, SLBE/ELBE/DBE, size range, insurance limits.</div></li>
+<li><div><b>Uploads, notifications, test</b>Capabilities statement, project list, logo; alerts to shared email and phone; ask a friendly estimator whether you appear in a “landscape, San Diego” search.</div></li>
 </ol>`,
-  ex: `<p><strong>Answering an invite:</strong> open it, read the due date and scope, then click the site's “will bid” or “won't bid” button within a day. Download the files, ask questions through the site's messaging so there's a record, and submit your proposal by the method the invite names (upload on the site or email). If you mark “will bid,” then don't send a number, the general contractor notices.</p>`
+  ex: `<p>On an invite: mark will bid / won't bid within a day, ask questions through the platform for a record, and submit by the method named. Marking “will bid” and then sending nothing gets noticed.</p>`
 },
 
-{ h: "Public agency portals",
-  lead: "Public bids are advertised openly. You have to register on each agency's portal to see documents and get notices.",
-  body: `<ul>
-<li><strong>City of San Diego:</strong> PlanetBids, reached from the City's vendor registration page. Register as a vendor and pick the landscape and irrigation categories.</li>
-<li><strong>Other agencies in the county:</strong> many cities, water districts and school districts also use PlanetBids, but <strong>each agency has its own PlanetBids portal and its own registration</strong>. Make a list and register on each one you'd work for.</li>
-<li><strong>County of San Diego:</strong> BuyNet, the County's free procurement portal. Construction bids from the County's Department of Public Works are posted there, and documents download only after you register.</li>
-<li><strong>State:</strong> Cal eProcure. <strong>Caltrans:</strong> its weekly list of advertised projects, with bids submitted on Bid Express.</li>
-<li><strong>Federal (optional):</strong> SAM.gov (System for Award Management), for military bases and federal property.</li>
-</ul>`,
-  ex: `<p>A good first list: City of San Diego, the County, and 5–8 nearby cities, water districts and school districts where your crews already work. Set notifications for landscape, irrigation, park, median, and water-efficiency projects.</p>`,
-  deeper: `<p>On PlanetBids, downloading the documents usually puts you on the project's planholders list. That list is public to other bidders, so primes can find you, and you can find the primes to send your sub price to.</p>`,
-  src: "City of San Diego Vendor Registration page; County of San Diego Purchasing and Contracting, BuyNet FAQ; Caltrans weekly advertised projects list."
-},
-
-{ h: "Register on the City's PlanetBids, step by step",
-  lead: "The City of San Diego posts every formal bid on its PlanetBids vendor portal. Registration is free and takes about 30 minutes.",
-  body: `<ol class="steps">
-<li><div><b>Open the City's portal</b>From the City's <a href="https://www.sandiego.gov/purchasing/bids-contracts/vendorreg" target="_blank" rel="noopener">Vendor Registration page</a>, click “Click Here for Vendor Registration and Bid Opportunities.” It opens the City's PlanetBids portal.</div></li>
-<li><div><b>Click Register</b>Enter the exact legal company name, FEIN (federal employer identification number), address, phone and a main contact. Use the shared bids email.</div></li>
-<li class="hl"><div><b>Choose categories</b>Pick every category for landscape, irrigation, park and grounds construction and maintenance. Notices are emailed by category, so this decides what you hear about. The City's “Category Definitions” page explains each one.</div></li>
-<li><div><b>Add licenses and certifications</b>CSLB (Contractors State License Board) license, DIR (Department of Industrial Relations) registration, and SLBE/ELBE if certified.</div></li>
-<li><div><b>Confirm your email and set a password</b>Save the login in the company's password manager, not on one person's phone.</div></li>
-<li class="hl"><div><b>Before you ever submit a bid as prime</b>Make sure your account has its system-assigned Digital ID, your browser allows cookies, and (for City public works) the company is prequalified (Module 2).</div></li>
-<li><div><b>Keep the profile current</b>The City uses it to send bid notices and wage requirement updates.</div></li>
+{ h: "Public portals and City PlanetBids registration",
+  lead: "Each agency runs its own portal and registration; registering with the City does not register you anywhere else.",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th>Agency</th><th>Portal</th></tr></thead>
+<tbody>
+<tr><td>City of San Diego</td><td>PlanetBids, from the City's vendor registration page</td></tr>
+<tr><td>Other cities, water and school districts</td><td>Often PlanetBids, each its own portal (Chula Vista, Escondido, Otay Water District…)</td></tr>
+<tr><td>County of San Diego</td><td>BuyNet (free; documents only after registering)</td></tr>
+<tr><td>State / Caltrans</td><td>Cal eProcure / weekly advertised list, bids on Bid Express</td></tr>
+<tr><td>Federal (optional)</td><td>SAM.gov (System for Award Management)</td></tr>
+</tbody></table></div>
+<ol class="steps">
+<li><div><b>Open the portal</b>City <a href="https://www.sandiego.gov/purchasing/bids-contracts/vendorreg" target="_blank" rel="noopener">Vendor Registration page</a> → “Click Here for Vendor Registration and Bid Opportunities.”</div></li>
+<li><div><b>Register</b>Exact legal name, FEIN (federal employer identification number), address, shared bids email.</div></li>
+<li class="hl"><div><b>Categories</b>Every landscape, irrigation, park and grounds construction and maintenance category; notices go out by category (see the City's Category Definitions).</div></li>
+<li><div><b>Licenses and certifications</b>CSLB, DIR, SLBE/ELBE (City Small / Emerging Local Business Enterprise) if certified.</div></li>
+<li class="hl"><div><b>Before any prime bid</b>System-assigned Digital ID on the account, browser cookies allowed, and City prequalification (<a href="#m2-1">Module 2</a>).</div></li>
 </ol>`,
-  watch: `<p>Each agency's PlanetBids portal is separate. Registering with the City does not register you with Chula Vista, Escondido, Otay Water District or a school district. Repeat these steps on each portal.</p>`,
-  src: "City of San Diego Vendor Registration page (sandiego.gov, checked 2026); City of San Diego K-24-1952 Instructions to Bidders §2.1–2.2."
+  ex: `<p>First list: City, County, and 5–8 nearby cities, water districts and school districts where your crews already work. Alerts for landscape, irrigation, park, median and water-efficiency projects. Store logins in the company password manager.</p>`,
+  src: "City of San Diego Vendor Registration page (checked 2026); K-24-1952 Instructions to Bidders §2.1–2.2; County Purchasing and Contracting, BuyNet FAQ; Caltrans weekly advertised projects list."
 },
 
-{ h: "Search and download on PlanetBids",
-  lead: "Once you're registered, use the portal to find bids, get the documents, follow addenda, ask questions and see results.",
+{ h: "Working a PlanetBids project",
+  lead: "Downloading documents makes you a planholder, which brings addenda and puts you in front of primes; results post the moment bids close.",
   body: `<ol class="steps">
-<li><div><b>Open Bid Opportunities</b>Log in and go to the bid search.</div></li>
-<li><div><b>Search smart</b>Try words like “landscape,” “irrigation,” “park,” “median,” “turf,” “planting,” “water conservation.” Filter by stage: currently bidding to find work, closed or awarded to study results.</div></li>
-<li class="hl"><div><b>Open a project and read the summary</b>Bid due date and time, pre-bid meeting, estimate, license, contact. Run go/no-go now.</div></li>
-<li><div><b>Download the documents</b>This usually puts you on the planholders list and signs you up for addenda emails for that project.</div></li>
-<li><div><b>Check the addenda and Q&amp;A (questions and answers) tabs</b>Read every addendum. Submit your own questions there before the deadline.</div></li>
-<li><div><b>Read the planholders list</b>On jobs you can't prime, it shows which A or B contractors are bidding. Those are the companies to send your landscape price to.</div></li>
-<li class="hl"><div><b>After bid opening, open the results</b>The City's system shows results right after the deadline. Save the bid tabulation for your bid log.</div></li>
+<li><div><b>Search</b>“landscape,” “irrigation,” “park,” “median,” “turf,” “planting,” “water conservation.” Filter currently bidding for work, closed or awarded for study.</div></li>
+<li class="hl"><div><b>Read the summary</b>Due date/time, pre-bid, estimate, license, contact. Go/no-go now.</div></li>
+<li><div><b>Download</b>Adds you to the planholders list and the project's addenda emails.</div></li>
+<li><div><b>Addenda and Q&amp;A tabs</b>Read every addendum; submit questions there before the deadline.</div></li>
+<li class="hl"><div><b>Planholders</b>On jobs you can't prime, these are the A or B primes to send your price to; primes can find you the same way.</div></li>
+<li><div><b>Results</b>Save the bid tabulation for your bid log the same afternoon.</div></li>
 </ol>`,
-  ex: `<p>K-24-1952's instructions say: “Once the Bid Due Date and Time has lapsed, bidders, proposers, the general public, and City staff are able to immediately see the results on line.” Pull them the same afternoon.</p>`,
-  src: "City of San Diego Vendor Registration page (portal features: documents, planholders, addenda notices, Q&A, bid tabulations); K-24-1952 Instructions to Bidders §2.5."
+  ex: `<p>K-24-1952: “Once the Bid Due Date and Time has lapsed, bidders, proposers, the general public, and City staff are able to immediately see the results on line.”</p>`,
+  src: "City of San Diego Vendor Registration page (portal features); K-24-1952 Instructions to Bidders §2.5."
 },
 
 { h: "Caltrans: finding and following a job",
-  lead: "Caltrans District 11 (San Diego and Imperial Counties) advertises freeway landscape and irrigation jobs every year. The steps are different from PlanetBids.",
+  lead: "District 11 (San Diego and Imperial Counties) advertises freeway landscape work every year; the notice, inquiries page and Bid Summary are your tools.",
   body: `<ol class="steps">
-<li><div><b>Watch the advertised projects list</b>Caltrans posts a <a href="https://ppmoe.dot.ca.gov/des/oe/weekly-ads/all-adv-projects.php" target="_blank" rel="noopener">list of all advertised projects</a>. Look for District 11 and work descriptions with “landscape,” “planting,” “irrigation” or “recycled water.”</div></li>
-<li><div><b>Open the contract page</b>Each contract has a page with the Notice to Bidders, plans, Special Provisions, addenda and wage rates.</div></li>
-<li class="hl"><div><b>Read the Notice to Bidders first</b>License, DBE (Disadvantaged Business Enterprise) or DVBE (Disabled Veteran Business Enterprise) goal, working days, plant establishment days, estimated cost.</div></li>
-<li><div><b>Ask questions through bidder inquiries</b>Caltrans posts questions and answers on its <a href="https://ppmoe.dot.ca.gov/des/oe/bid-inquiries.php" target="_blank" rel="noopener">bidder inquiries page</a>. Questions about unclear plans must be asked before bid opening.</div></li>
-<li><div><b>Bid on Bid Express</b>Bids are due at 2:00 p.m. on the bid open date, electronically. Set up Bid Express and a digital ID weeks ahead (Module 14).</div></li>
-<li class="hl"><div><b>Get the Bid Summary</b>After opening, Caltrans publishes every bidder's total, unit prices and listed subs. That's the data in the Real Bid Lab.</div></li>
+<li><div><b>Watch the <a href="https://ppmoe.dot.ca.gov/des/oe/weekly-ads/all-adv-projects.php" target="_blank" rel="noopener">advertised projects list</a></b>District 11; “landscape,” “planting,” “irrigation,” “recycled water.”</div></li>
+<li><div><b>Contract page</b>Notice to Bidders, plans, Special Provisions, addenda, wage rates.</div></li>
+<li class="hl"><div><b>Notice to Bidders first</b>License, DBE (Disadvantaged Business Enterprise) or DVBE (Disabled Veteran Business Enterprise) goal, working days, establishment days, estimate.</div></li>
+<li><div><b>Questions</b>On the <a href="https://ppmoe.dot.ca.gov/des/oe/bid-inquiries.php" target="_blank" rel="noopener">bidder inquiries page</a>, before opening.</div></li>
+<li><div><b>Bid Express</b>Due 2:00 p.m. on bid open date; set up account and digital ID weeks ahead (<a href="#m14-1">Module 14</a>).</div></li>
+<li class="hl"><div><b>Bid Summary</b>Every bidder's total, unit prices and listed subs.</div></li>
 </ol>`,
-  ex: `<p>Practice with real ones: <a href="#lab-11-422004">11-422004</a>, <a href="#lab-11-428704">11-428704</a>, <a href="#lab-11-431064">11-431064</a>, <a href="#lab-11-428804">11-428804</a> and <a href="#lab-11-430674">11-430674</a> in the Real Bid Lab, with links to every document.</p>`,
+  ex: `<p>Real jobs with all documents: <a href="#lab-11-422004">11-422004</a>, <a href="#lab-11-428704">11-428704</a>, <a href="#lab-11-431064">11-431064</a>, <a href="#lab-11-428804">11-428804</a>, <a href="#lab-11-430674">11-430674</a>.</p>`,
   src: "Caltrans 11-428704 and 11-422004 Notices to Bidders (bid submission, results and inquiry instructions)."
 },
 
-{ h: "Reading a public bid notice",
-  lead: "The notice inviting bids tells you in one page whether to keep going. Learn to scan it in two minutes.",
-  exLabel: "Practice example (made up for training, not a real project)",
-  ex: `<div class="tablewrap"><table><tbody>
-<tr><td><strong>Project</strong></td><td>Mira Mesa Blvd Median Irrigation &amp; Planting Retrofit</td></tr>
-<tr><td><strong>Engineer's estimate</strong></td><td>$780,000</td></tr>
-<tr><td><strong>License required</strong></td><td>Class A or C-27 at time of bid</td></tr>
-<tr><td><strong>Bids due</strong></td><td>Thursday, 2:00 PM, electronic, through PlanetBids</td></tr>
-<tr><td><strong>Pre-bid meeting</strong></td><td>Optional, 10:00 AM, two weeks before bid date</td></tr>
-<tr><td><strong>Bid security</strong></td><td>10% bid bond</td></tr>
-<tr><td><strong>SLBE/ELBE</strong></td><td>Mandatory participation goal (set in the bid documents)</td></tr>
-<tr><td><strong>Wages</strong></td><td>Prevailing wage; DIR registration required</td></tr>
-<tr><td><strong>Working days</strong></td><td>90 working days</td></tr>
-<tr><td><strong>Liquidated damages</strong></td><td>$1,500 per day late</td></tr>
-<tr><td><strong>Plant establishment</strong></td><td>120 days after acceptance of planting</td></tr>
-<tr><td><strong>Questions due</strong></td><td>7 days before bid date, through PlanetBids Q&amp;A only</td></tr>
+{ h: "Notice lines that change price and eligibility",
+  lead: "Scan the notice in two minutes for license, mandatory meetings, security, goals, time, LDs (liquidated damages) and price guarantee before anything else.",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th>Line</th><th>Why it matters</th></tr></thead>
+<tbody>
+<tr><td>License class for prime</td><td>Prime, sub to primes, or pass</td></tr>
+<tr><td>EE (engineer's estimate)</td><td>Sizing; market often lands well below or above</td></tr>
+<tr><td>Mandatory pre-bid</td><td>Miss it and you can't bid; arrive early to be signed in</td></tr>
+<tr><td>Bid security</td><td>Usually 10% bid bond</td></tr>
+<tr><td>Participation goal (SLBE/ELBE, DBE, DVBE)</td><td>Certified subs or self-performance, or good faith effort documents</td></tr>
+<tr><td>Prevailing wage, DIR</td><td>Labor cost from wage tables (<a href="#m11-1">Module 11</a>)</td></tr>
+<tr><td>Working days</td><td>Too short means more crews or overtime</td></tr>
+<tr><td>LDs</td><td>$1,500/day × 10 working days late = $15,000 withheld, usually passed to the sub who caused it</td></tr>
+<tr><td>Plant establishment</td><td>Months or years of labor to price</td></tr>
+<tr><td>Questions deadline and channel</td><td>Late or off-channel questions may be ignored</td></tr>
+<tr><td>Price guarantee</td><td>How long your price must hold (K-24-1952: 120 days)</td></tr>
 </tbody></table></div>`,
-  body: `<p>In the example: the C-27 can be prime, the size is mid-range, it needs a bid bond, certified subs (SLBE/ELBE, the City's small local business certifications) or self-performance count toward the goal, DIR (Department of Industrial Relations) registration is required, and the 120-day establishment period is real labor to price. The next four slides read three real notices the same way.</p>`
-},
-
-{ h: "Key terms in every notice",
-  lead: "A few lines in a bid notice change your price and your risk.",
-  body: `<ul>
-<li><strong>Engineer's estimate:</strong> the agency's own guess at the cost. Good for sizing the job. Bids often land above or below it.</li>
-<li><strong>Working days:</strong> how long you have to finish. Usually counts weekdays except holidays. Too short a schedule means more crews and overtime.</li>
-<li><strong>Liquidated damages:</strong> a set dollar amount per day you're late, taken from your payment. At $1,500 a day, two weeks (10 working days) late costs $15,000.</li>
-<li><strong>Mandatory pre-bid meeting:</strong> if it says mandatory and you miss it, you can't bid. No exceptions.</li>
-<li><strong>Bid security:</strong> the bid bond, usually 10%.</li>
-<li><strong>Bid opening:</strong> the time bids are opened and results read. Bids received one second late are rejected.</li>
-<li><strong>Price guarantee:</strong> how long your bid price must stay good. The City's K-24-1952 required 120 days from bid opening.</li>
-</ul>`,
-  watch: `<p>“Mandatory” means mandatory. Put mandatory meetings on the calendar the day you see the notice, and arrive early. Late arrivals often aren't signed in.</p>`,
   src: "City of San Diego K-24-1952 Instructions to Bidders §§3.4, 11."
 },
 
-{ h: "Real notice #1: City of San Diego K-24-1952",
-  lead: "EMTS Boat Dock Esplanade: about one acre of new park at Liberty Station with walkways, seating, irrigation, planting and lighting. Here's what the notice said and what each line means for a landscape company.",
+{ h: "Real notice: City K-24-1952",
+  lead: "EMTS Boat Dock Esplanade, about an acre of new park at Liberty Station: an A-only prime job where a certified landscape sub is valuable.",
   body: `<div class="tablewrap"><table>
-<thead><tr><th>The notice said</th><th>What it means for you</th></tr></thead>
+<thead><tr><th>Notice</th><th>Meaning for a landscape company</th></tr></thead>
 <tbody>
-<tr><td>Estimated construction cost $1,600,000</td><td>Mid-size City job; landscape and irrigation would be a meaningful slice of it</td></tr>
-<tr><td>Bid due December 6, 2023, 2:00 PM, on PlanetBids</td><td>Electronic only; primes need a Digital ID</td></tr>
-<tr><td>Prime “must possess the following licensing classification: A”</td><td>A C-27 company can't prime. Send your landscape price to the A contractors on the planholders list.</td></tr>
-<tr><td>Bidders must be on the City's Prequalified Contractors List</td><td>Applies to the prime, not to you as a sub</td></tr>
-<tr><td>Mandatory participation: SLBE 9.4% + ELBE 10.6% = 20.0%</td><td>Primes need certified subs. A certified landscape sub becomes very valuable.</td></tr>
-<tr><td>Questions received less than 14 days before opening may not be considered; only written addenda are binding</td><td>Send questions early, through the prime</td></tr>
-<tr><td>Bid security of at least 10% for bids $250,000 and above</td><td>The prime's bond, not yours</td></tr>
-<tr><td>Price guaranteed 120 days from bid opening</td><td>Your sub quote should be good at least that long, or say clearly how long it is</td></tr>
-<tr><td>Contract time 270 working days, including a 90 calendar day plant establishment period</td><td>Your establishment is inside the prime's schedule</td></tr>
-<tr><td>The prime must self-perform at least 50% of the base bid</td><td>The prime can sub out at most half, so it will choose subs carefully</td></tr>
-</tbody></table></div>`,
-  ex: `<p>The conformed contract copy names HSCC, Inc. of Lakeside as the contractor. Download the full bid book from the City (<a href="https://www.sandiego.gov/sites/default/files/2024-02/k-24-1952-dbb-3-a.pdf" target="_blank" rel="noopener">K-24-1952 PDF</a>) and find each line above yourself.</p>`,
-  src: "City of San Diego K-24-1952-DBB-3-A bidding documents: cover, Notice Inviting Bids §§1–9, Instructions to Bidders §§1, 3.4, 19, Scope of Work §3, SSP §§3-2, 6-1.1."
-},
-
-{ h: "Real notice #1, continued: the fine print that costs money",
-  lead: "Past the first pages, the same City bid book sets the late penalties and paperwork that a sub feels too.",
-  body: `<div class="tablewrap"><table>
-<thead><tr><th>Contract value</th><th class="num">Liquidated damages per day</th></tr></thead>
-<tbody>
-<tr><td>Less than $200,001</td><td class="num">$1,000</td></tr>
-<tr><td>$200,001 to $500,000</td><td class="num">$1,500</td></tr>
-<tr><td>$500,001 to $1,000,000</td><td class="num">$2,000</td></tr>
-<tr><td>$1,000,001 to $2,000,000</td><td class="num">$2,500</td></tr>
-<tr><td>$2,000,001 to $5,000,000</td><td class="num">$3,000</td></tr>
+<tr><td>Estimate $1,600,000; due Dec 6, 2023, 2:00 PM, PlanetBids</td><td>Mid-size; electronic, primes need Digital ID</td></tr>
+<tr><td>Prime “must possess … A”; prequalified primes only</td><td>Sub to A primes on the planholders list</td></tr>
+<tr><td>SLBE 9.4% + ELBE 10.6% = 20.0% mandatory</td><td>Certified subs are in demand</td></tr>
+<tr><td>Questions under 14 days before opening may be disregarded; only written addenda bind</td><td>Ask early, through the prime</td></tr>
+<tr><td>Bid security 10% for bids $250,000 and up</td><td>Prime's bond</td></tr>
+<tr><td>Price held 120 days</td><td>State your quote's validity at least that long</td></tr>
+<tr><td>270 working days including 90 calendar day establishment</td><td>Your establishment sits inside the prime's time</td></tr>
+<tr><td>Prime self-performs at least 50% of base bid</td><td>Primes sub at most half and choose carefully</td></tr>
 </tbody></table></div>
-<p>This table comes from the K-24-1952 Supplementary Special Provisions (§6-9). A $1.6 million contract falls in the $2,500-a-day row.</p>`,
-  exLabel: "Worked example (made-up delay)",
-  ex: `<p>The park finishes 6 working days late because the landscape crew started late. 6 × $2,500 = <strong>$15,000</strong> withheld from the prime. Most subcontracts let the prime pass that on to the sub who caused the delay. That's why your schedule promises matter.</p>`,
-  watch: `<p>Other after-bid deadlines in the same book: the original bid bond by 5 PM one working day after opening, and SLBE good faith effort documents by 5 PM three working days after. Primes who miss them lose, and their subs lose with them.</p>`,
-  src: "City of San Diego K-24-1952 SSP §6-9 (liquidated damages table) and Required Documents Schedule."
-},
-
-{ h: "Real notice #2: Caltrans 11-428704",
-  lead: "I-805 Chula Vista: convert freeway irrigation from drinking water to recycled water, plus planting. Module 15 walks through this job in full; here is the notice in two minutes.",
-  body: `<div class="tablewrap"><table>
-<thead><tr><th>The notice said</th><th>What it means for you</th></tr></thead>
+<div class="tablewrap"><table>
+<thead><tr><th>Contract value (SSP §6-9)</th><th class="num">LDs per day</th></tr></thead>
 <tbody>
-<tr><td>“Class A license or the following Class C license which constitutes a majority of the work: C-27”</td><td>A C-27 company can be the prime</td></tr>
-<tr><td>“The DBE Contract goal is 14 percent.” Federal-aid project.</td><td>About 14% of the bid must go to certified DBE (Disadvantaged Business Enterprise) firms, or you document good faith efforts</td></tr>
-<tr><td>“Bids must be on a unit price basis.”</td><td>Paid per unit installed and measured</td></tr>
-<tr><td>120 working days to build; 250 working days of plant establishment; 370 total</td><td>About a year of establishment visits to price</td></tr>
-<tr><td>Estimated cost $1,510,000</td><td>Size check against your bonding</td></tr>
-<tr><td>Bids until 2:00 p.m. via Bid Express; late bids not accepted</td><td>Electronic setup needed weeks ahead</td></tr>
-<tr><td>Bidder's security at least 10% of the bid</td><td>About $118,000 bid bond penal sum at the winning price</td></tr>
-<tr><td>Prevailing wages; pay the higher of state or federal rates</td><td>Labor cost is set by wage tables (Module 11)</td></tr>
+<tr><td>Under $200,001 / $200,001–$500,000 / $500,001–$1,000,000</td><td class="num">$1,000 / $1,500 / $2,000</td></tr>
+<tr><td>$1,000,001–$2,000,000 / $2,000,001–$5,000,000</td><td class="num">$2,500 / $3,000</td></tr>
 </tbody></table></div>`,
-  ex: `<p>Result: six bids. ACCU Construction won at $1,176,120.00. The lowest number, from Marina Landscape, was thrown out for late DBE forms. See <a href="#m15-1">Module 15</a>.</p>`,
-  src: "Caltrans 11-428704 Notice to Bidders (dated Aug. 2, 2021) and Bid Summary."
+  ex: `<p>At $1.6M, 6 working days late = 6 × $2,500 = $15,000, which most subcontracts let the prime pass to a sub who caused it. Conformed contract: HSCC, Inc. of Lakeside. Bid book: <a href="https://www.sandiego.gov/sites/default/files/2024-02/k-24-1952-dbb-3-a.pdf" target="_blank" rel="noopener">K-24-1952 PDF</a>.</p>`,
+  watch: `<p>Post-bid deadlines: original bid bond by 5 PM one working day after opening; SLBE good faith effort documents by 5 PM three working days after. A prime that misses them loses, and so do its subs.</p>`,
+  src: "City of San Diego K-24-1952-DBB-3-A: cover, Notice Inviting Bids §§1–9, Instructions to Bidders §§1, 3.4, 19, Scope of Work §3, SSP §§3-2, 6-1.1, 6-9, Required Documents Schedule."
 },
 
-{ h: "Real notice #3: Caltrans 11-422004",
-  lead: "I-5 Carmel Valley: pervious concrete, minor concrete, asphalt, and landscape changes. A smaller job that a landscape company won against three civil contractors.",
+{ h: "Three real notices compared",
+  lead: "Line notices up and the differences tell you whether to prime, sub or pass.",
   body: `<div class="tablewrap"><table>
-<thead><tr><th>The notice said</th><th>What it means for you</th></tr></thead>
+<thead><tr><th></th><th>City K-24-1952</th><th>Caltrans 11-428704 (I-805 Chula Vista)</th><th>Caltrans 11-422004 (I-5 Carmel Valley)</th></tr></thead>
 <tbody>
-<tr><td>“Construct pervious concrete, minor concrete, HMA and modify landscape.” (HMA is hot mix asphalt.)</td><td>A mixed job. You'd need subs for the concrete and asphalt.</td></tr>
-<tr><td>“Class A license or a combination of Class C licenses which constitutes a majority of the work”</td><td>A specialty prime can bid if its C licenses cover most of the work. Check the item list before assuming a C-27 alone qualifies.</td></tr>
-<tr><td>“The DVBE Contract goal is 5 percent.”</td><td>5% to certified Disabled Veteran Business Enterprises</td></tr>
-<tr><td>60 working days to build; 750 working days of plant establishment; 810 total</td><td>Short build, then about three years of establishment. Price every visit.</td></tr>
-<tr><td>Estimated cost $880,000</td><td>A size many growing landscape companies could bond</td></tr>
-<tr><td>Small business preference for certified small businesses (and non-small businesses committing 25% small business participation)</td><td>California SB (Small Business) certification can help on state jobs</td></tr>
+<tr><td>Work</td><td>New park</td><td>Recycled-water irrigation conversion, planting</td><td>Pervious and minor concrete, HMA (hot mix asphalt), modify landscape</td></tr>
+<tr><td>Estimate</td><td>$1,600,000</td><td>$1,510,000</td><td>$880,000</td></tr>
+<tr><td>Prime license</td><td>A only</td><td>“Class A … or C-27” (majority of work)</td><td>A or a combination of C licenses that is the majority of the work</td></tr>
+<tr><td>C-27 prime?</td><td>No: sub to A primes</td><td>Yes</td><td>Maybe: check the item mix and other licenses</td></tr>
+<tr><td>Goal</td><td>SLBE/ELBE 20%</td><td>DBE 14% (federal aid)</td><td>DVBE 5%; small business preference (SB, or non-SB committing 25%)</td></tr>
+<tr><td>Build / establishment</td><td>270 WD incl. 90 calendar days</td><td>120 WD / 250 WD (370)</td><td>60 WD / 750 WD (810), about 3 years</td></tr>
+<tr><td>Bid site / pricing</td><td>PlanetBids / LS with unit price provisions</td><td>Bid Express / unit price</td><td>Bid Express / unit price</td></tr>
+<tr><td>Security / wages</td><td>10% / prevailing</td><td>10% (≈ $118,000 penal sum at the winning bid) / higher of state or federal</td><td>10% / prevailing</td></tr>
+<tr><td>Result</td><td>HSCC, Inc.</td><td>ACCU Construction, $1,176,120.00; low bid NR for late DBE forms</td><td>Diversified Landscape, $557,307.25, about 36% under the EE of $876,703, beating 3 engineering contractors</td></tr>
 </tbody></table></div>`,
-  ex: `<p>Result: 6 bid packages issued, 4 bids. Diversified Landscape Co. won at $557,307.25, about 36% under the engineer's estimate of $876,703. The other three bidders were engineering contractors. Open it in the <a href="#lab-11-422004">Real Bid Lab</a>.</p>`,
-  src: "Caltrans 11-422004 Notice to Bidders (dated Aug. 16, 2021) and Bid Summary (bid opened Sept. 9, 2021)."
+  ex: `<p>For a C-27 company: K-24-1952 → sub price to the A primes, especially if certified. 11-428704 → realistic prime if bonding and DBE outreach are ready. 11-422004 → study the items; prime only if licensing works, otherwise sub to the engineering contractors. Full walkthrough of 11-428704: <a href="#m15-1">Module 15</a>.</p>`,
+  src: "City K-24-1952 bidding documents; Caltrans 11-428704 Notice to Bidders (Aug. 2, 2021) and Bid Summary; Caltrans 11-422004 Notice to Bidders (Aug. 16, 2021) and Bid Summary (opened Sept. 9, 2021)."
 },
 
-{ h: "Comparing the three notices",
-  lead: "Line the notices up side by side. The differences decide whether you bid as prime, bid as a sub, or pass.",
-  body: `<div class="tablewrap"><table>
-<thead><tr><th></th><th>City K-24-1952</th><th>Caltrans 11-428704</th><th>Caltrans 11-422004</th></tr></thead>
-<tbody>
-<tr><td><strong>Estimate</strong></td><td>$1,600,000</td><td>$1,510,000</td><td>$880,000</td></tr>
-<tr><td><strong>Prime license</strong></td><td>A only</td><td>A or C-27</td><td>A or a combination of C licenses that is the majority of the work</td></tr>
-<tr><td><strong>Can a C-27 company prime?</strong></td><td>No: sub to the A contractors</td><td>Yes</td><td>Maybe: depends on the work mix and your other licenses or subs</td></tr>
-<tr><td><strong>Participation goal</strong></td><td>SLBE/ELBE 20%</td><td>DBE 14%</td><td>DVBE 5%</td></tr>
-<tr><td><strong>Build time</strong></td><td>270 working days including establishment</td><td>120 working days</td><td>60 working days</td></tr>
-<tr><td><strong>Establishment</strong></td><td>90 calendar days</td><td>250 working days</td><td>750 working days</td></tr>
-<tr><td><strong>Bid site</strong></td><td>PlanetBids</td><td>Bid Express</td><td>Bid Express</td></tr>
-<tr><td><strong>Pricing</strong></td><td>Lump sum with unit price provisions</td><td>Unit price</td><td>Unit price</td></tr>
-</tbody></table></div>`,
-  ex: `<p><strong>Quick read for a C-27 company:</strong> K-24-1952 → find the A primes and send a sub price, especially if you're SLBE/ELBE certified. 11-428704 → a realistic prime job if bonding and DBE outreach are in place. 11-422004 → study the item list; prime only if the licensing works, otherwise sub the landscape to the engineering contractors.</p>`,
-  src: "Notices for City K-24-1952, Caltrans 11-428704 and 11-422004."
-},
-
-{ h: "Go or no-go: decide before you estimate",
-  lead: "A full landscape estimate can take 10 to 40 hours. Spend that time on jobs you can win and want to win.",
-  body: `<p><strong>Hard stops.</strong> Any of these means no-go, no matter what:</p>
-<ul>
-<li>License class not allowed as prime, and no primes you can sub to</li>
-<li>Missed a mandatory pre-bid meeting</li>
-<li>Can't get the required bond</li>
-<li>Not registered with DIR (Department of Industrial Relations) on a public job (and can't register in time)</li>
-<li>Not prequalified for a City of San Diego job you'd bid as prime</li>
-<li>Not enough time left to do the estimate properly</li>
+{ h: "Go or no-go: hard stops first",
+  lead: "An estimate costs 10–40 hours, so check the hard stops before scoring anything.",
+  body: `<ul>
+<li>License can't prime and no primes to sub to</li>
+<li>Missed a mandatory pre-bid</li>
+<li>Can't get the bond</li>
+<li>Not DIR-registered on a public job and can't be in time</li>
+<li>Not City-prequalified for a City job you'd prime</li>
+<li>Not enough time to estimate properly</li>
 </ul>
-<p>If none of those apply, score the job on the next slide.</p>`,
-  ex: `<p>When you pass on a general contractor's invitation, tell them: “We're going to pass on this one because of [schedule/size], but please keep us on your list.” Silence can get you dropped from their list. A polite no keeps you on it.</p>`
+<p>No hard stop → score it on the next slide.</p>`,
+  ex: `<p>Declining a GC: “We'll pass on this one because of [schedule/size]; please keep us on your list.” Silence gets you dropped.</p>`
 },
 
 { t: "scorer", id: "gonogo", h: "Go / no-go scorecard",
@@ -357,93 +246,45 @@ slides: [
   ]
 },
 
-{ h: "Go/no-go scenarios (part 1)",
-  lead: "Practice the decision. Read each situation, decide, then read the answer.",
-  exLabel: "Scenarios (made up for training, based on real rules)",
-  ex: `<div class="tablewrap"><table>
+{ h: "Go/no-go scenarios",
+  lead: "Most real decisions are close calls, and a no-go always has a next step.",
+  body: `<div class="tablewrap"><table>
 <thead><tr><th>Situation</th><th>Decision</th><th>Why</th></tr></thead>
 <tbody>
-<tr><td>A water district posts a $45,000 irrigation controller and valve retrofit, 15 miles away. C-27 can prime. Prevailing wage. You're DIR-registered.</td><td><strong>Go</strong></td><td>Small, all in your trade, close by. A great first public prime job to learn the paperwork on.</td></tr>
-<tr><td>A City job estimated at $420,000 is restricted to ELBE firms. Your company is SLBE, not ELBE.</td><td><strong>No-go as prime for now</strong>; watch it</td><td>Under the City's rules, jobs of $500,000 and below are restricted to ELBE firms first. It opens to SLBE firms only if no ELBE firms are available.</td></tr>
-<tr><td>A $1.2 million landscape package on a 300-unit apartment job. Your largest past job was $250,000.</td><td><strong>No-go</strong>, or ask to bid one phase</td><td>Almost five times your biggest job: crews, cash and bonding all stretch at once.</td></tr>
+<tr><td>Water district, $45,000 controller and valve retrofit, 15 miles, C-27 prime, prevailing wage, you're DIR-registered</td><td><strong>Go</strong></td><td>Small, all your trade: ideal first public prime</td></tr>
+<tr><td>City job, $420,000, ELBE-restricted; you're SLBE</td><td><strong>No-go as prime</strong>; watch it</td><td>$500,000 and below go to ELBE first; opens to SLBE only if no ELBE available</td></tr>
+<tr><td>$1.2M apartment landscape package; largest past job $250,000</td><td><strong>No-go</strong>, or bid one phase</td><td>Crews, cash and bonding all stretch at once</td></tr>
+<tr><td>Mandatory school job walk tomorrow 9 AM, same time as a crew start</td><td><strong>Send another rep, or no-go</strong></td><td>Any qualified company rep can usually attend</td></tr>
+<tr><td>$180,000 job, GC pays in 90–120 days, $60,000 free cash</td><td><strong>Probably no-go</strong> unless terms change</td><td>2–3 months of cost before the first check exceeds $60,000</td></tr>
+<tr><td>Caltrans planting, $700,000, C-27 allowed, night closures, 750 WD establishment</td><td><strong>Think it over</strong></td><td>3 years tie up a crew; night traffic control needs a sub</td></tr>
+<tr><td>City park, A prime required, 20% SLBE/ELBE goal, you're SLBE</td><td><strong>Go as a sub</strong></td><td>Price to every A prime on the planholders list</td></tr>
 </tbody></table></div>`,
-  body: `<p>Notice that “no-go” isn't the end. In each case there's a next step: watch for a re-advertisement, grow into the size, or offer a smaller piece.</p>`,
   src: "City of San Diego ELBE/SLBE Program Description Chart (Public Works Construction)."
 },
 
-{ h: "Go/no-go scenarios (part 2)",
-  lead: "More situations. These are closer calls, which is what most real bids are.",
-  exLabel: "Scenarios (made up for training, based on real rules)",
-  ex: `<div class="tablewrap"><table>
-<thead><tr><th>Situation</th><th>Decision</th><th>Why</th></tr></thead>
-<tbody>
-<tr><td>A school district bid has a mandatory job walk tomorrow at 9:00 AM. You have a crew start at the same time across the county.</td><td><strong>Send someone else, or no-go</strong></td><td>Any qualified company representative can usually attend. If nobody can, you can't bid.</td></tr>
-<tr><td>A general contractor known for paying in 90–120 days invites you to bid a $180,000 job. The company has $60,000 of free cash.</td><td><strong>Think it over</strong>; probably no-go unless terms change</td><td>Two to three months of costs before the first check would need more than $60,000 (see the cash flow slides). Ask for better pay terms or pass.</td></tr>
-<tr><td>A Caltrans freeway planting job, $700,000, C-27 allowed, night lane closures, 750 working days of establishment.</td><td><strong>Think it over</strong></td><td>License fits, but three years of establishment ties up a crew, and night traffic control needs a sub. Price it only if you can staff both.</td></tr>
-<tr><td>A City park job requires an A license as prime. The SLBE/ELBE goal is 20% and you're SLBE-certified.</td><td><strong>Go, as a sub</strong></td><td>Get the planholders list and send your price to every A contractor. Your certification helps them meet the goal.</td></tr>
-</tbody></table></div>`
-},
-
-{ h: "Choose the right size of job",
-  lead: "Start with jobs big enough to learn on and small enough to survive a mistake.",
+{ h: "Job size and the quick cash check",
+  lead: "Start at roughly $25,000–$250,000 of landscape scope, and before bidding compare rough peak cash to cash plus credit line.",
   body: `<ul>
-<li>A good first range for many landscape contractors is about <strong>$25,000 to $250,000</strong> of landscape scope. Adjust it to your company's largest past jobs, crew size and bonding.</li>
-<li>Jobs too small for big landscape firms are where newcomers win first: small medians, irrigation retrofits, small retail pads, HOA (homeowners association) renovations.</li>
-<li>Grow the size step by step as you complete jobs and your bonding grows.</li>
-</ul>`,
-  watch: `<p>A job twice as big as anything you've built isn't just twice the work. It's bigger crews, more supervision, more cash tied up, and a bigger loss if the estimate is wrong.</p>`
+<li>Adjust the range to your largest past job, crews and bonding; grow it step by step. Newcomers win first on work too small for big firms: small medians, retrofits, retail pads, HOA renovations.</li>
+<li>Twice your largest job is more than twice the work: bigger crews, more supervision, more cash tied up, a bigger loss if wrong.</li>
+</ul>
+<ol class="steps">
+<li><div><b>Monthly cost</b>Total cost ÷ months to build.</div></li>
+<li><div><b>Months before first check</b>Billing date + customer's pay time.</div></li>
+<li class="hl"><div><b>Rough peak</b>Monthly cost × months before first check + up-front costs (bond premium, deposits).</div></li>
+<li><div><b>Add overlapping jobs</b></div></li>
+<li class="hl"><div><b>Compare to cash + credit line, with cushion</b>Near or over: full month-by-month table, or pass.</div></li>
+</ol>`,
+  watch: `<p>This is a rule of thumb from the examples, not a rule-book formula. It ignores supplier credit like net 30 (helps) and disputed or slow pay (hurts).</p>`
 },
 
-{ h: "Cash flow: the math nobody shows you",
-  lead: "You pay for labor and materials now, but get paid much later, minus retention. Here's a simple example.",
-  body: `<p><strong>Example 1 (made-up numbers):</strong> a $150,000 landscape subcontract over three months. Your costs are $120,000 ($40,000 a month). You bill $50,000 at the end of each month. The general contractor pays about 45 days later and holds 5% retention.</p>
+{ h: "Cash flow: one job vs. overlapping jobs",
+  lead: "A $150,000 job alone needs about $80,000 before its first check; add a slow-paying $90,000 job and the peak jumps to $120,500.",
+  exLabel: "Made-up numbers",
+  ex: `<p><strong>Job A:</strong> $150,000, cost $40,000/month in months 1–3, billed $50,000/month, paid ~45 days later less 5% (checks $47,500 in months 3–5), retention $7,500 ~month 7. Alone: −$40,000, −$80,000, −$72,500, −$25,000, +$22,500, then +$30,000 profit.</p>
+<p><strong>Job B</strong> starts month 2: $90,000, cost $24,000/month in months 2–4, billed $30,000/month, paid ~90 days later (checks $28,500 in months 5–7), retention $4,500 ~month 9.</p>
 <div class="tablewrap"><table>
-<thead><tr><th>Month</th><th class="num">You spend</th><th class="num">You receive</th><th class="num">Cash position</th></tr></thead>
-<tbody>
-<tr><td>1</td><td class="num">−$40,000</td><td class="num">$0</td><td class="num">−$40,000</td></tr>
-<tr><td>2</td><td class="num">−$40,000</td><td class="num">$0</td><td class="num">−$80,000</td></tr>
-<tr><td>3</td><td class="num">−$40,000</td><td class="num">+$47,500</td><td class="num">−$72,500</td></tr>
-<tr><td>4</td><td class="num">$0</td><td class="num">+$47,500</td><td class="num">−$25,000</td></tr>
-<tr><td>5</td><td class="num">$0</td><td class="num">+$47,500</td><td class="num">+$22,500</td></tr>
-<tr><td>Later</td><td class="num">$0</td><td class="num">+$7,500 retention</td><td class="num">+$30,000</td></tr>
-</tbody></table></div>
-<p>Each check is $50,000 − 5% ($2,500) = $47,500. The job makes $30,000. But the company needs about <strong>$80,000 of cash</strong> before the first payment arrives, and it doesn't see its profit until month 5 or later.</p>`,
-  watch: `<p>Several jobs at once multiply this. Know how much cash or credit line the company has before you bid, and size jobs to fit. Supplier credit terms (net 30, meaning pay within 30 days of the invoice) help; ask your suppliers for them.</p>`
-},
-
-{ h: "Cash flow example 2: a public prime job with establishment",
-  lead: "On a public job you're the prime. You pay the bond up front, and a long establishment period stretches the cash out for over a year.",
-  exLabel: "Example numbers for practice (made up)",
-  ex: `<p><strong>The job:</strong> a $300,000 City irrigation and planting job. Install takes 3 months, billed $88,000 a month ($264,000). Then 12 months of establishment, billed $3,000 a month ($36,000). The agency pays about 30 days after each monthly bill, holding 5% retention.</p>
-<p><strong>Your costs:</strong> bond premium $6,000 at contract signing; install $75,000 a month for 3 months; establishment $2,400 a month for 12 months.</p>
-<div class="tablewrap"><table>
-<thead><tr><th>Month</th><th class="num">You spend</th><th class="num">You receive</th><th class="num">Cash position</th></tr></thead>
-<tbody>
-<tr><td>0 (signing)</td><td class="num">−$6,000</td><td class="num">$0</td><td class="num">−$6,000</td></tr>
-<tr><td>1</td><td class="num">−$75,000</td><td class="num">$0</td><td class="num">−$81,000</td></tr>
-<tr><td>2</td><td class="num">−$75,000</td><td class="num">+$83,600</td><td class="num">−$72,400</td></tr>
-<tr><td>3</td><td class="num">−$75,000</td><td class="num">+$83,600</td><td class="num">−$63,800</td></tr>
-<tr><td>4 (establishment starts)</td><td class="num">−$2,400</td><td class="num">+$83,600</td><td class="num">+$17,400</td></tr>
-<tr><td>5 to 15 (11 months)</td><td class="num">−$2,400 each</td><td class="num">+$2,850 each</td><td class="num">+$17,400 + (11 × $450) = +$22,350</td></tr>
-<tr><td>16</td><td class="num">$0</td><td class="num">+$2,850</td><td class="num">+$25,200</td></tr>
-<tr><td>About 18 (retention)</td><td class="num">$0</td><td class="num">+$15,000</td><td class="num">+$40,200</td></tr>
-</tbody></table></div>
-<p><strong>The math:</strong> each install check is $88,000 × 0.95 = $83,600. Each establishment check is $3,000 × 0.95 = $2,850. Retention is $300,000 × 0.05 = $15,000, released after the agency accepts the completed work (within 60 days of completion on public works). Profit: $300,000 − $6,000 − $225,000 − $28,800 = <strong>$40,200</strong>.</p>`,
-  body: `<ul>
-<li>Peak cash needed: <strong>$81,000</strong> in month 1.</li>
-<li>$15,000 of the $40,200 profit (37%) waits about a year and a half.</li>
-<li>Establishment barely pays its way month to month; most of the profit was made during install.</li>
-</ul>`,
-  src: "Retention release timing: Cal. Public Contract Code §7107."
-},
-
-{ h: "Cash flow example 3: two jobs and a slow payer",
-  lead: "The real danger is overlap. A second, smaller job with a slow-paying general contractor can push your cash need up by half.",
-  exLabel: "Example numbers for practice (made up)",
-  ex: `<p><strong>Job A</strong> is Example 1: $150,000, costs $40,000 a month in months 1–3, paid about 45 days after billing (checks of $47,500 in months 3, 4 and 5), retention $7,500 about month 7.</p>
-<p><strong>Job B</strong> starts in month 2: $90,000, costs $24,000 a month in months 2–4, billed $30,000 a month, but this general contractor pays about 90 days after billing (checks of $28,500 in months 5, 6 and 7), retention $4,500 about month 9.</p>
-<div class="tablewrap"><table>
-<thead><tr><th>Month</th><th class="num">Job A</th><th class="num">Job B</th><th class="num">Net for month</th><th class="num">Cash position</th></tr></thead>
+<thead><tr><th>Month</th><th class="num">Job A</th><th class="num">Job B</th><th class="num">Net</th><th class="num">Cash position</th></tr></thead>
 <tbody>
 <tr><td>1</td><td class="num">−$40,000</td><td class="num">$0</td><td class="num">−$40,000</td><td class="num">−$40,000</td></tr>
 <tr><td>2</td><td class="num">−$40,000</td><td class="num">−$24,000</td><td class="num">−$64,000</td><td class="num">−$104,000</td></tr>
@@ -454,119 +295,70 @@ slides: [
 <tr><td>7</td><td class="num">+$7,500</td><td class="num">+$28,500</td><td class="num">+$36,000</td><td class="num">+$43,500</td></tr>
 <tr><td>9</td><td class="num">$0</td><td class="num">+$4,500</td><td class="num">+$4,500</td><td class="num">+$48,000</td></tr>
 </tbody></table></div>
-<p>Total profit: Job A $30,000 + Job B $18,000 ($90,000 − $72,000) = <strong>$48,000</strong>. But peak cash need jumps from $80,000 (Job A alone) to <strong>$120,500</strong>, and the company is below zero for five months.</p>`,
-  watch: `<p>Before you say yes to a second job, rerun the cash plan with both. Ask a slow-paying general contractor for better terms, or price the cost of borrowing into the bid.</p>`
+<p>Profit $30,000 + $18,000 = $48,000, but the company is below zero for five months.</p>`,
+  watch: `<p>Rerun the cash plan before accepting a second job. With a slow payer, negotiate terms or price the borrowing cost into the bid.</p>`
 },
 
-{ h: "How much cash will a job need? A quick check",
-  lead: "Before a full cash flow table, use this rough check on any job you're thinking about bidding.",
-  body: `<ol class="steps">
-<li><div><b>Monthly cost</b>Your total cost to build ÷ months to build. (Example 1: $120,000 ÷ 3 = $40,000.)</div></li>
-<li><div><b>Months before the first check</b>Billing date plus the customer's pay time, in months. (Example 1: bill at end of month 1 + about 45 days ≈ 2 months of costs before the first check arrives in month 3.)</div></li>
-<li class="hl"><div><b>Rough peak cash</b>Monthly cost × months before the first check, plus anything paid up front (bond premium, deposits). (Example 1: $40,000 × 2 = $80,000. Example 2: $75,000 × 1 + $6,000 = $81,000.)</div></li>
-<li><div><b>Add your other jobs</b>Overlapping jobs add up (Example 3).</div></li>
-<li class="hl"><div><b>Compare to cash plus credit line</b>Keep a cushion. If the rough peak is near or above what you have, do a full table or pass.</div></li>
-</ol>`,
-  watch: `<p>This is a rule of thumb from the examples, not a formula from any rule book. It ignores supplier credit (which helps) and slow or disputed payments (which hurt). Use it to decide if a full cash plan is needed.</p>`
-},
-
-{ h: "Choosing your general contractors",
-  lead: "Not every general contractor is a good customer. Pick the ones worth building a relationship with.",
-  body: `<div class="twocol">
-<div><h3>Good signs</h3><ul>
-<li>Builds the project types you want, regularly</li>
-<li>Pays subs on time (ask other subs and suppliers)</li>
-<li>Gives feedback after bid day</li>
-<li>Has repeat owners and steady work</li>
-<li>Fair subcontract terms</li>
-</ul></div>
-<div><h3>Warning signs</h3><ul>
-<li>Reputation for slow pay or back-charges</li>
-<li>Mechanics liens or lawsuits from subs</li>
-<li>Uses sub bids only to “check” a favorite sub's price</li>
-<li>Never shares results</li>
-<li>One-sided subcontract (unlimited liability, pay-if-paid)</li>
-</ul></div>
-</div>`,
-  ex: `<p>Your irrigation supply house rep sees who pays and who doesn't. Ask: “Which general contractors do your contractor customers like working for?”</p>`
-},
-
-{ h: "Researching a general contractor: checklist",
-  lead: "Spend 30 minutes on a general contractor (GC) before you spend 20 hours estimating for them.",
-  body: `<ol>
-<li><strong>License:</strong> look them up on <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx" target="_blank" rel="noopener">CSLB (Contractors State License Board)</a>. Active? Right class? Any complaints or discipline?</li>
-<li><strong>Company status:</strong> active and in good standing with the California Secretary of State's business search.</li>
-<li><strong>Work history:</strong> their website project list and public bid results. Do they build what you want, in your area, at your size?</li>
-<li><strong>Payment reputation:</strong> ask two suppliers' credit managers and two other subs how fast they pay.</li>
-<li><strong>Liens and lawsuits:</strong> search San Diego Superior Court cases and the County's recorded documents for liens on their projects. A few is normal for a big builder; a pattern from unpaid subs is not.</li>
-<li><strong>Public works standing:</strong> DIR (Department of Industrial Relations) registration current; not on DIR's debarment list.</li>
-<li><strong>Subcontract terms:</strong> ask for their standard subcontract before you bid. Check pay terms, retention, insurance and indemnity (Module 16).</li>
-<li><strong>Bid practices:</strong> do they share results? Do other subs say they shop numbers?</li>
-<li><strong>Who to talk to:</strong> name of the estimator who sends landscape invites, and how (platform or email).</li>
-</ol>`,
-  watch: `<p>A general contractor that won't share its subcontract form before bid day, or pays subs in 90 days or more, is a cash flow risk. Price that in, or pass.</p>`
-},
-
-{ h: "Track every bid",
-  lead: "If you don't write it down, you can't learn from it. Log every invitation and every bid.",
-  body: `<p>For each bid, record:</p>
-<ul>
-<li>Bid number, project, general contractor or agency, contact</li>
-<li>Due date and time, job walk, question deadline</li>
-<li>Go/no-go decision and score</li>
-<li>Your price, and the low or winning price when you learn it</li>
-<li>How far over or under the low bid you were, as a percent</li>
-<li>Result (won, lost, pending, no bid) and the reason</li>
-<li>Follow-up date and notes</li>
-</ul>
-<p>Your company already has a tracker for this: <a href="https://claude.ai/artifact/BfM3VhU69VAesNWb6kbEnP" target="_blank" rel="noopener">Commercial Bid Tracker</a>.</p>`,
-  deeper: `<p>After 15–20 bids, patterns appear: which general contractors you win with, which project types you're always too high on, and how far off you usually are. Those patterns guide your pricing (Module 10) and your bid review meetings.</p>`
-},
-
-{ h: "Bid tabs: free education",
-  lead: "After a public bid opens, the agency posts every bidder's price. Studying them teaches you the market before you ever bid.",
-  exLabel: "Practice bid tab (made up for training)",
-  ex: `<div class="tablewrap"><table>
-<thead><tr><th>Rank</th><th>Bidder</th><th class="num">Total bid</th><th class="num">vs. low</th></tr></thead>
+{ h: "Cash flow: public prime with establishment",
+  lead: "As prime you pay the bond up front, and a long establishment period earns little monthly while 37% of the profit waits in retention.",
+  exLabel: "Made-up $300,000 City irrigation and planting job",
+  ex: `<p>Install 3 months billed $88,000/month; 12 months establishment billed $3,000/month; agency pays ~30 days after billing less 5%. Costs: bond premium $6,000 at signing; install $75,000/month; establishment $2,400/month.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Month</th><th class="num">Spend</th><th class="num">Receive</th><th class="num">Cash position</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>Landscape Co. A</td><td class="num">$356,880</td><td class="num">—</td></tr>
-<tr><td>2</td><td>Landscape Co. B</td><td class="num">$371,250</td><td class="num">+4.0%</td></tr>
-<tr><td>3</td><td>Engineering Contractor C</td><td class="num">$389,400</td><td class="num">+9.1%</td></tr>
-<tr><td>4</td><td>Landscape Co. D</td><td class="num">$402,115</td><td class="num">+12.7%</td></tr>
-<tr><td>5</td><td>Landscape Co. E</td><td class="num">$445,700</td><td class="num">+24.9%</td></tr>
-<tr><td>6</td><td>Engineering Contractor F</td><td class="num">$497,300</td><td class="num">+39.3%</td></tr>
-<tr><td></td><td>Engineer's estimate</td><td class="num">$412,000</td><td class="num">+15.4%</td></tr>
-</tbody></table></div>`,
-  body: `<p><strong>What this tells you:</strong></p>
-<ul>
-<li>The low bid came in about 13% under the engineer's estimate. That's the market's price, not the estimate.</li>
-<li>The top four were within about 13% of each other: that's the competitive range.</li>
-<li>Landscape specialists took 1st and 2nd. On landscape-heavy jobs they often beat general engineering firms.</li>
-<li>Many public bids have line items. Comparing unit prices (per tree, per valve, per foot of pipe) teaches you the most.</li>
-</ul>`
+<tr><td>0</td><td class="num">−$6,000</td><td class="num">$0</td><td class="num">−$6,000</td></tr>
+<tr><td>1</td><td class="num">−$75,000</td><td class="num">$0</td><td class="num"><strong>−$81,000</strong></td></tr>
+<tr><td>2</td><td class="num">−$75,000</td><td class="num">+$83,600</td><td class="num">−$72,400</td></tr>
+<tr><td>3</td><td class="num">−$75,000</td><td class="num">+$83,600</td><td class="num">−$63,800</td></tr>
+<tr><td>4</td><td class="num">−$2,400</td><td class="num">+$83,600</td><td class="num">+$17,400</td></tr>
+<tr><td>5–15</td><td class="num">−$2,400 each</td><td class="num">+$2,850 each</td><td class="num">+$22,350</td></tr>
+<tr><td>16</td><td class="num">$0</td><td class="num">+$2,850</td><td class="num">+$25,200</td></tr>
+<tr><td>~18</td><td class="num">$0</td><td class="num">+$15,000 retention</td><td class="num">+$40,200</td></tr>
+</tbody></table></div>
+<p>Profit $300,000 − $6,000 − $225,000 − $28,800 = $40,200. Retention released within 60 days of completion on public works.</p>`,
+  src: "Retention release timing: Cal. Public Contract Code §7107."
 },
 
-{ h: "How to work out spread and median, step by step",
-  lead: "Two numbers summarize any bid tab: the spread (how far apart bids are) and the median (the middle bid). Here's the math on a real ten-bid job.",
-  exLabel: "Worked example: Caltrans 11-428804 (I-805/SR-905 San Ysidro recycled-water conversion)",
-  ex: `<p><strong>Step 1 · List the valid bids from low to high.</strong> Nine counted (a tenth, marked “DECLINED RECONSIDERATION” on the summary, wasn't awarded, so leave it out):</p>
-<p>$5,468,945.45 · $5,795,426.00 · $5,940,779.78 · $6,117,486.40 · <strong>$6,373,435.15</strong> · $6,516,061.00 · $6,843,544.85 · $7,525,000.00 · $7,742,026.00</p>
-<p><strong>Step 2 · Find the median.</strong> With 9 bids, the middle one is the 5th: <strong>$6,373,435.15</strong>. (With an even number, average the two middle bids. Example: 11-422004's four bids have middle bids of $687,805.00 and $727,569.20; ($687,805.00 + $727,569.20) ÷ 2 = $707,687.10.)</p>
-<p><strong>Step 3 · Compare each to the low bid.</strong></p>
-<ul>
-<li>2nd vs. low: $5,795,426.00 ÷ $5,468,945.45 = 1.0597 → <strong>6.0%</strong> higher</li>
-<li>Median vs. low: $6,373,435.15 ÷ $5,468,945.45 = 1.1654 → <strong>16.5%</strong> higher</li>
-<li>High vs. low (the full spread): $7,742,026.00 ÷ $5,468,945.45 = 1.4156 → <strong>41.6%</strong> higher, or $2,273,080.55 apart</li>
-</ul>
-<p><strong>Step 4 · Compare the low bid to the engineer's estimate.</strong> $5,468,945.45 ÷ $5,957,722.50 = 0.918 → <strong>8.2% under</strong> the estimate.</p>`,
-  body: `<p><strong>Why the median matters:</strong> one wild bid (very high or very low) pulls an average around, but barely moves the median. The median tells you where a “normal” bidder landed; the low bid tells you what it took to win.</p>`,
-  src: "Caltrans Bid Summary, contract 11-428804; Caltrans Bid Summary, contract 11-422004 (data/caltrans)."
-},
-
-{ h: "Five real Caltrans bid tabs, side by side",
-  lead: "Here are the five District 11 landscape jobs in the Real Bid Lab, worked the same way. Only valid bids are counted.",
+{ h: "Choosing and researching GCs",
+  lead: "Spend 30 minutes checking a GC before spending 20 hours estimating for it.",
   body: `<div class="tablewrap"><table>
-<thead><tr><th>Job</th><th class="num">Engineer's estimate</th><th class="num">Bids</th><th class="num">Low bid</th><th class="num">2nd over low</th><th class="num">Median over low</th><th class="num">High over low</th><th class="num">Low vs. estimate</th></tr></thead>
+<thead><tr><th>Check</th><th>How</th><th>Red flag</th></tr></thead>
+<tbody>
+<tr><td>License</td><td><a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx" target="_blank" rel="noopener">CSLB lookup</a></td><td>Wrong class, discipline, complaints</td></tr>
+<tr><td>Entity</td><td>Secretary of State business search</td><td>Not in good standing</td></tr>
+<tr><td>Work history</td><td>Website, public bid results</td><td>Not your project types, area or size</td></tr>
+<tr><td>Payment</td><td>Two supplier credit managers, two subs</td><td>90+ days, back-charge habit</td></tr>
+<tr><td>Liens and suits</td><td>San Diego Superior Court cases; County recorded documents</td><td>A pattern from unpaid subs</td></tr>
+<tr><td>Public works standing</td><td>DIR registration and debarment list</td><td>Lapsed or debarred</td></tr>
+<tr><td>Subcontract</td><td>Request their form before bidding</td><td>Refuses; pay-if-paid, unlimited indemnity (<a href="#m16-1">Module 16</a>)</td></tr>
+<tr><td>Bid practices</td><td>Ask other subs</td><td>Shops numbers; never shares results; uses you only to check a favorite</td></tr>
+<tr><td>Contact</td><td>Name and channel of the landscape estimator</td><td></td></tr>
+</tbody></table></div>`,
+  ex: `<p>Ask your supply house rep: “Which GCs do your contractor customers like working for?” They see who pays.</p>`
+},
+
+{ h: "Bid tabs: spread and median",
+  lead: "The low bid shows what it took to win; the median shows where a normal bidder landed, unmoved by one wild number.",
+  exLabel: "Worked: Caltrans 11-428804 (I-805/SR-905 San Ysidro recycled-water conversion)",
+  ex: `<p>Nine valid bids, low to high (a tenth, “DECLINED RECONSIDERATION,” excluded): $5,468,945.45 · $5,795,426.00 · $5,940,779.78 · $6,117,486.40 · <strong>$6,373,435.15</strong> · $6,516,061.00 · $6,843,544.85 · $7,525,000.00 · $7,742,026.00</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Measure</th><th>Math</th><th class="num">Result</th></tr></thead>
+<tbody>
+<tr><td>Median (5th of 9)</td><td></td><td class="num">$6,373,435.15</td></tr>
+<tr><td>2nd over low</td><td>5,795,426.00 ÷ 5,468,945.45</td><td class="num">+6.0%</td></tr>
+<tr><td>Median over low</td><td>6,373,435.15 ÷ 5,468,945.45</td><td class="num">+16.5%</td></tr>
+<tr><td>High over low (spread)</td><td>7,742,026.00 ÷ 5,468,945.45; $2,273,080.55 apart</td><td class="num">+41.6%</td></tr>
+<tr><td>Low vs. EE</td><td>5,468,945.45 ÷ 5,957,722.50</td><td class="num">−8.2%</td></tr>
+</tbody></table></div>
+<p>Even count: average the two middle bids. 11-422004's four bids: ($687,805.00 + $727,569.20) ÷ 2 = $707,687.10.</p>`,
+  body: `<p>Read every tab for: low vs. EE (the market, not the estimate), the competitive cluster, who won (specialty vs. engineering contractors), and line-item unit prices, which teach the most.</p>`,
+  src: "Caltrans Bid Summaries, contracts 11-428804 and 11-422004."
+},
+
+{ h: "Five real Caltrans bid tabs",
+  lead: "Winners often beat second by under half a percent, and low bids ranged from 36% under to 3% over the engineer's estimate.",
+  body: `<div class="tablewrap"><table>
+<thead><tr><th>Job</th><th class="num">EE</th><th class="num">Bids</th><th class="num">Low</th><th class="num">2nd</th><th class="num">Median</th><th class="num">High</th><th class="num">Low vs. EE</th></tr></thead>
 <tbody>
 <tr><td><a href="#lab-11-422004">11-422004</a> I-5 Carmel Valley</td><td class="num">$876,703</td><td class="num">4</td><td class="num">$557,307</td><td class="num">+23.4%</td><td class="num">+27.0%</td><td class="num">+36.8%</td><td class="num">−36.4%</td></tr>
 <tr><td><a href="#lab-11-428704">11-428704</a> I-805 Chula Vista</td><td class="num">$1,516,177</td><td class="num">5</td><td class="num">$1,176,120</td><td class="num">+0.3%</td><td class="num">+5.0%</td><td class="num">+181.6%</td><td class="num">−22.4%</td></tr>
@@ -574,22 +366,20 @@ slides: [
 <tr><td><a href="#lab-11-428804">11-428804</a> I-805/SR-905 San Ysidro</td><td class="num">$5,957,723</td><td class="num">9</td><td class="num">$5,468,945</td><td class="num">+6.0%</td><td class="num">+16.5%</td><td class="num">+41.6%</td><td class="num">−8.2%</td></tr>
 <tr><td><a href="#lab-11-430674">11-430674</a> SR-5/75/805/905</td><td class="num">$11,206,405</td><td class="num">5</td><td class="num">$11,546,031</td><td class="num">+5.5%</td><td class="num">+10.0%</td><td class="num">+17.7%</td><td class="num">+3.0%</td></tr>
 </tbody></table></div>
-<p>Dollar amounts rounded to the nearest dollar. 11-428704 leaves out one bid marked non-responsive; 11-428804 leaves out one marked “declined reconsideration.” With 3 bids (11-431064), the median is the 2nd bid.</p>`,
-  ex: `<p><strong>What the five tabs teach:</strong></p>
-<ul>
-<li><strong>The winner is often very close to 2nd.</strong> On two of five jobs, 1st and 2nd were less than half a percent apart ($3,585 on 11-428704; $6,973 on 11-431064). Small pricing choices decide jobs.</li>
-<li><strong>The engineer's estimate is not the market.</strong> Low bids ranged from 36% under to 3% over it.</li>
-<li><strong>Normal bidders cluster.</strong> The median was within about 17% of the low bid on four of five jobs (11-422004, with only four bids, was 27%).</li>
-<li><strong>A far-high bid usually means someone didn't want the job, or priced it from far away.</strong> Don't measure yourself against it.</li>
-<li><strong>Landscape companies win these.</strong> Diversified Landscape won two of five; Marina Landscape was 2nd on two.</li>
+<p>Percentages are over low. Valid bids only: 11-428704 excludes one non-responsive bid; 11-428804 excludes one “declined reconsideration.” With 3 bids, the median is the 2nd.</p>`,
+  ex: `<ul>
+<li>1st vs. 2nd: $3,585 on 11-428704, $6,973 on 11-431064. Small pricing choices decide jobs.</li>
+<li>Median within about 17% of low on four of five (27% on four-bid 11-422004).</li>
+<li>A far-high bid usually means a bidder didn't want the job; don't benchmark against it.</li>
+<li>Landscape companies win these: Diversified Landscape won two of five; Marina Landscape placed 2nd on two.</li>
 </ul>`,
-  src: "Caltrans Bid Summaries for contracts 11-422004, 11-428704, 11-431064, 11-428804 and 11-430674 (src/realbids.js; data/caltrans)."
+  src: "Caltrans Bid Summaries for contracts 11-422004, 11-428704, 11-431064, 11-428804 and 11-430674."
 },
 
 { h: "Unit prices across the five jobs",
-  lead: "Line items let you compare the same work on different jobs. The pattern is clear: bigger quantities, lower unit prices.",
+  lead: "Bigger quantities bring lower unit prices because fixed trucking, equipment and setup spread over more units.",
   body: `<div class="tablewrap"><table>
-<thead><tr><th>Job</th><th class="num">Plant Group A quantity</th><th class="num">Median price each</th><th class="num">Wood mulch quantity</th><th class="num">Median price per CY</th></tr></thead>
+<thead><tr><th>Job</th><th class="num">Group A qty</th><th class="num">Median each</th><th class="num">Wood mulch</th><th class="num">Median per CY</th></tr></thead>
 <tbody>
 <tr><td>11-422004</td><td class="num">440</td><td class="num">$10.15</td><td class="num">55 CY</td><td class="num">$145.00</td></tr>
 <tr><td>11-428704</td><td class="num">1,460</td><td class="num">$18.00</td><td class="num">190 CY</td><td class="num">$100.00</td></tr>
@@ -597,131 +387,98 @@ slides: [
 <tr><td>11-431064</td><td class="num">6,880</td><td class="num">$7.00</td><td class="num">3,290 CY</td><td class="num">$54.70</td></tr>
 <tr><td>11-430674</td><td class="num">31,900</td><td class="num">$7.45</td><td class="num">8,040 CY</td><td class="num">$40.00</td></tr>
 </tbody></table></div>
-<p>CY means cubic yard. Plant Group A was the 1-gallon size on 11-422004, 11-428704 and 11-428804 (their scope lists match the quantities); always check each job's planting legend for what a group means.</p>`,
-  ex: `<p><strong>Wood mulch:</strong> the median price fell from $145 per CY at 55 CY to $40 per CY at 8,040 CY. Small quantities carry the same truck, equipment and setup costs spread over fewer units.</p>
-<p><strong>Plant establishment</strong> is where bidders disagreed most. On 11-428804 the lump sum for plant establishment work ranged from $50,000 to $300,000, with a median of $240,800. If your number is far from the pack on an item like that, check what you assumed.</p>`,
-  watch: `<p>Don't copy another bidder's unit price into your estimate. Use bid tabs to check your own costs: if you're far off the median, find out why before bid day.</p>`,
+<p>Group A was the 1-gallon size on 11-422004, 11-428704 and 11-428804 (scope lists match); always check each job's planting legend.</p>`,
+  ex: `<p>Plant establishment shows the widest disagreement: on 11-428804 the lump sum ranged from $50,000 to $300,000, median $240,800. If you're far from the pack on an item like that, recheck your assumptions.</p>`,
+  watch: `<p>Never copy another bidder's unit price. Use tabs to test your own costs and find out why you're off the median before bid day.</p>`,
   src: "Caltrans Bid Summaries: Plant (Group A) and Wood Mulch items on 11-422004 (items 22, 26), 11-428704 (27, 31), 11-428804 (36, 39), 11-431064 (28, 35), 11-430674 (37, 46); 11-428804 item 38 (Plant Establishment Work)."
 },
 
-{ h: "Common mistakes finding work",
-  lead: "New commercial estimators lose months to these. Each one has a simple fix.",
+{ h: "Mistakes that cost money",
+  lead: "New commercial estimators lose months to these.",
   body: `<div class="tablewrap"><table>
-<thead><tr><th>Mistake</th><th>What it costs</th><th>How to avoid it</th></tr></thead>
+<thead><tr><th>Mistake</th><th>Cost</th><th>Fix</th></tr></thead>
 <tbody>
-<tr><td>Registering only on the City's PlanetBids</td><td>Never seeing County, school, water district or other city bids</td><td>Register on each agency portal you'd work for, plus BuyNet and Caltrans</td></tr>
-<tr><td>A half-empty platform profile</td><td>General contractors' searches never find you</td><td>Every trade code, service area, license, DIR and certifications filled in</td></tr>
-<tr><td>Mass emails to every general contractor</td><td>Ignored or marked as spam</td><td>One personal email to the right estimator, then a call</td></tr>
-<tr><td>No follow-up</td><td>Most relationships need several contacts</td><td>Outreach log sorted by follow-up date every Monday</td></tr>
-<tr><td>Bidding everything</td><td>Low hit rate, rushed estimates, mistakes</td><td>Go/no-go on every invite; pass politely</td></tr>
-<tr><td>Ignoring “will bid” invites you then don't bid</td><td>Dropped from the general contractor's list</td><td>Always answer, even to decline</td></tr>
-<tr><td>No cash plan</td><td>A winning streak that runs out of money</td><td>Quick cash check on every bid; full table on big or overlapping jobs</td></tr>
-<tr><td>Studying only bid totals</td><td>Missing what the market pays for each item</td><td>Log unit prices for your common items from every tab</td></tr>
-<tr><td>Trusting the engineer's estimate</td><td>Bidding 20–30% too high</td><td>Use bid tabs to learn the real market</td></tr>
+<tr><td>Only the City's PlanetBids</td><td>Never see County, school, water district, other city bids</td><td>Register on each agency portal, BuyNet, Caltrans</td></tr>
+<tr><td>Half-empty platform profile</td><td>Invisible to GC searches</td><td>Every trade code, area, license, DIR, certifications</td></tr>
+<tr><td>Mass emails</td><td>Ignored or spam</td><td>One personal email to the right estimator, then a call</td></tr>
+<tr><td>No follow-up</td><td>Relationships never start</td><td>Outreach log sorted by follow-up every Monday</td></tr>
+<tr><td>Bidding everything</td><td>Low hit rate, rushed estimates</td><td>Hard stops and scorecard on every invite</td></tr>
+<tr><td>“Will bid” then silence</td><td>Dropped from the list</td><td>Always answer, even to decline</td></tr>
+<tr><td>No cash plan</td><td>A winning streak runs out of money</td><td>Quick check every bid; full table on big or overlapping jobs</td></tr>
+<tr><td>Studying totals only; trusting the EE</td><td>Bidding 20–30% high</td><td>Log unit prices for your common items from every tab</td></tr>
 </tbody></table></div>`
 },
 
-{ h: "Ask yourself: Module 3 self-check",
-  lead: "If you can answer these without looking, you're ready to read plans in Module 4. If not, go back to the slide in brackets.",
-  body: `<ol>
-<li>Name four places public landscape bids are posted in San Diego County. [Public agency portals]</li>
-<li>What do you do on PlanetBids to become a planholder, and why does it help? [Search and download on PlanetBids]</li>
-<li>Who at a general contractor gets your intro email? [Getting on general contractor bid lists]</li>
-<li>On K-24-1952, could a C-27 company be prime? What should it do instead? [Real notice #1]</li>
-<li>What were the establishment periods on the three real notices? [Comparing the three notices]</li>
-<li>Name three hard stops for go/no-go. [Go or no-go]</li>
-<li>Roughly how much cash does a job need before the first check? Show the quick check. [How much cash will a job need?]</li>
-<li>Why did adding Job B raise peak cash by $40,500? [Cash flow example 3]</li>
-<li>How do you find the median of 9 bids? Of 4 bids? [Spread and median]</li>
-<li>What happens to unit prices as quantities grow? [Unit prices across the five jobs]</li>
-</ol>`
-},
-
 { t: "terms", h: "Words to know",
-  lead: "Add these to your notebook.",
+  lead: "Module 3 terms. Everything else is in the <a href=\"#dict\">Bid Dictionary</a>.",
   terms: [
     ["Bid list", "A GC's list of subs it invites to bid."],
-    ["Chief estimator / precon manager", "The person at a GC who runs bidding and sends sub invitations."],
-    ["Bid platform", "Website GCs use to invite subs and collect bids (BuildingConnected, PlanHub)."],
-    ["Lead service", "Paid service listing upcoming projects and plans."],
-    ["PlanetBids", "Bidding portal used by the City of San Diego and many local agencies. Each agency has its own portal."],
-    ["BuyNet", "The County of San Diego's free bidding portal."],
-    ["Bid Express", "The website Caltrans uses for electronic bids."],
-    ["Digital ID", "An electronic identity a bidding system requires before you can submit a bid."],
-    ["Planholders list", "Public list of companies that downloaded a project's documents."],
-    ["Q&A", "Questions and answers: the portal tab where bidders ask and the agency answers."],
-    ["Notice inviting bids / Notice to Bidders", "The public announcement of a bid, with key dates and requirements."],
-    ["Engineer's estimate (EE)", "The agency's own estimate of the project cost."],
-    ["Working days", "The time allowed to finish, usually counting weekdays."],
-    ["Liquidated damages (LDs)", "A set dollar amount per day you finish late."],
-    ["Mandatory pre-bid", "A meeting you must attend to be allowed to bid."],
-    ["Price guarantee", "How long your bid price must stay good after bid opening."],
-    ["Self-performance", "Work a prime does with its own forces. City K-24-1952 required at least 50%."],
-    ["DBE / DVBE goal", "A percentage of the bid that should go to certified Disadvantaged or Disabled Veteran Business Enterprises."],
-    ["Good faith effort (GFE)", "Documents showing you tried to meet a participation goal you didn't reach."],
-    ["HMA", "Hot mix asphalt."],
-    ["Go / no-go", "The decision whether to spend time estimating a bid."],
-    ["Hard stop", "A reason that ends a go/no-go decision no matter how good the job looks."],
-    ["Cash flow", "When money actually goes out and comes in."],
-    ["Peak cash need", "The most money a job (or several) will have tied up at one time."],
-    ["Net 30", "Supplier terms: pay within 30 days of the invoice."],
-    ["Outreach log", "A record of every contact with GCs and primes, with follow-up dates."],
-    ["Bid tab", "The posted list of every bidder's price."],
-    ["Unit price", "The price for one unit: per tree, per valve, per foot."],
-    ["Spread", "How far apart the bids are, usually the high bid compared to the low bid."],
-    ["Median", "The middle bid when bids are listed from low to high."],
-    ["CY / LF / EA / LS", "Cubic yard / linear foot / each / lump sum."]
+    ["Chief estimator / precon manager", "GC staff who run bidding and send sub invitations."],
+    ["Bid platform", "Site GCs use to invite subs and collect bids (BuildingConnected, PlanHub)."],
+    ["Lead service", "Paid listing of upcoming projects and plans (ConstructConnect, Dodge)."],
+    ["PlanetBids", "Portal used by the City and many local agencies; one registration per agency."],
+    ["BuyNet", "County of San Diego bidding portal."],
+    ["Bid Express / Digital ID", "Caltrans electronic bidding site / electronic identity required to submit."],
+    ["Planholders list", "Public list of firms that downloaded a project's documents."],
+    ["Outreach log", "Record of every GC contact with follow-up dates."],
+    ["EE", "Engineer's estimate: the agency's cost estimate."],
+    ["Mandatory pre-bid", "Meeting you must attend to be eligible to bid."],
+    ["Liquidated damages (LDs)", "Fixed dollars per day late, withheld from payment."],
+    ["Price guarantee", "How long a bid price must remain valid after opening."],
+    ["Self-performance", "Work a prime does with its own forces (K-24-1952: at least 50%)."],
+    ["Participation goal", "Required share for SLBE/ELBE, DBE or DVBE firms."],
+    ["Good faith effort (GFE)", "Documents showing efforts to meet a goal not reached."],
+    ["Hard stop", "A condition that ends go/no-go regardless of score."],
+    ["Peak cash need", "Most money tied up at once across your jobs."],
+    ["Net 30", "Supplier terms: pay within 30 days of invoice."],
+    ["Spread", "Distance between bids, usually high vs. low."],
+    ["Median", "The middle valid bid, low to high; average the two middle on an even count."],
+    ["Bid Summary", "Caltrans post-opening report with totals, unit prices and listed subs."]
   ]
 },
 
 { t: "quiz", id: "m3", h: "Check yourself",
   lead: "Tap an answer to check it.",
   qs: [
-    { q: "Who at a GC should get your intro email?", a: ["The receptionist", "The chief estimator or preconstruction manager", "The superintendent on a job site"], c: 1, why: "Estimators run bidding and decide who gets invited." },
-    { q: "You registered on the City of San Diego's PlanetBids. Are you registered with every agency on PlanetBids?", a: ["Yes, it's one account for all", "No, each agency has its own portal and registration", "Only for county agencies"], c: 1, why: "Each agency runs its own PlanetBids portal. Register on each one you want to bid." },
-    { q: "A notice says the pre-bid meeting is mandatory. You can't make it. What happens?", a: ["You can still bid if you call them", "You can't bid that project", "You get a small penalty"], c: 1, why: "Missing a mandatory pre-bid meeting makes you ineligible to bid." },
-    { q: "Liquidated damages are $1,500 per day. You finish 10 working days late. What could it cost?", a: ["$1,500", "$15,000", "Nothing if the plants look good"], c: 1, why: "10 days × $1,500 = $15,000, usually taken from your payments." },
-    { q: "You decide not to bid a GC's invitation. What should you do?", a: ["Ignore it", "Reply that you're passing this time and want to stay on their list", "Send a very high number"], c: 1, why: "A polite decline keeps you on the list. Silence can get you dropped." },
-    { q: "In the cash flow example, about how much cash did the company need before its first payment?", a: ["$30,000", "$80,000", "$150,000"], c: 1, why: "Two full months of costs went out before the first payment came in." },
-    { q: "The low bid on a public job came in 13% under the engineer's estimate. What does that tell you?", a: ["The estimate is the real market price", "The market price was below the agency's estimate", "The low bidder will lose money for sure"], c: 1, why: "Bid tabs show what contractors actually bid. That's the price you compete against." },
-    { q: "When is paying for a lead service (like ConstructConnect) worth it?", a: ["Before you've bid anything", "When you're ready to bid more than you're being invited to", "Never"], c: 1, why: "Start with free platforms and relationships. Pay for leads when you have the capacity to use them." },
-    { q: "The City's K-24-1952 notice required a Class A prime. What should a C-27 landscape company do?", a: ["Bid as prime anyway", "Send its landscape price to the A contractors on the planholders list", "Ignore the job"], c: 1, why: "You can't prime it, but the A primes need landscape subs, and the 20% SLBE/ELBE goal makes certified subs valuable." },
-    { q: "Nine valid bids are listed from low to high. Which one is the median?", a: ["The 1st", "The 5th", "The 9th"], c: 1, why: "With an odd number of bids, the median is the middle one: the 5th of 9." },
-    { q: "Across the five Caltrans jobs, what happened to the median wood mulch price as the quantity grew?", a: ["It went up", "It stayed the same", "It went down, from $145/CY at 55 CY to $40/CY at 8,040 CY"], c: 2, why: "Fixed costs like trucking and setup are spread over more units on big quantities." },
-    { q: "Job A needs $80,000 at its peak. A second job with a slow-paying GC overlaps it. What happens to peak cash need?", a: ["It stays at $80,000", "It goes up, to $120,500 in the example", "It goes down because there's more profit"], c: 1, why: "Overlapping costs come due before either job's checks arrive." },
-    { q: "Caltrans 11-422004 had 750 working days of plant establishment. Roughly how long is that?", a: ["About 3 months", "About 1 year", "About 3 years"], c: 2, why: "There are roughly 250 working days in a year, so 750 is about three years of establishment to price." },
-    { q: "On the City's PlanetBids, what usually happens when you download a project's documents?", a: ["Nothing", "You're added to the planholders list and get addenda notices", "You've submitted a bid"], c: 1, why: "Planholders get addenda emails, and primes can find you on the list." }
+    { q: "You registered on the City of San Diego's PlanetBids. An Otay Water District job is on PlanetBids too. What do you need?", a: ["Nothing; one account covers all", "A separate registration on Otay Water District's own portal", "A Bid Express account"], c: 1, why: "Each agency runs its own PlanetBids portal and registration." },
+    { q: "A City park job requires a Class A prime and has a 20% SLBE/ELBE goal. You're a C-27, SLBE-certified. Best move?", a: ["Bid as prime", "Download to become a planholder, then send your price to every A prime on the list", "Pass"], c: 1, why: "You can't prime, but primes need certified subs and the planholders list shows who's bidding." },
+    { q: "City contract of $850,000 finishes 4 working days late under the K-24-1952 LD table. LDs?", a: ["$6,000", "$8,000", "$10,000"], c: 1, why: "$500,001–$1,000,000 is $2,000/day; 4 × $2,000 = $8,000." },
+    { q: "A $200,000 job costs $50,000/month for 3 months, billed monthly, and the GC pays 60 days after billing. A $5,000 bond premium is due at signing. Rough peak cash?", a: ["About $55,000", "About $105,000", "About $155,000"], c: 2, why: "Bill end of month 1 + 60 days ≈ first check in month 3 after three months of cost: 3 × $50,000 + $5,000 ≈ $155,000. Run a full table." },
+    { q: "Seven valid bids: $410K, $425K, $431K, $447K, $462K, $480K, $612K. Median over low?", a: ["+9.0%", "+12.7%", "+49.3%"], c: 0, why: "Median is the 4th, $447K. 447 ÷ 410 = 1.090 → +9.0%. The $612K outlier doesn't move it." },
+    { q: "On the five Caltrans tabs, low bids ranged from 36% under to 3% over the EE. What should you do with an EE?", a: ["Bid just under it", "Use it to size the job and bonding, and price from your costs checked against bid-tab unit prices", "Ignore it entirely"], c: 1, why: "The EE is a sizing tool; tabs show the market. Bidding to the EE can leave you 20–30% high." },
+    { q: "Your wood mulch unit price for 60 CY is $95. Bid tabs show a $145 median at 55 CY and $52 at 2,780 CY. What does that suggest?", a: ["You're far too high", "You're within range for a small quantity; small jobs carry fixed trucking and setup", "Use $52"], c: 1, why: "Unit prices fall with quantity. Compare against jobs of similar quantity." },
+    { q: "A GC asks you to bid a $180,000 job; it pays in 90–120 days and you have $60,000 free cash. First move?", a: ["Bid it; profit is profit", "Run the cash check, then ask for better pay terms, price borrowing, or pass", "Bid 20% higher"], c: 1, why: "Two to three months of cost before the first check exceeds $60,000." },
+    { q: "Caltrans 11-422004: 60 WD build and 750 WD establishment. What does that mean for a bidder?", a: ["A 3-month job", "A short build followed by about three years of establishment labor to price", "Establishment is the agency's cost"], c: 1, why: "About 250 working days a year; 750 is roughly three years of visits in your price." },
+    { q: "A City job of $420,000 is restricted. You're SLBE, not ELBE. Can you prime it?", a: ["Yes", "Only if no ELBE firms are available", "Never"], c: 1, why: "$500,000 and below are restricted to ELBE first, then SLBE, then all." }
   ]
 },
 
 { t: "practice", id: "m3", h: "Practice assignments",
-  lead: "By the end of these, the company should be visible to GCs and agencies, and invitations should start coming in.",
+  lead: "Real outreach and real data. Check each one off when done.",
   items: [
-    { h: "Register on public portals", hrs: 0.75, d: "<p>Register (or make the list to register, once the bidding entity is settled) on the City of San Diego's PlanetBids, the County's BuyNet, and at least 5 other local agencies. Choose landscape, irrigation and park categories. Save logins in a safe place.</p>" },
-    { h: "Build your bid platform profiles", hrs: 0.5, d: "<p>Create complete profiles on BuildingConnected and PlanHub using the step-by-step slide: trade codes, service area, license, DIR, certifications, capabilities statement. Ask one estimator to check that you show up in a search.</p>" },
-    { h: "Build a target list of 20 GCs", hrs: 1, d: "<p>Use planholders lists from recent public jobs, the subcontractor lists on Caltrans bid summaries, AGC and ABC San Diego member lists, and your supplier reps. For each: company, estimator name, email, phone, project types. Put them in the outreach log with columns for each contact date.</p>" },
-    { h: "Send 5 intro emails and make 5 calls", hrs: 1, d: "<p>Use the email template and call script. Log every contact. Set follow-up dates. Note what each GC told you about their projects and bid process.</p>" },
-    { h: "Score 3 open bids", hrs: 0.5, d: "<p>Find 3 open landscape or irrigation bids (public or private). For each, pull the notice details and run the go/no-go scorecard. Bring the scores to the owner and discuss.</p>" },
-    { h: "Study 3 bid tabs", hrs: 0.75, d: "<p>Download results for 3 closed City or agency landscape projects. Record: engineer's estimate, number of bidders, low bid, spread between bids, and who won. If line items are posted, note the unit prices for trees, shrubs, valves and irrigation pipe. Save this; you'll use it in Module 15.</p>" },
-    { h: "Read the three real notices yourself", hrs: 0.5, d: "<p>Open the <a href=\"https://www.sandiego.gov/sites/default/files/2024-02/k-24-1952-dbb-3-a.pdf\" target=\"_blank\" rel=\"noopener\">K-24-1952 bid book</a> and the Notices to Bidders for <a href=\"#lab-11-428704\">11-428704</a> and <a href=\"#lab-11-422004\">11-422004</a>. Find every line in the comparison slide in the real documents and write the page or section number next to it.</p>" },
-    { h: "Work out the five Caltrans tabs yourself", hrs: 0.5, d: "<p>In the Real Bid Lab, open each of the five jobs. For each, list the valid bid totals from low to high, find the median, and work out 2nd-over-low and high-over-low as percents. Check your answers against the side-by-side slide.</p>" },
-    { h: "Make a cash plan for a real bid", hrs: 0.5, d: "<p>Pick a job you scored “go.” Estimate monthly costs, billing dates, the customer's pay time and retention. Do the quick check, then a full month-by-month table like Example 2. Show the owner the peak cash need.</p>" },
-    { h: "Research 3 GCs and start your weekly routine", hrs: 0.5, d: "<p>Run the GC research checklist on 3 GCs from your target list and note what you found. Then put the weekly prospecting routine on your calendar as recurring blocks for the next 8 weeks.</p>" }
+    { h: "Register on public portals", hrs: 0.5, d: "<p>Register (or list for registration once the bidding entity is settled) on the City's PlanetBids, County BuyNet and at least 5 other local agency portals, with landscape, irrigation and park categories. Store logins in the company password manager.</p>" },
+    { h: "Build platform profiles", hrs: 0.5, d: "<p>Complete BuildingConnected and PlanHub profiles per the platform slide. Ask one estimator to confirm you appear in a search.</p>" },
+    { h: "Target list of 20 GCs", hrs: 0.75, d: "<p>From public planholders lists, Caltrans bid summary sub lists, AGC and ABC directories and supplier reps, list 20 GCs with estimator name, email, phone and project types in the outreach log. Run the research checklist on your top 3.</p>" },
+    { h: "Send 5 intro emails and make 5 calls", hrs: 1, d: "<p>Use the templates. Log every contact, set follow-up dates, and note each GC's projects and invite method. Calendar the weekly routine for the next 8 weeks.</p>" },
+    { h: "Score 3 open bids", hrs: 0.5, d: "<p>Pick 3 open landscape or irrigation bids. For each, extract the notice lines from the notice slide, check hard stops, run the scorecard, and review with the owner.</p>" },
+    { h: "Work real bid tabs", hrs: 0.75, d: "<p>For the five Caltrans jobs in the <a href=\"#lab\">Real Bid Lab</a> and 3 closed City or agency landscape jobs, list valid totals, median, 2nd and high over low, and low vs. EE. Where line items exist, log unit prices for trees, shrubs, valves, pipe and mulch for <a href=\"#m15-1\">Module 15</a>.</p>" },
+    { h: "Cash plan for a real bid", hrs: 0.5, d: "<p>For a job you scored “go,” run the quick check, then a month-by-month table like the public-prime example, including any overlap with current work. Show the owner the peak.</p>" },
+    { h: "Find the notice lines in the real documents", hrs: 0.25, d: "<p>In the <a href=\"https://www.sandiego.gov/sites/default/files/2024-02/k-24-1952-dbb-3-a.pdf\" target=\"_blank\" rel=\"noopener\">K-24-1952 bid book</a> and the 11-428704 and 11-422004 Notices to Bidders, locate every row of the comparison slide and note the section or page.</p>" }
   ]
 },
 
 { h: "Module 3 summary",
-  lead: "You know where bids come from, how to get invited, and how to choose. Next, you'll learn to read the plans.",
+  lead: "Get invited, read notices fast, bid only what you can win and fund, and learn the market from every tab.",
   body: `<ul>
-<li>Private bids come through general contractors; get on their lists with short emails, calls, fast prequalification and a weekly routine with an outreach log.</li>
-<li>Public bids are advertised; register on each agency's portal (PlanetBids, BuyNet, Caltrans) and on bid platforms, with complete profiles.</li>
-<li>Read every notice for license class, goals, mandatory meetings, bonds, schedule, establishment and liquidated damages. When you can't prime, sub to the primes on the planholders list.</li>
-<li>Decide go or no-go before you spend hours estimating.</li>
-<li>Size jobs to your cash, crews and bonding. Run the quick cash check, and a full table when jobs overlap or customers pay slowly.</li>
-<li>Research general contractors before you work for them.</li>
-<li>Track every bid and study bid tabs: low, median, spread and unit prices teach you the market.</li>
+<li>Private work: targeted email, call, fast prequal, logged weekly routine.</li>
+<li>Public work: a registration per agency portal; planholders lists bring addenda and connect you to primes.</li>
+<li>Notice lines that matter: prime license, mandatory meetings, security, goals, wages, working days, LDs, establishment, price guarantee.</li>
+<li>Hard stops, then the scorecard; decline politely to stay listed.</li>
+<li>Rough peak cash = monthly cost × months to first check + up-front costs; overlap and slow payers multiply it.</li>
+<li>Research GCs before estimating for them.</li>
+<li>Tabs: low vs. EE, median, spread and unit prices by quantity.</li>
 </ul>
-<p><strong>Next: Module 4 · Reading Landscape and Irrigation Plans.</strong></p>`
+<p><strong>Next:</strong> <a href="#m4-1">Module 4 · Reading Landscape and Irrigation Plans</a>.</p>`
 }
 ]
 });
