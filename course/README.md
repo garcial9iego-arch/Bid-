@@ -1,39 +1,39 @@
 # Commercial Landscape Bidding: course
 
-A 19-module, 189.5-hour course on bidding commercial landscape, irrigation and planting work in San Diego County, for someone starting from zero. It covers private work for general contractors and public work for cities, schools and agencies, plus the other scopes (demo, grading, drainage, hardscape) that often land in a landscape bid.
+A 19-module, 120-hour course covering the full bidding skill set for commercial landscape, irrigation and planting work in San Diego County: finding and qualifying jobs, plans and specs, takeoff, pricing, markup, prevailing wage, proposals, bid day and contract administration, plus the other scopes (demo, grading, drainage, hardscape) that land in landscape bids. Written for an experienced field professional new to commercial estimating: dense, direct, built on real San Diego bids.
 
 Each module is a set of written slides with:
 
-- plain-language main text, plus an optional "Go deeper" section for laws, numbers and fine print
+- the rule or method first, plus an optional "Go deeper" section for statute text and fine print
 - examples, "watch out" notes and a "Words to know" glossary
 - a self-check quiz and practice assignments with hour estimates
 - a read-aloud button on every slide
 
 ## Status
 
-All 19 modules (908 slides, 189.5 hours) are written, plus the Plan Set Deep Dive, the Real Bid Lab and the Bid Dictionary:
+All 19 modules (519 slides, 120 hours) are written, plus the Plan Set Deep Dive, the Real Bid Lab and the Bid Dictionary:
 
 | Module | Title | Slides | Hours |
 |---|---|---|---|
-| 0 | Foundations: Construction Math, Units and Tools | 52 | 8 |
-| 1 | How Construction Bidding Works | 46 | 9.5 |
-| 2 | Your License, Your Company and Getting Bid-Ready | 49 | 10 |
-| 3 | Finding Work and Deciding What to Bid | 42 | 10.5 |
-| 4 | Reading Landscape and Irrigation Plans | 51 | 13 |
-| 5 | Reading Specifications | 47 | 11.5 |
-| 6 | Irrigation Takeoff | 49 | 12 |
-| 7 | Planting, Soil and Hardscape Takeoff | 48 | 11 |
-| 8 | Pricing Materials and Working with Suppliers | 46 | 8 |
-| 9 | Labor, Production Rates and Equipment | 47 | 10 |
-| 10 | Overhead, Markup and Your Final Number | 46 | 8 |
-| 11 | Prevailing Wage and Public Works Compliance | 47 | 9 |
-| 12 | Pre-Bid Meetings, RFIs, Addenda and Communication | 50 | 9 |
-| 13 | Writing the Proposal | 50 | 9 |
-| 14 | Submitting Public Bids and Bid Day | 50 | 9 |
-| 15 | Real Bid Practice: Price It, Then Compare to the Winner | 26 | 8 |
-| 16 | After the Bid: Contracts, Billing and Growing the Division | 53 | 10 |
-| 17 | Other Scopes in Your Bid: Demo, Grading, Drainage, Hardscape and More | 55 | 10 |
-| 18 | Capstone: Bid the SR-905 Otay Mesa Job Start to Finish | 54 | 14 |
+| 0 | Estimator's Toolkit: Units, Factors and Takeoff Setup | 16 | 3 |
+| 1 | How Construction Bidding Works | 24 | 4 |
+| 2 | Your License, Your Company and Getting Bid-Ready | 27 | 6.25 |
+| 3 | Finding Work and Deciding What to Bid | 26 | 6.25 |
+| 4 | Reading Landscape and Irrigation Plans | 29 | 8 |
+| 5 | Reading Specifications | 28 | 8 |
+| 6 | Irrigation Takeoff | 30 | 9 |
+| 7 | Planting, Soil and Hardscape Takeoff | 30 | 8 |
+| 8 | Pricing Materials and Working with Suppliers | 25 | 5.5 |
+| 9 | Labor, Production Rates and Equipment | 28 | 6.5 |
+| 10 | Overhead, Markup and Your Final Number | 27 | 5.5 |
+| 11 | Prevailing Wage and Public Works Compliance | 27 | 6 |
+| 12 | Pre-Bid Meetings, RFIs, Addenda and Communication | 27 | 5 |
+| 13 | Writing the Proposal | 27 | 4.5 |
+| 14 | Submitting Public Bids and Bid Day | 28 | 6 |
+| 15 | Real Bid Practice: Price It, Then Compare to the Winner | 26 | 7 |
+| 16 | After the Bid: Contracts, Billing and Growing the Division | 28 | 6 |
+| 17 | Other Scopes in Your Bid: Demo, Grading, Drainage, Hardscape and More | 30 | 5.5 |
+| 18 | Capstone: Bid the SR-905 Otay Mesa Job Start to Finish | 36 | 10 |
 
 **Plan Set Deep Dive** (`src/plans.js`, 6 h workshop): the real 65-sheet 11-428704 plan set, every sheet ranked by importance to bidding, then close-ups of the price-driving sheets. Images in `src/img/pdd/` are crops of the public Caltrans plan PDFs.
 
