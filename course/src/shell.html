@@ -207,6 +207,9 @@ details.deeper .inner ul,details.deeper .inner ol{margin:0 0 8px;padding-left:1.
 .controls .mid{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .ghost{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px}
 .voicesel{max-width:12em}
+.script{border-top:1px dashed var(--line);padding:12px 24px 18px;display:grid;gap:4px}
+.script p{margin:0;font-size:15.5px;color:var(--muted);max-width:75ch}
+@media (max-width:520px){.script{padding:12px 16px 16px}}
 .ghost[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
 .kbd{font-family:var(--mono);font-size:12px;color:var(--muted)}
 /* Figures from real plan sheets */
@@ -351,15 +354,17 @@ function speakText(text, onend){
   const chunks = []; let cur = "";
   parts.forEach(p => { if((cur + p).length > 220 && cur){ chunks.push(cur); cur = p; } else cur += p; });
   if(cur.trim()) chunks.push(cur);
-  const v = pickVoice(); speechSynthesis.cancel();
+  const v = pickVoice(); speechSynthesis.cancel(); const tok = ++speechToken;
   chunks.forEach((c, k) => {
     const u = new SpeechSynthesisUtterance(c.trim()); if(v){ u.voice = v; u.lang = v.lang; }
     u.rate = store.get("rate", 1);
-    if(k === chunks.length - 1) u.onend = onend;
+    if(k === chunks.length - 1) u.onend = () => { if(tok === speechToken && onend) onend(); };
     speechSynthesis.speak(u);
   });
 }
-function stopSpeech(){ try { if(window.speechSynthesis) speechSynthesis.cancel(); } catch(e){} speaking = false; }
+let speechToken = 0, autoPending = false;
+function narrationFor(m, i){ const N = (window.NARRATION || {})[String(m.n)]; const e = N && N[i]; return e && e.h === m.slides[i].h ? e.say : null; }
+function stopSpeech(){ speechToken++;  try { if(window.speechSynthesis) speechSynthesis.cancel(); } catch(e){} speaking = false; }
 
 /* ---------- Navigation ---------- */
 function parseHash(){
@@ -638,12 +643,17 @@ function renderModule(scroll){
   if(!("speechSynthesis" in window)) rd.hidden = true;
   rd.onclick = () => {
     if(speaking){ stopSpeech(); rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; return; }
+    const script = narrationFor(m, i);
     const clone = sheet.querySelector(".sheet-body").cloneNode(true);
     clone.querySelectorAll("details:not([open]) .inner, select, .src").forEach(x => x.remove());
     clone.querySelectorAll("h1,h2,h3,h4,summary,b,strong,th").forEach(x => { if(!/[.!?:]\s*$/.test(x.textContent)) x.append(". "); });
     clone.querySelectorAll("p,li,td,dt,dd,div,figcaption,tr").forEach(x => x.append(" "));
     try {
-      speakText(clone.innerText.replace(/\s+/g, " "), () => { speaking = false; rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; });
+      speakText(script || clone.innerText.replace(/\s+/g, " "), () => {
+        speaking = false; rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud";
+        if(store.get("autoplay", false) && !last){ autoPending = true; go("module", m.n, i + 1); }
+        else if(store.get("autoplay", false) && last && nextMod){ autoPending = true; go("module", m.n + 1, 0); }
+      });
       speaking = true; rd.setAttribute("aria-pressed", "true"); rd.textContent = "Stop reading";
     } catch(e){ rd.hidden = true; }
   };
@@ -660,8 +670,22 @@ function renderModule(scroll){
   const rs = el("select", "ghost"); rs.setAttribute("aria-label", "Reading speed"); rs.hidden = rd.hidden;
   [[0.9, "0.9×"], [1, "1×"], [1.15, "1.15×"], [1.3, "1.3×"], [1.5, "1.5×"]].forEach(([v, t]) => { const o = new Option(t, v); if(+store.get("rate", 1) === v) o.selected = true; rs.append(o); });
   rs.onchange = () => { store.set("rate", +rs.value); if(speaking){ stopSpeech(); rd.click(); } };
-  tools.append(rd, vs, rs); top.append(label, tools);
-  sheet.append(top, renderSlide(m, i)); main.append(sheet);
+  const ap = el("button", "ghost", "Auto-advance"); ap.type = "button"; ap.hidden = rd.hidden;
+  ap.title = "When reading finishes, go to the next slide and keep reading";
+  ap.setAttribute("aria-pressed", String(!!store.get("autoplay", false)));
+  ap.onclick = () => { const on = !store.get("autoplay", false); store.set("autoplay", on); ap.setAttribute("aria-pressed", String(on)); };
+  const script = narrationFor(m, i);
+  const sc = el("button", "ghost", "Script"); sc.type = "button"; sc.hidden = !script;
+  sc.title = "Show what the narrator says on this slide";
+  sc.setAttribute("aria-pressed", String(!!store.get("showscript", false)));
+  tools.append(rd, vs, rs, ap, sc); top.append(label, tools);
+  sheet.append(top, renderSlide(m, i));
+  if(script){
+    const box = el("div", "script"); box.append(el("span", "eyebrow", "Narration script"), el("p", null, script));
+    box.hidden = !store.get("showscript", false); sheet.append(box);
+    sc.onclick = () => { const on = box.hidden; box.hidden = !on; store.set("showscript", on); sc.setAttribute("aria-pressed", String(on)); };
+  }
+  main.append(sheet);
   const ctr = el("div", "controls");
   const prev = el("button", "btn", "← Back"); prev.type = "button"; prev.disabled = i === 0;
   prev.onclick = () => go("module", m.n, i - 1);
@@ -673,6 +697,7 @@ function renderModule(scroll){
   ctr.append(prev, el("span", "kbd", "← → keys work too"), next);
   main.append(ctr);
   if(scroll) main.scrollIntoView({ block: "start", behavior: "auto" });
+  if(autoPending){ autoPending = false; setTimeout(() => { if(!speaking) rd.click(); }, 350); }
 }
 
 function render(scroll){
