@@ -1,4 +1,5 @@
 window.COURSE_OUTLINE = [
+  { n: 0,  hours: 8, title: "Foundations: Construction Math, Units and Tools", desc: "The math, units and computer skills every bid uses: area, volume, cubic yards, slope, plant spacing, scale, stationing, money math, spreadsheets, PDFs and file habits, with drills." },
   { n: 1,  hours: 6, title: "How Construction Bidding Works", desc: "The players, how money and paperwork move, private vs. public work, and how a contractor actually wins a job." },
   { n: 2,  hours: 6, title: "Your License, Your Company and Getting Bid-Ready", desc: "B and C-27 licenses, the new-company question, insurance, bonds, DIR registration, SLBE/ELBE and the bid-ready folder." },
   { n: 3,  hours: 6, title: "Finding Work and Deciding What to Bid", desc: "Getting on GC bid lists, bid platforms, public agency portals, reading a bid notice, go/no-go decisions and cash flow." },
