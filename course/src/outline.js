@@ -1,8 +1,8 @@
 window.COURSE_OUTLINE = [
-  { n: 0,  hours: 8, title: "Foundations: Construction Math, Units and Tools", desc: "The math, units and computer skills every bid uses: area, volume, cubic yards, slope, plant spacing, scale, stationing, money math, spreadsheets, PDFs and file habits, with drills." },
-  { n: 1,  hours: 9.5, title: "How Construction Bidding Works", desc: "The players, how money and paperwork move, private vs. public work, and how a contractor actually wins a job." },
-  { n: 2,  hours: 10, title: "Your License, Your Company and Getting Bid-Ready", desc: "B and C-27 licenses, the new-company question, insurance, bonds, DIR registration, SLBE/ELBE and the bid-ready folder." },
-  { n: 3,  hours: 10.5, title: "Finding Work and Deciding What to Bid", desc: "Getting on GC bid lists, bid platforms, public agency portals, reading a bid notice, go/no-go decisions and cash flow." },
+  { n: 0,  hours: 3, title: "Estimator's Toolkit: Units, Factors and Takeoff Setup", desc: "The conversions and conventions estimators use daily: pay units, CY from area and depth, slope and spacing factors, Caltrans plant groups, scale, stationing, PSI from elevation, markup vs. margin, working days and a takeoff sheet layout." },
+  { n: 1,  hours: 4, title: "How Construction Bidding Works", desc: "The players, how money and paperwork move, private vs. public work, and how a contractor actually wins a job." },
+  { n: 2,  hours: 6.25, title: "Your License, Your Company and Getting Bid-Ready", desc: "B and C-27 licenses, the new-company question, insurance, bonds, DIR registration, SLBE/ELBE and the bid-ready folder." },
+  { n: 3,  hours: 6.25, title: "Finding Work and Deciding What to Bid", desc: "Getting on GC bid lists, bid platforms, public agency portals, reading a bid notice, go/no-go decisions and cash flow." },
   { n: 4,  hours: 8, title: "Reading Landscape and Irrigation Plans", desc: "Sheet order, scales, legends, symbols, details, notes, and finding the civil and electrical sheets that touch your scope." },
   { n: 5,  hours: 8, title: "Reading Specifications", desc: "The project manual, CSI Division 32, the Greenbook and the City of San Diego Whitebook, and spec items that change your price." },
   { n: 6,  hours: 9, title: "Irrigation Takeoff", desc: "Counting heads, valves, controllers and backflow; measuring mainline and laterals by size; drip zones; sleeves and wire." },
