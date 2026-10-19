@@ -85,7 +85,7 @@ slides: [
 <tr><td>Paperwork</td><td>Submittals, as-builts, O&amp;M (operation and maintenance) manuals, certified payroll, safety plan</td><td>Office hours × rate</td></tr>
 <tr><td>Cleanup and disposal</td><td>Dump fees, green waste, final cleanup</td><td>Loads × cost per load</td></tr>
 </tbody></table></div>`,
-  watch: `<p>On a GC's (general contractor's) job, the GC often provides toilets, fencing and dumpsters. Read the GC's scope sheet. Don't price what they provide, and don't assume they provide what they don't. Demolition, grading, drainage and hardscape that GCs sometimes hand to landscape subs are separate scopes; see <a href="#m18-1">Module 18</a>.</p>`
+  watch: `<p>On a GC's (general contractor's) job, the GC often provides toilets, fencing and dumpsters. Read the GC's scope sheet. Don't price what they provide, and don't assume they provide what they don't. Demolition, grading, drainage and hardscape that GCs sometimes hand to landscape subs are separate scopes; see <a href="#m17-1">Module 17</a>.</p>`
 },
 
 { h: "Company overhead",

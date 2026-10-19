@@ -57,7 +57,7 @@ slides: [
 <thead><tr><th>Sheet (example)</th><th>Title</th><th>What you look for</th></tr></thead>
 <tbody>
 <tr><td>L-0.0</td><td>Landscape cover, general notes, abbreviations</td><td>Every abbreviation; notes that apply to all L-sheets</td></tr>
-<tr><td>L-1.0 to L-1.3</td><td>Hardscape or layout plans</td><td>Walls, paving, mow curbs, headers, boulders, sleeves; who builds them (Module 18)</td></tr>
+<tr><td>L-1.0 to L-1.3</td><td>Hardscape or layout plans</td><td>Walls, paving, mow curbs, headers, boulders, sleeves; who builds them (Module 17)</td></tr>
 <tr><td>L-2.0</td><td>Hardscape details</td><td>Edging, tree grates, planter walls</td></tr>
 <tr><td>L-3.0 to L-3.3</td><td>Irrigation plans</td><td>POC (point of connection), mainline, valves, heads, drip areas, controller</td></tr>
 <tr><td>L-3.4</td><td>Irrigation legend, notes and water calculations</td><td>Make and model of every part; the water budget</td></tr>
@@ -270,7 +270,7 @@ slides: [
 <tr><td>CMU</td><td>Concrete masonry unit (block)</td><td>Block walls and planters</td></tr>
 </tbody></table></div>`,
   ex: `<p>“FG 112.50” next to a dot means the soil surface at that spot must end at elevation 112.50 feet. “TW 116.00 / BW 112.50” at a planter wall means a wall 3.5 ft tall above finish grade (116.00 − 112.50 = 3.50).</p>`,
-  watch: `<p>Grading, drainage and hardscape are often handed to landscape subs. Module 18 covers pricing them (<a href="#m18-1">Module 18</a>). Here you only need to read them.</p>`
+  watch: `<p>Grading, drainage and hardscape are often handed to landscape subs. Module 17 covers pricing them (<a href="#m17-1">Module 17</a>). Here you only need to read them.</p>`
 },
 
 { h: "Grading marks you need to read",
@@ -287,7 +287,7 @@ slides: [
 <li class="hl"><div><b>A planted slope</b>Top of slope 130.0, toe 118.0, 24 ft apart on plan. Rise 12 ft, run 24 ft: 24 ÷ 12 = <strong>2:1</strong>, which is 50%. Crews plant slower here, and the spec may require erosion control fabric.</div></li>
 <li><div><b>Contours</b>1-ft contours that are 0.25" apart on a 1" = 20' sheet are 5 ft apart on the ground. 1 ft rise in 5 ft = 20%, or 5:1.</div></li>
 </ol>`,
-  watch: `<p>Plan area is flat area. A 2:1 slope has more real surface than the plan shows: about 1.118 times as much (the slope length, √(24² + 12²) = 26.8 ft, divided by the 24 ft run). For mulch or fabric on steep slopes, that difference is real material. Module 7 and <a href="#m18-1">Module 18</a> cover the pricing.</p>`
+  watch: `<p>Plan area is flat area. A 2:1 slope has more real surface than the plan shows: about 1.118 times as much (the slope length, √(24² + 12²) = 26.8 ft, divided by the 24 ft run). For mulch or fabric on steep slopes, that difference is real material. Module 7 and <a href="#m17-1">Module 17</a> cover the pricing.</p>`
 },
 
 { h: "Irrigation symbols: from the water source to the valve",
@@ -609,7 +609,7 @@ slides: [
 <li><strong>Drains in planting areas</strong> (area drains, subdrains): you must keep them clear and may be asked to install them.</li>
 </ul>`,
   ex: `<p>11-431064 (SR-905) put several of these in the landscape set itself: gravel mulch types with color requirements (“mostly red in color, closely resembling ‘red lava rock’”), rock blanket and HDPE (high-density polyethylene) edging with a separate layout detail (“See planting details for HDPE edging layout”). If you didn't read those sheets, you'd miss several rock products and an edging item.</p>`,
-  watch: `<p>Pricing hardscape, grading and drainage is a different skill. Module 18 covers the scopes GCs often hand to landscape subs (<a href="#m18-1">Module 18</a>). Here, just mark every hardscape item that touches your work and note who builds it.</p>`
+  watch: `<p>Pricing hardscape, grading and drainage is a different skill. Module 17 covers the scopes GCs often hand to landscape subs (<a href="#m17-1">Module 17</a>). Here, just mark every hardscape item that touches your work and note who builds it.</p>`
 },
 
 { h: "Coordination: who draws it, who builds it",

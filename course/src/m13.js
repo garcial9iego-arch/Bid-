@@ -233,7 +233,7 @@ slides: [
 <tr><td>Traffic control</td><td>Street-side work where the GC runs traffic control for everyone</td><td>You're the prime, or your work is the only work in the street</td></tr>
 <tr><td>SWPPP and BMPs</td><td>The GC holds the storm water permit for the site</td><td>The spec puts erosion control (fiber rolls, hydroseed) in your section</td></tr>
 </tbody></table></div>`,
-  ex: `<p>Many landscape subs get handed nearby scopes like demo, grading, drainage and hardscape. Module 18 covers how to price or exclude them: <a href="#m18-1">Module 18</a>.</p>`
+  ex: `<p>Many landscape subs get handed nearby scopes like demo, grading, drainage and hardscape. Module 17 covers how to price or exclude them: <a href="#m17-1">Module 17</a>.</p>`
 },
 
 { h: "Exclusions library · water, irrigation and power",
@@ -451,7 +451,7 @@ slides: [
 
 { h: "How GCs level bids, and how to make yours easy",
   lead: "The GC (general contractor) lines up every landscape proposal on one spreadsheet and adds plugs for missing items. The easiest proposal to level is often the one that gets carried.",
-  body: `<p>Review the leveling example in <a href="#m1-14">Module 1 · Bid leveling</a>. Then make your proposal easy to put on that spreadsheet:</p>
+  body: `<p>Review the leveling example in <a href="#m1-25">Module 1 · Bid leveling</a>. Then make your proposal easy to put on that spreadsheet:</p>
 <ol class="steps">
 <li><div><b>Use their breakdown</b>If the GC sends a scope sheet or bid form, follow its items and order.</div></li>
 <li class="hl"><div><b>One price per line</b>Every line item has its own number, and the lines add up to the total.</div></li>

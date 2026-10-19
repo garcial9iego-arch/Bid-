@@ -131,7 +131,7 @@ slides: [
 <tr><td><strong>A</strong></td><td>General Engineering</td><td>Required as prime on many street and park jobs</td></tr>
 </tbody></table></div>
 <p>If a piece is outside your C-27, either hire a licensed sub for it or exclude it clearly in your proposal.</p>`,
-  deeper: `<p>The scopes general contractors most often hand to landscape subs, like demolition, grading, drainage and hardscape, are covered in <a href="#m18-1">Module 18</a>. When in doubt about a class, read the full CSLB classification description or call CSLB.</p>`,
+  deeper: `<p>The scopes general contractors most often hand to landscape subs, like demolition, grading, drainage and hardscape, are covered in <a href="#m17-1">Module 17</a>. When in doubt about a class, read the full CSLB classification description or call CSLB.</p>`,
   src: "CSLB Licensing Classifications list (cslb.ca.gov, checked 2026)."
 },
 

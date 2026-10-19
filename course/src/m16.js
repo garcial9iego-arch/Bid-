@@ -544,7 +544,7 @@ slides: [
 <tr><td>Backfilling trenches</td><td>Pass the pressure test with the inspector present</td></tr>
 <tr><td>Planting</td><td>Finish irrigation, test coverage, complete weed control cycles</td></tr>
 </tbody></table></div>`,
-  watch: `<p>Before you accept an area from the GC (general contractor), walk it and note in writing: grade, debris, compacted soil, damaged sleeves, concrete washout. Once you start, you've accepted it. The City's K-24-1952 specs say exactly that: start of work “constitutes acceptance of the conditions.” If the GC hands you grading, drainage or hardscape work too, see <a href="#m18-1">Module 18</a>.</p>`,
+  watch: `<p>Before you accept an area from the GC (general contractor), walk it and note in writing: grade, debris, compacted soil, damaged sleeves, concrete washout. Once you start, you've accepted it. The City's K-24-1952 specs say exactly that: start of work “constitutes acceptance of the conditions.” If the GC hands you grading, drainage or hardscape work too, see <a href="#m17-1">Module 17</a>.</p>`,
   src: "City of San Diego K-24-1952-DBB-3-A, landscape Special Provisions."
 },
 
@@ -946,7 +946,7 @@ slides: [
 <li>Run plant establishment with a weekly checklist and a monthly report; close out with a checklist so retention comes back.</li>
 <li>Review job cost after every job and change rates on evidence; track KPIs monthly; plan hiring and bonding; grow in yearly steps.</li>
 </ul>
-<p><strong>You've finished the course.</strong> Keep pricing real jobs in the <a href="#lab">Real Bid Lab</a> and bring every result to your bid review meeting.</p>`
+<p><strong>Two modules to go.</strong> Module 17 covers the other scopes that land in landscape bids (demo, grading, drainage, hardscape and more). Module 18 is the capstone, where you bid a real Caltrans job start to finish. Keep pricing real jobs in the <a href="#lab">Real Bid Lab</a> and bring every result to your bid review meeting.</p>`
 }
 ]
 });

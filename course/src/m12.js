@@ -110,7 +110,7 @@ slides: [
 <li class="hl"><div><b>Walk the water path</b>Meter, backflow, POC (point of connection), mainline route, valve locations, controller and power.</div></li>
 <li><div><b>Walk the planting areas</b>Soils, slopes, existing plants to protect, weeds, drainage, edges and mow curbs.</div></li>
 <li><div><b>Walk access and staging</b>Gates, truck route, where a bin and pallets can go, parking for the crew.</div></li>
-<li><div><b>Look for scope that may land on you</b>Demolition, fine grading, drainage, site concrete and walls are sometimes handed to the landscape sub. Note what you see; <a href="#m18-1">Module 18</a> covers those scopes.</div></li>
+<li><div><b>Look for scope that may land on you</b>Demolition, fine grading, drainage, site concrete and walls are sometimes handed to the landscape sub. Note what you see; <a href="#m17-1">Module 17</a> covers those scopes.</div></li>
 <li><div><b>Take photos as you go</b>Follow the photo steps later in this module.</div></li>
 <li><div><b>Before you leave</b>Ask whether you may come back alone, and under what rules.</div></li>
 <li><div><b>Same day</b>Write up notes, file photos, and send your written questions.</div></li>
@@ -225,7 +225,7 @@ slides: [
 <tr><td>☐</td><td>Staging and bin location; secure overnight?</td><td></td></tr>
 <tr><td>☐</td><td>Crew parking within walking distance?</td><td></td></tr>
 <tr><td>☐</td><td>Work hours and noise limits; traffic control needed?</td><td></td></tr>
-<tr><td>☐</td><td>Other scopes seen (demo, grading, drainage, hardscape): see <a href="#m18-1">Module 18</a></td><td></td></tr>
+<tr><td>☐</td><td>Other scopes seen (demo, grading, drainage, hardscape): see <a href="#m17-1">Module 17</a></td><td></td></tr>
 <tr><td>☐</td><td>Drive time from our yard: ___ minutes</td><td></td></tr>
 <tr><td>☐</td><td>Questions to send in writing (numbered): ___</td><td></td></tr>
 </tbody></table></div>`,

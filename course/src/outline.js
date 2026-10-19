@@ -1,8 +1,8 @@
 window.COURSE_OUTLINE = [
   { n: 0,  hours: 8, title: "Foundations: Construction Math, Units and Tools", desc: "The math, units and computer skills every bid uses: area, volume, cubic yards, slope, plant spacing, scale, stationing, money math, spreadsheets, PDFs and file habits, with drills." },
-  { n: 1,  hours: 6, title: "How Construction Bidding Works", desc: "The players, how money and paperwork move, private vs. public work, and how a contractor actually wins a job." },
-  { n: 2,  hours: 6, title: "Your License, Your Company and Getting Bid-Ready", desc: "B and C-27 licenses, the new-company question, insurance, bonds, DIR registration, SLBE/ELBE and the bid-ready folder." },
-  { n: 3,  hours: 6, title: "Finding Work and Deciding What to Bid", desc: "Getting on GC bid lists, bid platforms, public agency portals, reading a bid notice, go/no-go decisions and cash flow." },
+  { n: 1,  hours: 9.5, title: "How Construction Bidding Works", desc: "The players, how money and paperwork move, private vs. public work, and how a contractor actually wins a job." },
+  { n: 2,  hours: 10, title: "Your License, Your Company and Getting Bid-Ready", desc: "B and C-27 licenses, the new-company question, insurance, bonds, DIR registration, SLBE/ELBE and the bid-ready folder." },
+  { n: 3,  hours: 10.5, title: "Finding Work and Deciding What to Bid", desc: "Getting on GC bid lists, bid platforms, public agency portals, reading a bid notice, go/no-go decisions and cash flow." },
   { n: 4,  hours: 13, title: "Reading Landscape and Irrigation Plans", desc: "Sheet order, scales, legends, symbols, details, notes, and finding the civil and electrical sheets that touch your scope." },
   { n: 5,  hours: 11.5, title: "Reading Specifications", desc: "The project manual, CSI Division 32, the Greenbook and the City of San Diego Whitebook, and spec items that change your price." },
   { n: 6,  hours: 12, title: "Irrigation Takeoff", desc: "Counting heads, valves, controllers and backflow; measuring mainline and laterals by size; drip zones; sleeves and wire." },
@@ -12,10 +12,10 @@ window.COURSE_OUTLINE = [
   { n: 10, hours: 8, title: "Overhead, Markup and Your Final Number", desc: "Knowing your real overhead, setting markup by job type, minimum margins and the final price review." },
   { n: 11, hours: 9, title: "Prevailing Wage and Public Works Compliance", desc: "Wage determinations, certified payroll, apprentices, DIR enforcement and building those costs into a public bid." },
   { n: 12, hours: 9, title: "Pre-Bid Meetings, RFIs, Addenda and Communication", desc: "What to ask at job walks, writing RFIs, tracking addenda, and how to talk to agencies and GC estimators." },
-  { n: 13, hours: 5, title: "Writing the Proposal", desc: "Scope letters, inclusions, exclusions, clarifications, alternates, unit prices and a proposal GCs can level easily." },
-  { n: 14, hours: 6, title: "Submitting Public Bids and Bid Day", desc: "Agency bid forms, bid bonds, subcontractor listing, SLBE/ELBE forms, electronic bidding and the bid opening." },
+  { n: 13, hours: 9, title: "Writing the Proposal", desc: "Scope letters, inclusions, exclusions, clarifications, alternates, unit prices and a proposal GCs can level easily." },
+  { n: 14, hours: 9, title: "Submitting Public Bids and Bid Day", desc: "Agency bid forms, bid bonds, subcontractor listing, SLBE/ELBE forms, electronic bidding and the bid opening." },
   { n: 15, hours: 8, title: "Real Bid Practice: Price It, Then Compare to the Winner", desc: "Price real past San Diego landscape and irrigation bids, then compare your line items to the winning and losing bids. The Real Bid Lab is open now with 5 Caltrans jobs." },
-  { n: 16, hours: 6, title: "After the Bid: Contracts, Billing and Growing the Division", desc: "Subcontracts, submittals, pay applications, retention, change orders, plant establishment and building a repeatable division." },
-  { n: 17, hours: 14, title: "Capstone: Bid the SR-905 Otay Mesa Job Start to Finish", desc: "Bid a real $4.2M Caltrans landscape job in 10 steps, from go/no-go to bid day, with an answer key from the real documents and a comparison to the three real bidders." },
-  { n: 18, hours: 10, title: "Other Scopes in Your Bid: Demo, Grading, Drainage, Hardscape and More", desc: "Demolition, grading and earthwork, erosion control, drainage, hardscape, walls, furnishings, lighting, turf, utilities and maintenance: who does it, what your license covers, how to take it off, price it, sub it out or exclude it." }
+  { n: 16, hours: 10, title: "After the Bid: Contracts, Billing and Growing the Division", desc: "Subcontracts, submittals, pay applications, retention, change orders, plant establishment and building a repeatable division." },
+  { n: 17, hours: 10, title: "Other Scopes in Your Bid: Demo, Grading, Drainage, Hardscape and More", desc: "Demolition, grading and earthwork, erosion control, drainage, hardscape, walls, furnishings, lighting, turf, utilities and maintenance: who does it, what your license covers, how to take it off, price it, sub it out or exclude it." },
+  { n: 18, hours: 14, title: "Capstone: Bid the SR-905 Otay Mesa Job Start to Finish", desc: "Bid a real $4.2M Caltrans landscape job in 10 steps, from go/no-go to bid day, with an answer key from the real documents and a comparison to the three real bidders." }
 ];

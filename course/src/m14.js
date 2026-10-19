@@ -73,7 +73,7 @@ slides: [
 { h: "Set up weeks before, not on bid day",
   lead: "Several accounts take days or weeks to approve. Set them up as soon as you decide to bid.",
   body: `<ol class="steps">
-<li><div><b>DIR registration</b>Registration with the Department of Industrial Relations, current for the whole bid and job. See <a href="#m2-10">Module 2</a>.</div></li>
+<li><div><b>DIR registration</b>Registration with the Department of Industrial Relations, current for the whole bid and job. See <a href="#m2-23">Module 2</a>.</div></li>
 <li class="hl"><div><b>City of San Diego prequalification</b>To bid as a prime, you must be prequalified for the total amount of your bid, alternates included. The City sets your MBC (maximum bidding capacity) from your bond letter and financial statement. Bid documents say to apply at least 2 weeks before bid opening; the City's page says 10 City working days. Use the earlier date.</div></li>
 <li><div><b>PlanetBids vendor account</b>Register on each agency's portal and get its digital ID. The City also requires your subs and suppliers to register before award.</div></li>
 <li><div><b>Caltrans Bidder ID and Bid Express</b>Request a Bidder ID from the Caltrans Office Engineer, then set up Bid Express and a digital ID. Caltrans says it can take 7 days or longer.</div></li>
@@ -320,7 +320,7 @@ slides: [
 </ul>`,
   ex: `<p><strong>Math:</strong> your bid on a City park job is $412,500. Bond at 10%: $412,500 × 0.10 = <strong>$41,250</strong>. Many sureties write the bid bond as “10% of the amount bid” so a late price change doesn't make it too small. ACCU's 11-428704 bond was for 10% of a $1,176,120 bid, or $117,612.</p>`,
   watch: `<p>Check the bond against the bid package: agency's exact name as obligee (the party the bond protects), project name and bid number, your exact legal name as on your CSLB license, the percent or amount, signatures and seal. The City rejects a bid if the PDF is missing at bid time or the original misses the next-day deadline.</p>`,
-  deeper: `<p>City wording: the surety “will pay to the City the damages, not exceeding the sum of 10% of the amount of the Bid,” if the winner fails to sign and give final bonds. The winner must sign and give bonds and insurance within 14 days of getting the contract (the 2023 package; the required documents table said 10 working days). Bonds basics are in <a href="#m2-8">Module 2</a>. Caltrans 2018 Standard Specifications 2-1.34 lists cash, cashier's check, certified check, a signed bidder's bond by an admitted surety insurer, or an electronic bond through an approved registry.</p>`,
+  deeper: `<p>City wording: the surety “will pay to the City the damages, not exceeding the sum of 10% of the amount of the Bid,” if the winner fails to sign and give final bonds. The winner must sign and give bonds and insurance within 14 days of getting the contract (the 2023 package; the required documents table said 10 working days). Bonds basics are in <a href="#m2-19">Module 2</a>. Caltrans 2018 Standard Specifications 2-1.34 lists cash, cashier's check, certified check, a signed bidder's bond by an admitted surety insurer, or an electronic bond through an approved registry.</p>`,
   src: "City of San Diego K-24-1952 Instructions to Bidders §§19, 22; Caltrans 11-428704 Notice to Bidders and ACCU Bidder's Bond page; Caltrans 2018 Standard Specifications 2-1.34."
 },
 

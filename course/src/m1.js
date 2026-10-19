@@ -168,7 +168,7 @@ slides: [
 </ul></div>
 </div>`,
   ex: `<p><strong>Real example, Caltrans 11-428704 (I-805 Chula Vista):</strong> the winning bidder listed subs for boring (Golden State Boring &amp; Pipe Jacking), electric service for irrigation (Perry Electric, item 69), traffic control (Synergy Traffic Control, items 3–6 and 8), temporary railing (Hi-Way Safety Rentals, item 7) and wood mulch (Turboscape, item 31). Even a landscape-heavy job needs other trades.</p>`,
-  deeper: `<p>When you hire a sub, you take on the GC's role for that piece: check their license and DIR (Department of Industrial Relations) registration, get their insurance certificate, and pay them on time. Other scopes landscape subs get handed, like demolition, grading, drainage and hardscape, are covered in <a href="#m18-1">Module 18</a>.</p>`,
+  deeper: `<p>When you hire a sub, you take on the GC's role for that piece: check their license and DIR (Department of Industrial Relations) registration, get their insurance certificate, and pay them on time. Other scopes landscape subs get handed, like demolition, grading, drainage and hardscape, are covered in <a href="#m17-1">Module 17</a>.</p>`,
   src: "Caltrans Bid Summary, contract 11-428704 (bid opened Sept. 8, 2021), List of Subcontractors, bidder 04."
 },
 
@@ -440,7 +440,7 @@ slides: [
 </ul></div>
 </div>`,
   watch: `<p>Sleeves under paving are often drawn on the landscape sheets but must be installed before paving, months before you start. Ask early who installs them.</p>`,
-  deeper: `<p>General contractors also hand landscape subs other scopes: demolition, fine and rough grading, area drains, site walls, paving, fencing. Those have their own risks. See <a href="#m18-1">Module 18</a>.</p>`
+  deeper: `<p>General contractors also hand landscape subs other scopes: demolition, fine and rough grading, area drains, site walls, paving, fencing. Those have their own risks. See <a href="#m17-1">Module 17</a>.</p>`
 },
 
 { h: "Bid leveling: how a general contractor compares subs",

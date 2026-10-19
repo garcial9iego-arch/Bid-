@@ -1,6 +1,6 @@
 # Commercial Landscape Bidding: course
 
-A 16-module, 100-hour course on bidding commercial landscape, irrigation and planting work in San Diego County, for someone starting from zero. It covers private work for general contractors and public work for cities, schools and agencies.
+A 19-module, 189.5-hour course on bidding commercial landscape, irrigation and planting work in San Diego County, for someone starting from zero. It covers private work for general contractors and public work for cities, schools and agencies, plus the other scopes (demo, grading, drainage, hardscape) that often land in a landscape bid.
 
 Each module is a set of written slides with:
 
@@ -11,30 +11,35 @@ Each module is a set of written slides with:
 
 ## Status
 
-All 16 modules (100 hours) are written, plus two practice sections:
+All 19 modules (908 slides, 189.5 hours) are written, plus the Plan Set Deep Dive, the Real Bid Lab and the Bid Dictionary:
 
-| Module | Title | Hours |
-|---|---|---|
-| 1 | How Construction Bidding Works | 6 |
-| 2 | Your License, Your Company and Getting Bid-Ready | 6 |
-| 3 | Finding Work and Deciding What to Bid | 6 |
-| 4 | Reading Landscape and Irrigation Plans | 8 |
-| 5 | Reading Specifications | 6 |
-| 6 | Irrigation Takeoff | 8 |
-| 7 | Planting, Soil and Hardscape Takeoff | 7 |
-| 8 | Pricing Materials and Working with Suppliers | 5 |
-| 9 | Labor, Production Rates and Equipment | 7 |
-| 10 | Overhead, Markup and Your Final Number | 5 |
-| 11 | Prevailing Wage and Public Works Compliance | 6 |
-| 12 | Pre-Bid Meetings, RFIs, Addenda and Communication | 5 |
-| 13 | Writing the Proposal | 5 |
-| 14 | Submitting Public Bids and Bid Day | 6 |
-| 15 | Real Bid Practice: full walkthrough of Caltrans 11-428704 | 8 |
-| 16 | After the Bid: Contracts, Billing and Growing the Division | 6 |
+| Module | Title | Slides | Hours |
+|---|---|---|---|
+| 0 | Foundations: Construction Math, Units and Tools | 52 | 8 |
+| 1 | How Construction Bidding Works | 46 | 9.5 |
+| 2 | Your License, Your Company and Getting Bid-Ready | 49 | 10 |
+| 3 | Finding Work and Deciding What to Bid | 42 | 10.5 |
+| 4 | Reading Landscape and Irrigation Plans | 51 | 13 |
+| 5 | Reading Specifications | 47 | 11.5 |
+| 6 | Irrigation Takeoff | 49 | 12 |
+| 7 | Planting, Soil and Hardscape Takeoff | 48 | 11 |
+| 8 | Pricing Materials and Working with Suppliers | 46 | 8 |
+| 9 | Labor, Production Rates and Equipment | 47 | 10 |
+| 10 | Overhead, Markup and Your Final Number | 46 | 8 |
+| 11 | Prevailing Wage and Public Works Compliance | 47 | 9 |
+| 12 | Pre-Bid Meetings, RFIs, Addenda and Communication | 50 | 9 |
+| 13 | Writing the Proposal | 50 | 9 |
+| 14 | Submitting Public Bids and Bid Day | 50 | 9 |
+| 15 | Real Bid Practice: Price It, Then Compare to the Winner | 26 | 8 |
+| 16 | After the Bid: Contracts, Billing and Growing the Division | 53 | 10 |
+| 17 | Other Scopes in Your Bid: Demo, Grading, Drainage, Hardscape and More | 55 | 10 |
+| 18 | Capstone: Bid the SR-905 Otay Mesa Job Start to Finish | 54 | 14 |
 
 **Plan Set Deep Dive** (`src/plans.js`, 6 h workshop): the real 65-sheet 11-428704 plan set, every sheet ranked by importance to bidding, then close-ups of the price-driving sheets. Images in `src/img/pdd/` are crops of the public Caltrans plan PDFs.
 
 **Real Bid Lab** (below): price five real Caltrans jobs and compare to every bidder.
+
+**Bid Dictionary** (`src/glossary.js`, shown by `src/dict.js` at `#dict`): 943 searchable words, abbreviations and phrases from plans, specs, bid forms, contracts and job-walk talk, each in plain words, many with a real example and a link to the module that teaches it.
 
 ## Real Bid Lab
 
@@ -55,12 +60,14 @@ Source data is saved in `data/caltrans/<contract>/` (Bid Summary PDF and text, b
 ```
 course/
   src/shell.html   page layout, styles and slide viewer
-  src/outline.js   the 16-module outline (titles, hours, descriptions)
+  src/outline.js   the module outline (titles, hours, descriptions)
   src/m1.js ...    one file per module (slides as data)
   src/plans.js     Plan Set Deep Dive workshop
   src/img/         plan sheet images used by the deep dive
   src/realbids.js  generated Real Bid Lab data (do not edit by hand)
   src/lab.js       Real Bid Lab pages
+  src/glossary.js  Bid Dictionary entries
+  src/dict.js      Bid Dictionary page (search, categories, A–Z)
   data/caltrans/   saved Caltrans source documents for the lab
   tools/           scripts that parse Caltrans Bid Summaries
   build.mjs        combines everything into one HTML file

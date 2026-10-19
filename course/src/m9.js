@@ -396,7 +396,7 @@ slides: [
 <tr><td>13 · Fiber rolls, staked</td><td>LF</td><td class="num">0.02–0.03</td></tr>
 <tr><td>20 · Plant establishment visit (per crew visit)</td><td>visit</td><td class="num">From your maintenance records</td></tr>
 </tbody></table></div>`,
-  watch: `<p>Hydroseed on the 11-422004, 11-430674 and 11-431064 Caltrans jobs ran $0.10 to $0.25 per SF all-in (bid item 210430). Most landscape contractors subcontract it. Get a sub quote rather than building a rate. Grading, demolition and hardscape rates belong to those scopes; see <a href="#m18-1">Module 18</a>.</p>`,
+  watch: `<p>Hydroseed on the 11-422004, 11-430674 and 11-431064 Caltrans jobs ran $0.10 to $0.25 per SF all-in (bid item 210430). Most landscape contractors subcontract it. Get a sub quote rather than building a rate. Grading, demolition and hardscape rates belong to those scopes; see <a href="#m17-1">Module 17</a>.</p>`,
   src: "Caltrans Bid Summaries, item 210430 Hydroseed: 11-422004 item 43, 11-431064 item 63, 11-430674 item 99 (Real Bid Lab data)."
 },
 

@@ -17,7 +17,7 @@ slides: [
     "Build a prevailing wage crew cost into a bid"
   ],
   time: [["Reading and slides", "4 h"], ["Practice assignments", "5 h"], ["Module total", "9 h"]],
-  body: `<p>Prevailing wage is the biggest difference between pricing a residential job and pricing a public one. The rates in this module are real, from the California Department of Industrial Relations (DIR) 2026-2 determinations for San Diego County, and from the federal wage decision for Caltrans job 11-428704 (<a href="#m15-17">Module 15</a>). Rates change every year. Always pull the current ones for your bid. Numbers marked “example” are made up for practice.</p>`,
+  body: `<p>Prevailing wage is the biggest difference between pricing a residential job and pricing a public one. The rates in this module are real, from the California Department of Industrial Relations (DIR) 2026-2 determinations for San Diego County, and from the federal wage decision for Caltrans job 11-428704 (<a href="#m15-16">Module 15</a>). Rates change every year. Always pull the current ones for your bid. Numbers marked “example” are made up for practice.</p>`,
   src: "California Labor Code §§1720–1861; DIR Office of the Director – Research, General Prevailing Wage Determinations (dir.ca.gov/oprl/DPreWageDetermination.htm)."
 },
 
@@ -495,7 +495,7 @@ slides: [
   lead: "You must be registered before you bid. Once you're working, the wage rates and DIR's (Department of Industrial Relations) notice go up on site, and your records must be ready to show.",
   body: `<div class="twocol">
 <div><h3>Registration (recap)</h3><ul>
-<li>Every contractor and sub on a public works job must be DIR-registered to bid, be listed or work. See <a href="#m2-10">Module 2</a>.</li>
+<li>Every contractor and sub on a public works job must be DIR-registered to bid, be listed or work. See <a href="#m2-23">Module 2</a>.</li>
 <li>$400 per fiscal year (July 1 to June 30). Late registration: $2,000 penalty, once in 12 months.</li>
 <li>The agency registers the project with DIR and gets a DIR project ID. You use it on eCPR (electronic certified payroll).</li>
 <li>Unregistered contractors on a job can be removed by a stop order.</li>

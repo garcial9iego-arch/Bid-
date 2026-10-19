@@ -577,7 +577,7 @@ slides: [
 <tr><td>Low landscape and seat walls</td><td>Length and height; footing per detail</td><td>LF or SF of face</td></tr>
 <tr><td>Boulders, cobble, stepping stones</td><td>Count by size, or area for cobble</td><td>EA, SF</td></tr>
 </tbody></table></div>
-<p>Module 18 covers demolition, grading, drainage and the larger hardscape scopes landscape subs get handed: <a href="#m18-1">go to Module 18</a>.</p>`,
+<p>Module 17 covers demolition, grading, drainage and the larger hardscape scopes landscape subs get handed: <a href="#m17-1">go to Module 17</a>.</p>`,
   watch: `<p>CSLB (Contractors State License Board) defines the C-27 as work on “landscape systems and facilities” that improve the grounds, including preparing and grading land “for the installation of any architectural, horticultural and decorative treatment or arrangement.” Larger walls, structural concrete, retaining walls and site lighting may need other classifications or an engineered design. Read the scope against the definition (Module 2) and, if unsure, ask CSLB before you bid it.</p>`,
   deeper: `<p>The full definition is in California Code of Regulations, Title 16, §832.27. On a private job, hardscape is often split between the landscape sub and the concrete or masonry sub. Read the GC's bid scope carefully and say in your proposal exactly which hardscape items you include (Module 13).</p>`,
   src: "CSLB C-27 Landscaping classification (16 CCR §832.27): cslb.ca.gov."
@@ -746,7 +746,7 @@ slides: [
 <tr><td>Plant establishment, 90 days weekly</td><td>90 ÷ 7</td><td>Visits</td><td class="num">13</td><td></td><td class="num">13</td></tr>
 </tbody></table></div>`,
   ex: `<p>Order quantity math: 99.9 × 1.05 = 104.9, rounded up to 105. 2,043 × 1.10 = 2,247.3, rounded up to 2,248. 5.56 × 1.2 = 6.67, about 6.7 CY.</p>`,
-  watch: `<p>Bioretention basins often have their own soil mix, underdrain and grading by the civil contractor. Before you price the cobble, read the civil sheets to see what is yours (Module 4, and Module 18 for drainage scope).</p>`
+  watch: `<p>Bioretention basins often have their own soil mix, underdrain and grading by the civil contractor. Before you price the cobble, read the civil sheets to see what is yours (Module 4, and Module 17 for drainage scope).</p>`
 },
 
 { h: "Check your takeoff against PQ-1",
@@ -839,7 +839,7 @@ slides: [
 <li><div><b>The spec says “amend per soils report,” and the report isn't in the bid set</b><em>Right move:</em> RFI for the report; if no answer by bid day, state your assumed rate (for example “4 CY compost per 1,000 SF”) in the proposal. <em>Why:</em> your number has to rest on something written.</div></li>
 <li><div><b>The plant legend shows groundcover at 18" o.c. (on center) but doesn't say square or triangular</b><em>Right move:</em> check the planting detail; if silent, ask, and state the pattern you priced. <em>Why:</em> 15% of the plants depends on it.</div></li>
 <li class="hl"><div><b>Your wood mulch total is 3,320 CY; the bid form says 3,290</b>It's a measured item. <em>Right move:</em> recheck your numbers, send a short inquiry, and plan to buy for your own takeoff. <em>Why:</em> a bid quantity lower than the plans isn't rounding.</div></li>
-<li><div><b>A GC's invitation lists “DG paths and seat walls” in your package</b><em>Right move:</em> take off the DG; check the wall height and footing against your license and the C-27 definition before including the walls. <em>Why:</em> some walls need another license or an engineer (see <a href="#m18-1">Module 18</a>).</div></li>
+<li><div><b>A GC's invitation lists “DG paths and seat walls” in your package</b><em>Right move:</em> take off the DG; check the wall height and footing against your license and the C-27 definition before including the walls. <em>Why:</em> some walls need another license or an engineer (see <a href="#m17-1">Module 17</a>).</div></li>
 <li><div><b>The plant establishment period is 750 working days</b><em>Right move:</em> convert to about 3 years, build a visit and hour plan, and flag it for wage escalation. <em>Why:</em> establishment is where bids on the same job differ by tens of thousands of dollars.</div></li>
 </ol>`
 },
