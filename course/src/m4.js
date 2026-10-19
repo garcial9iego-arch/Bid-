@@ -786,7 +786,7 @@ slides: [
 <li><strong>Plant schedule counts</strong> that don't match the symbols on the plan.</li>
 <li><strong>Missing sheets</strong> referenced in a callout but not in your set.</li>
 </ul>`,
-  watch: `<p>When the schedule and the plan disagree on a count, don't just pick one. Ask (RFI), and if there's no answer before bid day, state in your proposal which you priced.</p>`
+  watch: `<p>When the schedule and the plan disagree on a count, don't just pick one. Ask with an RFI (request for information), and if there's no answer before bid day, state in your proposal which you priced.</p>`
 },
 
 { h: "What the traps cost: three worked examples",
