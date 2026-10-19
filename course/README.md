@@ -7,7 +7,7 @@ Each module is a set of written slides with:
 - the rule or method first, plus an optional "Go deeper" section for statute text and fine print
 - examples, "watch out" notes and a "Words to know" glossary
 - a self-check quiz and practice assignments with hour estimates
-- a read-aloud button on every slide
+- a narration script for every slide (`src/narr/`): read aloud plays it in the browser's voice (best in Microsoft Edge with a "Natural" voice such as Ava), with voice and speed menus, auto-advance and a "Script" panel to read along
 
 ## Status
 
@@ -68,6 +68,7 @@ course/
   src/lab.js       Real Bid Lab pages
   src/glossary.js  Bid Dictionary entries
   src/dict.js      Bid Dictionary page (search, categories, A–Z)
+  src/narr/        narration scripts, one file per module (slide titles must match)
   data/caltrans/   saved Caltrans source documents for the lab
   tools/           scripts that parse Caltrans Bid Summaries
   build.mjs        combines everything into one HTML file
