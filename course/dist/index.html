@@ -214,6 +214,9 @@ details.deeper .inner ul,details.deeper .inner ol{margin:0 0 8px;padding-left:1.
 .controls .mid{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .ghost{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px}
 .voicesel{max-width:12em}
+.script{border-top:1px dashed var(--line);padding:12px 24px 18px;display:grid;gap:4px}
+.script p{margin:0;font-size:15.5px;color:var(--muted);max-width:75ch}
+@media (max-width:520px){.script{padding:12px 16px 16px}}
 .ghost[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
 .kbd{font-family:var(--mono);font-size:12px;color:var(--muted)}
 /* Figures from real plan sheets */
@@ -12413,6 +12416,25 @@ window.GLOSSARY = [
   window.DICT = { render, count: G.length };
 })();
 
+(window.NARRATION = window.NARRATION || {})["0"] = [
+  { h: "Estimator's Toolkit: Units, Factors and Takeoff Setup", say: "Welcome to the course. Here's how it works. Every slide has a read-aloud button, so you can listen while you look at the tables, and the Go deeper sections hold the fine print when you want it. But the real skill comes from the practice assignments, working on real jobs, so give those your best hours. We start with the toolkit: the conversions, field factors and sheet layout every landscape and irrigation takeoff runs on. The real numbers come from a Caltrans job on I-805 in Chula Vista, and anything made up is labeled that way." },
+  { h: "Pay units and area conversions", say: "Start with the unit printed on the bid form, because that's the unit you price in. The same mulch can be paid by the square foot on one job and by the cubic yard on the next. The table on screen lines up each unit with a real line from the Chula Vista job. The chain to memorize is short. Square feet divided by 9 gives square yards. Square feet divided by 43,560 gives acres. Here's the trap. Your PDF measure tool reports square feet. If the item is in square yards and you forget to divide by 9, your unit price is nine times off. That one mistake has sunk more than one bid." },
+  { h: "Volume: area × depth → CY, and rates per acre", say: "Now volume. The number to remember is 324. Cubic yards equals square feet times depth in inches, divided by 324, because that's 12 inches times 27 cubic feet. The top table gives you the yards per thousand square feet at common depths. Look at the real check below it. A compost callout of 310 square yards, run at the 200 cubic yards per acre rate, comes out to 12.8 yards, and the plan says 13. That's how you confirm you're reading the spec right. One more thing. The agency pays the bid quantity. Waste, settling and rounding to full loads belong in what you buy and inside your unit price, never in the quantity you price." },
+  { h: "Slope factor and slope area", say: "Plans are drawn flat, but slopes aren't. The real surface is the plan area times a slope factor, and the table gives you the common ones. On a 2 to 1 slope, it's 1.118, about 12 percent more surface than the plan shows. In the made-up example, 4,000 square feet of 2 to 1 needs 41.4 yards of mulch, not 37. Now check the measurement clause. Most items pay on plan area, so the factor goes into your cost, not your quantity. And here's the thing about slopes. They cost more in labor than in material. No wheelbarrows on 2 to 1, roped crews on steeper ground. Price those production rates separately." },
+  { h: "Plant spacing factors and Caltrans plant groups", say: "Plant counts. On square spacing, plants equal square feet divided by the spacing squared. On triangular, multiply by 1.155 first, which means about 15 percent more plants. Round counts up. If neither the legend nor the detail says which pattern, send an RFI or state your assumption, because that 15 percent is real money. The second table is the Caltrans plant groups. Each letter is a container size, and each group is its own bid item. A is a one-gallon, B is a five-gallon, K is a 24-inch box, H is a cutting. On the Chula Vista job, the cuttings line alone was nearly 62,000 iceplant. Never combine sizes on one line." },
+  { h: "Scale and stationing", say: "Two ways to get a length off a plan. With scale, feet equals paper inches times the scale, but only after you've checked the print size. A 24 by 36 sheet printed on 11 by 17 is half size, so one inch equals fifty feet now measures as one inch equals a hundred. Calibrate every sheet off a written dimension or the scale bar. Stationing is easier, because you don't measure at all. Station 298 plus 55 means 29,855 feet along that line. Subtract the lower station from the higher one and you have the length. The real supply line on screen comes out to 1,420 linear feet. Just remember, stations only compare on the same line." },
+  { h: "GPM, PSI and elevation", say: "You already know irrigation in the field, so think of this as reading the designer's mind. Every foot of rise costs 0.433 PSI. In the example, 80 PSI at the meter and a zone 46 feet uphill leaves about 60 PSI before friction. Rotors needing 45 still have some room. Put that zone 100 feet up and you've lost 43 PSI, which is why steep sites show booster pumps. The landscape architect designs the hydraulics, and you price what's drawn. But these numbers help you catch scope the drawings imply and don't itemize, like regulators, pump power or a bigger main. Raise those by RFI." },
+  { h: "Extensions, markup and margin", say: "Quantity times unit price is the extension. Simple, but look at the real numbers. The top two bids on the Chula Vista job were about 3,600 dollars apart on a 1.2 million dollar bid. That's three tenths of a percent. And one bidder priced the cuttings at six dollars each when others were under a dollar, about 322,000 dollars more on a single line. Now, markup and margin. Markup is on cost, margin is on price. Price equals cost divided by one minus the margin. The bottom table shows why it matters: a 25 percent markup is only a 20 percent margin. And on public unit-price bids, the unit price usually governs over your extension, so a unit price typo changes your total." },
+  { h: "Working days vs. calendar days", say: "Contract time is usually counted in working days, as the contract defines them. Bid deadlines are exact clock times. The Chula Vista job gave 120 working days to build plus 250 working days of plant establishment. 120 working days is about 24 weeks, more than five months before any weather. Bids opened at 2 PM on a Wednesday, on the agency's clock, and the addendum came out twelve calendar days earlier. Here's the catch. One contract can run three clocks at once. Those same specs gave five business days to dispute the weekly working day statement. Read the exact words on every deadline." },
+  { h: "Takeoff and pricing sheet layout", say: "This is the sheet you'll build and use for the rest of the course. Two tabs. The takeoff tab has one row per measurement, with a factor column where the slope, spacing, divide by 9 or divide by 324 happens. The pricing tab rolls those up by bid item with SUMIFS, and the tax and markup rates live in locked header cells. The key idea is in the example. Your extension always uses the agency's bid quantity, while your cost uses what you actually buy. The gap between them is your waste and quantity risk, priced inside the unit price. And never type a number over a formula. Color any hard-coded value so you can find it later." },
+  { h: "Drill 1 · Units and factors on real quantities", say: "Time to use it. These drills mix real Chula Vista quantities with a few made-up ones, and each one tests a single rule from this module. Work them on paper first, before you open Go deeper for the answers. If you miss one, go back to that slide rather than just reading the answer. Speed comes later. Right now you want the habit of checking units on every step." },
+  { h: "Drill 2 · Take off and price a small bed", say: "This one takes a single made-up bed all the way from takeoff to price. Area, plants, mulch, compost, edging, then tax and a 15 percent margin. Round purchases up, and watch the edging on that L-shape. It's a nice little trick. The answers are under Go deeper. Later in the course you'll add labor, equipment and overhead to the same bed." },
+  { h: "Words to know", say: "Here are the terms from this module. Most of them you'll use every day, so skim the list and make sure each one means something precise to you. Pay attention to markup versus margin, and working day versus calendar day. Those are the ones people mix up. Every bidding term is also in the Bid Dictionary." },
+  { h: "Check yourself", say: "A short quiz on the module. Tap an answer to check it, and read the explanation either way. Several of the wrong choices are the exact mistakes estimators make, like dividing by 9 instead of 27, or adding margin to cost. If one catches you, that's useful to know now rather than on bid day." },
+  { h: "Practice assignments", say: "This is where the skill actually comes from. First, build the two-tab sheet and run Drill 2 through it until it matches to the cent. Keep it, because it becomes your template. Then go into the Real Bid Lab and check the Chula Vista quantities, extensions and bidder spreads yourself, and measure a real supply line against its stations. Check each one off when you're done." },
+  { h: "Module 0 summary: the formula card", say: "So that's the toolkit. Keep this card beside every takeoff. Each row pairs a rule with the mistake it prevents, and every one of those mistakes has cost someone a bid. Nine times off on square yards, a 15 percent plant shortfall, a half-size print measured at full scale, margin confused with markup. Next, in Module 1, we step back and look at how construction bidding works as a whole: who's involved, how the money moves, and what a bid actually binds you to." }
+];
+
 </script>
 <script>
 (function(){
@@ -12452,15 +12474,17 @@ function speakText(text, onend){
   const chunks = []; let cur = "";
   parts.forEach(p => { if((cur + p).length > 220 && cur){ chunks.push(cur); cur = p; } else cur += p; });
   if(cur.trim()) chunks.push(cur);
-  const v = pickVoice(); speechSynthesis.cancel();
+  const v = pickVoice(); speechSynthesis.cancel(); const tok = ++speechToken;
   chunks.forEach((c, k) => {
     const u = new SpeechSynthesisUtterance(c.trim()); if(v){ u.voice = v; u.lang = v.lang; }
     u.rate = store.get("rate", 1);
-    if(k === chunks.length - 1) u.onend = onend;
+    if(k === chunks.length - 1) u.onend = () => { if(tok === speechToken && onend) onend(); };
     speechSynthesis.speak(u);
   });
 }
-function stopSpeech(){ try { if(window.speechSynthesis) speechSynthesis.cancel(); } catch(e){} speaking = false; }
+let speechToken = 0, autoPending = false;
+function narrationFor(m, i){ const N = (window.NARRATION || {})[String(m.n)]; const e = N && N[i]; return e && e.h === m.slides[i].h ? e.say : null; }
+function stopSpeech(){ speechToken++;  try { if(window.speechSynthesis) speechSynthesis.cancel(); } catch(e){} speaking = false; }
 
 /* ---------- Navigation ---------- */
 function parseHash(){
@@ -12739,12 +12763,17 @@ function renderModule(scroll){
   if(!("speechSynthesis" in window)) rd.hidden = true;
   rd.onclick = () => {
     if(speaking){ stopSpeech(); rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; return; }
+    const script = narrationFor(m, i);
     const clone = sheet.querySelector(".sheet-body").cloneNode(true);
     clone.querySelectorAll("details:not([open]) .inner, select, .src").forEach(x => x.remove());
     clone.querySelectorAll("h1,h2,h3,h4,summary,b,strong,th").forEach(x => { if(!/[.!?:]\s*$/.test(x.textContent)) x.append(". "); });
     clone.querySelectorAll("p,li,td,dt,dd,div,figcaption,tr").forEach(x => x.append(" "));
     try {
-      speakText(clone.innerText.replace(/\s+/g, " "), () => { speaking = false; rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; });
+      speakText(script || clone.innerText.replace(/\s+/g, " "), () => {
+        speaking = false; rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud";
+        if(store.get("autoplay", false) && !last){ autoPending = true; go("module", m.n, i + 1); }
+        else if(store.get("autoplay", false) && last && nextMod){ autoPending = true; go("module", m.n + 1, 0); }
+      });
       speaking = true; rd.setAttribute("aria-pressed", "true"); rd.textContent = "Stop reading";
     } catch(e){ rd.hidden = true; }
   };
@@ -12761,8 +12790,22 @@ function renderModule(scroll){
   const rs = el("select", "ghost"); rs.setAttribute("aria-label", "Reading speed"); rs.hidden = rd.hidden;
   [[0.9, "0.9×"], [1, "1×"], [1.15, "1.15×"], [1.3, "1.3×"], [1.5, "1.5×"]].forEach(([v, t]) => { const o = new Option(t, v); if(+store.get("rate", 1) === v) o.selected = true; rs.append(o); });
   rs.onchange = () => { store.set("rate", +rs.value); if(speaking){ stopSpeech(); rd.click(); } };
-  tools.append(rd, vs, rs); top.append(label, tools);
-  sheet.append(top, renderSlide(m, i)); main.append(sheet);
+  const ap = el("button", "ghost", "Auto-advance"); ap.type = "button"; ap.hidden = rd.hidden;
+  ap.title = "When reading finishes, go to the next slide and keep reading";
+  ap.setAttribute("aria-pressed", String(!!store.get("autoplay", false)));
+  ap.onclick = () => { const on = !store.get("autoplay", false); store.set("autoplay", on); ap.setAttribute("aria-pressed", String(on)); };
+  const script = narrationFor(m, i);
+  const sc = el("button", "ghost", "Script"); sc.type = "button"; sc.hidden = !script;
+  sc.title = "Show what the narrator says on this slide";
+  sc.setAttribute("aria-pressed", String(!!store.get("showscript", false)));
+  tools.append(rd, vs, rs, ap, sc); top.append(label, tools);
+  sheet.append(top, renderSlide(m, i));
+  if(script){
+    const box = el("div", "script"); box.append(el("span", "eyebrow", "Narration script"), el("p", null, script));
+    box.hidden = !store.get("showscript", false); sheet.append(box);
+    sc.onclick = () => { const on = box.hidden; box.hidden = !on; store.set("showscript", on); sc.setAttribute("aria-pressed", String(on)); };
+  }
+  main.append(sheet);
   const ctr = el("div", "controls");
   const prev = el("button", "btn", "← Back"); prev.type = "button"; prev.disabled = i === 0;
   prev.onclick = () => go("module", m.n, i - 1);
@@ -12774,6 +12817,7 @@ function renderModule(scroll){
   ctr.append(prev, el("span", "kbd", "← → keys work too"), next);
   main.append(ctr);
   if(scroll) main.scrollIntoView({ block: "start", behavior: "auto" });
+  if(autoPending){ autoPending = false; setTimeout(() => { if(!speaking) rd.click(); }, 350); }
 }
 
 function render(scroll){
