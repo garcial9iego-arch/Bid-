@@ -53,7 +53,7 @@ slides: [
 },
 
 { h: "Clause by clause · scope, documents and flow-down",
-  lead: "The scope clause decides what you must build. It should point to your proposal, not just “the plans and specs.”",
+  lead: "The scope clause decides what you must build. It should point to your proposal. “The plans and specs” alone leaves your exclusions out.",
   exLabel: "Sample clause (made up for teaching)",
   ex: `<p>“Subcontractor shall furnish all labor, materials, equipment and services necessary for the complete landscape and irrigation work, as shown or reasonably inferable from the Contract Documents, including all work customarily performed by the landscape trade. Subcontractor is bound to Contractor by the terms of the Prime Contract to the same extent Contractor is bound to Owner.”</p>`,
   body: `<div class="tablewrap"><table>
@@ -601,7 +601,7 @@ slides: [
   lead: "A one-page monthly report to the GC (general contractor) or inspector turns your visits into proof.",
   exLabel: "Report template (made-up example entries)",
   body: `<div class="tablewrap"><table>
-<thead><tr><th colspan="2">Plant Establishment Report · Month 2 of 3 · Period start (acceptance): 05/04/2026</th></tr></thead>
+<thead><tr><th colspan="2">Plant Establishment Report · Month 1 of 3 (May) · Period start (acceptance): 05/04/2026</th></tr></thead>
 <tbody>
 <tr><td>Visits this month</td><td>4 (05/04, 05/11, 05/18, 05/25) · 46 crew hours</td></tr>
 <tr><td>Watering schedule</td><td>Spring program; run times raised 15% on 05/18 for heat</td></tr>

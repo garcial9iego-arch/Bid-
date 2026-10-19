@@ -501,7 +501,7 @@ slides: [
   lead: "An addendum after you've sent your proposal means a revised proposal, clearly marked, even if your price doesn't change.",
   body: `<ol class="steps">
 <li><div><b>Read the addendum the day it comes out</b>Log it (Module 12). Mark every change that touches landscape, irrigation or your exclusions.</div></li>
-<li><div><b>Re-price only what changed</b>Change quantities on your takeoff and recap sheet, not just on the proposal.</div></li>
+<li><div><b>Re-price only what changed</b>Change quantities on your takeoff and recap sheet first, then on the proposal.</div></li>
 <li class="hl"><div><b>Mark the revision</b>“Proposal #26-041 Rev. 1, dated 07/09/2026, supersedes the 07/08/2026 proposal.”</div></li>
 <li><div><b>Add the addendum to the document list</b>“Addendum 3 (07/08/2026).”</div></li>
 <li><div><b>Say what changed in one line</b>“Rev. 1 adds Addendum 3: (6) added 24" box trees at the north lot. Base bid increased $3,840.”</div></li>
