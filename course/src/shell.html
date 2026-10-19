@@ -207,6 +207,13 @@ details.deeper .inner ul,details.deeper .inner ol{margin:0 0 8px;padding-left:1.
 .controls .mid{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .ghost{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px}
 .voicesel{max-width:12em}
+.gl{display:inline-grid;place-items:center;width:15px;height:15px;margin:0 1px 0 3px;padding:0;border:1px solid var(--accent);border-radius:50%;background:var(--accent-soft);color:var(--accent);font:italic 700 10px/1 Georgia,serif;vertical-align:super;cursor:pointer}
+.gl:hover{background:var(--accent);color:var(--sheet)}
+.glpop{position:absolute;z-index:30;background:var(--sheet);color:var(--ink);border:1.5px solid var(--accent);border-radius:8px;box-shadow:0 8px 28px rgba(0,0,0,.18);padding:12px 14px;display:grid;gap:6px;font-size:15px;line-height:1.5}
+.glh{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+.glf{display:flex;gap:8px;justify-content:space-between;margin-top:4px}
+.glf .ghost{font-size:13px;padding:4px 10px}
+
 .script{border-top:1px dashed var(--line);padding:12px 24px 18px;display:grid;gap:4px}
 .script p{margin:0;font-size:15.5px;color:var(--muted);max-width:75ch}
 @media (max-width:520px){.script{padding:12px 16px 16px}}
@@ -645,7 +652,7 @@ function renderModule(scroll){
     if(speaking){ stopSpeech(); rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; return; }
     const script = narrationFor(m, i);
     const clone = sheet.querySelector(".sheet-body").cloneNode(true);
-    clone.querySelectorAll("details:not([open]) .inner, select, .src").forEach(x => x.remove());
+    clone.querySelectorAll("details:not([open]) .inner, select, .src, .gl").forEach(x => x.remove());
     clone.querySelectorAll("h1,h2,h3,h4,summary,b,strong,th").forEach(x => { if(!/[.!?:]\s*$/.test(x.textContent)) x.append(". "); });
     clone.querySelectorAll("p,li,td,dt,dd,div,figcaption,tr").forEach(x => x.append(" "));
     try {
@@ -679,7 +686,8 @@ function renderModule(scroll){
   sc.title = "Show what the narrator says on this slide";
   sc.setAttribute("aria-pressed", String(!!store.get("showscript", false)));
   tools.append(rd, vs, rs, ap, sc); top.append(label, tools);
-  sheet.append(top, renderSlide(m, i));
+  const slideEl = renderSlide(m, i); if(m.slides[i].t !== "terms") tagTerms(slideEl);
+  sheet.append(top, slideEl);
   if(script){
     const box = el("div", "script"); box.append(el("span", "eyebrow", "Narration script"), el("p", null, script));
     box.hidden = !store.get("showscript", false); sheet.append(box);
@@ -701,7 +709,7 @@ function renderModule(scroll){
 }
 
 function render(scroll){
-  stopSpeech();
+  stopSpeech(); closeGloss();
   renderNav();
   if(cur.view === "module" && MODS[cur.m]) renderModule(scroll);
   else if(cur.view === "lab" && window.LAB){
@@ -721,6 +729,99 @@ document.addEventListener("keydown", e => {
   if(e.key === "ArrowRight" && cur.i < m.slides.length - 1) go("module", m.n, cur.i + 1);
   if(e.key === "ArrowLeft" && cur.i > 0) go("module", m.n, cur.i - 1);
 });
+
+/* ---------- Bid Dictionary info buttons ----------
+   After a slide renders, the first mention of each Bid Dictionary term or abbreviation gets a small "i" button.
+   Clicking it shows the definition in a popover. */
+const GL = (() => {
+  const G = window.GLOSSARY || [];
+  if(!G.length) return null;
+  // Everyday words that would put a button on nearly every slide.
+  const STOP = new Set("bid day hour each equal owner quantity sample schedule section sheet shall similar provide profit proposal estimate budget award claim delay detail dimension engineer extension filter flat float gallon pound ton zone reference revision scale spread variable volt watt carry cut fill plug offset principal execution inspector manufacturer nursery radius diameter coverage craft turnover cost price plan plans item unit work job contract".split(" "));
+  // Abbreviations that mean something else in this course (artificial intelligence, Bidder ID).
+  const ABBR_SKIP = new Set(["AI", "ID", "@", "%", "±"]);
+  const ALIAS_OK = new Set("payables receivables ampere blacktop backcharge collusion bioswale washout grow-out wrap-up timer cost-reimbursable crew-day dailies davis-bacon emitter micro-irrigation wattle flow-down ring-tite rotor sandbag hydroseeding indemnification dripline journey-level man-hour proctor non-responsive overex subsistence post-emergent potholing pre-bid kickoff preconstruction prelim prequal punchlist retainage pot-bound self-perform sprigs y-strainer sub-sub bulking subdrain hydro-excavation backflow caliper establishment".split(" "));
+  // Where one abbreviation has several meanings, show the one this course uses most first.
+  const PREFER = { GC: "General contractor", PCC: "Public Contract Code" };
+  const termKeys = new Map(), abbrKeys = new Map();
+  const add = (map, k, e) => { if(!map.has(k)) map.set(k, []); if(!map.get(k).includes(e)) map.get(k).push(e); };
+  G.forEach(e => {
+    const t = e.term.trim();
+    if(t.length >= 3 && !STOP.has(t.toLowerCase())) add(termKeys, t.toLowerCase(), e);
+    String(e.also || "").split(/;|,/).map(x => x.trim()).filter(Boolean).forEach(a => {
+      if(/^[A-Z0-9&/#.-]{2,}$/.test(a) && /[A-Z]/.test(a)) add(abbrKeys, a, e);
+      // Single-word aliases are often everyday words ("table", "grade", "left"); only use the distinctive ones.
+      else if(/\s/.test(a) ? a.length >= 4 : ALIAS_OK.has(a.toLowerCase())) add(termKeys, a.toLowerCase(), e);
+    });
+    if(e.abbr && e.abbr.length >= 2 && /[A-Za-z]/.test(e.abbr) && !ABBR_SKIP.has(e.abbr)) add(abbrKeys, e.abbr, e);
+  });
+  Object.entries(PREFER).forEach(([k, t]) => { const l = abbrKeys.get(k); if(l) l.sort((a, b) => (b.term === t) - (a.term === t)); });
+  const esc = x => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const keys = [...termKeys.keys(), ...abbrKeys.keys()].sort((a, b) => b.length - a.length).map(esc);
+  // Whole words only; terms may take a plural "s"/"es"; abbreviations followed by "-digit" are sheet codes (PL-1, IP-7), so skip those.
+  const re = new RegExp("(?<![A-Za-z0-9])(" + keys.join("|") + ")(e?s)?(?![A-Za-z0-9])(?!-\\d)", "gi");
+  function lookup(word){
+    const exact = abbrKeys.get(word); if(exact) return exact;
+    return termKeys.get(word.toLowerCase()) || null;
+  }
+  return { re, lookup, lookupTerm: w => termKeys.get(w.toLowerCase()) || null };
+})();
+
+function tagTerms(root){
+  if(!GL) return;
+  const done = new Set();
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode(n){
+    const p = n.parentElement;
+    if(!p || p.closest("h1,h2,h3,a,button,select,option,label.q,.src,.gl,.scorer,.fig,summary,code,.eyebrow,.mono")) return NodeFilter.FILTER_REJECT;
+    return /[A-Za-z]{2}/.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+  }});
+  const nodes = []; while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node => {
+    const text = node.nodeValue; GL.re.lastIndex = 0;
+    const frag = document.createDocumentFragment(); let last = 0, m, hit = false;
+    while((m = GL.re.exec(text))){
+      // A plural ending is only allowed on whole terms, not abbreviations.
+      const ents = m[2] ? GL.lookupTerm(m[1]) : GL.lookup(m[1]);
+      if(!ents) continue;
+      const id = ents[0].term;
+      if(done.has(id)) continue;
+      done.add(id); hit = true;
+      const end = m.index + m[0].length;
+      frag.append(text.slice(last, end));
+      const b = document.createElement("button"); b.type = "button"; b.className = "gl"; b.textContent = "i";
+      b.setAttribute("aria-label", "Define " + m[0]); b.title = "Bid Dictionary: " + ents[0].term;
+      b.onclick = ev => { ev.stopPropagation(); openGloss(b, ents); };
+      frag.append(b); last = end;
+    }
+    if(hit){ frag.append(text.slice(last)); node.parentNode.replaceChild(frag, node); }
+  });
+}
+
+function closeGloss(){ const o = document.querySelector(".glpop"); if(o) o.remove(); }
+function openGloss(btn, ents){
+  const was = document.querySelector(".glpop"); closeGloss();
+  if(was && was.dataset.for === ents[0].term) return;
+  const pop = el("div", "glpop"); pop.setAttribute("role", "dialog"); pop.dataset.for = ents[0].term;
+  ents.forEach(e => {
+    const h = el("div", "glh"); h.append(el("strong", null, e.term)); if(e.abbr) h.append(el("span", "dict-a", e.abbr));
+    const d = el("div", "gld"); d.innerHTML = e.def;
+    pop.append(h, d);
+    if(e.ex){ const x = el("div", "dict-x"); x.innerHTML = e.ex; pop.append(x); }
+  });
+  const foot = el("div", "glf");
+  const more = el("button", "ghost", "Open in Bid Dictionary"); more.type = "button";
+  more.onclick = () => { closeGloss(); if(window.DICT){ window.DICT.setQuery(ents[0].abbr || ents[0].term); go("dict", null, 0); } };
+  const x = el("button", "ghost", "Close"); x.type = "button"; x.onclick = closeGloss;
+  foot.append(more, x); pop.append(foot);
+  document.body.append(pop);
+  const r = btn.getBoundingClientRect(), pw = Math.min(360, window.innerWidth - 24);
+  pop.style.width = pw + "px";
+  let left = r.left + window.scrollX - 20; left = Math.max(12 + window.scrollX, Math.min(left, window.scrollX + window.innerWidth - pw - 12));
+  pop.style.left = left + "px"; pop.style.top = (r.bottom + window.scrollY + 6) + "px";
+  more.focus({ preventScroll: true });
+}
+document.addEventListener("click", e => { if(!e.target.closest(".glpop,.gl")) closeGloss(); });
+document.addEventListener("keydown", e => { if(e.key === "Escape") closeGloss(); });
 
 function openZoom(src, alt){
   const box = el("div", "zoombox"); box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true"); box.setAttribute("aria-label", alt || "Plan sheet");

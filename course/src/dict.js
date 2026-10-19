@@ -73,5 +73,5 @@
     sel.onchange = () => { cat = sel.value; draw(); };
     draw();
   }
-  window.DICT = { render, count: G.length };
+  window.DICT = { render, count: G.length, setQuery(v){ q = String(v || ""); cat = ""; } };
 })();
