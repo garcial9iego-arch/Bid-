@@ -411,15 +411,15 @@ function renderHome(){
   const main = $("main"); main.innerHTML = "";
   const totalH = OUT.reduce((a, o) => a + o.hours, 0);
   const hero = document.createElement("section"); hero.className = "home-hero";
-  hero.innerHTML = '<span class="eyebrow">Start here · from zero to bidding</span>' +
+  hero.innerHTML = '<span class="eyebrow">Commercial estimating · San Diego</span>' +
     '<h1>Learn to bid commercial landscape work</h1>' +
-    '<p>This course is for someone who has never bid a commercial job. It takes you from "what is a bid?" to pricing real San Diego landscape and irrigation projects and comparing your number to the contractor who actually won. It covers private jobs for general contractors and public jobs for cities, schools and agencies.</p>' +
+    '<p>The full bidding skill set for commercial landscape, irrigation and planting work: finding and qualifying jobs, reading plans and specs, takeoff, pricing, markup, public-works compliance, proposals, bid day and contract administration. Built on real San Diego bids, so you can price a job and compare your number to the contractor who won.</p>' +
     '<div class="btnrow"><button class="btn primary" type="button" id="startBtn">Start Module ' + (OUT[0] ? OUT[0].n : 1) + ' →</button><button class="btn" type="button" id="resumeBtn">Resume where I left off</button></div>';
   main.append(hero);
   const how = document.createElement("section"); how.className = "how";
   how.innerHTML = [
-    ["Plain words first", "Every slide starts in simple language. Open “Go deeper” when you want the laws, numbers and fine print."],
-    ["Practice is the course", "Most of the " + totalH + " hours are hands-on: real bid documents, calls, takeoffs and bid results, not reading."],
+    ["Rule first, detail on demand", "Each slide leads with the rule or method. “Go deeper” holds statute text, edge cases and fine print."],
+    ["Practice on real jobs", "Most of the " + totalH + " hours are hands-on: real plans, specs, takeoffs, supplier calls and bid results."],
     ["Read aloud", "Press “Read aloud” on any slide to hear it. Use the arrow keys or the buttons to move between slides."],
     ["Check the source", "Fees, limits and rules change. When a number matters for a real bid, confirm it at the source given on the slide."]
   ].map(x => '<div><h3>' + x[0] + '</h3><p>' + x[1] + '</p></div>').join("");
