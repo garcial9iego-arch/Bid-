@@ -183,7 +183,7 @@ slides: [
 <li>Each controller is its own bid item (items 41–44), each “48 station irrigation controller and enclosure.”</li>
 <li>The Special Provisions say payment for the <strong>concrete foundation and pad, and conduit sweeps</strong> for the controller enclosure cabinet is included in the controller payment. Take them off anyway: CY of concrete, LF of conduit, sweeps EA.</li>
 <li>The spec names the brand and lists Caltrans' quoted prices from a local supplier, with modems, radios and a 5-year data plan. Every one of those parts is in the bid item.</li>
-<li>Controller '166B' has no backflow or flow sensor of its own on IQ-3. The spec gives it a radio and a flow-sharing software option so it can use '166A's flow sensor.</li>
+<li>Controller '166B' has no backflow or flow sensor of its own on IQ-3. The spec gives '166A' and '166B' a spread spectrum radio and a shared flow-monitoring software option, so the two controllers work together. Read the spec list for each controller: they are not all the same package.</li>
 </ul>`,
   watch: `<p>A controller with every station used ('166B' here) is fine for a public job built to plan. On a private job, check whether the spec asks for spare stations. Adding a bigger controller later is a change order (Module 16) the owner may not want to pay.</p>`,
   src: "Caltrans 11-431064 Bid Item List items 41–44; plans IQ-1, IQ-2, IQ-3; Special Provisions additions to sections 20-2.05B, 20-2.06B(2)(a) and 20-2.06D."
