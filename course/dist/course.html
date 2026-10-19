@@ -206,6 +206,7 @@ details.deeper .inner ul,details.deeper .inner ol{margin:0 0 8px;padding-left:1.
 .controls{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
 .controls .mid{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .ghost{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px}
+.voicesel{max-width:12em}
 .ghost[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
 .kbd{font-family:var(--mono);font-size:12px;color:var(--muted)}
 /* Figures from real plan sheets */
@@ -12426,6 +12427,29 @@ function seen(n){ return new Set(store.get("seen:" + n, [])); }
 function markSeen(n, i){ const s = seen(n); if(!s.has(i)){ s.add(i); store.set("seen:" + n, [...s]); } }
 function pct(n){ const m = MODS[n]; if(!m) return 0; return Math.round(seen(n).size / m.slides.length * 100); }
 
+/* Voices: prefer natural/neural English voices (Edge exposes Microsoft "Online (Natural)" voices). */
+let voices = [];
+function loadVoices(){ try { voices = speechSynthesis.getVoices().filter(v => /^en(-|_|$)/i.test(v.lang)); } catch(e){ voices = []; } }
+if("speechSynthesis" in window){ loadVoices(); try { speechSynthesis.addEventListener("voiceschanged", loadVoices); } catch(e){} }
+function voiceScore(v){ let s = 0; if(/natural|neural|online/i.test(v.name)) s += 10; if(/en-US/i.test(v.lang)) s += 3; if(/google/i.test(v.name)) s += 2; if(v.localService === false) s += 1; return s; }
+function pickVoice(){
+  if(!voices.length) loadVoices();
+  const saved = store.get("voice", "");
+  return voices.find(v => v.name === saved) || voices.slice().sort((a, b) => voiceScore(b) - voiceScore(a))[0] || null;
+}
+function speakText(text, onend){
+  const parts = text.match(/[^.!?;:]+[.!?;:]*\s*/g) || [text];
+  const chunks = []; let cur = "";
+  parts.forEach(p => { if((cur + p).length > 220 && cur){ chunks.push(cur); cur = p; } else cur += p; });
+  if(cur.trim()) chunks.push(cur);
+  const v = pickVoice(); speechSynthesis.cancel();
+  chunks.forEach((c, k) => {
+    const u = new SpeechSynthesisUtterance(c.trim()); if(v){ u.voice = v; u.lang = v.lang; }
+    u.rate = store.get("rate", 1);
+    if(k === chunks.length - 1) u.onend = onend;
+    speechSynthesis.speak(u);
+  });
+}
 function stopSpeech(){ try { if(window.speechSynthesis) speechSynthesis.cancel(); } catch(e){} speaking = false; }
 
 /* ---------- Navigation ---------- */
@@ -12707,13 +12731,25 @@ function renderModule(scroll){
     if(speaking){ stopSpeech(); rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; return; }
     const clone = sheet.querySelector(".sheet-body").cloneNode(true);
     clone.querySelectorAll("details:not([open]) .inner, select, .src").forEach(x => x.remove());
+    clone.querySelectorAll("h1,h2,h3,h4,summary,b,strong,th").forEach(x => { if(!/[.!?:]\s*$/.test(x.textContent)) x.append(". "); });
+    clone.querySelectorAll("p,li,td,dt,dd,div,figcaption,tr").forEach(x => x.append(" "));
     try {
-      const u = new SpeechSynthesisUtterance(clone.innerText.replace(/\s+/g, " "));
-      u.rate = 0.95; u.onend = () => { speaking = false; rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; };
-      speechSynthesis.cancel(); speechSynthesis.speak(u); speaking = true; rd.setAttribute("aria-pressed", "true"); rd.textContent = "Stop reading";
+      speakText(clone.innerText.replace(/\s+/g, " "), () => { speaking = false; rd.setAttribute("aria-pressed", "false"); rd.textContent = "Read aloud"; });
+      speaking = true; rd.setAttribute("aria-pressed", "true"); rd.textContent = "Stop reading";
     } catch(e){ rd.hidden = true; }
   };
-  tools.append(rd); top.append(label, tools);
+  const vs = el("select", "ghost voicesel"); vs.setAttribute("aria-label", "Voice");
+  const fillVoices = () => {
+    vs.innerHTML = ""; const cur = pickVoice();
+    voices.slice().sort((a, b) => voiceScore(b) - voiceScore(a) || a.name.localeCompare(b.name)).forEach(v => { const o = new Option(v.name.replace(/^Microsoft /, "").replace(/ - English.*$/, ""), v.name); if(cur && v.name === cur.name) o.selected = true; vs.append(o); });
+    vs.hidden = rd.hidden || voices.length < 2;
+  };
+  fillVoices(); if("speechSynthesis" in window) try { speechSynthesis.addEventListener("voiceschanged", fillVoices, { once: true }); } catch(e){}
+  vs.onchange = () => { store.set("voice", vs.value); if(speaking){ stopSpeech(); rd.click(); } };
+  const rs = el("select", "ghost"); rs.setAttribute("aria-label", "Reading speed"); rs.hidden = rd.hidden;
+  [[0.9, "0.9×"], [1, "1×"], [1.15, "1.15×"], [1.3, "1.3×"], [1.5, "1.5×"]].forEach(([v, t]) => { const o = new Option(t, v); if(+store.get("rate", 1) === v) o.selected = true; rs.append(o); });
+  rs.onchange = () => { store.set("rate", +rs.value); if(speaking){ stopSpeech(); rd.click(); } };
+  tools.append(rd, vs, rs); top.append(label, tools);
   sheet.append(top, renderSlide(m, i)); main.append(sheet);
   const ctr = el("div", "controls");
   const prev = el("button", "btn", "← Back"); prev.type = "button"; prev.disabled = i === 0;
