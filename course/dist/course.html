@@ -12430,7 +12430,10 @@ function pct(n){ const m = MODS[n]; if(!m) return 0; return Math.round(seen(n).s
 /* Voices: prefer natural/neural English voices (Edge exposes Microsoft "Online (Natural)" voices). */
 let voices = [];
 function loadVoices(){ try { voices = speechSynthesis.getVoices().filter(v => /^en(-|_|$)/i.test(v.lang)); } catch(e){ voices = []; } }
-if("speechSynthesis" in window){ loadVoices(); try { speechSynthesis.addEventListener("voiceschanged", loadVoices); } catch(e){} }
+let refreshVoiceMenu = null;
+if("speechSynthesis" in window){ loadVoices(); try { speechSynthesis.addEventListener("voiceschanged", () => { loadVoices(); if(refreshVoiceMenu) refreshVoiceMenu(); }); } catch(e){} }
+/* Some browsers (Edge) fill the voice list late or in batches: poll briefly too. */
+if("speechSynthesis" in window){ let n = 0; const t = setInterval(() => { const before = voices.length; loadVoices(); if(voices.length !== before && refreshVoiceMenu) refreshVoiceMenu(); if(++n > 20) clearInterval(t); }, 500); }
 function voiceScore(v){ let s = 0; if(/natural|neural|online/i.test(v.name)) s += 10; if(/en-US/i.test(v.lang)) s += 3; if(/google/i.test(v.name)) s += 2; if(v.localService === false) s += 1; return s; }
 function pickVoice(){
   if(!voices.length) loadVoices();
@@ -12743,8 +12746,10 @@ function renderModule(scroll){
     vs.innerHTML = ""; const cur = pickVoice();
     voices.slice().sort((a, b) => voiceScore(b) - voiceScore(a) || a.name.localeCompare(b.name)).forEach(v => { const o = new Option(v.name.replace(/^Microsoft /, "").replace(/ - English.*$/, ""), v.name); if(cur && v.name === cur.name) o.selected = true; vs.append(o); });
     vs.hidden = rd.hidden || voices.length < 2;
+    vs.title = voices.some(v => /natural|neural|online/i.test(v.name)) ? "Voice" : "No natural voices in this browser. Open the course in Microsoft Edge for Microsoft natural voices (Ava, Andrew and others).";
   };
-  fillVoices(); if("speechSynthesis" in window) try { speechSynthesis.addEventListener("voiceschanged", fillVoices, { once: true }); } catch(e){}
+  fillVoices(); refreshVoiceMenu = fillVoices;
+  vs.addEventListener("pointerdown", () => { const n = voices.length; loadVoices(); if(voices.length !== n) fillVoices(); });
   vs.onchange = () => { store.set("voice", vs.value); if(speaking){ stopSpeech(); rd.click(); } };
   const rs = el("select", "ghost"); rs.setAttribute("aria-label", "Reading speed"); rs.hidden = rd.hidden;
   [[0.9, "0.9×"], [1, "1×"], [1.15, "1.15×"], [1.3, "1.3×"], [1.5, "1.5×"]].forEach(([v, t]) => { const o = new Option(t, v); if(+store.get("rate", 1) === v) o.selected = true; rs.append(o); });
