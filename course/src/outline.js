@@ -15,5 +15,6 @@ window.COURSE_OUTLINE = [
   { n: 13, hours: 5, title: "Writing the Proposal", desc: "Scope letters, inclusions, exclusions, clarifications, alternates, unit prices and a proposal GCs can level easily." },
   { n: 14, hours: 6, title: "Submitting Public Bids and Bid Day", desc: "Agency bid forms, bid bonds, subcontractor listing, SLBE/ELBE forms, electronic bidding and the bid opening." },
   { n: 15, hours: 8, title: "Real Bid Practice: Price It, Then Compare to the Winner", desc: "Price real past San Diego landscape and irrigation bids, then compare your line items to the winning and losing bids. The Real Bid Lab is open now with 5 Caltrans jobs." },
-  { n: 16, hours: 6, title: "After the Bid: Contracts, Billing and Growing the Division", desc: "Subcontracts, submittals, pay applications, retention, change orders, plant establishment and building a repeatable division." }
+  { n: 16, hours: 6, title: "After the Bid: Contracts, Billing and Growing the Division", desc: "Subcontracts, submittals, pay applications, retention, change orders, plant establishment and building a repeatable division." },
+  { n: 17, hours: 14, title: "Capstone: Bid the SR-905 Otay Mesa Job Start to Finish", desc: "Bid a real $4.2M Caltrans landscape job in 10 steps, from go/no-go to bid day, with an answer key from the real documents and a comparison to the three real bidders." }
 ];
