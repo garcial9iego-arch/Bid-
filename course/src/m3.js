@@ -221,7 +221,7 @@ slides: [
   body: `<ul>
 <li><strong>Engineer's estimate:</strong> the agency's own guess at the cost. Good for sizing the job. Bids often land above or below it.</li>
 <li><strong>Working days:</strong> how long you have to finish. Usually counts weekdays except holidays. Too short a schedule means more crews and overtime.</li>
-<li><strong>Liquidated damages:</strong> a set dollar amount per day you're late, taken from your payment. At $1,500 a day, two weeks (14 calendar days) late costs $21,000.</li>
+<li><strong>Liquidated damages:</strong> a set dollar amount per day you're late, taken from your payment. At $1,500 a day, two weeks (10 working days) late costs $15,000.</li>
 <li><strong>Mandatory pre-bid meeting:</strong> if it says mandatory and you miss it, you can't bid. No exceptions.</li>
 <li><strong>Bid security:</strong> the bid bond, usually 10%.</li>
 <li><strong>Bid opening:</strong> the time bids are opened and results read. Bids received one second late are rejected.</li>
