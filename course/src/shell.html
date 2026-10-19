@@ -227,6 +227,26 @@ details.deeper .inner ul,details.deeper .inner ol{margin:0 0 8px;padding-left:1.
 .labcard p{margin:4px 0 0;max-width:70ch}
 @media (max-width:640px){.labcard{grid-template-columns:minmax(0,1fr)}}
 .si-lab{border-bottom:2px solid var(--ink)}
+/* Bid Dictionary */
+.dict-head{display:grid;gap:8px;margin-bottom:10px}
+.dict-head h1{font-size:34px;text-transform:uppercase;margin:0}
+.dict-head p{margin:0;max-width:72ch}
+.dict-bar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,260px);gap:10px;position:sticky;top:0;z-index:2;background:var(--paper);padding:8px 0}
+.dict-bar input,.dict-bar select{font:inherit;font-size:16px;padding:9px 12px;border:1.5px solid var(--ink);border-radius:6px;background:var(--sheet);color:var(--ink);min-width:0;width:100%}
+@media (max-width:640px){.dict-bar{grid-template-columns:minmax(0,1fr)}}
+.dict-count{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.dict-az{display:flex;flex-wrap:wrap;gap:4px}
+.dict-az button{font-family:var(--mono);font-size:13px;min-width:30px;padding:4px 6px;border:1px solid var(--line);border-radius:4px;background:var(--sheet);color:var(--ink)}
+.dict-list{margin:0}
+.dict-L{font-size:24px;margin:22px 0 4px;border-bottom:2px solid var(--ink);scroll-margin-top:70px}
+.dict-e{border-bottom:1px solid var(--line);padding:10px 0;min-width:0}
+.dict-e dt{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.dict-t{font-weight:700;font-size:18px}
+.dict-a{font-family:var(--mono);font-size:13px;background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:1px 7px}
+.dict-e dd{margin:4px 0 0;overflow-wrap:anywhere}
+.dict-x{margin-top:4px;font-size:15px;border-left:3px solid var(--leaf);padding-left:10px}
+.dict-m{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:4px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.dict-none{color:var(--muted)}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 20px;margin:0}
 .facts div{border-bottom:1px solid var(--line);padding:7px 0;min-width:0}
 .facts dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
@@ -276,7 +296,7 @@ td.lo{color:var(--leaf);font-weight:700}
 <header class="titleblock">
   <div class="tb-inner">
     <a class="brand" href="#home" id="homeLink"><span class="brand-k">Course · Bid Division Training</span><span class="brand-n">Commercial Landscape Bidding</span></a>
-    <div class="tb-meta"><span>San Diego County</span><span>Private &amp; public work</span><span>C-27 landscape · irrigation · planting</span><span>16 modules · 100 hours</span></div>
+    <div class="tb-meta"><span>San Diego County</span><span>Private &amp; public work</span><span>C-27 landscape · irrigation · planting</span><span id="tbCount"></span></div>
   </div>
 </header>
 <div class="layout">
@@ -294,6 +314,7 @@ td.lo{color:var(--leaf);font-weight:700}
 (function(){
 const OUT = window.COURSE_OUTLINE || [];
 const MODS = {}; (window.COURSE_MODULES || []).forEach(m => MODS[m.n] = m);
+{ const tb = document.getElementById("tbCount"); if(tb) tb.textContent = OUT.length + " modules · " + OUT.reduce((a, o) => a + o.hours, 0) + " hours"; }
 const $ = id => document.getElementById(id);
 const store = {
   get(k, d){ try { const v = localStorage.getItem("clb:" + k); return v == null ? d : JSON.parse(v); } catch(e){ return d; } },
@@ -316,6 +337,7 @@ function parseHash(){
   const h = (location.hash || "").slice(1);
   const mm = /^m(\d+)(?:-(\d+))?$/.exec(h);
   if(h === "lab") return { view: "lab", m: null, i: 0 };
+  if(h === "dict" && window.DICT) return { view: "dict", m: null, i: 0 };
   const pm = /^plans(?:-(\d+))?$/.exec(h);
   if(pm && MODS.P){ let i = pm[1] ? +pm[1] - 1 : store.get("pos:P", 0); i = Math.max(0, Math.min(MODS.P.slides.length - 1, i || 0)); return { view: "module", m: "P", i }; }
   const lm = /^lab-(\d\d-\w{6})$/.exec(h);
@@ -328,7 +350,7 @@ function parseHash(){
   return { view: "home", m: null, i: 0 };
 }
 function go(view, m, i){
-  const h = view === "module" ? (m === "P" ? "#plans-" : "#m" + m + "-") + (i + 1) : view === "lab" ? (m ? "#lab-" + m : "#lab") : "#home";
+  const h = view === "module" ? (m === "P" ? "#plans-" : "#m" + m + "-") + (i + 1) : view === "lab" ? (m ? "#lab-" + m : "#lab") : view === "dict" ? "#dict" : "#home";
   if(location.hash !== h) history.replaceState(null, "", h);
   cur = { view, m, i }; render(true);
 }
@@ -344,6 +366,14 @@ function renderNav(){
     if(cur.view === "lab") b.setAttribute("aria-current", "true");
     b.innerHTML = '<span class="si-no">LAB</span><span><span class="si-t">Real Bid Lab</span><span class="si-s">' + window.LAB.projects.length + ' real San Diego bids to price</span></span>';
     b.onclick = () => { go("lab", null, 0); collapseNav(); };
+    li.append(b); ul.append(li);
+  }
+  if(window.DICT){
+    const li = document.createElement("li"); li.className = "si-item si-lab";
+    const b = document.createElement("button"); b.type = "button"; b.className = "si-btn";
+    if(cur.view === "dict") b.setAttribute("aria-current", "true");
+    b.innerHTML = '<span class="si-no">DICT</span><span><span class="si-t">Bid Dictionary</span><span class="si-s">' + window.DICT.count + ' words, abbreviations and phrases</span></span>';
+    b.onclick = () => { go("dict", null, 0); collapseNav(); };
     li.append(b); ul.append(li);
   }
   if(MODS.P){
@@ -382,7 +412,7 @@ function renderHome(){
   hero.innerHTML = '<span class="eyebrow">Start here · from zero to bidding</span>' +
     '<h1>Learn to bid commercial landscape work</h1>' +
     '<p>This course is for someone who has never bid a commercial job. It takes you from "what is a bid?" to pricing real San Diego landscape and irrigation projects and comparing your number to the contractor who actually won. It covers private jobs for general contractors and public jobs for cities, schools and agencies.</p>' +
-    '<div class="btnrow"><button class="btn primary" type="button" id="startBtn">Start Module 1 →</button><button class="btn" type="button" id="resumeBtn">Resume where I left off</button></div>';
+    '<div class="btnrow"><button class="btn primary" type="button" id="startBtn">Start Module ' + (OUT[0] ? OUT[0].n : 1) + ' →</button><button class="btn" type="button" id="resumeBtn">Resume where I left off</button></div>';
   main.append(hero);
   const how = document.createElement("section"); how.className = "how";
   how.innerHTML = [
@@ -401,6 +431,11 @@ function renderHome(){
     const pc = document.createElement("section"); pc.className = "labcard";
     pc.innerHTML = '<div><span class="eyebrow">Workshop · real plan sheets</span><h2>Plan Set Deep Dive</h2><p>Every sheet of a real 65-sheet Caltrans landscape plan set, ranked by how much it matters to your bid, then a close-up walkthrough of the sheets that set your price.</p></div><button class="btn primary" type="button" id="plansBtn">Open the deep dive →</button>';
     main.append(pc); $("plansBtn").onclick = () => go("module", "P", store.get("pos:P", 0));
+  }
+  if(window.DICT){
+    const dc = document.createElement("section"); dc.className = "labcard";
+    dc.innerHTML = '<div><span class="eyebrow">Reference · look it up any time</span><h2>Bid Dictionary</h2><p>' + window.DICT.count + ' words, abbreviations and phrases you will run into on plans, specs, bid forms, contracts and calls, each explained in plain words with a real example where we have one.</p></div><button class="btn primary" type="button" id="dictBtn">Open the dictionary →</button>';
+    main.append(dc); $("dictBtn").onclick = () => go("dict", null, 0);
   }
   const h2 = document.createElement("h2"); h2.textContent = "Sheet index"; h2.style.fontSize = "26px"; h2.style.textTransform = "uppercase"; h2.style.marginBottom = "10px"; main.append(h2);
   const wrap = document.createElement("div"); wrap.className = "tablewrap";
@@ -421,7 +456,7 @@ function renderHome(){
   const n = document.createElement("p"); n.className = "note"; n.style.marginTop = "14px";
   n.innerHTML = 'This course teaches how bidding works and where to check the rules. It is not legal, tax or insurance advice. For license structure, contracts and bonding, use a construction attorney, a CPA and a surety agent. Your progress is saved in this browser only.';
   main.append(n);
-  $("startBtn").onclick = () => go("module", 1, 0);
+  $("startBtn").onclick = () => go("module", OUT[0] ? OUT[0].n : 1, 0);
   $("resumeBtn").onclick = () => { const last = store.get("last", null); if(last && MODS[last.m]) go("module", last.m, last.i); else go("module", 1, 0); };
 }
 
@@ -606,6 +641,7 @@ function render(scroll){
     if(cur.m) window.LAB.renderProject($("main"), cur.m, labGo); else window.LAB.renderList($("main"), labGo);
     if(scroll) $("main").scrollIntoView({ block: "start" });
   }
+  else if(cur.view === "dict" && window.DICT){ window.DICT.render($("main")); if(scroll) $("main").scrollIntoView({ block: "start" }); }
   else { renderHome(); if(scroll) window.scrollTo(0, 0); }
 }
 

@@ -13,7 +13,7 @@ const dist = join(root, "dist");
 // MODULES=1,2,3 builds only those modules (handy while others are still being written).
 const only = process.env.MODULES ? new Set(process.env.MODULES.split(",").map(Number)) : null;
 const moduleFiles = readdirSync(src).filter(f => /^m\d+\.js$/.test(f) && (!only || only.has(parseInt(f.slice(1))))).sort((a, b) => parseInt(a.slice(1)) - parseInt(b.slice(1)));
-const extras = ["plans.js", "realbids.js", "lab.js"].map(f => readFileSync(join(src, f), "utf8"));
+const extras = ["plans.js", "realbids.js", "lab.js", "glossary.js", "dict.js"].filter(f => existsSync(join(src, f))).map(f => readFileSync(join(src, f), "utf8"));
 const content = [readFileSync(join(src, "outline.js"), "utf8"), ...moduleFiles.map(f => readFileSync(join(src, f), "utf8")), ...extras].join("\n");
 const shell = readFileSync(join(src, "shell.html"), "utf8");
 if (!shell.includes("/*__CONTENT__*/")) throw new Error("shell.html is missing the /*__CONTENT__*/ placeholder");
